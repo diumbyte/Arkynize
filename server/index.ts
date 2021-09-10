@@ -1,4 +1,5 @@
-const express = require('express');
+// const express = require('express');
+import express from 'express';
 const app = express();
 
 const PORT = process.env.PORT || 3001;
@@ -21,5 +22,5 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`);
+    console.log(`Listening REALLY CLOSELY on port ${PORT}`);
 })
