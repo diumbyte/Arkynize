@@ -1,11 +1,46 @@
-// const express = require('express');
 import express from 'express';
+import { ApolloServer, gql } from 'apollo-server-express';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 const app = express();
 
 const PORT = process.env.PORT || 3001;
 
-app.get("/api/test", (req, res) => {
-    res.send("Server functioning");
+
+// Apollo code
+// The GraphQL schema
+async function startApolloServer(): Promise<void>{
+    const typeDefs = gql`
+      type Query {
+        "A simple type for getting started!"
+        hello: String
+      }
+    `;
+    
+    // A map of functions which return data for the schema.
+    const resolvers = {
+      Query: {
+        hello: () => 'world',
+      },
+    };
+    
+    const apolloServer = new ApolloServer({
+        typeDefs,
+        resolvers,
+        context: {}
+    })
+
+    await apolloServer.start()
+    apolloServer.applyMiddleware({ app, path: '/api' })
+}
+startApolloServer();
+
+app.get("/api/test", async (req, res) => {
+
+    const allUsers = await prisma.unit.findMany();
+    
+    res.send(allUsers);
 })
 
 if (process.env.NODE_ENV === 'production') {

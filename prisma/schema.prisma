@@ -1,0 +1,84 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Unit {
+    id      Int     @id @default(autoincrement())
+    name    String  
+    code    String
+
+    skills  Skill[]
+}
+
+model Skill {
+    id      Int     @id @default(autoincrement())
+    name    String  
+    code    String
+    type    Int
+
+    unitId  Int
+    unit    Unit    @relation(fields: [unitId], references: [id])
+
+    enhancements    Enhancement[]
+}
+
+model Enhancement {
+    id      Int     @id @default(autoincrement())
+    level   Int
+    gold        Int
+    molagara    Int?
+    stigma      Int?
+
+    skillId     Int
+    skill       Skill   @relation(fields: [skillId], references: [id])
+
+
+}
+
+model Catalyst {
+    id      Int     @id @default(autoincrement())
+
+    name    String
+    code    String
+
+    // Drop
+    dropLocations   Location[]    @relation(references: [id])
+    // Shop
+    shopLocations   ShopItem[]
+}
+
+model Location {
+    id      Int     @id @default(autoincrement())
+    name    String
+    episode Int
+    region  String
+    instance    String
+
+    catalysts   Catalyst[]  @relation(references: [id])
+}
+
+model ShopItem {
+    catalystId  Int
+    shopId      Int
+    price       Int
+
+    catalyst    Catalyst    @relation(fields: [catalystId], references: [id])
+    shop      Shop        @relation(fields: [shopId], references: [id])
+    @@id([catalystId, shopId])
+}
+
+model Shop {
+    id      Int     @id @default(autoincrement())
+    episode String
+    region  String
+
+    catalysts    ShopItem[]
+}
