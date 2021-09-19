@@ -18,7 +18,10 @@ Notes:
   ☐ `npx tsc --init` to create a tsconfig.json file after installing Typescript and the necessary complementary @types packages for w/e Im working with.
   * According to `https://www.prisma.io/docs/guides/deployment/deployment-guides/deploying-to-heroku` - `schema.prisma` should automatically read Herokus config vars and inject thatin env("DATABASE_URL")
 
-
+Prisma:
+  * When I make a change to my schema, run: `npx prisma migrate dev --name someNameHere`
+  * Then update my client to match my updated schema: `npx prisma generate`
+  * To reseed: `npx prisma migrate reset`
 
 * API Scraping:
 * First I'll need to figure out how I want to model a unit, their skill enhancement, and their awakenings
@@ -26,4 +29,4 @@ Notes:
   * Some CRON job
   * Need to filter out the "placeholder" units/unreleased units.
   
-  
+  * I'll have to manually scrape from epic7x. The API I used before isn't up to date anymore

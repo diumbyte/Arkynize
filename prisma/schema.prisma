@@ -11,74 +11,87 @@ generator client {
 }
 
 model Unit {
-    id      Int     @id @default(autoincrement())
-    name    String  
-    code    String
+  id   Int    @id @default(autoincrement())
+  name String
+  code String @unique
 
-    skills  Skill[]
+  zodiacId Int
+  zodiac   Zodiac  @relation(fields: [zodiacId], references: [id])
+  skills   Skill[]
+}
+
+model Zodiac {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  units     Unit[]
+  catalysts Catalyst[]
 }
 
 model Skill {
-    id      Int     @id @default(autoincrement())
-    name    String  
-    code    String
-    type    Int
+  id   Int    @id @default(autoincrement())
+  name String
+  code String @unique
+  type Int
 
-    unitId  Int
-    unit    Unit    @relation(fields: [unitId], references: [id])
+  unitId Int
+  unit   Unit @relation(fields: [unitId], references: [id])
 
-    enhancements    Enhancement[]
+  enhancements Enhancement[]
 }
 
 model Enhancement {
-    id      Int     @id @default(autoincrement())
-    level   Int
-    gold        Int
-    molagara    Int?
-    stigma      Int?
+  id       Int  @id @default(autoincrement())
+  level    Int
+  gold     Int
+  molagara Int?
+  stigma   Int?
 
-    skillId     Int
-    skill       Skill   @relation(fields: [skillId], references: [id])
+  skillId Int
+  skill   Skill @relation(fields: [skillId], references: [id])
 
 
 }
 
 model Catalyst {
-    id      Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-    name    String
-    code    String
+  name String
+  code String @unique
 
-    // Drop
-    dropLocations   Location[]    @relation(references: [id])
-    // Shop
-    shopLocations   ShopItem[]
+  zodiacId      Int
+  zodiac        Zodiac     @relation(fields: [zodiacId], references: [id])
+  // Drop
+  dropLocations Location[] @relation(references: [id])
+  // Shop
+  shopLocations ShopItem[]
 }
 
 model Location {
-    id      Int     @id @default(autoincrement())
-    name    String
-    episode Int
-    region  String
-    instance    String
+  id       Int    @id @default(autoincrement())
+  name     String
+  episode  Int
+  region   String
+  instance String
 
-    catalysts   Catalyst[]  @relation(references: [id])
+  catalysts Catalyst[] @relation(references: [id])
 }
 
 model ShopItem {
-    catalystId  Int
-    shopId      Int
-    price       Int
+  catalystId Int
+  shopId     Int
+  price      Int
 
-    catalyst    Catalyst    @relation(fields: [catalystId], references: [id])
-    shop      Shop        @relation(fields: [shopId], references: [id])
-    @@id([catalystId, shopId])
+  catalyst Catalyst @relation(fields: [catalystId], references: [id])
+  shop     Shop     @relation(fields: [shopId], references: [id])
+  @@id([catalystId, shopId])
 }
 
 model Shop {
-    id      Int     @id @default(autoincrement())
-    episode String
-    region  String
+  id      Int    @id @default(autoincrement())
+  episode String
+  region  String
+  name    String
 
-    catalysts    ShopItem[]
+  catalysts ShopItem[]
 }
