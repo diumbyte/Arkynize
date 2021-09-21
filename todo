@@ -30,3 +30,5 @@ Prisma:
   * Need to filter out the "placeholder" units/unreleased units.
   
   * I'll have to manually scrape from epic7x. The API I used before isn't up to date anymore
+
+* Handling `A Crack in World` stages by setting their `instance` property to `0`.

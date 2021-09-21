@@ -62,36 +62,47 @@ model Catalyst {
   zodiacId      Int
   zodiac        Zodiac     @relation(fields: [zodiacId], references: [id])
   // Drop
-  dropLocations Location[] @relation(references: [id])
-  // Shop
+  dropLocations Drop[]    @relation(references: [id])
+  // Region
   shopLocations ShopItem[]
 }
 
-model Location {
+model Drop {
   id       Int    @id @default(autoincrement())
-  name     String
-  episode  Int
-  region   String
-  instance String
-
+  
+  stageId   Int
+  stage     Stage @relation(fields: [stageId], references: [id])
   catalysts Catalyst[] @relation(references: [id])
+}
+
+model Stage {
+  id    Int   @id @default(autoincrement())
+  instance String
+  name     String
+  points    Int
+  energy    Int
+
+  drops     Drop[]
+  regionId  Int
+  region    Region     @relation(fields: [regionId], references: [id])
 }
 
 model ShopItem {
   catalystId Int
-  shopId     Int
+  regionId   Int
   price      Int
 
   catalyst Catalyst @relation(fields: [catalystId], references: [id])
-  shop     Shop     @relation(fields: [shopId], references: [id])
-  @@id([catalystId, shopId])
+  region   Region   @relation(fields: [regionId], references: [id])
+  @@id([catalystId, regionId])
 }
 
-model Shop {
+model Region {
   id      Int    @id @default(autoincrement())
   episode String
   region  String
   name    String
 
   catalysts ShopItem[]
+  stages  Stage[]
 }

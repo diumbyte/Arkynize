@@ -1,4 +1,4 @@
-const shopList = [
+const regionList = [
     { id: 1, episode: "1", region: "1", name: "Ezera"},
     { id: 2, episode: "1", region: "2", name: "Reingar"},
     { id: 3, episode: "1", region: "2S", name: "Levulin"},
@@ -61,4 +61,4 @@ const shopList = [
 
 ]
 
-module.exports = shopList;
+module.exports = regionList;

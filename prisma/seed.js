@@ -5,15 +5,18 @@ const prisma = new PrismaClient();
 const zodiacList = require('./seedData/zodiacList.js')
 const catalystList = require('./seedData/catalystList.js')
 const unitList = require('./seedData/unitList.js')
-const shopList = require('./seedData/shopList.js')
+const region = require('./seedData/regionList.js')
 const shopItemList = require('./seedData/shopItemList.js')
+const stageList = require('./seedData/stageList.js')
 
 async function main() {
     
     // Seed Zodiac Symbols
     await Promise.all(zodiacList.map(async zodiac => {
         await prisma.zodiac.create({
-            data: { id: zodiac.id, name: zodiac.name }
+            data: { 
+                ...zodiac 
+            }
         })
     }))
 
@@ -21,22 +24,16 @@ async function main() {
     await Promise.all(catalystList.map(async catalyst => {
         await prisma.catalyst.create({
             data: {
-                id: catalyst.id,
-                name: catalyst.name,
-                code: catalyst.code,
-                zodiacId: catalyst.zodiac
+                ...catalyst
             }
         })
     }))
 
-    // Seed Shops
-    await Promise.all(shopList.map(async shop => {
-        await prisma.shop.create({
+    // Seed Regions
+    await Promise.all(region.map(async shop => {
+        await prisma.region.create({
             data: {
-                id: shop.id,
-                episode: shop.episode,
-                region: shop.region,
-                name: shop.name
+                ...shop
             }
         })
     }))
@@ -45,9 +42,16 @@ async function main() {
     await Promise.all(shopItemList.map(async item => {
         await prisma.shopItem.create({
             data: {
-                shopId: item.shopId,
-                catalystId: item.catalystId,
-                price: item.price
+                ...item
+            }
+        })
+    }))
+
+    // Seed Stages in Regions
+    await Promise.all(stageList.map(async stage => {
+        await prisma.stage.create({
+            data: {
+                ...stage
             }
         })
     }))
@@ -56,23 +60,10 @@ async function main() {
     await Promise.all(unitList.map(async unit => {
         await prisma.unit.create({
             data: {
-                name: unit.name,
-                code: unit.code,
-                zodiacId: unit.zodiac
+                ...unit
             }
         })
     }))
-    // const alencia = await prisma.unit.upsert({
-    //     where: { code: "c1001" },
-    //     update: {},
-    //     create: {
-    //         name: "Alencia",
-    //         code: "c1001"
-    //     }
-    // })
-
-    // console.log(alencia);
-    
 }
 
 main()
