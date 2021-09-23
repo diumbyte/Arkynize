@@ -1848,54 +1848,6 @@ const stageList = [
     "id": 231
   },
   {
-    "regionId": 20,
-    "points": 8,
-    "instance": "S1",
-    "name": "Gnarled Forest",
-    "energy": 8,
-    "id": 232
-  },
-  {
-    "regionId": 20,
-    "points": 8,
-    "instance": "S2",
-    "name": "Vagabond's Refuge",
-    "energy": 8,
-    "id": 233
-  },
-  {
-    "regionId": 20,
-    "points": 8,
-    "instance": "S3",
-    "name": "Wandering Poet's Grave",
-    "energy": 8,
-    "id": 234
-  },
-  {
-    "regionId": 20,
-    "points": 8,
-    "instance": "S4",
-    "name": "Rainy Trail",
-    "energy": 8,
-    "id": 235
-  },
-  {
-    "regionId": 20,
-    "points": 8,
-    "instance": "S5",
-    "name": "The Forest of Dreaming Saints",
-    "energy": 8,
-    "id": 236
-  },
-  {
-    "regionId": 20,
-    "points": 8,
-    "instance": "S6",
-    "name": "Dark Blood Cave",
-    "energy": 8,
-    "id": 237
-  },
-  {
     "regionId": 21,
     "points": 8,
     "instance": "1",
@@ -6174,7 +6126,103 @@ const stageList = [
     "name": "Roundabout Way",
     "energy": 8,
     "id": 772
-  }
+  },
+  {
+    "regionId": 20,
+    "points": 8,
+    "instance": "1",
+    "name": "Levulin Harbor",
+    "energy": 8,
+    "id": 773
+  },
+  {
+    "regionId": 20,
+    "points": 8,
+    "instance": "2",
+    "name": "Mehiti Wilds",
+    "energy": 8,
+    "id": 774
+  },
+  {
+    "regionId": 20,
+    "points": 8,
+    "instance": "3",
+    "name": "Pomegranate Shrine",
+    "energy": 8,
+    "id": 775
+  },
+  {
+    "regionId": 20,
+    "points": 8,
+    "instance": "4",
+    "name": "Ki Ruburan",
+    "energy": 8,
+    "id": 776
+  },
+  {
+    "regionId": 20,
+    "points": 8,
+    "instance": "5",
+    "name": "Weeping Vixen Waterway",
+    "energy": 8,
+    "id": 777
+  },
+  {
+    "regionId": 20,
+    "points": 8,
+    "instance": "6",
+    "name": "Silver Sand Path",
+    "energy": 8,
+    "id": 778
+  },
+  {
+    "regionId": 20,
+    "points": 8,
+    "instance": "7",
+    "name": "Goat Horn Waterway",
+    "energy": 8,
+    "id": 779
+  },
+  {
+    "regionId": 20,
+    "points": 8,
+    "instance": "8",
+    "name": "West Radwa",
+    "energy": 8,
+    "id": 780
+  },
+  {
+    "regionId": 20,
+    "points": 8,
+    "instance": "S1",
+    "name": "Coin Grave Desert",
+    "energy": 8,
+    "id": 781
+  },
+  {
+    "regionId": 20,
+    "points": 8,
+    "instance": "S2",
+    "name": "Gold Scorpion Dock",
+    "energy": 8,
+    "id": 782
+  },
+  {
+    "regionId": 20,
+    "points": 8,
+    "instance": "S3",
+    "name": "Red Sand Island",
+    "energy": 8,
+    "id": 783
+  },
+  {
+    "regionId": 20,
+    "points": 8,
+    "instance": "S4",
+    "name": "Haven",
+    "energy": 8,
+    "id": 784
+  },
 ]
 
 module.exports = stageList;

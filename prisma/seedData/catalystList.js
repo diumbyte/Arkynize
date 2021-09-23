@@ -56,7 +56,7 @@ const catalystList = [{
   },
   {
       "id": 8,
-    "name": "Blood Flaked Bone",
+    "name": "Blood Flaked Bones",
     "code": "Blood-Flaked-Bone",
     "zodiacId": 12,
     "isEpic": false,
@@ -88,7 +88,7 @@ const catalystList = [{
   },
   {
       "id": 12,
-    "name": "Dragons Wrath",
+    "name": "Dragon's Wrath",
     "code": "Dragons-Wrath",
     "zodiacId": 10,
     "isEpic": true,
@@ -168,7 +168,7 @@ const catalystList = [{
   },
   {
       "id": 22,
-    "name": "Mercenarys Medicine",
+    "name": "Mercenary's Medicine",
     "code": "Mercenarys-Medicine",
     "zodiacId": 9,
     "isEpic": true,

@@ -79,7 +79,8 @@ model Drop {
 
   stageId   Int
   stage     Stage      @relation(fields: [stageId], references: [id])
-  catalysts Catalyst[] @relation(references: [id])
+  catalystId  Int
+  catalyst Catalyst[] @relation(fields: [catalystId], references: [id])
 }
 
 model Stage {

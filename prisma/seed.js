@@ -13,6 +13,7 @@ const rarityList = require('./seedData/rarityList.js')
 const runeList = require('./seedData/runeList.js')
 const awakeningList = require('./seedData/awakeningList.js')
 const runeCostList = require('./seedData/runeCostList.js')
+const dropList = require('./seedData/dropList.js')
 
 async function main() {
     
@@ -106,6 +107,15 @@ async function main() {
         })
     }))
 
+    // Seed Drops
+    await Promise.all(dropList.map(async drop => {
+        await prisma.drop.create({
+            data: {
+                ...drop
+            }
+        })
+    }))
+
     // Seed Units
     await Promise.all(unitList.map(async unit => {
         await prisma.unit.create({
@@ -114,6 +124,7 @@ async function main() {
             }
         })
     }))
+
 }
 
 main()
