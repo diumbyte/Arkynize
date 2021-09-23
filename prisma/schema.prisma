@@ -15,17 +15,22 @@ model Unit {
   name String
   code String @unique
 
-  zodiacId Int
-  zodiac   Zodiac  @relation(fields: [zodiacId], references: [id])
-  skills   Skill[]
+  zodiacId    Int
+  zodiac      Zodiac    @relation(fields: [zodiacId], references: [id])
+  attributeId Int
+  attribute   Attribute @relation(fields: [attributeId], references: [id])
+  rarityId    Int
+  rarity      Rarity    @relation(fields: [rarityId], references: [id])
+  skills      Skill[]
 }
 
 model Zodiac {
   id   Int    @id @default(autoincrement())
   name String
 
-  units     Unit[]
-  catalysts Catalyst[]
+  units      Unit[]
+  catalysts  Catalyst[]
+  awakenings Awakening[]
 }
 
 model Skill {
@@ -56,35 +61,37 @@ model Enhancement {
 model Catalyst {
   id Int @id @default(autoincrement())
 
-  name String
-  code String @unique
+  name            String
+  code            String  @unique
+  isEpic          Boolean
+  isSkillMaterial Boolean
 
   zodiacId      Int
   zodiac        Zodiac     @relation(fields: [zodiacId], references: [id])
   // Drop
-  dropLocations Drop[]    @relation(references: [id])
+  dropLocations Drop[]     @relation(references: [id])
   // Region
   shopLocations ShopItem[]
 }
 
 model Drop {
-  id       Int    @id @default(autoincrement())
-  
+  id Int @id @default(autoincrement())
+
   stageId   Int
-  stage     Stage @relation(fields: [stageId], references: [id])
+  stage     Stage      @relation(fields: [stageId], references: [id])
   catalysts Catalyst[] @relation(references: [id])
 }
 
 model Stage {
-  id    Int   @id @default(autoincrement())
+  id       Int    @id @default(autoincrement())
   instance String
   name     String
-  points    Int
-  energy    Int
+  points   Int
+  energy   Int
 
-  drops     Drop[]
-  regionId  Int
-  region    Region     @relation(fields: [regionId], references: [id])
+  drops    Drop[]
+  regionId Int
+  region   Region @relation(fields: [regionId], references: [id])
 }
 
 model ShopItem {
@@ -104,5 +111,57 @@ model Region {
   name    String
 
   catalysts ShopItem[]
-  stages  Stage[]
+  stages    Stage[]
+}
+
+model Awakening {
+  id            Int  @id @default(autoincrement())
+  // This table more accurately represents the "cost" to get to this state
+  // e.g Getting "state: 1" requires the materials in its row
+  state         Int
+  catalystCount Int?
+
+
+  rarityId    Int
+  rarity      Rarity    @relation(fields: [rarityId], references: [id])
+  attributeId Int
+  attribute   Attribute @relation(fields: [attributeId], references: [id])
+
+  runeCosts RuneCost[]
+  Zodiac    Zodiac?    @relation(fields: [zodiacId], references: [id])
+  zodiacId  Int?
+}
+
+model Rune {
+  id   Int    @id @default(autoincrement())
+  name String
+  code String
+
+  runeCosts RuneCost[]
+}
+
+model RuneCost {
+  runeId      Int
+  awakeningId Int
+  count       Int
+
+  rune      Rune      @relation(fields: [runeId], references: [id])
+  awakening Awakening @relation(fields: [awakeningId], references: [id])
+  @@id([runeId, awakeningId])
+}
+
+model Rarity {
+  id    Int @id @default(autoincrement())
+  value Int
+
+  awakenings Awakening[]
+  units      Unit[]
+}
+
+model Attribute {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  awakenings Awakening[]
+  units      Unit[]
 }

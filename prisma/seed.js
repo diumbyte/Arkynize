@@ -5,17 +5,49 @@ const prisma = new PrismaClient();
 const zodiacList = require('./seedData/zodiacList.js')
 const catalystList = require('./seedData/catalystList.js')
 const unitList = require('./seedData/unitList.js')
-const region = require('./seedData/regionList.js')
+const regionList = require('./seedData/regionList.js')
 const shopItemList = require('./seedData/shopItemList.js')
 const stageList = require('./seedData/stageList.js')
+const attributeList = require('./seedData/attributeList.js')
+const rarityList = require('./seedData/rarityList.js')
+const runeList = require('./seedData/runeList.js')
+const awakeningList = require('./seedData/awakeningList.js')
+const runeCostList = require('./seedData/runeCostList.js')
 
 async function main() {
     
+    // Seed Attribute List
+    await Promise.all(attributeList.map(async attribute => {
+        await prisma.attribute.create({
+            data: { 
+                ...attribute 
+            }
+        })
+    }))
+
+    // Seed Rarity List
+    await Promise.all(rarityList.map(async rarity => {
+        await prisma.rarity.create({
+            data: { 
+                ...rarity 
+            }
+        })
+    }))
+
     // Seed Zodiac Symbols
     await Promise.all(zodiacList.map(async zodiac => {
         await prisma.zodiac.create({
             data: { 
                 ...zodiac 
+            }
+        })
+    }))
+
+    // Seed Runes
+    await Promise.all(runeList.map(async rune => {
+        await prisma.rune.create({
+            data: {
+                ...rune
             }
         })
     }))
@@ -30,10 +62,10 @@ async function main() {
     }))
 
     // Seed Regions
-    await Promise.all(region.map(async shop => {
+    await Promise.all(regionList.map(async region => {
         await prisma.region.create({
             data: {
-                ...shop
+                ...region
             }
         })
     }))
@@ -52,6 +84,24 @@ async function main() {
         await prisma.stage.create({
             data: {
                 ...stage
+            }
+        })
+    }))
+
+    // Seed Awakenings
+    await Promise.all(awakeningList.map(async awakening => {
+        await prisma.awakening.create({
+            data: {
+                ...awakening
+            }
+        })
+    }))
+
+    // Seed Rune Costs
+    await Promise.all(runeCostList.map(async runeCost => {
+        await prisma.runeCost.create({
+            data: {
+                ...runeCost
             }
         })
     }))
