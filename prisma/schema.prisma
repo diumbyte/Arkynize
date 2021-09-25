@@ -36,7 +36,7 @@ model Zodiac {
 model Skill {
   id   Int    @id @default(autoincrement())
   name String
-  code String @unique
+  code String 
   type Int
 
   unitId Int
@@ -52,10 +52,11 @@ model Enhancement {
   molagara Int?
   stigma   Int?
 
+  catalystCount Int?
+  catalystIsEpic  Boolean?
+
   skillId Int
   skill   Skill @relation(fields: [skillId], references: [id])
-
-
 }
 
 model Catalyst {

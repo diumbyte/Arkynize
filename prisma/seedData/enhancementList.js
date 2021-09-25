@@ -1,0 +1,26515 @@
+const enhancementList = [{
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 259
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 259
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 259
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 259
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 259
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 260
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 260
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 260
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 260
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 260
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 261
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 261
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 261
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 261
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 261
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 295
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 295
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 295
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 295
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 295
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 295
+}, {
+    "level": 1,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 296
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 296
+}, {
+    "level": 3,
+    "gold": 42000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 296
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 297
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 297
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 297
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 297
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 297
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 297
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 280
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 280
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 280
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 280
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 280
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 281
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 281
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 281
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 281
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 281
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 282
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 282
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 282
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 282
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 282
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 283
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 283
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 283
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 283
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 283
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 284
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 284
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 284
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 284
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 284
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 285
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 285
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 285
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 285
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 285
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 271
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 271
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 271
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 271
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 271
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 272
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 272
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 272
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 272
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 272
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 273
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 273
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 273
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 273
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 273
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 289
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 289
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 289
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 289
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 289
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 289
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 290
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 290
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 290
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 290
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 290
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 290
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 290
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 291
+}, {
+    "level": 2,
+    "gold": 38000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 291
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 292
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 292
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 292
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 292
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 292
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 293
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 293
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 293
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 293
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 293
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 294
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 294
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 294
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 294
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 294
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 310
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 310
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 310
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 310
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 310
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 310
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 311
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 311
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 311
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 311
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 311
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 311
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 311
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 312
+}, {
+    "level": 2,
+    "gold": 38000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 312
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 301
+}, {
+    "level": 2,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 301
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 301
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 301
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 302
+}, {
+    "level": 2,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 302
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 302
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 302
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 303
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 303
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 303
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 303
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 303
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 303
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 303
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 313
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 313
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 313
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 313
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 313
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 313
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 314
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 314
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 314
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 314
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 314
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 314
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 314
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 315
+}, {
+    "level": 2,
+    "gold": 38000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 315
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 19
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 19
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 19
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 19
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 19
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 20
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 20
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 20
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 20
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 20
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 21
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 21
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 21
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 21
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 21
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 316
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 316
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 316
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 316
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 316
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 316
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 317
+}, {
+    "level": 2,
+    "gold": 38000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 317
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 318
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 318
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 318
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 318
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 318
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 318
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 318
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 304
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 304
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 304
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 304
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 304
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 305
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 305
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 305
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 305
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 305
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 306
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 306
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 306
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 306
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 306
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 307
+}, {
+    "level": 2,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 307
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 307
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 307
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 308
+}, {
+    "level": 2,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 308
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 308
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 308
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 309
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 309
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 309
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 309
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 309
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 309
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 309
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 358
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 358
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 358
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 358
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 358
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 358
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 358
+}, {
+    "level": 1,
+    "gold": 44000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 8,
+    "catalystIsEpic": false,
+    "skillId": 359
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 360
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 360
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 360
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 360
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 360
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 360
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 360
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 331
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 331
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 331
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 331
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 331
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 331
+}, {
+    "level": 1,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 332
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 332
+}, {
+    "level": 3,
+    "gold": 42000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 332
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 333
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 333
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 333
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 333
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 333
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 333
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 355
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 355
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 355
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 355
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 355
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 356
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 356
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 356
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 356
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 356
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 357
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 357
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 357
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 357
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 357
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 343
+}, {
+    "level": 2,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 343
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 343
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 343
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 344
+}, {
+    "level": 2,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 344
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 344
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 344
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 345
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 345
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 345
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 345
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 345
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 345
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 345
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 352
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 352
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 352
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 352
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 352
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 353
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 353
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 353
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 353
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 353
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 354
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 354
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 354
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 354
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 354
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 349
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 349
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 349
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 349
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 349
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 349
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 349
+}, {
+    "level": 1,
+    "gold": 44000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 8,
+    "catalystIsEpic": false,
+    "skillId": 350
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 351
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 351
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 351
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 351
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 351
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 351
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 351
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 28
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 28
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 28
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 29
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 29
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 29
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 29
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 29
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 29
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 30
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 30
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 30
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 30
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 30
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 30
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 337
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 337
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 337
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 337
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 337
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 337
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 337
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 338
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 338
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 338
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 338
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 338
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 338
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 338
+}, {
+    "level": 1,
+    "gold": 44000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 8,
+    "catalystIsEpic": false,
+    "skillId": 339
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 334
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 334
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 334
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 334
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 334
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 334
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 335
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 335
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 335
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 335
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 335
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 335
+}, {
+    "level": 1,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 336
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 336
+}, {
+    "level": 3,
+    "gold": 42000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 336
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 322
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 322
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 322
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 322
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 322
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 323
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 323
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 323
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 323
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 323
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 324
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 324
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 324
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 324
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 324
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 340
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 340
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 340
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 340
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 340
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 341
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 341
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 341
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 341
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 341
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 342
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 342
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 342
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 342
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 342
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 346
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 346
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 346
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 346
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 346
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 346
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 347
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 347
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 347
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 347
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 347
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 347
+}, {
+    "level": 1,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 348
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 348
+}, {
+    "level": 3,
+    "gold": 42000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 348
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 325
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 325
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 325
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 325
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 325
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 326
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 326
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 326
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 326
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 326
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 327
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 327
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 327
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 327
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 327
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 319
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 319
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 319
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 319
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 319
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 320
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 320
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 320
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 320
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 320
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 321
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 321
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 321
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 321
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 321
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 328
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 328
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 328
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 328
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 328
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 328
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 329
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 329
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 329
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 329
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 329
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 329
+}, {
+    "level": 1,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 330
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 330
+}, {
+    "level": 3,
+    "gold": 42000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 330
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 361
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 361
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 361
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 361
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 361
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 362
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 362
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 362
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 362
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 362
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 363
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 363
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 363
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 363
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 363
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 370
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 370
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 370
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 370
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 370
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 371
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 371
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 371
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 371
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 371
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 372
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 372
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 372
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 372
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 372
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 31
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 31
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 31
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 31
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 31
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 32
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 32
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 32
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 32
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 32
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 33
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 33
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 33
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 33
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 33
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 375
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 375
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 375
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 375
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 375
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 376
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 376
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 376
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 376
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 376
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 377
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 377
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 377
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 377
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 377
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 367
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 367
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 367
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 367
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 367
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 368
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 368
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 368
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 368
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 368
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 369
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 369
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 369
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 369
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 369
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 387
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 387
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 387
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 387
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 387
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 388
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 388
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 388
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 388
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 388
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 389
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 389
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 389
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 389
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 389
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 381
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 381
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 381
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 381
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 381
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 382
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 382
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 382
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 382
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 382
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 383
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 383
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 383
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 383
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 383
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 378
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 378
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 378
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 378
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 378
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 378
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 379
+}, {
+    "level": 2,
+    "gold": 38000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 379
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 380
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 380
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 380
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 380
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 380
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 380
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 380
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 364
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 364
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 364
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 364
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 364
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 364
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 364
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 365
+}, {
+    "level": 2,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 365
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 365
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 365
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 366
+}, {
+    "level": 2,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 366
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 366
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 366
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 390
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 390
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 390
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 390
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 390
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 390
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 390
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 391
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 391
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 391
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 391
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 391
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 391
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 391
+}, {
+    "level": 1,
+    "gold": 44000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 8,
+    "catalystIsEpic": false,
+    "skillId": 392
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 408
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 408
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 408
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 408
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 408
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 409
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 409
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 409
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 409
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 409
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 410
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 410
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 410
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 410
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 410
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 393
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 393
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 393
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 393
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 393
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 394
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 394
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 394
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 394
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 394
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 395
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 395
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 395
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 395
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 395
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 373
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 373
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 373
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 373
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 373
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 373
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 373
+}, {
+    "level": 1,
+    "gold": 44000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 8,
+    "catalystIsEpic": false,
+    "skillId": 374
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 22
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 22
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 22
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 22
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 22
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 23
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 23
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 23
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 23
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 23
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 24
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 24
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 24
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 24
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 24
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 414
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 414
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 414
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 414
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 414
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 415
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 415
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 415
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 415
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 415
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 416
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 416
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 416
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 416
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 416
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 384
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 384
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 384
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 384
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 384
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 385
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 385
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 385
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 385
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 385
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 386
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 386
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 386
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 386
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 386
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 396
+}, {
+    "level": 2,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 396
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 396
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 396
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 397
+}, {
+    "level": 2,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 397
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 397
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 397
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 398
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 398
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 398
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 398
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 398
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 398
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 398
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 411
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 411
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 411
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 411
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 411
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 412
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 412
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 412
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 412
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 412
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 413
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 413
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 413
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 413
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 413
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 402
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 402
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 402
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 402
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 402
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 403
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 403
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 403
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 403
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 403
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 404
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 404
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 404
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 404
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 404
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 417
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 417
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 417
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 417
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 417
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 418
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 418
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 418
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 418
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 418
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 419
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 419
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 419
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 419
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 419
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 405
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 405
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 405
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 405
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 405
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 406
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 406
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 406
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 406
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 406
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 407
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 407
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 407
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 407
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 407
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 150,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 399
+}, {
+    "level": 2,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 399
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 550,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 399
+}, {
+    "level": 4,
+    "gold": 35000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 399
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 150,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 400
+}, {
+    "level": 2,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 400
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 550,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 400
+}, {
+    "level": 4,
+    "gold": 35000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 400
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 401
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 401
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 401
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 401
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 401
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 401
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 401
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 421
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 421
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 421
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 422
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 422
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 422
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 422
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 422
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 422
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 423
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 423
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 423
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 423
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 423
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 423
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 430
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 430
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 430
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 430
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 430
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 430
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 431
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 431
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 431
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 432
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 432
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 432
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 432
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 432
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 432
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 34
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 34
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 34
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 34
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 34
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 35
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 35
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 35
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 35
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 35
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 36
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 36
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 36
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 36
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 36
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 436
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 436
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 436
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 436
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 436
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 437
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 437
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 437
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 437
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 437
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 438
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 438
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 438
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 438
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 438
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 433
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 433
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 433
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 433
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 433
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 433
+}, {
+    "level": 1,
+    "gold": 13000,
+    "molagara": 0,
+    "stigma": 200,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 434
+}, {
+    "level": 2,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 434
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 434
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 435
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 435
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 435
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 435
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 435
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 435
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 424
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 424
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 424
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 424
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 424
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 425
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 425
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 425
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 425
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 425
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 426
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 426
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 426
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 426
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 426
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 427
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 427
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 427
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 427
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 427
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 427
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 428
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 428
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 428
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 428
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 428
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 428
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 428
+}, {
+    "level": 1,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 250,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 429
+}, {
+    "level": 2,
+    "gold": 24000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 429
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 448
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 448
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 448
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 448
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 448
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 449
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 449
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 449
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 449
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 449
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 450
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 450
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 450
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 450
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 450
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 451
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 451
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 451
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 451
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 451
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 451
+}, {
+    "level": 1,
+    "gold": 13000,
+    "molagara": 0,
+    "stigma": 200,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 452
+}, {
+    "level": 2,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 452
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 452
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 453
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 453
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 453
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 453
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 453
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 453
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 442
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 442
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 442
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 442
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 442
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 442
+}, {
+    "level": 1,
+    "gold": 13000,
+    "molagara": 0,
+    "stigma": 200,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 443
+}, {
+    "level": 2,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 443
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 444
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 444
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 444
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 444
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 444
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 444
+}, {
+    "level": 7,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1050,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 444
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 478
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 478
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 478
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 478
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 478
+}, {
+    "level": 1,
+    "gold": 13000,
+    "molagara": 0,
+    "stigma": 200,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 479
+}, {
+    "level": 2,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 479
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 479
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 480
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 480
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 480
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 480
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 480
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 469
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 469
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 469
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 469
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 469
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 469
+}, {
+    "level": 1,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 250,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 470
+}, {
+    "level": 2,
+    "gold": 24000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 470
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 471
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 471
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 471
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 471
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 471
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 471
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 471
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 439
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 439
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 439
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 439
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 439
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 439
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 440
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 440
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 440
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 440
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 440
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 440
+}, {
+    "level": 7,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1050,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 440
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 441
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 441
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 37
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 37
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 37
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 37
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 37
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 38
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 38
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 38
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 38
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 38
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 39
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 39
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 39
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 39
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 39
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 475
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 475
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 475
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 475
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 475
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 475
+}, {
+    "level": 1,
+    "gold": 13000,
+    "molagara": 0,
+    "stigma": 200,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 476
+}, {
+    "level": 2,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 476
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 476
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 477
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 477
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 477
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 477
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 477
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 477
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 445
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 445
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 445
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 445
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 150,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 446
+}, {
+    "level": 2,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 446
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 550,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 446
+}, {
+    "level": 4,
+    "gold": 35000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 446
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 447
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 447
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 447
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 447
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 447
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 447
+}, {
+    "level": 7,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1050,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 447
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 454
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 454
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 454
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 454
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 150,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 455
+}, {
+    "level": 2,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 455
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 550,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 455
+}, {
+    "level": 4,
+    "gold": 35000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 455
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 456
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 456
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 456
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 456
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 456
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 456
+}, {
+    "level": 7,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1050,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 456
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 457
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 457
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 457
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 457
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 457
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 458
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 458
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 458
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 458
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 458
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 459
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 459
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 459
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 459
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 459
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 472
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 472
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 472
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 472
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 472
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 472
+}, {
+    "level": 1,
+    "gold": 13000,
+    "molagara": 0,
+    "stigma": 200,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 473
+}, {
+    "level": 2,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 473
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 473
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 474
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 474
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 474
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 474
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 474
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 474
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 460
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 460
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 460
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 460
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 460
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 461
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 461
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 461
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 461
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 461
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 462
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 462
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 462
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 462
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 462
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 463
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 463
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 463
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 463
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 463
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 464
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 464
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 464
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 464
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 464
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 465
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 465
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 465
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 465
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 465
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 466
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 466
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 466
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 466
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 466
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 466
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 467
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 467
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 467
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 467
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 467
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 467
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 467
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 150,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 468
+}, {
+    "level": 2,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 468
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 481
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 481
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 481
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 481
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 481
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 482
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 482
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 482
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 482
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 482
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 483
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 483
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 483
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 483
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 483
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 511
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 511
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 511
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 511
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 511
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 511
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 512
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 512
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 512
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 512
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 512
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 512
+}, {
+    "level": 1,
+    "gold": 13000,
+    "molagara": 0,
+    "stigma": 200,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 513
+}, {
+    "level": 2,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 513
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 513
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 10
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 10
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 10
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 10
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 10
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 11
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 11
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 11
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 11
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 11
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 12
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 12
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 12
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 12
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 12
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 496
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 496
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 496
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 496
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 496
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 496
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 496
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 497
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 497
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 497
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 497
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 497
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 497
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 497
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 498
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 484
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 484
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 484
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 484
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 484
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 484
+}, {
+    "level": 1,
+    "gold": 13000,
+    "molagara": 0,
+    "stigma": 200,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 485
+}, {
+    "level": 2,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 485
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 485
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 486
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 486
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 486
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 486
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 486
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 486
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 508
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 508
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 508
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 508
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 508
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 508
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 508
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 509
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 509
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 509
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 509
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 509
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 509
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 509
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 510
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 487
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 487
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 487
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 487
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 487
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 488
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 488
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 488
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 488
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 488
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 489
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 489
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 489
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 489
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 489
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 505
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 505
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 505
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 505
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 505
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 505
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 505
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 506
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 506
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 506
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 506
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 506
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 506
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 506
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 507
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 490
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 490
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 490
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 490
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 491
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 491
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 491
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 491
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 492
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 492
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 492
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 492
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 492
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 492
+}, {
+    "level": 7,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1050,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 492
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 502
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 502
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 502
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 502
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 502
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 502
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 502
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 503
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 503
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 503
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 503
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 503
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 503
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 504
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 493
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 493
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 493
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 493
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 493
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 493
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 494
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 494
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 494
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 495
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 495
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 495
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 495
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 495
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 495
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 514
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 514
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 514
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 514
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 514
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 514
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 514
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 515
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 516
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 516
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 516
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 516
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 516
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 516
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 516
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 150,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 523
+}, {
+    "level": 2,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 523
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 550,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 523
+}, {
+    "level": 4,
+    "gold": 35000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 523
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 150,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 524
+}, {
+    "level": 2,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 524
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 550,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 524
+}, {
+    "level": 4,
+    "gold": 35000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 524
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 525
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 525
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 525
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 525
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 525
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 525
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 525
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 58
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 58
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 58
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 58
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 58
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 58
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 58
+}, {
+    "level": 1,
+    "gold": 52000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 8,
+    "catalystIsEpic": false,
+    "skillId": 59
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 60
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 60
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 60
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 60
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 60
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 60
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 60
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 532
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 532
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 532
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 532
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 533
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 533
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 533
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 533
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 534
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 534
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 534
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 534
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 534
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 534
+}, {
+    "level": 7,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1050,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 534
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 517
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 517
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 517
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 517
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 517
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 518
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 518
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 518
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 518
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 518
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 519
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 519
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 519
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 519
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 519
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 526
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 526
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 526
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 526
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 526
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 527
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 527
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 527
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 527
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 527
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 528
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 528
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 528
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 528
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 528
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 529
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 529
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 529
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 529
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 529
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 529
+}, {
+    "level": 7,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1050,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 529
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 530
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 530
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 530
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 530
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 530
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 530
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 531
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 531
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 499
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 499
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 499
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 499
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 499
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 499
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 500
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 500
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 500
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 500
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 500
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 500
+}, {
+    "level": 1,
+    "gold": 13000,
+    "molagara": 0,
+    "stigma": 200,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 501
+}, {
+    "level": 2,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 501
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 501
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 535
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 535
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 535
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 535
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 535
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 535
+}, {
+    "level": 1,
+    "gold": 13000,
+    "molagara": 0,
+    "stigma": 200,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 536
+}, {
+    "level": 2,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 536
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 536
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 537
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 537
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 537
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 537
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 537
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 537
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 538
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 538
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 538
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 538
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 538
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 539
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 539
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 539
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 539
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 539
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 540
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 540
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 540
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 540
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 540
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 520
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 520
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 520
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 520
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 520
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 521
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 521
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 521
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 521
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 521
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 522
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 522
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 522
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 522
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 522
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 583
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 583
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 583
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 583
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 584
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 584
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 584
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 584
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 585
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 585
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 585
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 585
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 585
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 585
+}, {
+    "level": 7,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1050,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 585
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 49
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 49
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 49
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 49
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 49
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 50
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 50
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 50
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 50
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 50
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 51
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 51
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 51
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 51
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 51
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 541
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 541
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 541
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 541
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 541
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 541
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 541
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 542
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 542
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 542
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 542
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 542
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 542
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 543
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 562
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 562
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 562
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 562
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 562
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 562
+}, {
+    "level": 1,
+    "gold": 13000,
+    "molagara": 0,
+    "stigma": 200,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 563
+}, {
+    "level": 2,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 563
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 563
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 564
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 564
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 564
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 564
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 564
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 564
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 544
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 544
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 544
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 544
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 544
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 545
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 545
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 545
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 545
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 545
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 546
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 546
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 546
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 546
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 546
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 565
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 565
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 565
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 565
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 565
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 566
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 566
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 566
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 566
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 566
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 567
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 567
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 567
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 567
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 567
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 589
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 589
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 589
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 589
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 589
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 590
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 590
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 590
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 590
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 590
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 591
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 591
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 591
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 591
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 591
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 559
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 559
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 559
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 559
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 559
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 559
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 560
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 560
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 560
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 560
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 560
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 560
+}, {
+    "level": 7,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1050,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 560
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 561
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 561
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 547
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 547
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 547
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 547
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 547
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 548
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 548
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 548
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 548
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 548
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 549
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 549
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 549
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 549
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 549
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 556
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 556
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 556
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 556
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 556
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 556
+}, {
+    "level": 1,
+    "gold": 13000,
+    "molagara": 0,
+    "stigma": 200,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 557
+}, {
+    "level": 2,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 557
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 557
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 558
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 558
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 558
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 558
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 558
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 558
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 550
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 550
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 550
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 550
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 550
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 551
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 551
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 551
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 551
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 551
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 552
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 552
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 552
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 552
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 552
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 13
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 13
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 13
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 13
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 13
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 14
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 14
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 14
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 14
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 14
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 15
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 15
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 15
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 15
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 15
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 25
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 25
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 25
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 25
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 25
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 26
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 26
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 26
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 26
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 26
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 27
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 27
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 27
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 27
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 27
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 598
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 598
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 598
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 598
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 598
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 599
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 599
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 599
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 599
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 599
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 600
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 600
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 600
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 600
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 600
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 553
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 553
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 553
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 553
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 553
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 554
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 554
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 554
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 554
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 554
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 555
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 555
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 555
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 555
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 555
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 568
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 568
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 568
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 0,
+    "stigma": 530,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 568
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 0,
+    "stigma": 850,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 568
+}, {
+    "level": 6,
+    "gold": 48000,
+    "molagara": 0,
+    "stigma": 1340,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 568
+}, {
+    "level": 1,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 250,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 569
+}, {
+    "level": 2,
+    "gold": 24000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 569
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 570
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 570
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 570
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 570
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 570
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 570
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 570
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 586
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 586
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 586
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 586
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 586
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 587
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 587
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 587
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 587
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 587
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 588
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 588
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 588
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 588
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 588
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 595
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 595
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 595
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 595
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 595
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 595
+}, {
+    "level": 1,
+    "gold": 13000,
+    "molagara": 0,
+    "stigma": 200,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 596
+}, {
+    "level": 2,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 596
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 597
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 597
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 597
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 597
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 597
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 597
+}, {
+    "level": 7,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1050,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 597
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 592
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 592
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 592
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 592
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 592
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 592
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 593
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 593
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 593
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 593
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 593
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 593
+}, {
+    "level": 7,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1050,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 593
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 150,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 594
+}, {
+    "level": 2,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 594
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 571
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 571
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 571
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 571
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 571
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 572
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 572
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 572
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 572
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 572
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 573
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 573
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 573
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 573
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 573
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 577
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 577
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 577
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 577
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 577
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 578
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 578
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 578
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 578
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 578
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 579
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 579
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 579
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 579
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 579
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 150,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 580
+}, {
+    "level": 2,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 580
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 550,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 580
+}, {
+    "level": 4,
+    "gold": 35000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 580
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 150,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 581
+}, {
+    "level": 2,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 581
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 550,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 581
+}, {
+    "level": 4,
+    "gold": 35000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 581
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 582
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 582
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 582
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 582
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 582
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 582
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 582
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 574
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 574
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 574
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 574
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 574
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 575
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 575
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 575
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 575
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 575
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 576
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 576
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 576
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 576
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 576
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 43
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 43
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 43
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 43
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 43
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 44
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 44
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 44
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 44
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 44
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 45
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 45
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 45
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 45
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 45
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 601
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 601
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 601
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 601
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 601
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 602
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 602
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 602
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 602
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 602
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 603
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 603
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 603
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 603
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 603
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 150,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 607
+}, {
+    "level": 2,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 607
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 550,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 607
+}, {
+    "level": 4,
+    "gold": 35000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 607
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 150,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 608
+}, {
+    "level": 2,
+    "gold": 14000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 608
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 550,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 608
+}, {
+    "level": 4,
+    "gold": 35000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 608
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 609
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 609
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 609
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 609
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 609
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 609
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 609
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 604
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 604
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 604
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 604
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 604
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 604
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 80,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 605
+}, {
+    "level": 2,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 180,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 605
+}, {
+    "level": 3,
+    "gold": 10000,
+    "molagara": 0,
+    "stigma": 320,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 605
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 606
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 100,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 606
+}, {
+    "level": 3,
+    "gold": 3000,
+    "molagara": 0,
+    "stigma": 170,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 606
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 0,
+    "stigma": 280,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 606
+}, {
+    "level": 5,
+    "gold": 16000,
+    "molagara": 0,
+    "stigma": 450,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 606
+}, {
+    "level": 6,
+    "gold": 25000,
+    "molagara": 0,
+    "stigma": 700,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 606
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 610
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 610
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 610
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 610
+}, {
+    "level": 5,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 1150,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 610
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 611
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 611
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 611
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 611
+}, {
+    "level": 5,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 1150,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 611
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 605
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 605
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 605
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 605
+}, {
+    "level": 5,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 605
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 613
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 613
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 613
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 613
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 613
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 613
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 613
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 614
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 615
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 615
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 615
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 615
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 615
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 615
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 615
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 628
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 628
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 628
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 628
+}, {
+    "level": 5,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 628
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 629
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 629
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 629
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 629
+}, {
+    "level": 5,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 629
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 630
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 630
+}, {
+    "level": 3,
+    "gold": 23000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 630
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 630
+}, {
+    "level": 5,
+    "gold": 37000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 630
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 631
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 631
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 631
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 631
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 631
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 632
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 632
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 632
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 632
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 632
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 633
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 633
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 633
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 633
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 633
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 634
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 634
+}, {
+    "level": 3,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 634
+}, {
+    "level": 4,
+    "gold": 27000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 634
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 634
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 634
+}, {
+    "level": 7,
+    "gold": 32000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 634
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 635
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 635
+}, {
+    "level": 3,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 635
+}, {
+    "level": 4,
+    "gold": 27000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 635
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 635
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 635
+}, {
+    "level": 7,
+    "gold": 32000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 635
+}, {
+    "level": 1,
+    "gold": 64000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 8,
+    "catalystIsEpic": false,
+    "skillId": 636
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 637
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 637
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 637
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 637
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 637
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 637
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 637
+}, {
+    "level": 1,
+    "gold": 1000,
+    "molagara": 0,
+    "stigma": 50,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 638
+}, {
+    "level": 2,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 638
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 230,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 638
+}, {
+    "level": 4,
+    "gold": 21000,
+    "molagara": 0,
+    "stigma": 400,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 638
+}, {
+    "level": 5,
+    "gold": 29000,
+    "molagara": 0,
+    "stigma": 650,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 638
+}, {
+    "level": 6,
+    "gold": 39000,
+    "molagara": 0,
+    "stigma": 1000,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 638
+}, {
+    "level": 7,
+    "gold": 50000,
+    "molagara": 0,
+    "stigma": 1450,
+    "catalystCount": 6,
+    "catalystIsEpic": false,
+    "skillId": 638
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 300,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 639
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 640
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 640
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 640
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 640
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 640
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 641
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 641
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 641
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 641
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 641
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 642
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 642
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 642
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 642
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 642
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 82
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 82
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 82
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 82
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 82
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 82
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 83
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 83
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 83
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 84
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 84
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 84
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 84
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 84
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 84
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 643
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 643
+}, {
+    "level": 3,
+    "gold": 13000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 643
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 643
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 643
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 643
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 644
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 644
+}, {
+    "level": 3,
+    "gold": 13000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 644
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 644
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 644
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 644
+}, {
+    "level": 1,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 645
+}, {
+    "level": 2,
+    "gold": 23000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 645
+}, {
+    "level": 3,
+    "gold": 50000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 645
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 646
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 649
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 649
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 649
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 649
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 649
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 650
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 650
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 650
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 650
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 650
+}, {
+    "level": 1,
+    "gold": 2000,
+    "molagara": 0,
+    "stigma": 120,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 651
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 0,
+    "stigma": 270,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 651
+}, {
+    "level": 3,
+    "gold": 22000,
+    "molagara": 0,
+    "stigma": 470,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 651
+}, {
+    "level": 4,
+    "gold": 30000,
+    "molagara": 0,
+    "stigma": 740,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 651
+}, {
+    "level": 5,
+    "gold": 40000,
+    "molagara": 0,
+    "stigma": 1100,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 651
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 652
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 652
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 652
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 652
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 652
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 653
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 653
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 653
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 653
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 653
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 654
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 654
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 654
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 654
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 654
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 655
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 655
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 655
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 655
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 655
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 656
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 656
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 656
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 656
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 656
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 657
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 657
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 657
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 657
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 657
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 658
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 658
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 658
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 658
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 658
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 659
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 659
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 659
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 659
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 659
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 660
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 660
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 660
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 660
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 660
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 661
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 661
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 661
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 661
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 661
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 662
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 662
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 662
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 662
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 662
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 663
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 663
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 663
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 663
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 663
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 61
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 61
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 61
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 61
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 61
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 61
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 62
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 62
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 62
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 63
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 63
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 63
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 63
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 63
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 63
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 91
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 91
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 91
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 91
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 91
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 92
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 92
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 92
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 92
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 92
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 93
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 93
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 93
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 93
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 93
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 704
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 704
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 704
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 704
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 704
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 705
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 705
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 705
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 705
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 705
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 706
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 706
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 706
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 706
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 706
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 64
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 64
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 64
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 64
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 64
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 64
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 65
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 65
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 65
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 66
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 66
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 66
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 66
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 66
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 66
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 67
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 67
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 67
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 67
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 67
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 67
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 67
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 68
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 68
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 68
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 68
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 68
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 68
+}, {
+    "level": 1,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 69
+}, {
+    "level": 2,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 69
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 79
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 79
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 79
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 79
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 79
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 80
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 80
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 80
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 80
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 80
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 81
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 81
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 81
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 81
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 81
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 707
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 707
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 707
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 707
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 707
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 708
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 708
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 708
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 708
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 708
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 709
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 709
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 709
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 709
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 709
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 118
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 118
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 118
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 118
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 119
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 119
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 119
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 119
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 119
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 119
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 119
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 120
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 120
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 120
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 120
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 700
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 700
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 700
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 700
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 701
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 701
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 701
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 701
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 702
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 702
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 702
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 702
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 702
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 702
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 702
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 94
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 94
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 94
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 94
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 94
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 95
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 95
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 95
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 95
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 95
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 96
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 96
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 96
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 96
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 96
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 115
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 115
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 115
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 115
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 115
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 116
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 116
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 116
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 116
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 116
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 117
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 117
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 117
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 117
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 117
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 97
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 97
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 97
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 97
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 97
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 98
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 98
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 98
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 98
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 98
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 99
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 99
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 99
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 99
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 99
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 73
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 73
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 73
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 73
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 73
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 74
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 74
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 74
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 74
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 74
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 75
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 75
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 75
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 75
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 75
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 70
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 70
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 70
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 70
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 70
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 71
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 71
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 71
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 71
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 71
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 72
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 72
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 72
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 72
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 72
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 109
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 109
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 109
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 109
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 109
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 109
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 109
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 110
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 110
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 110
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 110
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 110
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 110
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 110
+}, {
+    "level": 1,
+    "gold": 52000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 8,
+    "catalystIsEpic": false,
+    "skillId": 111
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 76
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 76
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 76
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 76
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 76
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 77
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 77
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 77
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 77
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 77
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 78
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 78
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 78
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 78
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 78
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 100
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 100
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 100
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 100
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 100
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 101
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 101
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 101
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 101
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 101
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 102
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 102
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 102
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 102
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 102
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 112
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 112
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 112
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 112
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 112
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 112
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 112
+}, {
+    "level": 1,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 113
+}, {
+    "level": 2,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 113
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 114
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 114
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 114
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 114
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 114
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 114
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 106
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 106
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 106
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 106
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 107
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 107
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 107
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 107
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 108
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 108
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 108
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 108
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 108
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 108
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 108
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 52
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 52
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 52
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 52
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 52
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 52
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 53
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 53
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 53
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 54
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 54
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 54
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 54
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 54
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 54
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 88
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 88
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 88
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 88
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 88
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 89
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 89
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 89
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 89
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 89
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 90
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 90
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 90
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 90
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 90
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 103
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 103
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 103
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 103
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 103
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 103
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 104
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 104
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 104
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 105
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 105
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 105
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 105
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 105
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 105
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 85
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 85
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 85
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 85
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 85
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 85
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 86
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 86
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 86
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 87
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 87
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 87
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 87
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 87
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 87
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 127
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 127
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 127
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 127
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 127
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 128
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 128
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 128
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 128
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 128
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 129
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 129
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 129
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 129
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 129
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 124
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 124
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 124
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 124
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 124
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 124
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 125
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 125
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 125
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 125
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 125
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 125
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 125
+}, {
+    "level": 1,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 126
+}, {
+    "level": 2,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 126
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 130
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 130
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 130
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 130
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 130
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 131
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 131
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 131
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 131
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 131
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 132
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 132
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 132
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 132
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 132
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 121
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 121
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 121
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 121
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 121
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 122
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 122
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 122
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 122
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 122
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 123
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 123
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 123
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 123
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 123
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 133
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 133
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 133
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 133
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 133
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 134
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 134
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 134
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 134
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 134
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 135
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 135
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 135
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 135
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 135
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 139
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 139
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 139
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 139
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 139
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 139
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 140
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 140
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 140
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 141
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 141
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 141
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 141
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 141
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 141
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 136
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 136
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 136
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 136
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 136
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 137
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 137
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 137
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 137
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 137
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 138
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 138
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 138
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 138
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 138
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 4
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 4
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 4
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 4
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 5
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 5
+}, {
+    "level": 3,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 5
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 5
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 6
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 6
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 6
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 6
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 6
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 6
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 6
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 178
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 178
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 178
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 178
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 178
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 179
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 179
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 179
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 179
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 179
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 180
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 180
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 180
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 180
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 180
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 160
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 160
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 160
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 160
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 160
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 161
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 161
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 161
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 161
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 161
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 162
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 162
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 162
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 162
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 162
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 148
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 148
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 148
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 148
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 148
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 149
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 149
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 149
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 149
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 149
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 150
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 150
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 150
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 150
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 150
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 163
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 163
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 163
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 163
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 163
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 164
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 164
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 164
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 164
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 164
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 165
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 165
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 165
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 165
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 165
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 151
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 151
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 151
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 151
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 151
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 151
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 151
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 152
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 152
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 152
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 152
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 152
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 152
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 152
+}, {
+    "level": 1,
+    "gold": 52000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 8,
+    "catalystIsEpic": false,
+    "skillId": 153
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 154
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 154
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 154
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 154
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 154
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 154
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 155
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 155
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 155
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 156
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 156
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 156
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 156
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 156
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 156
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 710
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 710
+}, {
+    "level": 3,
+    "gold": 18000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 710
+}, {
+    "level": 4,
+    "gold": 32000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 710
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 710
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 710
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 711
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 711
+}, {
+    "level": 3,
+    "gold": 18000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 711
+}, {
+    "level": 4,
+    "gold": 32000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 711
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 711
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 711
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 712
+}, {
+    "level": 2,
+    "gold": 37000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 712
+}, {
+    "level": 3,
+    "gold": 114000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 712
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 169
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 169
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 169
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 169
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 169
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 170
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 170
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 170
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 170
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 170
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 171
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 171
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 171
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 171
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 171
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 172
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 172
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 172
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 172
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 172
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 173
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 173
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 173
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 173
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 173
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 174
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 174
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 174
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 174
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 174
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 166
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 166
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 166
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 166
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 166
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 167
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 167
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 167
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 167
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 167
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 168
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 168
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 168
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 168
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 168
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 46
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 46
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 46
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 46
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 46
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 46
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 47
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 47
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 47
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 48
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 48
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 48
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 48
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 48
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 48
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 145
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 145
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 145
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 145
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 145
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 146
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 146
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 146
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 146
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 146
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 147
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 147
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 147
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 147
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 147
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 157
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 157
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 157
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 157
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 157
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 158
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 158
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 158
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 158
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 158
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 159
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 159
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 159
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 159
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 159
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 713
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 713
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 713
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 713
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 713
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 714
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 714
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 714
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 714
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 714
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 715
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 715
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 715
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 715
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 715
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 175
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 175
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 175
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 175
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 175
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 176
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 176
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 176
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 176
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 176
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 177
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 177
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 177
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 177
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 177
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 142
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 142
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 142
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 143
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 143
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 143
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 143
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 143
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 143
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 144
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 144
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 144
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 144
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 144
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 144
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 196
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 196
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 196
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 196
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 196
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 197
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 197
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 197
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 197
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 197
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 198
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 198
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 198
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 198
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 198
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 184
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 184
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 184
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 184
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 184
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 184
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 184
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 185
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 185
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 185
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 185
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 185
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 185
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 185
+}, {
+    "level": 1,
+    "gold": 52000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 8,
+    "catalystIsEpic": false,
+    "skillId": 186
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 201
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 201
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 201
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 201
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 201
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 201
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 202
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 202
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 202
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 202
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 202
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 202
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 202
+}, {
+    "level": 1,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 203
+}, {
+    "level": 2,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 203
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 181
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 181
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 181
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 181
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 181
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 182
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 182
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 182
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 182
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 182
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 183
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 183
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 183
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 183
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 183
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 190
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 190
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 190
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 190
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 190
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 190
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 191
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 191
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 191
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 192
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 192
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 192
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 192
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 192
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 192
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 7
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 7
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 7
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 7
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 7
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 8
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 8
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 8
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 8
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 8
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 9
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 9
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 9
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 9
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 9
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 1
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 1
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 1
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 1
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 1
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 2
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 2
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 2
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 2
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 2
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 3
+}, {
+    "level": 2,
+    "gold": 8000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 3
+}, {
+    "level": 3,
+    "gold": 33000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 3
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 3
+}, {
+    "level": 5,
+    "gold": 84000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 3
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 193
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 193
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 193
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 193
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 193
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 194
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 194
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 194
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 194
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 194
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 195
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 195
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 195
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 195
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 195
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 213
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 213
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 213
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 213
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 213
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 214
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 214
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 214
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 214
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 214
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 215
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 215
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 215
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 215
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 215
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 187
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 187
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 187
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 187
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 187
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 188
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 188
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 188
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 188
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 188
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 189
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 189
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 189
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 189
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 189
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 199
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 199
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 199
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 199
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 199
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 200
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 200
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 200
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 200
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 200
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 210
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 210
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 210
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 210
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 210
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 211
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 211
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 211
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 211
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 211
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 212
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 212
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 212
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 212
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 212
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 216
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 216
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 216
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 216
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 216
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 216
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 217
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 217
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 217
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 218
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 218
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 218
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 218
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 218
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 218
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 231
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 231
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 231
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 231
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 231
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 231
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 231
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 232
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 232
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 232
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 232
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 232
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 232
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 232
+}, {
+    "level": 1,
+    "gold": 52000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 8,
+    "catalystIsEpic": false,
+    "skillId": 233
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 219
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 219
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 219
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 219
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 219
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 220
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 220
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 220
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 220
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 220
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 221
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 221
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 221
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 221
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 221
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 16
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 16
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 16
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 17
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 17
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 17
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 17
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 17
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 17
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 18
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 18
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 18
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 18
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 18
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 18
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 225
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 225
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 225
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 225
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 225
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 226
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 226
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 226
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 226
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 226
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 227
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 227
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 227
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 227
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 227
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 222
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 222
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 222
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 222
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 222
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 222
+}, {
+    "level": 1,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 223
+}, {
+    "level": 2,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 223
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 224
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 224
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 224
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 224
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 224
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 224
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 224
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 228
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 228
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 228
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 228
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 228
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 229
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 229
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 229
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 229
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 229
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 230
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 230
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 230
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 230
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 230
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 237
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 237
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 237
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 237
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 237
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 237
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 237
+}, {
+    "level": 1,
+    "gold": 52000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 8,
+    "catalystIsEpic": false,
+    "skillId": 238
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 239
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 239
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 239
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 239
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 239
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 239
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 239
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 204
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 204
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 204
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 204
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 204
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 204
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 204
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 205
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 205
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 205
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 205
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 205
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 205
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 205
+}, {
+    "level": 1,
+    "gold": 52000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 8,
+    "catalystIsEpic": false,
+    "skillId": 206
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 234
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 234
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 234
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 234
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 234
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 234
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 235
+}, {
+    "level": 2,
+    "gold": 33000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 235
+}, {
+    "level": 3,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 235
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 236
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 236
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 236
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 236
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 236
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 236
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 207
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 207
+}, {
+    "level": 3,
+    "gold": 14000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 207
+}, {
+    "level": 4,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 207
+}, {
+    "level": 5,
+    "gold": 45000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 207
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 207
+}, {
+    "level": 1,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 208
+}, {
+    "level": 2,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 208
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 209
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 209
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 209
+}, {
+    "level": 4,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 209
+}, {
+    "level": 5,
+    "gold": 32000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 209
+}, {
+    "level": 6,
+    "gold": 55000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 209
+}, {
+    "level": 7,
+    "gold": 110000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": true,
+    "skillId": 209
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 244
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 244
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 244
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 244
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 244
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 245
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 245
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 245
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 245
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 245
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 246
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 246
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 246
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 246
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 246
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 241
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 241
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 241
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 241
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 241
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 242
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 242
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 242
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 242
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 242
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 243
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 243
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 243
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 243
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 243
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 253
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 253
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 253
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 253
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 253
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 254
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 254
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 254
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 254
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 254
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 255
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 255
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 255
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 255
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 255
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 55
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 55
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 55
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 55
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 55
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 56
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 56
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 56
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 56
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 56
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 57
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 57
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 57
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 57
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 57
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 250
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 250
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 250
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 250
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 250
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 250
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 250
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 251
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 251
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 251
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 251
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 251
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 251
+}, {
+    "level": 1,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 252
+}, {
+    "level": 2,
+    "gold": 38000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 252
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 247
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 247
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 247
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 247
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 247
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 248
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 248
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 248
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 248
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 248
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 249
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 249
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 249
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 249
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 249
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 298
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 298
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 298
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 298
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 298
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 298
+}, {
+    "level": 1,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 299
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 299
+}, {
+    "level": 3,
+    "gold": 42000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 299
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 300
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 300
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 300
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 300
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 300
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 300
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 274
+}, {
+    "level": 2,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 274
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 274
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 274
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 275
+}, {
+    "level": 2,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 275
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 275
+}, {
+    "level": 4,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 275
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 276
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 276
+}, {
+    "level": 3,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 276
+}, {
+    "level": 4,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 276
+}, {
+    "level": 5,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 276
+}, {
+    "level": 6,
+    "gold": 37000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 276
+}, {
+    "level": 7,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 276
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 277
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 277
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 277
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 277
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 277
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 277
+}, {
+    "level": 1,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 278
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 278
+}, {
+    "level": 3,
+    "gold": 42000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 278
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 279
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 279
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 279
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 279
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 279
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 279
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 286
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 286
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 286
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 286
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 286
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 287
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 287
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 287
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 287
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 287
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 288
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 288
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 288
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 288
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 288
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 265
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 265
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 265
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 265
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 265
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 266
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 266
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 266
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 266
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 266
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 267
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 267
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 267
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 267
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 267
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 262
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 262
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 262
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 262
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 262
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 263
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 263
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 263
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 263
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 263
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 264
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 264
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 264
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 264
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 264
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 268
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 268
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 268
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 268
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 268
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 268
+}, {
+    "level": 1,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 269
+}, {
+    "level": 2,
+    "gold": 19000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 269
+}, {
+    "level": 3,
+    "gold": 42000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": true,
+    "skillId": 269
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 270
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 270
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 270
+}, {
+    "level": 4,
+    "gold": 18000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": false,
+    "skillId": 270
+}, {
+    "level": 5,
+    "gold": 28000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 4,
+    "catalystIsEpic": false,
+    "skillId": 270
+}, {
+    "level": 6,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 270
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 256
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 256
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 256
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 256
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 256
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 257
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 257
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 257
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 257
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 257
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 258
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 258
+}, {
+    "level": 3,
+    "gold": 9000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 1,
+    "catalystIsEpic": false,
+    "skillId": 258
+}, {
+    "level": 4,
+    "gold": 23000,
+    "molagara": 2,
+    "stigma": 0,
+    "catalystCount": 3,
+    "catalystIsEpic": false,
+    "skillId": 258
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 4,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 258
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 40
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 40
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 40
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 40
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 40
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 41
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 41
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 41
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 41
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 41
+}, {
+    "level": 1,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 42
+}, {
+    "level": 2,
+    "gold": 4000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 0,
+    "catalystIsEpic": false,
+    "skillId": 42
+}, {
+    "level": 3,
+    "gold": 29000,
+    "molagara": 1,
+    "stigma": 0,
+    "catalystCount": 5,
+    "catalystIsEpic": false,
+    "skillId": 42
+}, {
+    "level": 4,
+    "gold": 47000,
+    "molagara": 3,
+    "stigma": 0,
+    "catalystCount": 7,
+    "catalystIsEpic": false,
+    "skillId": 42
+}, {
+    "level": 5,
+    "gold": 80000,
+    "molagara": 5,
+    "stigma": 0,
+    "catalystCount": 2,
+    "catalystIsEpic": true,
+    "skillId": 42
+}]
+
+module.exports = enhancementList;
