@@ -15,6 +15,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const apollo_server_express_1 = require("apollo-server-express");
 const client_1 = require("@prisma/client");
+const schema_1 = require("./graphql/schema");
+const resolvers_1 = require("./graphql/resolvers");
 const prisma = new client_1.PrismaClient();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 3001;
@@ -22,32 +24,20 @@ const PORT = process.env.PORT || 3001;
 // The GraphQL schema
 function startApolloServer() {
     return __awaiter(this, void 0, void 0, function* () {
-        const typeDefs = (0, apollo_server_express_1.gql) `
-      type Query {
-        "A simple type for getting started!"
-        hello: String
-      }
-    `;
-        // A map of functions which return data for the schema.
-        const resolvers = {
-            Query: {
-                hello: () => 'world',
-            },
-        };
+        // A map of functions which return data for the schema.    
+        // typeDefs: "/server/graphql/schema.graphql",
         const apolloServer = new apollo_server_express_1.ApolloServer({
-            typeDefs,
-            resolvers,
-            context: {}
+            typeDefs: schema_1.typeDefs,
+            resolvers: resolvers_1.resolvers,
+            context: {
+                prisma
+            }
         });
         yield apolloServer.start();
         apolloServer.applyMiddleware({ app, path: '/api' });
     });
 }
 startApolloServer();
-app.get("/api/test", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const allUsers = yield prisma.unit.findMany();
-    res.send(allUsers);
-}));
 if (process.env.NODE_ENV === 'production') {
     // Express will serve up production assets like main.js/css file
     app.use(express_1.default.static('../client/build'));

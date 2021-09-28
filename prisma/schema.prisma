@@ -36,7 +36,7 @@ model Zodiac {
 model Skill {
   id   Int    @id @default(autoincrement())
   name String
-  code String 
+  code String
   type Int
 
   unitId Int
@@ -52,8 +52,8 @@ model Enhancement {
   molagara Int?
   stigma   Int?
 
-  catalystCount Int?
-  catalystIsEpic  Boolean?
+  catalystCount  Int?
+  catalystIsEpic Boolean?
 
   skillId Int
   skill   Skill @relation(fields: [skillId], references: [id])
@@ -70,7 +70,7 @@ model Catalyst {
   zodiacId      Int
   zodiac        Zodiac     @relation(fields: [zodiacId], references: [id])
   // Drop
-  dropLocations Drop[]     @relation(references: [id])
+  dropLocations Drop[]     
   // Region
   shopLocations ShopItem[]
 }
@@ -78,10 +78,10 @@ model Catalyst {
 model Drop {
   id Int @id @default(autoincrement())
 
-  stageId   Int
-  stage     Stage      @relation(fields: [stageId], references: [id])
-  catalystId  Int
-  catalyst Catalyst[] @relation(fields: [catalystId], references: [id])
+  stageId    Int
+  stage      Stage      @relation(fields: [stageId], references: [id])
+  catalystId Int
+  catalyst   Catalyst @relation(fields: [catalystId], references: [id])
 }
 
 model Stage {
@@ -130,7 +130,7 @@ model Awakening {
   attribute   Attribute @relation(fields: [attributeId], references: [id])
 
   runeCosts RuneCost[]
-  Zodiac    Zodiac?    @relation(fields: [zodiacId], references: [id])
+  zodiac    Zodiac?    @relation(fields: [zodiacId], references: [id])
   zodiacId  Int?
 }
 
