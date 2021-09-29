@@ -285,6 +285,15 @@ const catalystList = [{
     "zodiacId": 5,
     "isEpic": false,
     "isSkillMaterial": false
+  },
+  ,
+  {
+      "id": 37,
+      "name": "Placeholder",
+      "code": "Placeholder",
+      "zodiacId": 1,
+      "isEpic": false,
+      "isSkillMaterial": false
   }
 ]
 

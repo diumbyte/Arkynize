@@ -67,19 +67,20 @@ model Catalyst {
   isEpic          Boolean
   isSkillMaterial Boolean
 
-  zodiacId      Int
-  zodiac        Zodiac     @relation(fields: [zodiacId], references: [id])
+  zodiacId              Int
+  zodiac                Zodiac                  @relation(fields: [zodiacId], references: [id])
   // Drop
-  dropLocations Drop[]     
+  dropLocations         Drop[]
   // Region
-  shopLocations ShopItem[]
+  shopLocations         ShopItem[]
+  AwakeningCatalystCost AwakeningCatalystCost[]
 }
 
 model Drop {
   id Int @id @default(autoincrement())
 
   stageId    Int
-  stage      Stage      @relation(fields: [stageId], references: [id])
+  stage      Stage    @relation(fields: [stageId], references: [id])
   catalystId Int
   catalyst   Catalyst @relation(fields: [catalystId], references: [id])
 }
@@ -121,17 +122,17 @@ model Awakening {
   // This table more accurately represents the "cost" to get to this state
   // e.g Getting "state: 1" requires the materials in its row
   state         Int
-  catalystCount Int?
 
 
   rarityId    Int
   rarity      Rarity    @relation(fields: [rarityId], references: [id])
   attributeId Int
   attribute   Attribute @relation(fields: [attributeId], references: [id])
+  zodiacId              Int
+  zodiac                Zodiac                 @relation(fields: [zodiacId], references: [id])
 
-  runeCosts RuneCost[]
-  zodiac    Zodiac?    @relation(fields: [zodiacId], references: [id])
-  zodiacId  Int?
+  runeCosts             RuneCost[]
+  AwakeningCatalystCost AwakeningCatalystCost[]
 }
 
 model Rune {
@@ -140,6 +141,16 @@ model Rune {
   code String
 
   runeCosts RuneCost[]
+}
+
+model AwakeningCatalystCost {
+  id          Int @id @default(autoincrement())
+  count       Int
+  catalystId  Int
+  awakeningId Int
+
+  catalyst  Catalyst  @relation(fields: [catalystId], references: [id])
+  awakening Awakening @relation(fields: [awakeningId], references: [id])
 }
 
 model RuneCost {

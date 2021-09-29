@@ -168,16 +168,17 @@ exports.resolvers = {
         }),
         awakenings: (parent, { unitId }, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
             const unit = yield prisma.unit.findUnique({ where: { id: unitId } });
+            console.log(unit);
             return yield prisma.awakening.findMany({
                 where: {
                     rarityId: unit.rarityId,
                     attributeId: unit.attributeId,
-                    zodiacId: unit.zodiacId
                 },
                 include: {
                     attribute: true,
                     rarity: true,
-                    zodiac: true
+                    zodiac: true,
+                    runeCosts: true
                 },
                 orderBy: {
                     state: 'asc'

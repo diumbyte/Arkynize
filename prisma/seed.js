@@ -16,6 +16,7 @@ const runeCostList = require('./seedData/runeCostList.js')
 const dropList = require('./seedData/dropList.js')
 const skillList = require('./seedData/skillList.js')
 const enhancementList = require('./seedData/enhancementList.js')
+const awakeningCatalystCostList = require('./seedData/awakeningCatalystCostList.js')
 
 async function main() {
     
@@ -144,6 +145,16 @@ async function main() {
             }
         })
     }))
+    
+    // Awakening Catalyst Cost List
+    await Promise.all(awakeningCatalystCostList.map(async awakeningCatalystCost => {
+        await prisma.awakeningCatalystCost.create({
+            data: {
+                ...awakeningCatalystCost
+            }
+        })
+    }))
+    
 }
 
 main()

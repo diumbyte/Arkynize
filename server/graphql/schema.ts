@@ -14,7 +14,13 @@ type Query {
     shopItems(catalystId: Int!): [ShopItem]
     awakening(id: Int!): Awakening
     awakenings(unitId: Int!): [Awakening]
+    # getAwakeningCost(awakeningId: Int!): AwakeningCost
 }
+
+# type AwakeningCost {
+#   catalystAwakeningCost: [CatalystAwakeningCost]
+#   runeCost: [RuneCost]
+# }
 
 type Unit {
     id: Int!

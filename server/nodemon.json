@@ -2,5 +2,6 @@
     "ignore": ["../git", "../node_modules", "./dist"],
     "watch": ["./"],
     "exec": "npm start",
-    "ext": "ts"
+    "ext": "ts",
+    "delay": 2500
 }

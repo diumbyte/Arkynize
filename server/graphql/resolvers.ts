@@ -160,16 +160,19 @@ export const resolvers: Resolvers = {
         },
         awakenings: async (parent, { unitId }, { prisma } ) => {
             const unit = await prisma.unit.findUnique({where: {id: unitId}})
+
+            console.log(unit);
+            
             return await prisma.awakening.findMany({
                 where: { 
                     rarityId: unit.rarityId,
                     attributeId: unit.attributeId,
-                    zodiacId: unit.zodiacId
                 },
                 include: {
                     attribute: true,
                     rarity: true,
-                    zodiac: true
+                    zodiac: true,
+                    runeCosts: true
                 },
                 orderBy: {
                     state: 'asc'
