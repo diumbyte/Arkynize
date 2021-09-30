@@ -13,8 +13,7 @@ type Query {
     shopItem(catalystId: Int!, regionId: Int!): ShopItem
     shopItems(catalystId: Int!): [ShopItem]
     awakening(id: Int!): Awakening
-    awakenings(unitId: Int!): [Awakening]
-    # getAwakeningCost(awakeningId: Int!): AwakeningCost
+    getAwakeningsForUnit(unitId: Int!): [Awakening]
 }
 
 # type AwakeningCost {
@@ -95,12 +94,19 @@ type Region {
 type Awakening {
   id: Int!
   state: Int!
-  catalystCount: Int
 
   rarity: Rarity
   attribute: Attribute
-
   zodiac:    Zodiac
+
+  runeCosts: [RuneCost]
+  awakeningCatalystCost: AwakeningCatalystCost
+}
+
+type AwakeningCatalystCost {
+  id: Int!
+  count: Int!
+  catalyst: Catalyst
 }
 
 type Rune {
@@ -112,7 +118,6 @@ type Rune {
 type RuneCost {
   count: Int!
   rune: Rune
-  awakening: Awakening
 }
 
 type Rarity {

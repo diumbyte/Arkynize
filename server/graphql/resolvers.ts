@@ -1,4 +1,3 @@
-import { parentPort } from 'worker_threads'
 import { Resolvers } from './graphql'
 
 export const resolvers: Resolvers = {
@@ -154,25 +153,51 @@ export const resolvers: Resolvers = {
                 include: {
                     attribute: true,
                     rarity: true,
-                    zodiac: true
+                    zodiac: true,
+                    awakeningCatalystCost: {
+                        include: {
+                            catalyst: {
+                                include: {
+                                    zodiac: true
+                                }
+                            }
+                        }
+                    },
+                    runeCosts: {
+                        include: {
+                            rune: true
+                        }
+                    }
                 }
             })
         },
-        awakenings: async (parent, { unitId }, { prisma } ) => {
+        getAwakeningsForUnit: async (parent, { unitId }, { prisma } ) => {
             const unit = await prisma.unit.findUnique({where: {id: unitId}})
 
-            console.log(unit);
-            
             return await prisma.awakening.findMany({
                 where: { 
                     rarityId: unit.rarityId,
                     attributeId: unit.attributeId,
+                    zodiacId: unit.zodiacId
                 },
                 include: {
                     attribute: true,
                     rarity: true,
                     zodiac: true,
-                    runeCosts: true
+                    awakeningCatalystCost: {
+                        include: {
+                            catalyst: {
+                                include: {
+                                    zodiac: true
+                                }
+                            }
+                        }
+                    },
+                    runeCosts: {
+                        include: {
+                            rune: true
+                        }
+                    }
                 },
                 orderBy: {
                     state: 'asc'
@@ -259,7 +284,6 @@ export const resolvers: Resolvers = {
     Awakening: {
         id: (parent) => parent.id,
         state: (parent) => parent.state,
-        catalystCount: (parent) => parent.catalystCount,
         rarity: async (parent, args, {prisma}) => {
             return await prisma.rarity.findUnique({
                 where: {id: parent.rarity.id}
@@ -274,6 +298,40 @@ export const resolvers: Resolvers = {
             return await prisma.attribute.findUnique({
                 where: {id: parent.attribute.id}
             })
+        },
+        awakeningCatalystCost: async (parent, args, {prisma}) => {
+            return await prisma.awakeningCatalystCost.findUnique({
+                where: {awakeningId: parent.id},
+                include: {
+                    catalyst: {
+                        include: {
+                            zodiac: true
+                        }
+                    }
+                }
+            })
+        },
+        runeCosts: async (parent, args, {prisma}) => {
+            return await prisma.runeCost.findMany({
+                where: {
+                    awakeningId: parent.id
+                },
+                include: {
+                    rune: true
+                }
+            })
+        }
+    },
+    AwakeningCatalystCost: {
+        id: (parent) => parent.id,
+        count: (parent) => parent.count,
+        catalyst: async (parent, args, {prisma}) => {
+            return await prisma.catalyst.findUnique({
+                where: {id: parent.catalyst.id},
+                include: {
+                    zodiac: true
+                }
+            })
         }
     },
     RuneCost: {
@@ -281,16 +339,6 @@ export const resolvers: Resolvers = {
         rune: async (parent, args, {prisma}) => {
             return await prisma.rune.findUnique({
                 where: {id: parent.rune.id}
-            })
-        },
-        awakening: async (parent, args, {prisma}) => {
-            return await prisma.awakening.findUnique({
-                where: {id: parent.awakening.id},
-                include: {
-                    attribute: true,
-                    rarity: true,
-                    zodiac: true
-                }
             })
         }
     },

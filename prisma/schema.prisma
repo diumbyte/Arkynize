@@ -132,7 +132,7 @@ model Awakening {
   zodiac                Zodiac                 @relation(fields: [zodiacId], references: [id])
 
   runeCosts             RuneCost[]
-  AwakeningCatalystCost AwakeningCatalystCost[]
+  awakeningCatalystCost AwakeningCatalystCost?
 }
 
 model Rune {
@@ -147,7 +147,7 @@ model AwakeningCatalystCost {
   id          Int @id @default(autoincrement())
   count       Int
   catalystId  Int
-  awakeningId Int
+  awakeningId Int @unique
 
   catalyst  Catalyst  @relation(fields: [catalystId], references: [id])
   awakening Awakening @relation(fields: [awakeningId], references: [id])

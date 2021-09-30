@@ -20,7 +20,7 @@ type Query {
 }
 
 # type AwakeningCost {
-#   awakenings: [Awakening]
+#   catalystAwakeningCost: [CatalystAwakeningCost]
 #   runeCost: [RuneCost]
 # }
 
@@ -97,12 +97,19 @@ type Region {
 type Awakening {
   id: Int!
   state: Int!
-  catalystCount: Int
 
   rarity: Rarity
   attribute: Attribute
-
   zodiac:    Zodiac
+
+  runeCosts: [RuneCost]
+  awakeningCatalystCost: AwakeningCatalystCost
+}
+
+type AwakeningCatalystCost {
+  id: Int!
+  count: Int!
+  catalyst: Catalyst
 }
 
 type Rune {
@@ -114,7 +121,6 @@ type Rune {
 type RuneCost {
   count: Int!
   rune: Rune
-  awakening: Awakening
 }
 
 type Rarity {

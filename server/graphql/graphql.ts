@@ -23,11 +23,19 @@ export type Attribute = {
 export type Awakening = {
   __typename?: 'Awakening';
   attribute: Maybe<Attribute>;
-  catalystCount: Maybe<Scalars['Int']>;
+  awakeningCatalystCost: Maybe<AwakeningCatalystCost>;
   id: Scalars['Int'];
   rarity: Maybe<Rarity>;
+  runeCosts: Maybe<Array<Maybe<RuneCost>>>;
   state: Scalars['Int'];
   zodiac: Maybe<Zodiac>;
+};
+
+export type AwakeningCatalystCost = {
+  __typename?: 'AwakeningCatalystCost';
+  catalyst: Maybe<Catalyst>;
+  count: Scalars['Int'];
+  id: Scalars['Int'];
 };
 
 export type Catalyst = {
@@ -61,10 +69,10 @@ export type Enhancement = {
 export type Query = {
   __typename?: 'Query';
   awakening: Maybe<Awakening>;
-  awakenings: Maybe<Array<Maybe<Awakening>>>;
   catalyst: Maybe<Catalyst>;
   drop: Maybe<Drop>;
   drops: Maybe<Array<Maybe<Drop>>>;
+  getAwakeningsForUnit: Maybe<Array<Maybe<Awakening>>>;
   getSkillEnhancements: Maybe<Array<Maybe<Enhancement>>>;
   getUnitSkills: Maybe<Array<Maybe<Skill>>>;
   shopItem: Maybe<ShopItem>;
@@ -80,11 +88,6 @@ export type QueryAwakeningArgs = {
 };
 
 
-export type QueryAwakeningsArgs = {
-  unitId: Scalars['Int'];
-};
-
-
 export type QueryCatalystArgs = {
   id: Scalars['Int'];
 };
@@ -97,6 +100,11 @@ export type QueryDropArgs = {
 
 export type QueryDropsArgs = {
   catalystId: Scalars['Int'];
+};
+
+
+export type QueryGetAwakeningsForUnitArgs = {
+  unitId: Scalars['Int'];
 };
 
 
@@ -153,7 +161,6 @@ export type Rune = {
 
 export type RuneCost = {
   __typename?: 'RuneCost';
-  awakening: Maybe<Awakening>;
   count: Scalars['Int'];
   rune: Maybe<Rune>;
 };
@@ -273,6 +280,7 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 export type ResolversTypes = ResolversObject<{
   Attribute: ResolverTypeWrapper<Attribute>;
   Awakening: ResolverTypeWrapper<Awakening>;
+  AwakeningCatalystCost: ResolverTypeWrapper<AwakeningCatalystCost>;
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
   Catalyst: ResolverTypeWrapper<Catalyst>;
   Drop: ResolverTypeWrapper<Drop>;
@@ -295,6 +303,7 @@ export type ResolversTypes = ResolversObject<{
 export type ResolversParentTypes = ResolversObject<{
   Attribute: Attribute;
   Awakening: Awakening;
+  AwakeningCatalystCost: AwakeningCatalystCost;
   Boolean: Scalars['Boolean'];
   Catalyst: Catalyst;
   Drop: Drop;
@@ -321,11 +330,19 @@ export type AttributeResolvers<ContextType = Context, ParentType extends Resolve
 
 export type AwakeningResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Awakening'] = ResolversParentTypes['Awakening']> = ResolversObject<{
   attribute: Resolver<Maybe<ResolversTypes['Attribute']>, ParentType, ContextType>;
-  catalystCount: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
+  awakeningCatalystCost: Resolver<Maybe<ResolversTypes['AwakeningCatalystCost']>, ParentType, ContextType>;
   id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   rarity: Resolver<Maybe<ResolversTypes['Rarity']>, ParentType, ContextType>;
+  runeCosts: Resolver<Maybe<Array<Maybe<ResolversTypes['RuneCost']>>>, ParentType, ContextType>;
   state: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   zodiac: Resolver<Maybe<ResolversTypes['Zodiac']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+}>;
+
+export type AwakeningCatalystCostResolvers<ContextType = Context, ParentType extends ResolversParentTypes['AwakeningCatalystCost'] = ResolversParentTypes['AwakeningCatalystCost']> = ResolversObject<{
+  catalyst: Resolver<Maybe<ResolversTypes['Catalyst']>, ParentType, ContextType>;
+  count: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+  id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
@@ -359,10 +376,10 @@ export type EnhancementResolvers<ContextType = Context, ParentType extends Resol
 
 export type QueryResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
   awakening: Resolver<Maybe<ResolversTypes['Awakening']>, ParentType, ContextType, RequireFields<QueryAwakeningArgs, 'id'>>;
-  awakenings: Resolver<Maybe<Array<Maybe<ResolversTypes['Awakening']>>>, ParentType, ContextType, RequireFields<QueryAwakeningsArgs, 'unitId'>>;
   catalyst: Resolver<Maybe<ResolversTypes['Catalyst']>, ParentType, ContextType, RequireFields<QueryCatalystArgs, 'id'>>;
   drop: Resolver<Maybe<ResolversTypes['Drop']>, ParentType, ContextType, RequireFields<QueryDropArgs, 'id'>>;
   drops: Resolver<Maybe<Array<Maybe<ResolversTypes['Drop']>>>, ParentType, ContextType, RequireFields<QueryDropsArgs, 'catalystId'>>;
+  getAwakeningsForUnit: Resolver<Maybe<Array<Maybe<ResolversTypes['Awakening']>>>, ParentType, ContextType, RequireFields<QueryGetAwakeningsForUnitArgs, 'unitId'>>;
   getSkillEnhancements: Resolver<Maybe<Array<Maybe<ResolversTypes['Enhancement']>>>, ParentType, ContextType, RequireFields<QueryGetSkillEnhancementsArgs, 'skillId'>>;
   getUnitSkills: Resolver<Maybe<Array<Maybe<ResolversTypes['Skill']>>>, ParentType, ContextType, RequireFields<QueryGetUnitSkillsArgs, 'unitId'>>;
   shopItem: Resolver<Maybe<ResolversTypes['ShopItem']>, ParentType, ContextType, RequireFields<QueryShopItemArgs, 'catalystId' | 'regionId'>>;
@@ -394,7 +411,6 @@ export type RuneResolvers<ContextType = Context, ParentType extends ResolversPar
 }>;
 
 export type RuneCostResolvers<ContextType = Context, ParentType extends ResolversParentTypes['RuneCost'] = ResolversParentTypes['RuneCost']> = ResolversObject<{
-  awakening: Resolver<Maybe<ResolversTypes['Awakening']>, ParentType, ContextType>;
   count: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   rune: Resolver<Maybe<ResolversTypes['Rune']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
@@ -446,6 +462,7 @@ export type ZodiacResolvers<ContextType = Context, ParentType extends ResolversP
 export type Resolvers<ContextType = Context> = ResolversObject<{
   Attribute: AttributeResolvers<ContextType>;
   Awakening: AwakeningResolvers<ContextType>;
+  AwakeningCatalystCost: AwakeningCatalystCostResolvers<ContextType>;
   Catalyst: CatalystResolvers<ContextType>;
   Drop: DropResolvers<ContextType>;
   Enhancement: EnhancementResolvers<ContextType>;
