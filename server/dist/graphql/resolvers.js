@@ -601,7 +601,7 @@ exports.resolvers = {
         id: (parent) => parent.id,
         name: (parent) => parent.name,
         episode: (parent) => parent.episode,
-        region: (parent) => parent.region
+        chapter: (parent) => parent.chapter
     },
     Rune: {
         id: (parent) => parent.id,

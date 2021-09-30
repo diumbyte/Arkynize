@@ -128,10 +128,10 @@ export type Rarity = {
 
 export type Region = {
   __typename?: 'Region';
+  chapter: Scalars['String'];
   episode: Scalars['String'];
   id: Scalars['Int'];
   name: Scalars['String'];
-  region: Scalars['String'];
 };
 
 export type Rune = {
@@ -382,10 +382,10 @@ export type RarityResolvers<ContextType = Context, ParentType extends ResolversP
 }>;
 
 export type RegionResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Region'] = ResolversParentTypes['Region']> = ResolversObject<{
+  chapter: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   episode: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   name: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  region: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 

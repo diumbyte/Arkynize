@@ -80,7 +80,7 @@ type ShopItem {
 type Region {
   id: Int!
   episode: String!
-  region:  String!
+  chapter:  String!
   name:    String!
 }
 

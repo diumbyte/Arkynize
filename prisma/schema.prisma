@@ -110,7 +110,7 @@ model ShopItem {
 model Region {
   id      Int    @id @default(autoincrement())
   episode String
-  region  String
+  chapter  String
   name    String
 
   catalysts ShopItem[]
