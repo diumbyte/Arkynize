@@ -412,7 +412,7 @@ exports.resolvers = {
         id: (parent) => parent.id,
         level: (parent) => parent.level,
         gold: (parent) => parent.gold,
-        molagara: (parent) => parent.molagara,
+        molagora: (parent) => parent.molagora,
         stigma: (parent) => parent.stigma,
         enhancementCatalystCost: (parent, args, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
             return yield prisma.enhancementCatalystCost.findUnique({

@@ -39,7 +39,7 @@ type Enhancement {
     id: Int!
     level: Int!
     gold: Int!
-    molagara: Int!
+    molagora: Int!
     stigma: Int!
     enhancementCatalystCost: EnhancementCatalystCost
 }

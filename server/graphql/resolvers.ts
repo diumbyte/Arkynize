@@ -402,7 +402,7 @@ export const resolvers: Resolvers = {
         id: (parent) => parent.id,
         level: (parent) => parent.level,
         gold: (parent) => parent.gold,
-        molagara: (parent) => parent.molagara,
+        molagora: (parent) => parent.molagora,
         stigma: (parent) => parent.stigma,
         enhancementCatalystCost: async (parent, args, {prisma}) => {
             return await prisma.enhancementCatalystCost.findUnique({

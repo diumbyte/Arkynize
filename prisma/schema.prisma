@@ -49,7 +49,7 @@ model Enhancement {
   id       Int  @id @default(autoincrement())
   level    Int
   gold     Int
-  molagara Int?
+  molagora Int?
   stigma   Int?
 
   skillId Int

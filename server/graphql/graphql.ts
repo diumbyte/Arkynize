@@ -62,7 +62,7 @@ export type Enhancement = {
   gold: Scalars['Int'];
   id: Scalars['Int'];
   level: Scalars['Int'];
-  molagara: Scalars['Int'];
+  molagora: Scalars['Int'];
   stigma: Scalars['Int'];
 };
 
@@ -352,7 +352,7 @@ export type EnhancementResolvers<ContextType = Context, ParentType extends Resol
   gold: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   level: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  molagara: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+  molagora: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   stigma: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
