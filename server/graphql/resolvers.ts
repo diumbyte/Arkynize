@@ -37,11 +37,6 @@ export const resolvers: Resolvers = {
                 }
             })
         },
-        zodiac: async (parent, { id }, { prisma } ) => {
-            return await prisma.zodiac.findUnique({
-                where: {id}
-            })
-        },
         getUnitSkills: async (parent, { unitId }, { prisma } ) => {
             return await prisma.skill.findMany({
                 where: {unitId},
@@ -65,31 +60,6 @@ export const resolvers: Resolvers = {
                 }
             })
         },
-        catalyst: async (parent, { id }, { prisma } ) => {
-            return await prisma.catalyst.findUnique({
-                where: {id},
-                include: {
-                    zodiac: true
-                }
-            })
-        },
-        drop: async (parent, { id }, { prisma } ) => {
-            return await prisma.drop.findUnique({
-                where: {id},
-                include: {
-                    catalyst: {
-                        include: {
-                            zodiac: true
-                        }
-                    },
-                    stage: {
-                        include: {
-                            region: true
-                        }
-                    }
-                }
-            })
-        },
         drops: async (parent, { catalystId }, { prisma } ) => {
             return await prisma.drop.findMany({
                 where: {catalystId},
@@ -108,24 +78,6 @@ export const resolvers: Resolvers = {
                 },
                 orderBy: {
                     stageId: "asc"
-                }
-            })
-        },
-        shopItem: async (parent, { catalystId, regionId }, { prisma } ) => {
-            return await prisma.shopItem.findUnique({
-                where: {
-                    catalystId_regionId: {
-                        catalystId,
-                        regionId
-                    }
-                },
-                include: {
-                    catalyst: {
-                        include: {
-                            zodiac: true
-                        }
-                    },
-                    region: true
                 }
             })
         },
@@ -158,7 +110,21 @@ export const resolvers: Resolvers = {
                         include: {
                             catalyst: {
                                 include: {
-                                    zodiac: true
+                                    zodiac: true,
+                                    shopLocations: {
+                                        include: {
+                                            region: true
+                                        }
+                                    },
+                                    dropLocations: {
+                                        include: {
+                                            stage: {
+                                                include: {
+                                                    region: true
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -188,7 +154,21 @@ export const resolvers: Resolvers = {
                         include: {
                             catalyst: {
                                 include: {
-                                    zodiac: true
+                                    zodiac: true,
+                                    shopLocations: {
+                                        include: {
+                                            region: true
+                                        }
+                                    },
+                                    dropLocations: {
+                                        include: {
+                                            stage: {
+                                                include: {
+                                                    region: true
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -267,14 +247,6 @@ export const resolvers: Resolvers = {
     },
     ShopItem: {
         price: (parent) => parent.price,
-        catalyst: async (parent, args, {prisma}) => {
-            return await prisma.catalyst.findUnique({
-                where: {id: parent.catalyst.id},
-                include: {
-                    zodiac: true
-                }
-            })
-        },
         region: async (parent, args, {prisma}) => {
             return await prisma.region.findUnique({
                 where: {id: parent.region.id}
@@ -305,7 +277,21 @@ export const resolvers: Resolvers = {
                 include: {
                     catalyst: {
                         include: {
-                            zodiac: true
+                            zodiac: true,
+                            shopLocations: {
+                                include: {
+                                    region: true
+                                }
+                            },
+                            dropLocations: {
+                                include: {
+                                    stage: {
+                                        include: {
+                                            region: true
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -329,7 +315,21 @@ export const resolvers: Resolvers = {
             return await prisma.catalyst.findUnique({
                 where: {id: parent.catalyst.id},
                 include: {
-                    zodiac: true
+                    zodiac: true,
+                    dropLocations: {
+                        include: {
+                            stage: {
+                                include: {
+                                    region: true
+                                }
+                            }
+                        }
+                    },
+                    shopLocations: {
+                        include: {
+                            region: true
+                        }
+                    }
                 }
             })
         }
@@ -352,6 +352,30 @@ export const resolvers: Resolvers = {
             return await prisma.zodiac.findUnique({
                 where: {id: parent.zodiac.id}
             })
+        },
+        dropLocations: async (parent, args, {prisma}) => {
+            return await prisma.drop.findMany({
+                where: {
+                    catalystId: parent.id
+                },
+                include: {
+                    stage: {
+                        include:{
+                            region: true
+                        }
+                    }
+                }
+            })
+        },
+        shopLocations: async (parent, args, {prisma}) => {
+            return await prisma.shopItem.findMany({
+                where: {
+                    catalystId: parent.id
+                },
+                include: {
+                    region: true
+                }
+            })
         }
     },
     Drop: {
@@ -361,14 +385,6 @@ export const resolvers: Resolvers = {
                 where: {id: parent.stage.id},
                 include: {
                     region: true
-                }
-            })
-        },
-        catalyst: async (parent, args, {prisma}) => {
-            return await prisma.catalyst.findUnique({
-                where: {id: parent.catalyst.id},
-                include: {
-                    zodiac: true
                 }
             })
         }

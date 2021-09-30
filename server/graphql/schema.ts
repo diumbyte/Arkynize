@@ -4,22 +4,13 @@ export const typeDefs = gql`
 type Query {
     unit(id: Int!): Unit
     units: [Unit]
-    zodiac(id: Int!): Zodiac
     getUnitSkills(unitId: Int!): [Skill]
     getSkillEnhancements(skillId: Int!): [Enhancement]
-    catalyst(id: Int!): Catalyst
-    drop(id: Int!): Drop
     drops(catalystId: Int!): [Drop]
-    shopItem(catalystId: Int!, regionId: Int!): ShopItem
     shopItems(catalystId: Int!): [ShopItem]
     awakening(id: Int!): Awakening
     getAwakeningsForUnit(unitId: Int!): [Awakening]
 }
-
-# type AwakeningCost {
-#   catalystAwakeningCost: [CatalystAwakeningCost]
-#   runeCost: [RuneCost]
-# }
 
 type Unit {
     id: Int!
@@ -61,12 +52,14 @@ type Catalyst {
     isEpic: Boolean!
     isSkillMaterial: Boolean!
     zodiac: Zodiac
+
+    dropLocations: [Drop]
+    shopLocations: [ShopItem]
 }
 
 type Drop {
     id: Int!
     stage: Stage
-    catalyst: Catalyst
 }
 
 type Stage {
@@ -80,7 +73,6 @@ type Stage {
 
 type ShopItem {
   price: Int!
-  catalyst: Catalyst
   region:   Region
 }
 

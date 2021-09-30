@@ -73,7 +73,7 @@ model Catalyst {
   dropLocations         Drop[]
   // Region
   shopLocations         ShopItem[]
-  AwakeningCatalystCost AwakeningCatalystCost[]
+  awakeningCatalystCost AwakeningCatalystCost[]
 }
 
 model Drop {

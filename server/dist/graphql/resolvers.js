@@ -47,11 +47,6 @@ exports.resolvers = {
                 }
             });
         }),
-        zodiac: (parent, { id }, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
-            return yield prisma.zodiac.findUnique({
-                where: { id }
-            });
-        }),
         getUnitSkills: (parent, { unitId }, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
             return yield prisma.skill.findMany({
                 where: { unitId },
@@ -75,31 +70,6 @@ exports.resolvers = {
                 }
             });
         }),
-        catalyst: (parent, { id }, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
-            return yield prisma.catalyst.findUnique({
-                where: { id },
-                include: {
-                    zodiac: true
-                }
-            });
-        }),
-        drop: (parent, { id }, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
-            return yield prisma.drop.findUnique({
-                where: { id },
-                include: {
-                    catalyst: {
-                        include: {
-                            zodiac: true
-                        }
-                    },
-                    stage: {
-                        include: {
-                            region: true
-                        }
-                    }
-                }
-            });
-        }),
         drops: (parent, { catalystId }, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
             return yield prisma.drop.findMany({
                 where: { catalystId },
@@ -117,24 +87,6 @@ exports.resolvers = {
                 },
                 orderBy: {
                     stageId: "asc"
-                }
-            });
-        }),
-        shopItem: (parent, { catalystId, regionId }, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
-            return yield prisma.shopItem.findUnique({
-                where: {
-                    catalystId_regionId: {
-                        catalystId,
-                        regionId
-                    }
-                },
-                include: {
-                    catalyst: {
-                        include: {
-                            zodiac: true
-                        }
-                    },
-                    region: true
                 }
             });
         }),
@@ -167,7 +119,21 @@ exports.resolvers = {
                         include: {
                             catalyst: {
                                 include: {
-                                    zodiac: true
+                                    zodiac: true,
+                                    shopLocations: {
+                                        include: {
+                                            region: true
+                                        }
+                                    },
+                                    dropLocations: {
+                                        include: {
+                                            stage: {
+                                                include: {
+                                                    region: true
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -180,9 +146,8 @@ exports.resolvers = {
                 }
             });
         }),
-        awakenings: (parent, { unitId }, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
+        getAwakeningsForUnit: (parent, { unitId }, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
             const unit = yield prisma.unit.findUnique({ where: { id: unitId } });
-            console.log(unit);
             return yield prisma.awakening.findMany({
                 where: {
                     rarityId: unit.rarityId,
@@ -197,7 +162,21 @@ exports.resolvers = {
                         include: {
                             catalyst: {
                                 include: {
-                                    zodiac: true
+                                    zodiac: true,
+                                    shopLocations: {
+                                        include: {
+                                            region: true
+                                        }
+                                    },
+                                    dropLocations: {
+                                        include: {
+                                            stage: {
+                                                include: {
+                                                    region: true
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -278,14 +257,6 @@ exports.resolvers = {
     },
     ShopItem: {
         price: (parent) => parent.price,
-        catalyst: (parent, args, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
-            return yield prisma.catalyst.findUnique({
-                where: { id: parent.catalyst.id },
-                include: {
-                    zodiac: true
-                }
-            });
-        }),
         region: (parent, args, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
             return yield prisma.region.findUnique({
                 where: { id: parent.region.id }
@@ -316,7 +287,21 @@ exports.resolvers = {
                 include: {
                     catalyst: {
                         include: {
-                            zodiac: true
+                            zodiac: true,
+                            shopLocations: {
+                                include: {
+                                    region: true
+                                }
+                            },
+                            dropLocations: {
+                                include: {
+                                    stage: {
+                                        include: {
+                                            region: true
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -340,7 +325,21 @@ exports.resolvers = {
             return yield prisma.catalyst.findUnique({
                 where: { id: parent.catalyst.id },
                 include: {
-                    zodiac: true
+                    zodiac: true,
+                    dropLocations: {
+                        include: {
+                            stage: {
+                                include: {
+                                    region: true
+                                }
+                            }
+                        }
+                    },
+                    shopLocations: {
+                        include: {
+                            region: true
+                        }
+                    }
                 }
             });
         })
@@ -363,6 +362,30 @@ exports.resolvers = {
             return yield prisma.zodiac.findUnique({
                 where: { id: parent.zodiac.id }
             });
+        }),
+        dropLocations: (parent, args, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
+            return yield prisma.drop.findMany({
+                where: {
+                    catalystId: parent.id
+                },
+                include: {
+                    stage: {
+                        include: {
+                            region: true
+                        }
+                    }
+                }
+            });
+        }),
+        shopLocations: (parent, args, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
+            return yield prisma.shopItem.findMany({
+                where: {
+                    catalystId: parent.id
+                },
+                include: {
+                    region: true
+                }
+            });
         })
     },
     Drop: {
@@ -372,14 +395,6 @@ exports.resolvers = {
                 where: { id: parent.stage.id },
                 include: {
                     region: true
-                }
-            });
-        }),
-        catalyst: (parent, args, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
-            return yield prisma.catalyst.findUnique({
-                where: { id: parent.catalyst.id },
-                include: {
-                    zodiac: true
                 }
             });
         })
