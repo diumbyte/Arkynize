@@ -43,8 +43,7 @@ type Enhancement {
     gold: Int!
     molagara: Int!
     stigma: Int!
-    catalystCount: Int!
-    catalystIsEpic: Boolean!
+    enhancementCatalystCost: EnhancementCatalystCost
 }
 
 type Catalyst {
@@ -53,8 +52,8 @@ type Catalyst {
     code: String!
     isEpic: Boolean!
     isSkillMaterial: Boolean!
-    zodiac: Zodiac
 
+    zodiac: Zodiac
     dropLocations: [Drop]
     shopLocations: [ShopItem]
 }
@@ -98,6 +97,12 @@ type Awakening {
 }
 
 type AwakeningCatalystCost {
+  id: Int!
+  count: Int!
+  catalyst: Catalyst
+}
+
+type EnhancementCatalystCost {
   id: Int!
   count: Int!
   catalyst: Catalyst

@@ -11,7 +11,33 @@ export const resolvers: Resolvers = {
                     attribute: true,
                     skills: {
                         include: {
-                            enhancements: true
+                            enhancements: {
+                                include: {
+                                    enhancementCatalystCost: {
+                                        include: {
+                                            catalyst: {
+                                                include: {
+                                                    dropLocations: {
+                                                        include: {
+                                                            stage: {
+                                                                include: {
+                                                                    region: true
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    shopLocations: {
+                                                        include: {
+                                                            region: true
+                                                        }
+                                                    },
+                                                    zodiac: true
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         },
                         orderBy: {
                             type: "asc"
@@ -28,7 +54,33 @@ export const resolvers: Resolvers = {
                     attribute: true,
                     skills: {
                         include: {
-                            enhancements: true
+                            enhancements: {
+                                include: {
+                                    enhancementCatalystCost: {
+                                        include: {
+                                            catalyst: {
+                                                include: {
+                                                    dropLocations: {
+                                                        include: {
+                                                            stage: {
+                                                                include: {
+                                                                    region: true
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    shopLocations: {
+                                                        include: {
+                                                            region: true
+                                                        }
+                                                    },
+                                                    zodiac: true
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         },
                         orderBy: {
                             type: "asc"
@@ -42,6 +94,31 @@ export const resolvers: Resolvers = {
                 where: {unitId},
                 include: {
                     enhancements: {
+                        include: {
+                            enhancementCatalystCost: {
+                                include: {
+                                    catalyst: {
+                                        include: {
+                                            dropLocations: {
+                                                include: {
+                                                    stage: {
+                                                        include: {
+                                                            region: true
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            shopLocations: {
+                                                include: {
+                                                    region: true
+                                                }
+                                            },
+                                            zodiac: true
+                                        }
+                                    }
+                                }
+                            }
+                        },
                         orderBy: {
                             level: "asc"
                         }
@@ -55,6 +132,31 @@ export const resolvers: Resolvers = {
         getSkillEnhancements: async (parent, { skillId }, { prisma } ) => {
             return await prisma.enhancement.findMany({
                 where: {skillId},
+                include: {
+                    enhancementCatalystCost: {
+                        include: {
+                            catalyst: {
+                                include: {
+                                    dropLocations: {
+                                        include: {
+                                            stage: {
+                                                include: {
+                                                    region: true
+                                                }
+                                            }
+                                        }
+                                    },
+                                    shopLocations: {
+                                        include: {
+                                            region: true
+                                        }
+                                    },
+                                    zodiac: true
+                                }
+                            }
+                        }
+                    }
+                },
                 orderBy: {
                     level: "asc"
                 }
@@ -212,7 +314,39 @@ export const resolvers: Resolvers = {
             return await prisma.skill.findMany({
                 where: {unitId: parent.id},
                 include: {
-                    enhancements: true
+                    enhancements: {
+                        include: {
+                            enhancementCatalystCost: {
+                                include: {
+                                    catalyst: {
+                                        include: {
+                                            dropLocations: {
+                                                include: {
+                                                    stage: {
+                                                        include: {
+                                                            region: true
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            shopLocations: {
+                                                include: {
+                                                    region: true
+                                                }
+                                            },
+                                            zodiac: true
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        orderBy: {
+                            level: "asc"
+                        }
+                    }
+                },
+                orderBy: {
+                    type: "asc"
                 }
             })
         }
@@ -232,7 +366,35 @@ export const resolvers: Resolvers = {
         type: (parent) => parent.type,
         enhancements: async (parent, args, {prisma}) => {
             return await prisma.enhancement.findMany({
-                where: {skillId: parent.id}
+                where: {skillId: parent.id},
+                include: {
+                    enhancementCatalystCost: {
+                        include: {
+                            catalyst: {
+                                include: {
+                                    dropLocations: {
+                                        include: {
+                                            stage: {
+                                                include: {
+                                                    region: true
+                                                }
+                                            }
+                                        }
+                                    },
+                                    shopLocations: {
+                                        include: {
+                                            region: true
+                                        }
+                                    },
+                                    zodiac: true
+                                }
+                            }
+                        }
+                    }
+                },
+                orderBy: {
+                    level: "asc"
+                }
             })
         }
     },
@@ -242,8 +404,32 @@ export const resolvers: Resolvers = {
         gold: (parent) => parent.gold,
         molagara: (parent) => parent.molagara,
         stigma: (parent) => parent.stigma,
-        catalystCount: (parent) => parent.catalystCount,
-        catalystIsEpic: (parent) => parent.catalystIsEpic
+        enhancementCatalystCost: async (parent, args, {prisma}) => {
+            return await prisma.enhancementCatalystCost.findUnique({
+                where: {enhancementId: parent.id},
+                include: {
+                    catalyst: {
+                        include: {
+                            dropLocations: {
+                                include: {
+                                    stage: {
+                                        include: {
+                                            region: true
+                                        }
+                                    }
+                                }
+                            },
+                            shopLocations: {
+                                include: {
+                                    region: true
+                                }
+                            },
+                            zodiac: true
+                        }
+                    }
+                }
+            })
+        }
     },
     ShopItem: {
         price: (parent) => parent.price,
@@ -415,5 +601,31 @@ export const resolvers: Resolvers = {
     Attribute: {
         id: (parent) => parent.id,
         name: (parent) => parent.name
+    },
+    EnhancementCatalystCost: {
+        id: (parent) => parent.id,
+        count: (parent) => parent.count,
+        catalyst: async (parent, args, {prisma}) => {
+            return await prisma.catalyst.findUnique({
+                where: {id: parent.catalyst.id},
+                include: {
+                    zodiac: true,
+                    shopLocations: {
+                        include: {
+                            region: true
+                        }
+                    },
+                    dropLocations: {
+                        include: {
+                            stage: {
+                                include: {
+                                    region: true
+                                }
+                            }
+                        }
+                    }
+                }
+            })
+        }
     }
 }

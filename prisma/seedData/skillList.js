@@ -895,6 +895,13 @@ const skillList = [
     "type": 1
   },
   {
+    "id": 717,
+    "unitId": 139,
+    "name": "Chivalry",
+    "code": "sk_c2036_2",
+    "type": 2
+  },
+  {
     "id": 374,
     "unitId": 139,
     "name": "Oath of Protection",
@@ -2815,9 +2822,9 @@ const skillList = [
     "code": "sk_c6011_3",
     "type": 3
   },
-  { "id": 661, "unitId": 226, "name": "", "code": "sk_c6012_1", "type": 1 },
-  { "id": 662, "unitId": 226, "name": "", "code": "sk_c6012_2", "type": 2 },
-  { "id": 663, "unitId": 226, "name": "", "code": "sk_c6012_3", "type": 3 },
+  { "id": 661, "unitId": 226, "name": "Are you the Culprit?", "code": "sk_c6012_1", "type": 1 },
+  { "id": 662, "unitId": 226, "name": "Suppression Attempt", "code": "sk_c6012_2", "type": 2 },
+  { "id": 663, "unitId": 226, "name": "Sword of Flowers!", "code": "sk_c6012_3", "type": 3 },
   {
     "id": 91,
     "unitId": 23,
@@ -3934,6 +3941,13 @@ const skillList = [
     "name": "Gunflame",
     "code": "sk_c1092_1",
     "type": 1
+  },
+  {
+    "id": 716,
+    "unitId": 74,
+    "name": "Volcanic Viper",
+    "code": "sk_c1092_2",
+    "type": 2
   },
   {
     "id": 200,

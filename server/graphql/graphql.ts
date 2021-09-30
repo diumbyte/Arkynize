@@ -58,13 +58,19 @@ export type Drop = {
 
 export type Enhancement = {
   __typename?: 'Enhancement';
-  catalystCount: Scalars['Int'];
-  catalystIsEpic: Scalars['Boolean'];
+  enhancementCatalystCost: Maybe<EnhancementCatalystCost>;
   gold: Scalars['Int'];
   id: Scalars['Int'];
   level: Scalars['Int'];
   molagara: Scalars['Int'];
   stigma: Scalars['Int'];
+};
+
+export type EnhancementCatalystCost = {
+  __typename?: 'EnhancementCatalystCost';
+  catalyst: Maybe<Catalyst>;
+  count: Scalars['Int'];
+  id: Scalars['Int'];
 };
 
 export type Query = {
@@ -260,6 +266,7 @@ export type ResolversTypes = ResolversObject<{
   Catalyst: ResolverTypeWrapper<Catalyst>;
   Drop: ResolverTypeWrapper<Drop>;
   Enhancement: ResolverTypeWrapper<Enhancement>;
+  EnhancementCatalystCost: ResolverTypeWrapper<EnhancementCatalystCost>;
   Int: ResolverTypeWrapper<Scalars['Int']>;
   Query: ResolverTypeWrapper<{}>;
   Rarity: ResolverTypeWrapper<Rarity>;
@@ -283,6 +290,7 @@ export type ResolversParentTypes = ResolversObject<{
   Catalyst: Catalyst;
   Drop: Drop;
   Enhancement: Enhancement;
+  EnhancementCatalystCost: EnhancementCatalystCost;
   Int: Scalars['Int'];
   Query: {};
   Rarity: Rarity;
@@ -340,13 +348,19 @@ export type DropResolvers<ContextType = Context, ParentType extends ResolversPar
 }>;
 
 export type EnhancementResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Enhancement'] = ResolversParentTypes['Enhancement']> = ResolversObject<{
-  catalystCount: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  catalystIsEpic: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
+  enhancementCatalystCost: Resolver<Maybe<ResolversTypes['EnhancementCatalystCost']>, ParentType, ContextType>;
   gold: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   level: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   molagara: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   stigma: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+}>;
+
+export type EnhancementCatalystCostResolvers<ContextType = Context, ParentType extends ResolversParentTypes['EnhancementCatalystCost'] = ResolversParentTypes['EnhancementCatalystCost']> = ResolversObject<{
+  catalyst: Resolver<Maybe<ResolversTypes['Catalyst']>, ParentType, ContextType>;
+  count: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+  id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
@@ -437,6 +451,7 @@ export type Resolvers<ContextType = Context> = ResolversObject<{
   Catalyst: CatalystResolvers<ContextType>;
   Drop: DropResolvers<ContextType>;
   Enhancement: EnhancementResolvers<ContextType>;
+  EnhancementCatalystCost: EnhancementCatalystCostResolvers<ContextType>;
   Query: QueryResolvers<ContextType>;
   Rarity: RarityResolvers<ContextType>;
   Region: RegionResolvers<ContextType>;

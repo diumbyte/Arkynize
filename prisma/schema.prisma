@@ -52,11 +52,10 @@ model Enhancement {
   molagara Int?
   stigma   Int?
 
-  catalystCount  Int?
-  catalystIsEpic Boolean?
-
   skillId Int
   skill   Skill @relation(fields: [skillId], references: [id])
+
+  enhancementCatalystCost EnhancementCatalystCost?
 }
 
 model Catalyst {
@@ -74,6 +73,7 @@ model Catalyst {
   // Region
   shopLocations         ShopItem[]
   awakeningCatalystCost AwakeningCatalystCost[]
+  enhancementCatalystCost EnhancementCatalystCost[]
 }
 
 model Drop {
@@ -177,4 +177,14 @@ model Attribute {
 
   awakenings Awakening[]
   units      Unit[]
+}
+
+model EnhancementCatalystCost {
+  id  Int @id @default(autoincrement())
+  count Int
+  catalystId  Int
+  enhancementId Int @unique
+
+  catalyst  Catalyst  @relation(fields: [catalystId], references: [id])
+  enhancement Enhancement @relation(fields: [enhancementId], references: [id])
 }

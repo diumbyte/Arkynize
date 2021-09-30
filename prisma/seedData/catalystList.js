@@ -286,12 +286,11 @@ const catalystList = [{
     "isEpic": false,
     "isSkillMaterial": false
   },
-  ,
   {
       "id": 37,
       "name": "Placeholder",
       "code": "Placeholder",
-      "zodiacId": 1,
+      "zodiacId": 13,
       "isEpic": false,
       "isSkillMaterial": false
   }

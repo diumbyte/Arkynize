@@ -1,12 +1,7 @@
 General: 
   ☐ Yup for JS validation on both frontend and backend
 Server:
-  ☐ Install and configure TypeScript
-  ☐ Decide between TypeORM/Prisma
-    ☐ Setup DB configuration.
-    ☐ This includes Data Modeling. I should be able to just use a similar structure from GWScouter
-  ☐ Dont forget I installed TablePlus to preview databases
-  ☐ Decide on REST vs GraphQL
+  ☐ Normalize Enhancements (Separate catalyst cost like I did for Awakenings)
 Client: 
   ✔ Install and configure TypeScript @done(21-09-07 21:03)
   ☐ Install and learn Formik

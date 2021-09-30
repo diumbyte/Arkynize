@@ -10,7 +10,8 @@ const zodiacList = [
     {id: 9, name: "sagittarius"},
     {id: 10, name: "capricorn"},
     {id: 11, name: "aquarius"},
-    {id: 12, name: "pisces"}
+    {id: 12, name: "pisces"},
+    {id: 13, name: "placeholder"}
 ]
 
 module.exports = zodiacList;
