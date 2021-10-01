@@ -1,7 +1,7 @@
 General: 
   ☐ Yup for JS validation on both frontend and backend
 Server:
-  ☐ Normalize Enhancements (Separate catalyst cost like I did for Awakenings)
+  ✔ Normalize Enhancements (Separate catalyst cost like I did for Awakenings) @done(21-09-30 22:11)
 Client: 
   ✔ Install and configure TypeScript @done(21-09-07 21:03)
   ☐ Install and learn Formik

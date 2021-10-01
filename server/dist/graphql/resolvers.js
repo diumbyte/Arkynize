@@ -560,7 +560,28 @@ exports.resolvers = {
                             region: true
                         }
                     }
-                }
+                },
+                orderBy: [
+                    {
+                        stage: {
+                            region: {
+                                episode: "asc"
+                            }
+                        }
+                    },
+                    {
+                        stage: {
+                            region: {
+                                chapter: "asc"
+                            }
+                        }
+                    },
+                    {
+                        stage: {
+                            instance: "asc"
+                        }
+                    }
+                ]
             });
         }),
         shopLocations: (parent, args, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
@@ -570,7 +591,19 @@ exports.resolvers = {
                 },
                 include: {
                     region: true
-                }
+                },
+                orderBy: [
+                    {
+                        region: {
+                            episode: "asc"
+                        }
+                    },
+                    {
+                        region: {
+                            chapter: "asc"
+                        }
+                    }
+                ]
             });
         })
     },

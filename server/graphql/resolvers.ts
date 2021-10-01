@@ -550,7 +550,28 @@ export const resolvers: Resolvers = {
                             region: true
                         }
                     }
-                }
+                },
+                orderBy: [
+                    {
+                        stage: {
+                            region: {
+                                episode: "asc"
+                            }
+                        }
+                    },
+                    {
+                        stage: {
+                            region: {
+                                chapter: "asc"
+                            }
+                        }
+                    },
+                    {
+                        stage: {
+                            instance: "asc"
+                        }
+                    }
+                ]
             })
         },
         shopLocations: async (parent, args, {prisma}) => {
@@ -560,7 +581,19 @@ export const resolvers: Resolvers = {
                 },
                 include: {
                     region: true
-                }
+                },
+                orderBy: [
+                    {
+                        region: {
+                            episode: "asc"
+                        }
+                    },
+                    {
+                        region: {
+                            chapter: "asc"
+                        }
+                    }
+                ]
             })
         }
     },
