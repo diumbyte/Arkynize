@@ -192,13 +192,18 @@ export type Zodiac = {
 export type GetAllUnitsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetAllUnitsQuery = { __typename?: 'Query', units?: Array<{ __typename?: 'Unit', name: string } | null | undefined> | null | undefined };
+export type GetAllUnitsQuery = { __typename?: 'Query', units?: Array<{ __typename?: 'Unit', id: number, name: string, code: string, zodiac?: { __typename?: 'Zodiac', name: string } | null | undefined } | null | undefined> | null | undefined };
 
 
 export const GetAllUnitsDocument = gql`
     query getAllUnits {
   units {
+    id
     name
+    zodiac {
+      name
+    }
+    code
   }
 }
     `;

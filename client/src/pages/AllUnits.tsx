@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom"
 
 export const AllUnits = () => {
     const history = useHistory();
-    const { data } = useGetAllUnitsQuery();
+    const { data, loading, error } = useGetAllUnitsQuery();
 
     console.log(data);
     
@@ -13,10 +13,20 @@ export const AllUnits = () => {
             <button onClick={() => history.push("/")}>Home</button>
             <h1>List of Units:</h1>
             <ul>
-                { data?.units?.length === 0 ? (
+                { loading ? (
                     <h6>No units yet</h6>
                 ) : (
-                    data?.units?.map(unit => <li key={unit?.name}>{unit?.name}</li>)
+                    data?.units?.map(unit => {
+                    return (<li key={unit?.name}>
+                        <div>
+                            <h1>{unit?.name}</h1>
+                            <img 
+                                src={`${process.env.PUBLIC_URL}/assets/images/hero/icon/${unit?.code}.png`}
+                                alt={`${unit?.name} icon`}
+                            />
+                        </div>
+                    </li>)
+                })
                 )
                 }
             </ul>
