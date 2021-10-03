@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Logo as LogoComponent } from './Logo';
 import { SidebarItem } from './SidebarItem';
 import {ReactComponent as AddIcon} from "../../assets/add.svg" 
 import {ReactComponent as SummaryIcon} from "../../assets/summary.svg" 
+import {ReactComponent as BurgerIcon } from "../../assets/burger.svg"
 
-export const Sidebar = () => {
+type SidebarProps = {
+    isExpanded: boolean
+}
+
+export const Sidebar = ({
+    isExpanded
+}: SidebarProps) => {
+    
     return (
-        <nav className={`flex flex-col h-full bg-primaryBlue w-72 pt-16`}>
+        <nav 
+            className={`relative z-30 flex flex-col h-full bg-primaryBlue w-72 transition duration-300 ease-out 
+            transform translate-x-0
+            ${isExpanded ? "ease-out translate-x-0" : "ease-in -translate-x-full"}`
+            }
+        >
             <LogoComponent />
-            <div className={`mt-10`}>
+            <div className={``}>
                 <SidebarItem 
                     title="All Units"
                     destination="units"

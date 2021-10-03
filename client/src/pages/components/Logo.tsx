@@ -5,9 +5,13 @@ import {ReactComponent as LogoIcon} from "../../assets/logo.svg";
 
 export const Logo: React.FC = () => {
     return (
-        <Link className="row" to="/">
-            <LogoIcon />
-            <span className="text-3xl font-bold leading-10 ml-6">E7Planner</span>
+        <Link className="row border-b pb-2 border-primaryBlue-light pt-8 pb-8" to="/">
+            <LogoIcon 
+                width={60}
+                height={60}
+                fill={"#fff"}
+            />
+            <span className="text-3xl font-bold leading-10 ml-6 text-white">E7Planner</span>
         </Link>
     )
 }
