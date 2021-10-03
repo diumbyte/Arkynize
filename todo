@@ -8,6 +8,8 @@ Client:
     ☐ Do I really need Formik? The only form Ill really need is the Search for characters and to input the number of materials a user has
     * One of the Twitch devs I follow suggested against it. react-form-hooks instead
   ☐ Look into HookState
+  ☐ useEffect - If I have to call a function inside it either define it within useEffect or outside the component
+    ☐ https://stackoverflow.com/questions/56410369/can-i-call-separate-function-in-useeffect
 
 Notes:
   ☐ `npx tsc --init` to create a tsconfig.json file after installing Typescript and the necessary complementary @types packages for w/e Im working with.

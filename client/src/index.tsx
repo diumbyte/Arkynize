@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { InMemoryCache, ApolloClient, ApolloProvider } from '@apollo/client';
+import { BrowserRouter as Router } from "react-router-dom"
+
 
 const cache = new InMemoryCache();
 const client = new ApolloClient({
@@ -15,7 +17,9 @@ const client = new ApolloClient({
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')

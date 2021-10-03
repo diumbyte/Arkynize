@@ -9,21 +9,21 @@ export const AllUnits = () => {
     console.log(data);
     
     return (
-        <div>
-            <button onClick={() => history.push("/")}>Home</button>
+        <div className="h-auto">
             <h1>List of Units:</h1>
-            <ul>
+            <ul className="flex flex-col">
                 { loading ? (
                     <h6>No units yet</h6>
                 ) : (
                     data?.units?.map(unit => {
-                    return (<li key={unit?.name}>
+                    return (
+                    <li key={unit?.id}>
                         <div>
                             <h1>{unit?.name}</h1>
-                            <img 
+                            {/* <img 
                                 src={`${process.env.PUBLIC_URL}/assets/images/hero/icon/${unit?.code}.png`}
                                 alt={`${unit?.name} icon`}
-                            />
+                            /> */}
                         </div>
                     </li>)
                 })
