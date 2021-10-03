@@ -17,8 +17,6 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
     let location = useLocation()
     const isActive = location.pathname.substring(1) === destination
 
-    console.log("location.pathname", location.pathname);
-    console.log("destination", destination)
     return (
         <NavLink 
             to={`/${destination}`}

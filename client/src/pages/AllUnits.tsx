@@ -6,8 +6,6 @@ export const AllUnits = () => {
     const history = useHistory();
     const { data, loading, error } = useGetAllUnitsQuery();
 
-    console.log(data);
-    
     return (
         <div className="h-auto">
             <h1>List of Units:</h1>
