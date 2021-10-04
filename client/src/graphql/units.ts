@@ -5,10 +5,19 @@ gql`
         units {
             id
             name
+            code
+            rarity {
+                id
+                value
+            }
             zodiac {
+                id
                 name
             }
-            code
+            attribute {
+                id
+                name
+            }
         }
     }
 

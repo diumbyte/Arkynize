@@ -28,10 +28,19 @@ module.exports = {
           light: "#FFC075",
           DEFAULT: "#f5a65b",
           dark: "#DC8D42"
+        },
+        iconBlue: {
+          DEFAULT: "#253466"
         }
       },
       fontFamily: {
         "mulish": ["Mulish", "sans-serif"]
+      },
+      maxWidth: {
+        "xxs": "110px"
+      },
+      boxShadow: {
+        "icon": "0 0 3px 3px rgba(0,0,0,.4), 0 0 0 4px rgba(156,127,89,1), 0 0 3px 6px black"
       }
     },
   },

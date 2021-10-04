@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from "react"
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom"
+import { Switch, Route } from "react-router-dom"
 
 import { AllUnits } from "./pages/AllUnits"
 import { UnitDetail } from "./pages/UnitDetail"
