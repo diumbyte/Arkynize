@@ -31,16 +31,19 @@ module.exports = {
         },
         iconBlue: {
           DEFAULT: "#253466"
+        },
+        tavernBrown: {
+          DEFAULT: "rgba(28,20,16,1)"
         }
       },
       fontFamily: {
         "mulish": ["Mulish", "sans-serif"]
       },
       maxWidth: {
-        "xxs": "110px"
+        "2xs": "110px"
       },
       boxShadow: {
-        "icon": "0 0 3px 3px rgba(0,0,0,.4), 0 0 0 4px rgba(156,127,89,1), 0 0 3px 6px black"
+        "icon": "0 0 2px 2px rgba(0,0,0,.4), 0 0 0 3px rgba(156,127,89,1), 0 0 3px 5px rgba(0,0,0,0.6)"
       }
     },
   },

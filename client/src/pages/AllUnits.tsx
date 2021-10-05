@@ -10,7 +10,7 @@ export const AllUnits = () => {
     return (
         <div className="h-auto">
             <h1>List of Units:</h1>
-            <div className="flex flex-col">
+            <div className="flex flex-row flex-wrap mt-2 px-4 md:pl-6 md:pr-4">
                 { loading ? (
                     <h6>No units yet</h6>
                 ) : (

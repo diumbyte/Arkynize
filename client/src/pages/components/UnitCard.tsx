@@ -12,9 +12,9 @@ export const UnitCard = ({
     code
 }: UnitCardProps) => {
     return (
-        <div className="border border-primaryBlue rounded-2xl max-w-xxs text-center mt-14 bg-primaryBlue-dark text-white text-md">
+        <div className="border border-primaryBlue rounded-2xl max-w-2xs text-center mt-14 bg-primaryBlue-dark text-white text-md">
             <div 
-                className="bg-iconBlue w-24 h-24 overflow-hidden rounded-full border-black border border-opacity-20 -mt-14 mx-auto mb-0 shadow-icon"
+                className="bg-iconBlue w-24 h-24 overflow-hidden rounded-full border-black border border-opacity-50 -mt-14 mx-auto mb-0 shadow-icon"
             >
                 <img 
                     className="w-full h-full object-contain"
