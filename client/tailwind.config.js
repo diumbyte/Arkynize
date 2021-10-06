@@ -44,6 +44,12 @@ module.exports = {
       },
       boxShadow: {
         "icon": "0 0 2px 2px rgba(0,0,0,.4), 0 0 0 3px rgba(156,127,89,1), 0 0 3px 5px rgba(0,0,0,0.6)"
+      },
+      width: {
+        "1/8": "12.5%"
+      },
+      minWidth: {
+        "90": "90px"
       }
     },
   },

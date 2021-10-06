@@ -12,9 +12,9 @@ export const UnitCard = ({
     code
 }: UnitCardProps) => {
     return (
-        <div className="border border-primaryBlue rounded-2xl max-w-2xs text-center mt-14 bg-primaryBlue-dark text-white text-md">
+        <div className="w-1/4 flex-grow min-w-90 max-w-2xs md:flex-grow-0 md:w-1/6 mx-1 py-1 md:mx-2 md:py-2 border border-primaryBlue bg-primaryBlue-dark rounded-2xl text-center text-white mb-4 cursor-pointer w-2xs">
             <div 
-                className="bg-iconBlue w-24 h-24 overflow-hidden rounded-full border-black border border-opacity-50 -mt-14 mx-auto mb-0 shadow-icon"
+                className="bg-iconBlue w-18 h-18 md:w-20 md:h-20 overflow-hidden rounded-full border-black border border-opacity-50 md:mx-auto"
             >
                 <img 
                     className="w-full h-full object-contain"
@@ -22,7 +22,7 @@ export const UnitCard = ({
                     alt={`${name}'s icon`}
                 />
             </div>
-            <div className="pb-4">
+            <div className="text-base flex flex-col items-center h-full break-words">
                 {name}
             </div>
         </div>

@@ -13,7 +13,7 @@ export const Header = ({
     
     return (
         <div className="flex flex-row flex-nowrap items-center pt-4 pb-4">
-            <BurgerIcon className="cursor-pointer md:hidden" onClick={() => setIsExpanded(true)}/>
+            <BurgerIcon className="cursor-pointer md:hidden" onClick={() => setIsExpanded(true)} fill={"#fff"}/>
             <span className="capitalize md:text-3xl text-2xl md:ml-0 ml-4">
                 {locationName.length === 0 ? "Home" : locationName}
             </span>

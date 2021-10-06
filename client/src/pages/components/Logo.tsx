@@ -5,7 +5,7 @@ import {ReactComponent as LogoIcon} from "../../assets/logo.svg";
 
 export const Logo: React.FC = () => {
     return (
-        <Link className="row border-b pb-2 border-primaryBlue-light pt-8 pb-8" to="/">
+        <Link className="row border-b border-primaryBlue-light pt-8 pb-8 px-4" to="/">
             <LogoIcon 
                 width={60}
                 height={60}

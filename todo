@@ -2,6 +2,7 @@ General:
   ☐ Yup for JS validation on both frontend and backend
   ☐ When a user wants to edit their current progress it should ideally be done from the summary screen.
     ☐ BUT. We'll show a pencil edit icon at the top right corner of characters they're currently tracking
+  ☐ Search bar for Units page
 Server:
   ✔ Normalize Enhancements (Separate catalyst cost like I did for Awakenings) @done(21-09-30 22:11)
 Client: 
