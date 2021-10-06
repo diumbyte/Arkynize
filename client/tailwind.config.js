@@ -33,7 +33,8 @@ module.exports = {
           DEFAULT: "#253466"
         },
         tavernBrown: {
-          DEFAULT: "rgba(28,20,16,1)"
+          DEFAULT: "rgba(28,20,16,1)",
+          light: "#9c7f59"
         }
       },
       fontFamily: {

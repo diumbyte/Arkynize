@@ -12,8 +12,10 @@ export const SearchBar = ({
     placeholder = "Search"
 }: SearchBarProps) => {
     return (
-        <div className="row text-black">
-            <input type="text" name="search" id="search" placeholder={placeholder} value={value} onChange={e => onChange(e)}/>
+        <div className="row text-black mb-4">
+            <input type="text" name="search" id="search" placeholder={placeholder} value={value} onChange={e => onChange(e)}
+                className="p-2 bg-transparent border-2 border-tavernBrown-light rounded-md md:w-1/4 w-full"
+            />
         </div>
     )
 }
