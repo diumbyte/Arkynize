@@ -23,6 +23,7 @@ export const AllUnits = () => {
         const fuseOpts = {
             threshold: 0.1,
             distance: 200,
+            minMatchCharLength: 0,
             keys: ["name"]
         }
 
@@ -31,9 +32,7 @@ export const AllUnits = () => {
         const fuse = new Fuse(units, fuseOpts);
         const results = fuse.search(searchTerm).map(sugg => sugg.item)
 
-        if (inputLength === 0) {
-            setSearchResults(units)
-        } else {
+        if (inputLength !== 0) {
             setSearchResults(results)
         }
     }
@@ -49,7 +48,7 @@ export const AllUnits = () => {
                 { loading ? (
                     <h6>No units yet</h6>
                 ) : 
-                searchTerm.length !== 0 ? (
+                searchTerm.length > 1 ? (
                     searchResults.map(unit => {
                         return <UnitCard key={unit?.id} id={unit?.id} code={unit?.code} name={unit?.name}/>
                     })
