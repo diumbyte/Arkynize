@@ -2,14 +2,14 @@ import { gql } from 'apollo-server-express'
 
 export const typeDefs = gql`
 type Query {
-    unit(id: Int!): Unit
-    units: [Unit]
-    getUnitSkills(unitId: Int!): [Skill]
-    getSkillEnhancements(skillId: Int!): [Enhancement]
-    drops(catalystId: Int!): [Drop]
-    shopItems(catalystId: Int!): [ShopItem]
-    awakening(id: Int!): Awakening
-    getAwakeningsForUnit(unitId: Int!): [Awakening]
+    unit(id: Int!): Unit!
+    units: [Unit!]!
+    getUnitSkills(unitId: Int!): [Skill!]!
+    getSkillEnhancements(skillId: Int!): [Enhancement!]!
+    drops(catalystId: Int!): [Drop!]!
+    shopItems(catalystId: Int!): [ShopItem!]!
+    awakening(id: Int!): Awakening!
+    getAwakeningsForUnit(unitId: Int!): [Awakening!]!
 }
 
 type Unit {
@@ -17,9 +17,9 @@ type Unit {
     name: String!
     code: String!
     zodiac: Zodiac
-    attribute: Attribute
-    rarity: Rarity
-    skills: [Skill]
+    attribute: Attribute!
+    rarity: Rarity!
+    skills: [Skill!]!
 }
 
 type Zodiac {
@@ -32,7 +32,7 @@ type Skill {
     name: String!
     code: String!
     type: Int!
-    enhancements: [Enhancement]
+    enhancements: [Enhancement!]!
 }
 
 type Enhancement {
@@ -41,7 +41,7 @@ type Enhancement {
     gold: Int!
     molagora: Int!
     stigma: Int!
-    enhancementCatalystCost: EnhancementCatalystCost
+    enhancementCatalystCost: EnhancementCatalystCost!
 }
 
 type Catalyst {
@@ -51,14 +51,14 @@ type Catalyst {
     isEpic: Boolean!
     isSkillMaterial: Boolean!
 
-    zodiac: Zodiac
-    dropLocations: [Drop]
-    shopLocations: [ShopItem]
+    zodiac: Zodiac!
+    dropLocations: [Drop!]!
+    shopLocations: [ShopItem!]!
 }
 
 type Drop {
     id: Int!
-    stage: Stage
+    stage: Stage!
 }
 
 type Stage {
@@ -67,12 +67,12 @@ type Stage {
   name:     String!
   points:   Int!
   energy:   Int!
-  region:   Region
+  region:   Region!
 }
 
 type ShopItem {
   price: Int!
-  region:   Region
+  region:   Region!
 }
 
 type Region {
@@ -86,24 +86,24 @@ type Awakening {
   id: Int!
   state: Int!
 
-  rarity: Rarity
-  attribute: Attribute
-  zodiac:    Zodiac
+  rarity: Rarity!
+  attribute: Attribute!
+  zodiac:    Zodiac!
 
-  runeCosts: [RuneCost]
-  awakeningCatalystCost: AwakeningCatalystCost
+  runeCosts: [RuneCost!]!
+  awakeningCatalystCost: AwakeningCatalystCost!
 }
 
 type AwakeningCatalystCost {
   id: Int!
   count: Int!
-  catalyst: Catalyst
+  catalyst: Catalyst!
 }
 
 type EnhancementCatalystCost {
   id: Int!
   count: Int!
-  catalyst: Catalyst
+  catalyst: Catalyst!
 }
 
 type Rune {
@@ -114,7 +114,7 @@ type Rune {
 
 type RuneCost {
   count: Int!
-  rune: Rune
+  rune: Rune!
 }
 
 type Rarity {

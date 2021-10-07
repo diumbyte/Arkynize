@@ -1,40 +1,23 @@
-import React, {useState, ChangeEvent} from 'react';
-import Fuse from 'fuse.js'
+import React, {ChangeEvent} from 'react';
 
 import { useGetAllUnitsQuery } from "../generated/graphql"
 import { SearchBar } from './components/SearchBar';
 import { UnitCard } from './components/UnitCard';
-// import { useHistory } from "react-router-dom"
-
+import { useSearch } from '../util/useSearch';
 
 
 export const AllUnits = () => {
-    // const history = useHistory();
     const { data, loading, error } = useGetAllUnitsQuery();
-    const [searchTerm, setSearchTerm] = useState("");
-    const [searchResults, setSearchResults] = useState([]);
+
+    const {
+        searchResults,
+        searchTerm,
+        setSearchTerm
+    } = useSearch(data);
 
     const onSearchTermChange = (e: ChangeEvent<HTMLInputElement>) => {
         const {target: {value: newSearchTerm}} = e
-        const inputLength = newSearchTerm.trim().toLowerCase().length
-
         setSearchTerm(newSearchTerm)
-        
-        const fuseOpts = {
-            threshold: 0.1,
-            distance: 200,
-            minMatchCharLength: 0,
-            keys: ["name"]
-        }
-
-        const units = data?.units;
-
-        const fuse = new Fuse(units, fuseOpts);
-        const results = fuse.search(searchTerm).map(sugg => sugg.item)
-
-        if (inputLength !== 0) {
-            setSearchResults(results)
-        }
     }
     
     return (
@@ -45,7 +28,7 @@ export const AllUnits = () => {
             />
             <h1>List of Units:</h1>
             <div className="max-w-screen-xl	flex flex-row flex-wrap mt-2 justify-between md:justify-start">
-                { loading ? (
+                { loading || data === null ? (
                     <h6>No units yet</h6>
                 ) : 
                 searchTerm.length > 1 ? (

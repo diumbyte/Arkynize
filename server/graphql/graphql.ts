@@ -22,18 +22,18 @@ export type Attribute = {
 
 export type Awakening = {
   __typename?: 'Awakening';
-  attribute: Maybe<Attribute>;
-  awakeningCatalystCost: Maybe<AwakeningCatalystCost>;
+  attribute: Attribute;
+  awakeningCatalystCost: AwakeningCatalystCost;
   id: Scalars['Int'];
-  rarity: Maybe<Rarity>;
-  runeCosts: Maybe<Array<Maybe<RuneCost>>>;
+  rarity: Rarity;
+  runeCosts: Array<RuneCost>;
   state: Scalars['Int'];
-  zodiac: Maybe<Zodiac>;
+  zodiac: Zodiac;
 };
 
 export type AwakeningCatalystCost = {
   __typename?: 'AwakeningCatalystCost';
-  catalyst: Maybe<Catalyst>;
+  catalyst: Catalyst;
   count: Scalars['Int'];
   id: Scalars['Int'];
 };
@@ -41,24 +41,24 @@ export type AwakeningCatalystCost = {
 export type Catalyst = {
   __typename?: 'Catalyst';
   code: Scalars['String'];
-  dropLocations: Maybe<Array<Maybe<Drop>>>;
+  dropLocations: Array<Drop>;
   id: Scalars['Int'];
   isEpic: Scalars['Boolean'];
   isSkillMaterial: Scalars['Boolean'];
   name: Scalars['String'];
-  shopLocations: Maybe<Array<Maybe<ShopItem>>>;
-  zodiac: Maybe<Zodiac>;
+  shopLocations: Array<ShopItem>;
+  zodiac: Zodiac;
 };
 
 export type Drop = {
   __typename?: 'Drop';
   id: Scalars['Int'];
-  stage: Maybe<Stage>;
+  stage: Stage;
 };
 
 export type Enhancement = {
   __typename?: 'Enhancement';
-  enhancementCatalystCost: Maybe<EnhancementCatalystCost>;
+  enhancementCatalystCost: EnhancementCatalystCost;
   gold: Scalars['Int'];
   id: Scalars['Int'];
   level: Scalars['Int'];
@@ -68,21 +68,21 @@ export type Enhancement = {
 
 export type EnhancementCatalystCost = {
   __typename?: 'EnhancementCatalystCost';
-  catalyst: Maybe<Catalyst>;
+  catalyst: Catalyst;
   count: Scalars['Int'];
   id: Scalars['Int'];
 };
 
 export type Query = {
   __typename?: 'Query';
-  awakening: Maybe<Awakening>;
-  drops: Maybe<Array<Maybe<Drop>>>;
-  getAwakeningsForUnit: Maybe<Array<Maybe<Awakening>>>;
-  getSkillEnhancements: Maybe<Array<Maybe<Enhancement>>>;
-  getUnitSkills: Maybe<Array<Maybe<Skill>>>;
-  shopItems: Maybe<Array<Maybe<ShopItem>>>;
-  unit: Maybe<Unit>;
-  units: Maybe<Array<Maybe<Unit>>>;
+  awakening: Awakening;
+  drops: Array<Drop>;
+  getAwakeningsForUnit: Array<Awakening>;
+  getSkillEnhancements: Array<Enhancement>;
+  getUnitSkills: Array<Skill>;
+  shopItems: Array<ShopItem>;
+  unit: Unit;
+  units: Array<Unit>;
 };
 
 
@@ -144,19 +144,19 @@ export type Rune = {
 export type RuneCost = {
   __typename?: 'RuneCost';
   count: Scalars['Int'];
-  rune: Maybe<Rune>;
+  rune: Rune;
 };
 
 export type ShopItem = {
   __typename?: 'ShopItem';
   price: Scalars['Int'];
-  region: Maybe<Region>;
+  region: Region;
 };
 
 export type Skill = {
   __typename?: 'Skill';
   code: Scalars['String'];
-  enhancements: Maybe<Array<Maybe<Enhancement>>>;
+  enhancements: Array<Enhancement>;
   id: Scalars['Int'];
   name: Scalars['String'];
   type: Scalars['Int'];
@@ -169,17 +169,17 @@ export type Stage = {
   instance: Scalars['String'];
   name: Scalars['String'];
   points: Scalars['Int'];
-  region: Maybe<Region>;
+  region: Region;
 };
 
 export type Unit = {
   __typename?: 'Unit';
-  attribute: Maybe<Attribute>;
+  attribute: Attribute;
   code: Scalars['String'];
   id: Scalars['Int'];
   name: Scalars['String'];
-  rarity: Maybe<Rarity>;
-  skills: Maybe<Array<Maybe<Skill>>>;
+  rarity: Rarity;
+  skills: Array<Skill>;
   zodiac: Maybe<Zodiac>;
 };
 
@@ -312,18 +312,18 @@ export type AttributeResolvers<ContextType = Context, ParentType extends Resolve
 }>;
 
 export type AwakeningResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Awakening'] = ResolversParentTypes['Awakening']> = ResolversObject<{
-  attribute: Resolver<Maybe<ResolversTypes['Attribute']>, ParentType, ContextType>;
-  awakeningCatalystCost: Resolver<Maybe<ResolversTypes['AwakeningCatalystCost']>, ParentType, ContextType>;
+  attribute: Resolver<ResolversTypes['Attribute'], ParentType, ContextType>;
+  awakeningCatalystCost: Resolver<ResolversTypes['AwakeningCatalystCost'], ParentType, ContextType>;
   id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  rarity: Resolver<Maybe<ResolversTypes['Rarity']>, ParentType, ContextType>;
-  runeCosts: Resolver<Maybe<Array<Maybe<ResolversTypes['RuneCost']>>>, ParentType, ContextType>;
+  rarity: Resolver<ResolversTypes['Rarity'], ParentType, ContextType>;
+  runeCosts: Resolver<Array<ResolversTypes['RuneCost']>, ParentType, ContextType>;
   state: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  zodiac: Resolver<Maybe<ResolversTypes['Zodiac']>, ParentType, ContextType>;
+  zodiac: Resolver<ResolversTypes['Zodiac'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type AwakeningCatalystCostResolvers<ContextType = Context, ParentType extends ResolversParentTypes['AwakeningCatalystCost'] = ResolversParentTypes['AwakeningCatalystCost']> = ResolversObject<{
-  catalyst: Resolver<Maybe<ResolversTypes['Catalyst']>, ParentType, ContextType>;
+  catalyst: Resolver<ResolversTypes['Catalyst'], ParentType, ContextType>;
   count: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
@@ -331,24 +331,24 @@ export type AwakeningCatalystCostResolvers<ContextType = Context, ParentType ext
 
 export type CatalystResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Catalyst'] = ResolversParentTypes['Catalyst']> = ResolversObject<{
   code: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  dropLocations: Resolver<Maybe<Array<Maybe<ResolversTypes['Drop']>>>, ParentType, ContextType>;
+  dropLocations: Resolver<Array<ResolversTypes['Drop']>, ParentType, ContextType>;
   id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   isEpic: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
   isSkillMaterial: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
   name: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  shopLocations: Resolver<Maybe<Array<Maybe<ResolversTypes['ShopItem']>>>, ParentType, ContextType>;
-  zodiac: Resolver<Maybe<ResolversTypes['Zodiac']>, ParentType, ContextType>;
+  shopLocations: Resolver<Array<ResolversTypes['ShopItem']>, ParentType, ContextType>;
+  zodiac: Resolver<ResolversTypes['Zodiac'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type DropResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Drop'] = ResolversParentTypes['Drop']> = ResolversObject<{
   id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  stage: Resolver<Maybe<ResolversTypes['Stage']>, ParentType, ContextType>;
+  stage: Resolver<ResolversTypes['Stage'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type EnhancementResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Enhancement'] = ResolversParentTypes['Enhancement']> = ResolversObject<{
-  enhancementCatalystCost: Resolver<Maybe<ResolversTypes['EnhancementCatalystCost']>, ParentType, ContextType>;
+  enhancementCatalystCost: Resolver<ResolversTypes['EnhancementCatalystCost'], ParentType, ContextType>;
   gold: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   level: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -358,21 +358,21 @@ export type EnhancementResolvers<ContextType = Context, ParentType extends Resol
 }>;
 
 export type EnhancementCatalystCostResolvers<ContextType = Context, ParentType extends ResolversParentTypes['EnhancementCatalystCost'] = ResolversParentTypes['EnhancementCatalystCost']> = ResolversObject<{
-  catalyst: Resolver<Maybe<ResolversTypes['Catalyst']>, ParentType, ContextType>;
+  catalyst: Resolver<ResolversTypes['Catalyst'], ParentType, ContextType>;
   count: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type QueryResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
-  awakening: Resolver<Maybe<ResolversTypes['Awakening']>, ParentType, ContextType, RequireFields<QueryAwakeningArgs, 'id'>>;
-  drops: Resolver<Maybe<Array<Maybe<ResolversTypes['Drop']>>>, ParentType, ContextType, RequireFields<QueryDropsArgs, 'catalystId'>>;
-  getAwakeningsForUnit: Resolver<Maybe<Array<Maybe<ResolversTypes['Awakening']>>>, ParentType, ContextType, RequireFields<QueryGetAwakeningsForUnitArgs, 'unitId'>>;
-  getSkillEnhancements: Resolver<Maybe<Array<Maybe<ResolversTypes['Enhancement']>>>, ParentType, ContextType, RequireFields<QueryGetSkillEnhancementsArgs, 'skillId'>>;
-  getUnitSkills: Resolver<Maybe<Array<Maybe<ResolversTypes['Skill']>>>, ParentType, ContextType, RequireFields<QueryGetUnitSkillsArgs, 'unitId'>>;
-  shopItems: Resolver<Maybe<Array<Maybe<ResolversTypes['ShopItem']>>>, ParentType, ContextType, RequireFields<QueryShopItemsArgs, 'catalystId'>>;
-  unit: Resolver<Maybe<ResolversTypes['Unit']>, ParentType, ContextType, RequireFields<QueryUnitArgs, 'id'>>;
-  units: Resolver<Maybe<Array<Maybe<ResolversTypes['Unit']>>>, ParentType, ContextType>;
+  awakening: Resolver<ResolversTypes['Awakening'], ParentType, ContextType, RequireFields<QueryAwakeningArgs, 'id'>>;
+  drops: Resolver<Array<ResolversTypes['Drop']>, ParentType, ContextType, RequireFields<QueryDropsArgs, 'catalystId'>>;
+  getAwakeningsForUnit: Resolver<Array<ResolversTypes['Awakening']>, ParentType, ContextType, RequireFields<QueryGetAwakeningsForUnitArgs, 'unitId'>>;
+  getSkillEnhancements: Resolver<Array<ResolversTypes['Enhancement']>, ParentType, ContextType, RequireFields<QueryGetSkillEnhancementsArgs, 'skillId'>>;
+  getUnitSkills: Resolver<Array<ResolversTypes['Skill']>, ParentType, ContextType, RequireFields<QueryGetUnitSkillsArgs, 'unitId'>>;
+  shopItems: Resolver<Array<ResolversTypes['ShopItem']>, ParentType, ContextType, RequireFields<QueryShopItemsArgs, 'catalystId'>>;
+  unit: Resolver<ResolversTypes['Unit'], ParentType, ContextType, RequireFields<QueryUnitArgs, 'id'>>;
+  units: Resolver<Array<ResolversTypes['Unit']>, ParentType, ContextType>;
 }>;
 
 export type RarityResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Rarity'] = ResolversParentTypes['Rarity']> = ResolversObject<{
@@ -398,19 +398,19 @@ export type RuneResolvers<ContextType = Context, ParentType extends ResolversPar
 
 export type RuneCostResolvers<ContextType = Context, ParentType extends ResolversParentTypes['RuneCost'] = ResolversParentTypes['RuneCost']> = ResolversObject<{
   count: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  rune: Resolver<Maybe<ResolversTypes['Rune']>, ParentType, ContextType>;
+  rune: Resolver<ResolversTypes['Rune'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type ShopItemResolvers<ContextType = Context, ParentType extends ResolversParentTypes['ShopItem'] = ResolversParentTypes['ShopItem']> = ResolversObject<{
   price: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  region: Resolver<Maybe<ResolversTypes['Region']>, ParentType, ContextType>;
+  region: Resolver<ResolversTypes['Region'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type SkillResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Skill'] = ResolversParentTypes['Skill']> = ResolversObject<{
   code: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  enhancements: Resolver<Maybe<Array<Maybe<ResolversTypes['Enhancement']>>>, ParentType, ContextType>;
+  enhancements: Resolver<Array<ResolversTypes['Enhancement']>, ParentType, ContextType>;
   id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   name: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   type: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
@@ -423,17 +423,17 @@ export type StageResolvers<ContextType = Context, ParentType extends ResolversPa
   instance: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   name: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   points: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
-  region: Resolver<Maybe<ResolversTypes['Region']>, ParentType, ContextType>;
+  region: Resolver<ResolversTypes['Region'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type UnitResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Unit'] = ResolversParentTypes['Unit']> = ResolversObject<{
-  attribute: Resolver<Maybe<ResolversTypes['Attribute']>, ParentType, ContextType>;
+  attribute: Resolver<ResolversTypes['Attribute'], ParentType, ContextType>;
   code: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   name: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  rarity: Resolver<Maybe<ResolversTypes['Rarity']>, ParentType, ContextType>;
-  skills: Resolver<Maybe<Array<Maybe<ResolversTypes['Skill']>>>, ParentType, ContextType>;
+  rarity: Resolver<ResolversTypes['Rarity'], ParentType, ContextType>;
+  skills: Resolver<Array<ResolversTypes['Skill']>, ParentType, ContextType>;
   zodiac: Resolver<Maybe<ResolversTypes['Zodiac']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;

@@ -22,18 +22,18 @@ export type Attribute = {
 
 export type Awakening = {
   __typename?: 'Awakening';
-  attribute?: Maybe<Attribute>;
-  awakeningCatalystCost?: Maybe<AwakeningCatalystCost>;
+  attribute: Attribute;
+  awakeningCatalystCost: AwakeningCatalystCost;
   id: Scalars['Int'];
-  rarity?: Maybe<Rarity>;
-  runeCosts?: Maybe<Array<Maybe<RuneCost>>>;
+  rarity: Rarity;
+  runeCosts: Array<RuneCost>;
   state: Scalars['Int'];
-  zodiac?: Maybe<Zodiac>;
+  zodiac: Zodiac;
 };
 
 export type AwakeningCatalystCost = {
   __typename?: 'AwakeningCatalystCost';
-  catalyst?: Maybe<Catalyst>;
+  catalyst: Catalyst;
   count: Scalars['Int'];
   id: Scalars['Int'];
 };
@@ -41,24 +41,24 @@ export type AwakeningCatalystCost = {
 export type Catalyst = {
   __typename?: 'Catalyst';
   code: Scalars['String'];
-  dropLocations?: Maybe<Array<Maybe<Drop>>>;
+  dropLocations: Array<Drop>;
   id: Scalars['Int'];
   isEpic: Scalars['Boolean'];
   isSkillMaterial: Scalars['Boolean'];
   name: Scalars['String'];
-  shopLocations?: Maybe<Array<Maybe<ShopItem>>>;
-  zodiac?: Maybe<Zodiac>;
+  shopLocations: Array<ShopItem>;
+  zodiac: Zodiac;
 };
 
 export type Drop = {
   __typename?: 'Drop';
   id: Scalars['Int'];
-  stage?: Maybe<Stage>;
+  stage: Stage;
 };
 
 export type Enhancement = {
   __typename?: 'Enhancement';
-  enhancementCatalystCost?: Maybe<EnhancementCatalystCost>;
+  enhancementCatalystCost: EnhancementCatalystCost;
   gold: Scalars['Int'];
   id: Scalars['Int'];
   level: Scalars['Int'];
@@ -68,21 +68,21 @@ export type Enhancement = {
 
 export type EnhancementCatalystCost = {
   __typename?: 'EnhancementCatalystCost';
-  catalyst?: Maybe<Catalyst>;
+  catalyst: Catalyst;
   count: Scalars['Int'];
   id: Scalars['Int'];
 };
 
 export type Query = {
   __typename?: 'Query';
-  awakening?: Maybe<Awakening>;
-  drops?: Maybe<Array<Maybe<Drop>>>;
-  getAwakeningsForUnit?: Maybe<Array<Maybe<Awakening>>>;
-  getSkillEnhancements?: Maybe<Array<Maybe<Enhancement>>>;
-  getUnitSkills?: Maybe<Array<Maybe<Skill>>>;
-  shopItems?: Maybe<Array<Maybe<ShopItem>>>;
-  unit?: Maybe<Unit>;
-  units?: Maybe<Array<Maybe<Unit>>>;
+  awakening: Awakening;
+  drops: Array<Drop>;
+  getAwakeningsForUnit: Array<Awakening>;
+  getSkillEnhancements: Array<Enhancement>;
+  getUnitSkills: Array<Skill>;
+  shopItems: Array<ShopItem>;
+  unit: Unit;
+  units: Array<Unit>;
 };
 
 
@@ -144,19 +144,19 @@ export type Rune = {
 export type RuneCost = {
   __typename?: 'RuneCost';
   count: Scalars['Int'];
-  rune?: Maybe<Rune>;
+  rune: Rune;
 };
 
 export type ShopItem = {
   __typename?: 'ShopItem';
   price: Scalars['Int'];
-  region?: Maybe<Region>;
+  region: Region;
 };
 
 export type Skill = {
   __typename?: 'Skill';
   code: Scalars['String'];
-  enhancements?: Maybe<Array<Maybe<Enhancement>>>;
+  enhancements: Array<Enhancement>;
   id: Scalars['Int'];
   name: Scalars['String'];
   type: Scalars['Int'];
@@ -169,17 +169,17 @@ export type Stage = {
   instance: Scalars['String'];
   name: Scalars['String'];
   points: Scalars['Int'];
-  region?: Maybe<Region>;
+  region: Region;
 };
 
 export type Unit = {
   __typename?: 'Unit';
-  attribute?: Maybe<Attribute>;
+  attribute: Attribute;
   code: Scalars['String'];
   id: Scalars['Int'];
   name: Scalars['String'];
-  rarity?: Maybe<Rarity>;
-  skills?: Maybe<Array<Maybe<Skill>>>;
+  rarity: Rarity;
+  skills: Array<Skill>;
   zodiac?: Maybe<Zodiac>;
 };
 
@@ -192,14 +192,14 @@ export type Zodiac = {
 export type GetAllUnitsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetAllUnitsQuery = { __typename?: 'Query', units?: Array<{ __typename?: 'Unit', id: number, name: string, code: string, rarity?: { __typename?: 'Rarity', id: number, value: number } | null | undefined, zodiac?: { __typename?: 'Zodiac', id: number, name: string } | null | undefined, attribute?: { __typename?: 'Attribute', id: number, name: string } | null | undefined } | null | undefined> | null | undefined };
+export type GetAllUnitsQuery = { __typename?: 'Query', units: Array<{ __typename?: 'Unit', id: number, name: string, code: string, rarity: { __typename?: 'Rarity', id: number, value: number }, zodiac?: { __typename?: 'Zodiac', id: number, name: string } | null | undefined, attribute: { __typename?: 'Attribute', id: number, name: string } }> };
 
 export type GetUnitDetailsQueryVariables = Exact<{
   unitId: Scalars['Int'];
 }>;
 
 
-export type GetUnitDetailsQuery = { __typename?: 'Query', getAwakeningsForUnit?: Array<{ __typename?: 'Awakening', id: number, state: number, awakeningCatalystCost?: { __typename?: 'AwakeningCatalystCost', count: number, catalyst?: { __typename?: 'Catalyst', name: string, dropLocations?: Array<{ __typename?: 'Drop', stage?: { __typename?: 'Stage', instance: string, name: string, region?: { __typename?: 'Region', episode: string, name: string, chapter: string } | null | undefined } | null | undefined } | null | undefined> | null | undefined, shopLocations?: Array<{ __typename?: 'ShopItem', price: number, region?: { __typename?: 'Region', episode: string, name: string, chapter: string } | null | undefined } | null | undefined> | null | undefined } | null | undefined } | null | undefined, runeCosts?: Array<{ __typename?: 'RuneCost', count: number, rune?: { __typename?: 'Rune', name: string } | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined, getUnitSkills?: Array<{ __typename?: 'Skill', name: string, type: number, enhancements?: Array<{ __typename?: 'Enhancement', level: number, molagora: number, gold: number, enhancementCatalystCost?: { __typename?: 'EnhancementCatalystCost', count: number, catalyst?: { __typename?: 'Catalyst', name: string, dropLocations?: Array<{ __typename?: 'Drop', stage?: { __typename?: 'Stage', instance: string, name: string, region?: { __typename?: 'Region', episode: string, chapter: string, name: string } | null | undefined } | null | undefined } | null | undefined> | null | undefined, shopLocations?: Array<{ __typename?: 'ShopItem', price: number, region?: { __typename?: 'Region', episode: string, chapter: string, name: string } | null | undefined } | null | undefined> | null | undefined } | null | undefined } | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined };
+export type GetUnitDetailsQuery = { __typename?: 'Query', getAwakeningsForUnit: Array<{ __typename?: 'Awakening', id: number, state: number, awakeningCatalystCost: { __typename?: 'AwakeningCatalystCost', count: number, catalyst: { __typename?: 'Catalyst', name: string, dropLocations: Array<{ __typename?: 'Drop', stage: { __typename?: 'Stage', instance: string, name: string, region: { __typename?: 'Region', episode: string, name: string, chapter: string } } }>, shopLocations: Array<{ __typename?: 'ShopItem', price: number, region: { __typename?: 'Region', episode: string, name: string, chapter: string } }> } }, runeCosts: Array<{ __typename?: 'RuneCost', count: number, rune: { __typename?: 'Rune', name: string } }> }>, getUnitSkills: Array<{ __typename?: 'Skill', name: string, type: number, enhancements: Array<{ __typename?: 'Enhancement', level: number, molagora: number, gold: number, enhancementCatalystCost: { __typename?: 'EnhancementCatalystCost', count: number, catalyst: { __typename?: 'Catalyst', name: string, dropLocations: Array<{ __typename?: 'Drop', stage: { __typename?: 'Stage', instance: string, name: string, region: { __typename?: 'Region', episode: string, chapter: string, name: string } } }>, shopLocations: Array<{ __typename?: 'ShopItem', price: number, region: { __typename?: 'Region', episode: string, chapter: string, name: string } }> } } }> }> };
 
 
 export const GetAllUnitsDocument = gql`
