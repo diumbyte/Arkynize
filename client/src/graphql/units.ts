@@ -22,74 +22,50 @@ gql`
     }
 
     query getUnitDetails($unitId: Int!) {
+        unit(id: $unitId) {
+            id
+            name
+            code
+        }
+        
         getAwakeningsForUnit(unitId: $unitId) {
             id
             state
             awakeningCatalystCost {
             count
             catalyst {
+                id
                 name
-                dropLocations {
-                stage {
-                    region {
-                    episode
-                    name
-                    chapter
-                    }
-                    instance
-                    name
-                }
-                }
-                shopLocations {
-                price
-                region {
-                    episode
-                    name
-                    chapter
-                }
-                }
             }
             }
             runeCosts {
-            count
-            rune {
-                name
-            }
+                count
+                rune {
+                    id
+                    name
+                }
             }
         }
 
         getUnitSkills(unitId: $unitId) {
+            id
             name
             type
+            code
             enhancements {
-            level
-            molagora
-            gold
-            enhancementCatalystCost {
-                count
-                catalyst {
-                name
-                dropLocations {
-                    stage {
-                    instance
-                    name
-                    region {
-                        episode
-                        chapter
+                id
+                level
+                stigma
+                molagora
+                gold
+                enhancementCatalystCost {
+                    id
+                    count
+                    catalyst {
+                        id
                         name
                     }
-                    }
                 }
-                shopLocations {
-                    price
-                    region {
-                    episode
-                    chapter
-                    name
-                    }
-                }
-                }
-            }
             }
         }
     }

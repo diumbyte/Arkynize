@@ -199,7 +199,7 @@ export type GetUnitDetailsQueryVariables = Exact<{
 }>;
 
 
-export type GetUnitDetailsQuery = { __typename?: 'Query', getAwakeningsForUnit: Array<{ __typename?: 'Awakening', id: number, state: number, awakeningCatalystCost: { __typename?: 'AwakeningCatalystCost', count: number, catalyst: { __typename?: 'Catalyst', name: string, dropLocations: Array<{ __typename?: 'Drop', stage: { __typename?: 'Stage', instance: string, name: string, region: { __typename?: 'Region', episode: string, name: string, chapter: string } } }>, shopLocations: Array<{ __typename?: 'ShopItem', price: number, region: { __typename?: 'Region', episode: string, name: string, chapter: string } }> } }, runeCosts: Array<{ __typename?: 'RuneCost', count: number, rune: { __typename?: 'Rune', name: string } }> }>, getUnitSkills: Array<{ __typename?: 'Skill', name: string, type: number, enhancements: Array<{ __typename?: 'Enhancement', level: number, molagora: number, gold: number, enhancementCatalystCost: { __typename?: 'EnhancementCatalystCost', count: number, catalyst: { __typename?: 'Catalyst', name: string, dropLocations: Array<{ __typename?: 'Drop', stage: { __typename?: 'Stage', instance: string, name: string, region: { __typename?: 'Region', episode: string, chapter: string, name: string } } }>, shopLocations: Array<{ __typename?: 'ShopItem', price: number, region: { __typename?: 'Region', episode: string, chapter: string, name: string } }> } } }> }> };
+export type GetUnitDetailsQuery = { __typename?: 'Query', unit: { __typename?: 'Unit', id: number, name: string, code: string }, getAwakeningsForUnit: Array<{ __typename?: 'Awakening', id: number, state: number, awakeningCatalystCost: { __typename?: 'AwakeningCatalystCost', count: number, catalyst: { __typename?: 'Catalyst', id: number, name: string } }, runeCosts: Array<{ __typename?: 'RuneCost', count: number, rune: { __typename?: 'Rune', id: number, name: string } }> }>, getUnitSkills: Array<{ __typename?: 'Skill', id: number, name: string, type: number, code: string, enhancements: Array<{ __typename?: 'Enhancement', id: number, level: number, stigma: number, molagora: number, gold: number, enhancementCatalystCost: { __typename?: 'EnhancementCatalystCost', id: number, count: number, catalyst: { __typename?: 'Catalyst', id: number, name: string } } }> }> };
 
 
 export const GetAllUnitsDocument = gql`
@@ -252,71 +252,46 @@ export type GetAllUnitsLazyQueryHookResult = ReturnType<typeof useGetAllUnitsLaz
 export type GetAllUnitsQueryResult = Apollo.QueryResult<GetAllUnitsQuery, GetAllUnitsQueryVariables>;
 export const GetUnitDetailsDocument = gql`
     query getUnitDetails($unitId: Int!) {
+  unit(id: $unitId) {
+    id
+    name
+    code
+  }
   getAwakeningsForUnit(unitId: $unitId) {
     id
     state
     awakeningCatalystCost {
       count
       catalyst {
+        id
         name
-        dropLocations {
-          stage {
-            region {
-              episode
-              name
-              chapter
-            }
-            instance
-            name
-          }
-        }
-        shopLocations {
-          price
-          region {
-            episode
-            name
-            chapter
-          }
-        }
       }
     }
     runeCosts {
       count
       rune {
+        id
         name
       }
     }
   }
   getUnitSkills(unitId: $unitId) {
+    id
     name
     type
+    code
     enhancements {
+      id
       level
+      stigma
       molagora
       gold
       enhancementCatalystCost {
+        id
         count
         catalyst {
+          id
           name
-          dropLocations {
-            stage {
-              instance
-              name
-              region {
-                episode
-                chapter
-                name
-              }
-            }
-          }
-          shopLocations {
-            price
-            region {
-              episode
-              chapter
-              name
-            }
-          }
         }
       }
     }

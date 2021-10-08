@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 type UnitCardProps = {
     name?: string,
@@ -12,7 +13,10 @@ export const UnitCard = ({
     code
 }: UnitCardProps) => {
     return (
-        <div className="w-1/4 flex flex-col flex-grow min-w-90 max-w-2xs md:flex-grow-0 md:w-1/6 mx-1 py-1 md:mx-2 md:py-2 border border-tavernBrown-light bg-transparent rounded-2xl text-center text-white mb-4 cursor-pointer w-2xs">
+        <Link 
+            to={`/unit/${id}`}
+            className="w-1/4 flex flex-col flex-grow min-w-90 max-w-2xs md:flex-grow-0 md:w-1/6 mx-1 py-1 md:mx-2 md:py-2 border border-tavernBrown-light bg-transparent rounded-2xl text-center text-white mb-4 cursor-pointer w-2xs"
+        >
             <div 
                 className="bg-iconBlue w-18 h-18 md:w-20 md:h-20 overflow-hidden rounded-full border-black border border-opacity-50 md:mx-auto"
             >
@@ -25,6 +29,6 @@ export const UnitCard = ({
             <div className="text-base flex flex-col justify-center break-words flex-grow">
                 {name}
             </div>
-        </div>
+        </Link>
     )    
 }

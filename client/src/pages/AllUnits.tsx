@@ -7,7 +7,7 @@ import { useSearch } from '../util/useSearch';
 
 
 export const AllUnits = () => {
-    const { data, loading, error } = useGetAllUnitsQuery();
+    const { data, loading } = useGetAllUnitsQuery();
 
     const {
         searchResults,
@@ -27,7 +27,7 @@ export const AllUnits = () => {
                 onChange={onSearchTermChange}
             />
             <h1>List of Units:</h1>
-            <div className="max-w-screen-xl	flex flex-row flex-wrap mt-2 justify-between md:justify-start">
+            <div className="max-w-screen-xl mx-auto flex flex-row flex-wrap mt-2 justify-between md:justify-start">
                 { loading || data === null ? (
                     <h6>No units yet</h6>
                 ) : 
