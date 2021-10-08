@@ -1,7 +1,12 @@
+import { Modal } from 'react-responsive-modal'
+import 'react-responsive-modal/styles.css';
+
 import { Awakening } from "../../generated/graphql";
 import { useAwakeningTracking } from "../../util/useAwakeningTracking"; 
+import {ReactComponent as PlusIcon} from "../../assets/plus.svg"
 import StarIcon from "../../assets/star.png"
 import StarFilledIcon from "../../assets/star_filled.png"
+import { useState } from 'react';
 
 type AwakeningDetailProps = {
     awakenings: Array<Awakening>
@@ -10,7 +15,7 @@ type AwakeningDetailProps = {
 export const AwakeningDetail = ({
     awakenings
 }: AwakeningDetailProps) => {
-    // const currentAwakeningOptions = awakenings.map(e => ({state: e.state, id: e.id}));
+    const [modalOpen, setModalOpen] = useState(false);
     const {
         currentAwakenings,
         desiredAwakenings,
@@ -22,7 +27,7 @@ export const AwakeningDetail = ({
         <>
             <div className="flex-auto">
                 <p className="text-2xl">Current</p>
-                <div className="row">
+                <div className="row justify-start">
                     {currentAwakenings.map(a => 
                         <img
                             key={a.id}
@@ -36,9 +41,9 @@ export const AwakeningDetail = ({
                     )}
                 </div>
             </div>
-            <div className="flex-auto">
+            <div className="flex-auto my-4 md:my-0">
                 <p className="text-2xl">Desired</p>
-                <div className="row">
+                <div className="row justify-start">
                     {desiredAwakenings.map(a => 
                         <img 
                             key={a.id}
@@ -52,6 +57,15 @@ export const AwakeningDetail = ({
                     )}
                 </div>
             </div>
+            <div className="flex-auto md:w-auto w-full my-4">
+                <PlusIcon fill="#fff" width={32} height={32} className="cursor-pointer" onClick={() => setModalOpen(true)}/>
+            </div>
+            <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "bg-black bg-opacity-80"}}>
+                <div className="text-offWhite">
+                    <h2>List of mats required</h2>
+                    <button>Track!</button>
+                </div>
+            </Modal>
         </>
     )
 }

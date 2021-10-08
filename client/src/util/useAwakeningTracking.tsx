@@ -29,7 +29,6 @@ export const useAwakeningTracking = ({
     const onCurrentAwakeningClick = (id: number) => {
         const clickedIdx = currentAwakenings.findIndex(ca => ca.id === id);
 
-        console.log("Current | clickedIdx", clickedIdx);
         
 
         const updatedCurrentAwakenings = currentAwakenings.map((e, idx) => {
@@ -55,10 +54,6 @@ export const useAwakeningTracking = ({
         const reversedIdx = currentAwakenings.slice().reverse().findIndex(ca => ca.status === true)
         const highestCurrentAwakeningIdx = ( reversedIdx >= 0 ? currentAwakenings.length - 1 - reversedIdx : reversedIdx)
 
-        console.log("Desired | clickedIdx", clickedIdx);
-        console.log("Desired | highestCurrentAwakeningIdx", highestCurrentAwakeningIdx);
-        
-        
         if(highestCurrentAwakeningIdx < clickedIdx) {
             let status;
             const updatedDesiredAwakenings = desiredAwakenings.map((e,idx) => {

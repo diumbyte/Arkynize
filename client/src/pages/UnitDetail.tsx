@@ -3,6 +3,7 @@ import { Awakening, Enhancement, useGetUnitDetailsQuery } from "../generated/gra
 import { useParams } from "react-router-dom"
 import { SkillDetail } from './components/SkillDetail';
 import { AwakeningDetail } from './components/AwakeningDetail';
+import { ReactComponent as PlusIcon } from "../assets/plus.svg"
 
 type UnitParams = {
     unitId: string
@@ -11,8 +12,6 @@ type UnitParams = {
 export const UnitDetail = () => {
     const {unitId} = useParams<UnitParams>();
     const { data } = useGetUnitDetailsQuery({variables: {unitId: Number(unitId)}});
-    
-    console.log(data);
     
     return (
         <div className="w-full">
@@ -42,8 +41,10 @@ export const UnitDetail = () => {
                 </div>
             </div>
             <div className="container pt-4">
-                    <span className="text-2xl">Awakenings</span>
-                    <div className="row">
+                    <div className="row justify-start">
+                        <span className="text-2xl pr-4">Awakenings</span>
+                    </div>
+                    <div className="row mt-4 flex-wrap">
                         <AwakeningDetail awakenings={data?.getAwakeningsForUnit as Array<Awakening>}/>
                     </div>
             </div>

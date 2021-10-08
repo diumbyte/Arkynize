@@ -11,9 +11,6 @@ export const Header = ({
     const location = useLocation();
     const locationName = location.pathname.substring(1)
 
-    console.log(locationName);
-    
-    
     return (
         <div className="flex flex-row flex-nowrap items-center pt-4 pb-4">
             <BurgerIcon className="cursor-pointer md:hidden" onClick={() => setIsExpanded(true)} fill={"#fff"}/>

@@ -6,4 +6,7 @@
     .row {
         @apply flex flex-row flex-nowrap justify-center items-center;
     }
+    .customModal {
+        @apply max-w-screen-md w-80 bg-tavernBrown border border-tavernBrown-light border-opacity-40 rounded-lg !important
+    }
 }

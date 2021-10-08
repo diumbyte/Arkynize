@@ -1,4 +1,5 @@
 import { Enhancement } from "../../generated/graphql"
+import {ReactComponent as PlusIcon } from "../../assets/plus.svg"
 
 type SkillDetailProps = {
     id: number,
@@ -22,7 +23,10 @@ export const SkillDetail = ({
         <div className="row">
             {/* Skill Info */}
             <div className="w-1/3">
-                <p className="text-xl mx-auto">{name}</p>
+                <div className="row justify-start">
+                    <PlusIcon fill="#fff" className="mr-4 cursor-pointer"/>
+                    <span className="text-xl">{name}</span>
+                </div>
                 <div>
                     <img 
                         src={`${process.env.PUBLIC_URL}/assets/images/skill/${code}.png`} 
