@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import { Awakening } from "../generated/graphql"
+import findLastIndex from "./findLastIndex"
 
-type isAwakeningLevelComplete = {
+export type isAwakeningLevelComplete = {
     id: number,
     state: number,
     status: boolean
@@ -29,8 +30,6 @@ export const useAwakeningTracking = ({
     const onCurrentAwakeningClick = (id: number) => {
         const clickedIdx = currentAwakenings.findIndex(ca => ca.id === id);
 
-        
-
         const updatedCurrentAwakenings = currentAwakenings.map((e, idx) => {
             let status;
             if(idx <= clickedIdx) {
@@ -46,13 +45,16 @@ export const useAwakeningTracking = ({
         })
 
         setCurrentAwakenings(updatedCurrentAwakenings);
-        setDesiredAwakenings(updatedCurrentAwakenings);
+
+        const highestDesiredAwakeningIdx = findLastIndex(desiredAwakenings, da => da.status === true)
+        if(highestDesiredAwakeningIdx < clickedIdx) {
+            setDesiredAwakenings(updatedCurrentAwakenings);
+        }
     }
 
     const onDesiredAwakeningClick = (id: number)  => {
         const clickedIdx = desiredAwakenings.findIndex(da => da.id === id);
-        const reversedIdx = currentAwakenings.slice().reverse().findIndex(ca => ca.status === true)
-        const highestCurrentAwakeningIdx = ( reversedIdx >= 0 ? currentAwakenings.length - 1 - reversedIdx : reversedIdx)
+        const highestCurrentAwakeningIdx = findLastIndex(currentAwakenings, ca => ca.status === true)
 
         if(highestCurrentAwakeningIdx < clickedIdx) {
             let status;

@@ -11,8 +11,13 @@ module.exports = {
         },
         primaryGreen: {
           light: "#44EEBE",
-          DEFAULT: "#2ad4a4",
-          dark: "#11BB8B"
+          DEFAULT: "#0B2B14",
+          dark: "#0D2810"
+        },
+        buttonGreen: {
+          light: "#0e3a0d",
+          DEFAULT: "#062212",
+          dark: "#001505"
         },
         secondaryBlue: {
           light: "#CEFAFD",
@@ -37,6 +42,9 @@ module.exports = {
           light: "#9c7f59"
         }
       },
+      backgroundImage: {
+        "primary-button": "linear-gradient(180deg, rgba(5,32,18,1) 0%, rgba(6,34,18,1) 48%, rgba(14,58,13,1) 85%, rgba(43,99,10,1) 100%)"
+      },
       fontFamily: {
         "mulish": ["Mulish", "sans-serif"]
       },
@@ -56,7 +64,12 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      background: ['active'],
+      backgroundColor: ['active'],
+      backgroundImage: ['active'],
+      borderWidth: ['last']
+    },
   },
   plugins: [],
 }

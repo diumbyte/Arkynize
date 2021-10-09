@@ -3,7 +3,6 @@ import { Awakening, Enhancement, useGetUnitDetailsQuery } from "../generated/gra
 import { useParams } from "react-router-dom"
 import { SkillDetail } from './components/SkillDetail';
 import { AwakeningDetail } from './components/AwakeningDetail';
-import { ReactComponent as PlusIcon } from "../assets/plus.svg"
 
 type UnitParams = {
     unitId: string

@@ -7,6 +7,8 @@ import {ReactComponent as PlusIcon} from "../../assets/plus.svg"
 import StarIcon from "../../assets/star.png"
 import StarFilledIcon from "../../assets/star_filled.png"
 import { useState } from 'react';
+import renderAwakeningCost from '../../util/renderAwakeningCost';
+import findLastIndex from '../../util/findLastIndex';
 
 type AwakeningDetailProps = {
     awakenings: Array<Awakening>
@@ -58,12 +60,19 @@ export const AwakeningDetail = ({
                 </div>
             </div>
             <div className="flex-auto md:w-auto w-full my-4">
-                <PlusIcon fill="#fff" width={32} height={32} className="cursor-pointer" onClick={() => setModalOpen(true)}/>
+                <PlusIcon fill={`#fff`} width={32} height={32} className="cursor-pointer" onClick={() => setModalOpen(true)}/>
             </div>
-            <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "bg-black bg-opacity-80"}}>
+            <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "customModalOverlay"}}>
                 <div className="text-offWhite">
-                    <h2>List of mats required</h2>
-                    <button>Track!</button>
+                    <h2 className="text-center text-2xl">Materials Required</h2>
+                    <div className="flex flex-col items-center py-6">
+                        {
+                            renderAwakeningCost(findLastIndex(currentAwakenings, ca => ca.status === true), findLastIndex(desiredAwakenings, da => da.status === true), awakenings)
+                        }
+                    </div>
+                    <div className="w-full row">
+                        <button className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2">Track!</button>
+                    </div>
                 </div>
             </Modal>
         </>

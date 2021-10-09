@@ -36,6 +36,7 @@ gql`
             catalyst {
                 id
                 name
+                code
             }
             }
             runeCosts {
@@ -43,6 +44,7 @@ gql`
                 rune {
                     id
                     name
+                    code
                 }
             }
         }

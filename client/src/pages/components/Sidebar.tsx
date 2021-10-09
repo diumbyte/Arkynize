@@ -4,6 +4,7 @@ import { Logo as LogoComponent } from './Logo';
 import { SidebarItem } from './SidebarItem';
 import {ReactComponent as AddIcon} from "../../assets/add.svg" 
 import {ReactComponent as SummaryIcon} from "../../assets/summary.svg" 
+// import {ReactComponent as UnitIcon} from "../../assets/unit.svg" 
 
 type SidebarProps = {
     isExpanded: boolean,
