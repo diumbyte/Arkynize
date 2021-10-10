@@ -1,3 +1,6 @@
+import react, { ReactElement } from "react"
+import { useAppSelector, useAppDispatch } from "../redux/hooks"
+import { editAwakening } from "../redux/actions/unitsReducer"
 import { Awakening } from "../generated/graphql"
 
 type CatalystCost = {
@@ -17,11 +20,22 @@ type AwakeningCosts = {
     runes: Array<RuneCost>
 }
 
-export const renderAwakeningCosts = (currentAwakeningsIdx: number, desiredAwakeningsIdx: number, awakenings: Array<Awakening>) => {
+type RenderAwakeningCostsProps = {
+    currentAwakeningsIdx: number, 
+    desiredAwakeningsIdx: number, 
+    awakenings: Array<Awakening>
+}
 
-    console.log("currentAwakeningsIdx", currentAwakeningsIdx);
-    console.log("desiredAwakeningsIdx", desiredAwakeningsIdx);
-
+const AwakeningCosts = (
+    {
+        currentAwakeningsIdx, 
+        desiredAwakeningsIdx, 
+        awakenings
+    }: RenderAwakeningCostsProps) => 
+    {
+    const {units} = useAppSelector(state => state.units)
+    const dispatch = useAppDispatch();
+    
     if(currentAwakeningsIdx < desiredAwakeningsIdx) {
         // .slice() just goes to the end of the array even if the second arg goes past awakening.length
         const targetAwakenings = awakenings.slice(currentAwakeningsIdx + 1, desiredAwakeningsIdx + 1).map(a => ({
@@ -30,7 +44,6 @@ export const renderAwakeningCosts = (currentAwakeningsIdx: number, desiredAwaken
             runeCosts: a.runeCosts,
             awakeningCatalystCost: a.awakeningCatalystCost
         }))
-        // console.log(targetAwakenings);
         
         const res = targetAwakenings.reduce<AwakeningCosts>( (acc, currObj) => {
             const catalystIdx = acc.catalysts.findIndex(c => c.id === currObj.awakeningCatalystCost.id)
@@ -72,7 +85,7 @@ export const renderAwakeningCosts = (currentAwakeningsIdx: number, desiredAwaken
                 {
                     res.catalysts.map(catalystCost => {
                         return (
-                            <div className="row w-80 md:w-1/2 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
+                            <div key={catalystCost.id} className="row w-80 md:w-1/2 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
                                 <img src={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.code}.png`} alt={catalystCost.code}/>
                                 <span>{catalystCost.count}</span>
                             </div>
@@ -82,7 +95,7 @@ export const renderAwakeningCosts = (currentAwakeningsIdx: number, desiredAwaken
                 {
                     res.runes.map(runeCost => {
                         return (
-                            <div className="row w-80 md:w-1/2 justify-between border-b-2 border-tavernBrown-light border-opacity-40 last:border-b-0">
+                            <div key={runeCost.id} className="row w-80 md:w-1/2 justify-between border-b-2 border-tavernBrown-light border-opacity-40 last:border-b-0">
                                 <img src={`${process.env.PUBLIC_URL}/assets/images/rune/${runeCost.code}.png`} alt={runeCost.code}/>
                                 <span>{runeCost.count}</span>
                             </div>
@@ -100,4 +113,4 @@ export const renderAwakeningCosts = (currentAwakeningsIdx: number, desiredAwaken
     )
 }
 
-export default renderAwakeningCosts
+export default AwakeningCosts

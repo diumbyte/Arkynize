@@ -32,6 +32,7 @@ gql`
             id
             state
             awakeningCatalystCost {
+            id
             count
             catalyst {
                 id

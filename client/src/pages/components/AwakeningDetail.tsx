@@ -2,12 +2,12 @@ import { Modal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css';
 
 import { Awakening } from "../../generated/graphql";
-import { useAwakeningTracking } from "../../util/useAwakeningTracking"; 
+import { useAwakeningTracking } from "../../hooks/useAwakeningTracking"; 
 import {ReactComponent as PlusIcon} from "../../assets/plus.svg"
 import StarIcon from "../../assets/star.png"
 import StarFilledIcon from "../../assets/star_filled.png"
 import { useState } from 'react';
-import renderAwakeningCost from '../../util/renderAwakeningCost';
+import AwakeningCost from '../../util/AwakeningCost';
 import findLastIndex from '../../util/findLastIndex';
 
 type AwakeningDetailProps = {
@@ -66,9 +66,11 @@ export const AwakeningDetail = ({
                 <div className="text-offWhite">
                     <h2 className="text-center text-2xl">Materials Required</h2>
                     <div className="flex flex-col items-center py-6">
-                        {
-                            renderAwakeningCost(findLastIndex(currentAwakenings, ca => ca.status === true), findLastIndex(desiredAwakenings, da => da.status === true), awakenings)
-                        }
+                        <AwakeningCost 
+                            currentAwakeningsIdx={findLastIndex(currentAwakenings, ca => ca.status === true)}
+                            desiredAwakeningsIdx={findLastIndex(desiredAwakenings, da => da.status === true)}
+                            awakenings={awakenings}   
+                        />
                     </div>
                     <div className="w-full row">
                         <button className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2">Track!</button>

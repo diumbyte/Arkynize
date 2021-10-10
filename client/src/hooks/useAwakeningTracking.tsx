@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Awakening } from "../generated/graphql"
-import findLastIndex from "./findLastIndex"
+import findLastIndex from "../util/findLastIndex"
 
 export type isAwakeningLevelComplete = {
     id: number,

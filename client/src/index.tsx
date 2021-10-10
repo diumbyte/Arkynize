@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import { InMemoryCache, ApolloClient, ApolloProvider } from '@apollo/client';
 import { BrowserRouter as Router } from "react-router-dom"
 
@@ -18,7 +20,9 @@ ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <Router>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </Router>
     </ApolloProvider>
   </React.StrictMode>,
