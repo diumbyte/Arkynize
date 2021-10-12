@@ -46,6 +46,7 @@ gql`
                     id
                     name
                     code
+                    type
                 }
             }
         }

@@ -639,7 +639,8 @@ exports.resolvers = {
     Rune: {
         id: (parent) => parent.id,
         name: (parent) => parent.name,
-        code: (parent) => parent.code
+        code: (parent) => parent.code,
+        type: (parent) => parent.type
     },
     Attribute: {
         id: (parent) => parent.id,

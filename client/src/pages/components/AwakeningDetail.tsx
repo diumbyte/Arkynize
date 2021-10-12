@@ -11,10 +11,16 @@ import AwakeningCost from '../../util/AwakeningCost';
 import findLastIndex from '../../util/findLastIndex';
 
 type AwakeningDetailProps = {
+    unitId?: number,
+    unitName?: string,
+    unitCode?: string,
     awakenings: Array<Awakening>
 }
 
 export const AwakeningDetail = ({
+    unitId,
+    unitName,
+    unitCode,
     awakenings
 }: AwakeningDetailProps) => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -67,13 +73,13 @@ export const AwakeningDetail = ({
                     <h2 className="text-center text-2xl">Materials Required</h2>
                     <div className="flex flex-col items-center py-6">
                         <AwakeningCost 
+                            unitId={unitId}
+                            unitName={unitName}
+                            unitCode={unitCode}
                             currentAwakeningsIdx={findLastIndex(currentAwakenings, ca => ca.status === true)}
                             desiredAwakeningsIdx={findLastIndex(desiredAwakenings, da => da.status === true)}
                             awakenings={awakenings}   
                         />
-                    </div>
-                    <div className="w-full row">
-                        <button className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2">Track!</button>
                     </div>
                 </div>
             </Modal>

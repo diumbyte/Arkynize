@@ -44,7 +44,12 @@ export const UnitDetail = () => {
                         <span className="text-2xl pr-4">Awakenings</span>
                     </div>
                     <div className="row mt-4 flex-wrap">
-                        <AwakeningDetail awakenings={data?.getAwakeningsForUnit as Array<Awakening>}/>
+                        <AwakeningDetail 
+                            awakenings={data?.getAwakeningsForUnit as Array<Awakening>} 
+                            unitId={data?.unit.id}
+                            unitCode={data?.unit.code}
+                            unitName={data?.unit.name}
+                        />
                     </div>
             </div>
         </div>

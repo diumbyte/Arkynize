@@ -1,11 +1,23 @@
-import { AwakeningCatalystCost, RuneCost, EnhancementCatalystCost } from "../../generated/graphql";
+import { AwakeningCatalystCost, RuneCost, EnhancementCatalystCost, Awakening } from "../../generated/graphql";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
+export interface TrackedCatalysts {
+    catalystId: number,
+    currentCount: number,
+    desiredCount: number
+}
+
+export interface TrackedRunes {
+    runeId: number,
+    currentCount: number,
+    desiredCount: number
+}
+
 export interface TrackedAwakening {
-    awakeningId: number,
-    runes: RuneCost[],
-    catalysts?: AwakeningCatalystCost
+    trackedAwakeningIds: number[],
+    currentCatalysts: TrackedCatalysts[],
+    currentRunes: TrackedRunes[]
 }
 
 export interface TrackedSkill {
@@ -19,7 +31,7 @@ export interface TrackedSkill {
 }
 
 export interface TrackedUnit {
-    id: number,
+    unitId: number,
     code: string,
     name: string,
     awakenings: TrackedAwakening[],
@@ -39,12 +51,12 @@ export const unitsSlice = createSlice({
     initialState,
     reducers: {
         editAwakening: (state, action: PayloadAction<TrackedUnit>) => {
-            const unitToTrackIdx = state.units.findIndex(tu => tu.id === action.payload.id)
+            const unitToTrackIdx = state.units.findIndex(tu => tu.unitId === action.payload.unitId)
             if(unitToTrackIdx === -1) {
                 state.units = [...state.units, {...action.payload, skills: []}]
             } else {
                 state.units = state.units.map(trackedUnit => {
-                    if(trackedUnit.id === action.payload.id) {
+                    if(trackedUnit.unitId === action.payload.unitId) {
                         return {
                             ...trackedUnit,
                             awakenings: action.payload.awakenings

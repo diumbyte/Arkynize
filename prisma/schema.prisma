@@ -139,6 +139,7 @@ model Rune {
   id   Int    @id @default(autoincrement())
   name String
   code String
+  type  String
 
   runeCosts RuneCost[]
 }

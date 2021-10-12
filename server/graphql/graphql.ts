@@ -139,6 +139,7 @@ export type Rune = {
   code: Scalars['String'];
   id: Scalars['Int'];
   name: Scalars['String'];
+  type: Scalars['String'];
 };
 
 export type RuneCost = {
@@ -393,6 +394,7 @@ export type RuneResolvers<ContextType = Context, ParentType extends ResolversPar
   code: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   id: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   name: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  type: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 

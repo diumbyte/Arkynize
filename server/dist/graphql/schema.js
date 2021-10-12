@@ -112,6 +112,7 @@ type Rune {
   id: Int!
   name: String!
   code: String!
+  type: String!
 }
 
 type RuneCost {
