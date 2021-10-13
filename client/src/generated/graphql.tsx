@@ -200,7 +200,7 @@ export type GetUnitDetailsQueryVariables = Exact<{
 }>;
 
 
-export type GetUnitDetailsQuery = { __typename?: 'Query', unit: { __typename?: 'Unit', id: number, name: string, code: string }, getAwakeningsForUnit: Array<{ __typename?: 'Awakening', id: number, state: number, awakeningCatalystCost: { __typename?: 'AwakeningCatalystCost', id: number, count: number, catalyst: { __typename?: 'Catalyst', id: number, name: string, code: string } }, runeCosts: Array<{ __typename?: 'RuneCost', count: number, rune: { __typename?: 'Rune', id: number, name: string, code: string, type: string } }> }>, getUnitSkills: Array<{ __typename?: 'Skill', id: number, name: string, type: number, code: string, enhancements: Array<{ __typename?: 'Enhancement', id: number, level: number, stigma: number, molagora: number, gold: number, enhancementCatalystCost: { __typename?: 'EnhancementCatalystCost', id: number, count: number, catalyst: { __typename?: 'Catalyst', id: number, name: string } } }> }> };
+export type GetUnitDetailsQuery = { __typename?: 'Query', unit: { __typename?: 'Unit', id: number, name: string, code: string }, getAwakeningsForUnit: Array<{ __typename?: 'Awakening', id: number, state: number, awakeningCatalystCost: { __typename?: 'AwakeningCatalystCost', id: number, count: number, catalyst: { __typename?: 'Catalyst', id: number, name: string, code: string, isEpic: boolean } }, runeCosts: Array<{ __typename?: 'RuneCost', count: number, rune: { __typename?: 'Rune', id: number, name: string, code: string, type: string } }> }>, getUnitSkills: Array<{ __typename?: 'Skill', id: number, name: string, type: number, code: string, enhancements: Array<{ __typename?: 'Enhancement', id: number, level: number, stigma: number, molagora: number, gold: number, enhancementCatalystCost: { __typename?: 'EnhancementCatalystCost', id: number, count: number, catalyst: { __typename?: 'Catalyst', id: number, name: string } } }> }> };
 
 
 export const GetAllUnitsDocument = gql`
@@ -268,6 +268,7 @@ export const GetUnitDetailsDocument = gql`
         id
         name
         code
+        isEpic
       }
     }
     runeCosts {

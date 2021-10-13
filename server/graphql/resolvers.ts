@@ -86,6 +86,9 @@ export const resolvers: Resolvers = {
                             type: "asc"
                         }
                     }
+                },
+                orderBy: {
+                    name: "asc"
                 }
             })
         },

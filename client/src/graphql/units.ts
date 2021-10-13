@@ -38,6 +38,7 @@ gql`
                 id
                 name
                 code
+                isEpic
             }
             }
             runeCosts {

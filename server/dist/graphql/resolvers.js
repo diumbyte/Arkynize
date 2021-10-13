@@ -96,6 +96,9 @@ exports.resolvers = {
                             type: "asc"
                         }
                     }
+                },
+                orderBy: {
+                    name: "asc"
                 }
             });
         }),

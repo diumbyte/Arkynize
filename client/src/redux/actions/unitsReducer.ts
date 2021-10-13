@@ -32,9 +32,9 @@ export interface TrackedSkill {
 
 export interface TrackedUnit {
     unitId: number,
-    code: string,
-    name: string,
-    awakenings: TrackedAwakening[],
+    unitCode: string,
+    unitName: string,
+    awakenings: TrackedAwakening,
     skills: TrackedSkill[]
 }
 

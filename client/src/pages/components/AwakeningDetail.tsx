@@ -7,7 +7,7 @@ import {ReactComponent as PlusIcon} from "../../assets/plus.svg"
 import StarIcon from "../../assets/star.png"
 import StarFilledIcon from "../../assets/star_filled.png"
 import { useState } from 'react';
-import AwakeningCost from '../../util/AwakeningCost';
+import AwakeningCost from './AwakeningCost';
 import findLastIndex from '../../util/findLastIndex';
 
 type AwakeningDetailProps = {
