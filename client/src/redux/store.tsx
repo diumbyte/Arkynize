@@ -1,10 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
 import unitsReducer from "./actions/unitsReducer";
+import { loadState, saveState } from "./localStorage";
 
 const store = configureStore({
     reducer: {
         units: unitsReducer
-    }
+    },
+    preloadedState: loadState()
+})
+
+store.subscribe(() => {
+    saveState({
+        units: store.getState().units
+    })
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

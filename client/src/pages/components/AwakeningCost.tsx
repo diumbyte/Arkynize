@@ -157,7 +157,6 @@ const AwakeningCosts = (
 
     // Update local state if materials are already being tracked and stored in redux store
     useEffect(() => {
-        console.log("test");
         // Check if awakenings exist for current unit id
         const unitIdx = units.findIndex(unit => unit.unitId === unitId && unit.awakenings)
         if (unitIdx !== -1){
