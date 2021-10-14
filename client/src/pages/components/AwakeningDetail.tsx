@@ -71,7 +71,7 @@ export const AwakeningDetail = ({
             <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "customModalOverlay"}}>
                 <div className="text-offWhite">
                     <h2 className="text-center text-2xl">Materials Required</h2>
-                    <div className="flex flex-col items-center py-6">
+                    <form className="flex flex-col items-center py-6" onSubmit={(e) => e.preventDefault()}>
                         <AwakeningCost 
                             unitId={unitId}
                             unitName={unitName}
@@ -79,8 +79,9 @@ export const AwakeningDetail = ({
                             currentAwakeningsIdx={findLastIndex(currentAwakenings, ca => ca.status === true)}
                             desiredAwakeningsIdx={findLastIndex(desiredAwakenings, da => da.status === true)}
                             awakenings={awakenings}   
+                            setModalOpen={setModalOpen}
                         />
-                    </div>
+                    </form>
                 </div>
             </Modal>
         </>

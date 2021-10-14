@@ -1,15 +1,19 @@
-import { AwakeningCatalystCost, RuneCost, EnhancementCatalystCost, Awakening } from "../../generated/graphql";
+import { EnhancementCatalystCost } from "../../generated/graphql";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
 export interface TrackedCatalysts {
     catalystId: number,
+    catalystName: string,
+    isEpic: boolean,
     currentCount: number,
     desiredCount: number
 }
 
 export interface TrackedRunes {
     runeId: number,
+    runeName: string,
+    runeType: string,
     currentCount: number,
     desiredCount: number
 }

@@ -1,11 +1,11 @@
-import { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../redux/hooks"
-import { editAwakening, TrackedAwakening, TrackedRunes, TrackedUnit } from "../../redux/actions/unitsReducer"
+import { editAwakening, TrackedRunes, TrackedUnit } from "../../redux/actions/unitsReducer"
 import { Awakening } from "../../generated/graphql"
-import e from "cors"
 
 type CatalystCost = {
     id: number,
+    name: string,
     code: string,
     count: number,
     isEpic: boolean
@@ -13,12 +13,13 @@ type CatalystCost = {
 
 type RuneCost = {
     id: number,
+    name: string,
     code: string,
     count: number,
     type: string
 }
 
-type AwakeningCosts = {
+type AwakeningCostsData = {
     catalysts: Array<CatalystCost>,
     runes: Array<RuneCost>
 }
@@ -29,7 +30,8 @@ type RenderAwakeningCostsProps = {
     unitName?: string,
     currentAwakeningsIdx: number, 
     desiredAwakeningsIdx: number, 
-    awakenings: Array<Awakening>
+    awakenings: Array<Awakening>,
+    setModalOpen: Function
 }
 
 const buildDispatchData = (unitId: number, unitCode: string, unitName: string, awakenings: Awakening[], basicCatalystCount: number, epicCatalystCount: number, basicRune: number, midRune: number, topRune: number): TrackedUnit => {
@@ -37,11 +39,15 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
 
     const currentCatalysts = awakenings.map(a => {
         const catalystId = a.awakeningCatalystCost.catalyst.id
+        const isEpic = a.awakeningCatalystCost.catalyst.isEpic
+        const catalystName = a.awakeningCatalystCost.catalyst.name
         const currentCount = a.awakeningCatalystCost.catalyst.isEpic ? epicCatalystCount : basicCatalystCount
         const desiredCount = a.awakeningCatalystCost.count
 
         return {
             catalystId,
+            isEpic,
+            catalystName,
             currentCount,
             desiredCount
         }
@@ -54,6 +60,8 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
                 if(basicRune !== 0) {
                     const runeData = {
                         runeId: rc.rune.id,
+                        runeType: rc.rune.type,
+                        runeName: rc.rune.name,
                         currentCount: basicRune,
                         desiredCount: rc.count
                     }
@@ -62,9 +70,11 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
             } else if(rc.rune.type === "greater") {
                  if(midRune !== 0) {
                      const runeData = {
-                         runeId: rc.rune.id,
-                         currentCount: midRune,
-                         desiredCount: rc.count
+                        runeId: rc.rune.id,
+                        runeType: rc.rune.type,
+                        runeName: rc.rune.name,
+                        currentCount: midRune,
+                        desiredCount: rc.count
                      }
                      spreadRunes.push(runeData)
                  }
@@ -72,6 +82,8 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
                 if(topRune !== 0) {
                     const runeData = {
                         runeId: rc.rune.id,
+                        runeType: rc.rune.type,
+                        runeName: rc.rune.name,
                         currentCount: topRune, 
                         desiredCount: rc.count
                     }
@@ -81,16 +93,21 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
         })
     })
 
+    console.log(spreadRunes);
+    
+
     const currentRunes: TrackedRunes[] = spreadRunes.reduce<TrackedRunes[]>((acc, currentRune) => {
         const runeIdx = acc.findIndex(rune => rune.runeId === currentRune.runeId )
 
         if(runeIdx !== -1) {
             // It's found. Add it to the current object
-            acc[runeIdx].currentCount += currentRune.currentCount
+            acc[runeIdx].desiredCount += currentRune.desiredCount
         } else {
             // New entry. 
             acc.push({
                 runeId: currentRune.runeId,
+                runeType: currentRune.runeType,
+                runeName: currentRune.runeName,
                 currentCount: currentRune.currentCount,
                 desiredCount: currentRune.desiredCount
             })
@@ -122,11 +139,13 @@ const AwakeningCosts = (
         unitName,
         currentAwakeningsIdx, 
         desiredAwakeningsIdx, 
-        awakenings
+        awakenings,
+        setModalOpen
     }: RenderAwakeningCostsProps) => 
     {
     const {units} = useAppSelector(state => state.units)
     const dispatch = useAppDispatch();
+
 
     // Local state management
     const [basicCatalyst, setBasicCatalyst] = useState<number>(0)
@@ -134,6 +153,35 @@ const AwakeningCosts = (
     const [basicRune, setBasicRune] = useState<number>(0)
     const [midRune, setMidRune] = useState<number>(0)
     const [topRune, setTopRune] = useState<number>(0)
+
+
+    // Update local state if materials are already being tracked and stored in redux store
+    useEffect(() => {
+        console.log("test");
+        // Check if awakenings exist for current unit id
+        const unitIdx = units.findIndex(unit => unit.unitId === unitId && unit.awakenings)
+        if (unitIdx !== -1){
+            // Update local states
+            // Update catalysts
+            units[unitIdx].awakenings.currentCatalysts.forEach(catalyst => {
+                if(catalyst.isEpic) {
+                    setEpicCatalyst(catalyst.currentCount)
+                }  else {
+                    setBasicCatalyst(catalyst.currentCount)
+                }
+            })
+            // Update runes
+            units[unitIdx].awakenings.currentRunes.forEach(rune => {
+                if(rune.runeType === "basic") {
+                    setBasicRune(rune.currentCount)
+                } else if(rune.runeType === "greater") {
+                    setMidRune(rune.currentCount)
+                } else {
+                    setTopRune(rune.currentCount)
+                }
+            })
+        }
+    }, [])
 
     // Calculation 
     if(currentAwakeningsIdx < desiredAwakeningsIdx) {
@@ -147,13 +195,14 @@ const AwakeningCosts = (
             awakeningCatalystCost: a.awakeningCatalystCost
         }))
         
-        const res = mappedTargetAwakenings.reduce<AwakeningCosts>( (acc, currObj) => {
+        const res = mappedTargetAwakenings.reduce<AwakeningCostsData>( (acc, currObj) => {
             const catalystIdx = acc.catalysts.findIndex(c => c.id === currObj.awakeningCatalystCost.id)
             if(catalystIdx >= 0) {
                 acc.catalysts[catalystIdx].count += currObj.awakeningCatalystCost.count
             } else if(currObj.awakeningCatalystCost.count !== 0) {
                 acc.catalysts.push({
                     id: currObj.awakeningCatalystCost.catalyst.id,
+                    name: currObj.awakeningCatalystCost.catalyst.name,
                     code: currObj.awakeningCatalystCost.catalyst.code,
                     count: currObj.awakeningCatalystCost.count,
                     isEpic: currObj.awakeningCatalystCost.catalyst.isEpic
@@ -168,6 +217,7 @@ const AwakeningCosts = (
                 } else {
                     acc.runes.push({
                         id: runeCost.rune.id,
+                        name: runeCost.rune.name,
                         code: runeCost.rune.code,
                         count: runeCost.count,
                         type: runeCost.rune.type
@@ -251,25 +301,11 @@ const AwakeningCosts = (
                 <div className="w-full row">
                     <button 
                         className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2 mt-2"
+                        type="submit"
                         onClick={(e) => {
                             e.preventDefault();
-                            res.catalysts.forEach(trackedCatalysts => {
-                                if(trackedCatalysts.isEpic) {
-                                    setEpicCatalyst(0)
-                                } else {
-                                    setBasicCatalyst(0)
-                                }
-                            })
-                            res.runes.forEach(trackedRunes => {
-                                if(trackedRunes.type === "basic") {
-                                    setBasicRune(0)
-                                } else if(trackedRunes.type === "greater") {
-                                    setMidRune(0)
-                                } else {
-                                    setTopRune(0)
-                                }   
-                            })
                             dispatch(editAwakening(buildDispatchData(unitId as number, unitCode as string, unitName as string, targetAwakenings, basicCatalyst, epicCatalyst, basicRune, midRune, topRune)))
+                            setModalOpen(false)
                         }}
                     >
                         Track!
