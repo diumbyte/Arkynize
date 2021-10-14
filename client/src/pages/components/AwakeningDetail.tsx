@@ -29,7 +29,7 @@ export const AwakeningDetail = ({
         desiredAwakenings,
         onCurrentAwakeningClick,
         onDesiredAwakeningClick
-    } = useAwakeningTracking({awakenings})
+    } = useAwakeningTracking({unitId, awakenings})
     
     return (
         <>
