@@ -19,9 +19,9 @@ export const useAwakeningTracking = ({
     awakenings
 }: UseAwakeningTrackingProps) => {
     // Current awakenings
-    const [currentAwakenings, setCurrentAwakenings] = useState<Array<isAwakeningLevelComplete>>(awakenings.map(a => ({id: a.id, state: a.state, status: false})))
+    const [currentAwakenings, setCurrentAwakenings] = useState<Array<isAwakeningLevelComplete>>([])
     // Desired awakenings
-    const [desiredAwakenings, setDesiredAwakenings] = useState<Array<isAwakeningLevelComplete>>(awakenings.map(a => ({id: a.id, state: a.state, status: false})))
+    const [desiredAwakenings, setDesiredAwakenings] = useState<Array<isAwakeningLevelComplete>>([])
     const {units} = useAppSelector(state => state.units)
 
     useEffect(() => {
@@ -32,7 +32,7 @@ export const useAwakeningTracking = ({
             const highestTrackedAwakeningId = trackedAwakeningIds[trackedAwakeningIds.length - 1]
 
             // Set current awakenings status
-            const updatedCurrentAwakenings = currentAwakenings.map(ca => {
+            const updatedCurrentAwakenings = awakenings.map(ca => {
                 let status = false;
                 if (ca.id < lowestTrackedAwakeningId) {
                     status = true
@@ -46,7 +46,7 @@ export const useAwakeningTracking = ({
             setCurrentAwakenings(updatedCurrentAwakenings)
 
             // Set desired awakenings status
-            const updatedDesiredAwakenings = desiredAwakenings.map(da => {
+            const updatedDesiredAwakenings = awakenings.map(da => {
                 let status = false;
                 if(da.id <= highestTrackedAwakeningId) {
                     status = true
@@ -57,8 +57,13 @@ export const useAwakeningTracking = ({
                 }
             })
             setDesiredAwakenings(updatedDesiredAwakenings)
+        } else {
+            if(awakenings !== undefined) {
+                setCurrentAwakenings(awakenings.map(a => ({id: a.id, state: a.state, status: false})))
+                setDesiredAwakenings(awakenings.map(a => ({id: a.id, state: a.state, status: false})))
+            }
         }
-    }, [units])
+    }, [units, awakenings])
 
     const onCurrentAwakeningClick = (id: number) => {
         const clickedIdx = currentAwakenings.findIndex(ca => ca.id === id);

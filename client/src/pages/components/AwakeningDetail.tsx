@@ -36,7 +36,7 @@ export const AwakeningDetail = ({
             <div className="flex-auto">
                 <p className="text-2xl">Current</p>
                 <div className="row justify-start">
-                    {currentAwakenings.map(a => 
+                    {currentAwakenings?.map(a => 
                         <img
                             key={a.id}
                             className="cursor-pointer" 
@@ -52,7 +52,7 @@ export const AwakeningDetail = ({
             <div className="flex-auto my-4 md:my-0">
                 <p className="text-2xl">Desired</p>
                 <div className="row justify-start">
-                    {desiredAwakenings.map(a => 
+                    {desiredAwakenings?.map(a => 
                         <img 
                             key={a.id}
                             className="cursor-pointer"

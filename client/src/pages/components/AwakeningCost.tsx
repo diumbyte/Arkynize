@@ -93,9 +93,6 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
         })
     })
 
-    console.log(spreadRunes);
-    
-
     const currentRunes: TrackedRunes[] = spreadRunes.reduce<TrackedRunes[]>((acc, currentRune) => {
         const runeIdx = acc.findIndex(rune => rune.runeId === currentRune.runeId )
 
