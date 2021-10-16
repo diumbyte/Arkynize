@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { Enhancement } from "../generated/graphql"
-import findLastIndex from "../util/findLastIndex"
 
 // TODO: Send unitId in here in order to initialize state from redux store in case it's being tracked already
 export const useSkillEnhancementTracking = (skillId: number, enhancements: Enhancement[]) => {
@@ -12,7 +11,7 @@ export const useSkillEnhancementTracking = (skillId: number, enhancements: Enhan
             setSelectedCurrentEnhancementId(0)
             setSelectedDesiredEnhancementId(enhancements[0].id)
         }
-    }, enhancements)
+    }, [enhancements])
 
     const onCurrentEnhancementClick = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedCurrentEnhancementId(parseInt(e.target.value))

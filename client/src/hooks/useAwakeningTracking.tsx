@@ -63,7 +63,7 @@ export const useAwakeningTracking = ({
                 setDesiredAwakenings(awakenings.map(a => ({id: a.id, state: a.state, status: false})))
             }
         }
-    }, [units, awakenings])
+    }, [units, unitId, awakenings])
 
     const onCurrentAwakeningClick = (id: number) => {
         const clickedIdx = currentAwakenings.findIndex(ca => ca.id === id);

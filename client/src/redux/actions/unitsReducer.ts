@@ -24,14 +24,22 @@ export interface TrackedAwakening {
     currentRunes: TrackedRunes[]
 }
 
+export interface TrackedEnhancement {
+    enhancemenId: number,
+    level: number
+}
 export interface TrackedSkill {
     skillId: number,
-    enhancementId: number,
-    gold: number,
-    level: number,
-    molagora: number,
-    stigma: number,
-    catalyst: EnhancementCatalystCost
+    type: number,
+    currentEnhancement: TrackedEnhancement,
+    desiredEnhancement: TrackedEnhancement,
+    currentGold: number,
+    desiredGold: number,
+    currentMolagora?: number,
+    desiredMolagora?: number,
+    currentStigma?: number,
+    desiredStigma?: number,
+    currentCatalysts: TrackedCatalysts[]
 }
 
 export interface TrackedUnit {

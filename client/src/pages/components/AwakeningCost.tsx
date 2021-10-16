@@ -177,7 +177,7 @@ const AwakeningCosts = (
                 }
             })
         }
-    }, [])
+    }, [unitId, units])
 
     // Calculation 
     if(currentAwakeningsIdx < desiredAwakeningsIdx) {

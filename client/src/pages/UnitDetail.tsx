@@ -35,6 +35,9 @@ export const UnitDetail = () => {
                             type={skill.type} 
                             code={skill.code}
                             enhancements={skill.enhancements as Array<Enhancement>}
+                            unitId={data.unit.id}
+                            unitCode={data.unit.code}
+                            unitName={data.unit.name}
                         />)
                     }
                 </div>

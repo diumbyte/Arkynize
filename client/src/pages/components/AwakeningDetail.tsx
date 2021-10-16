@@ -1,12 +1,12 @@
 import { Modal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css';
+import { useState } from 'react';
 
 import { Awakening } from "../../generated/graphql";
 import { useAwakeningTracking } from "../../hooks/useAwakeningTracking"; 
 import {ReactComponent as PlusIcon} from "../../assets/plus.svg"
 import StarIcon from "../../assets/star.png"
 import StarFilledIcon from "../../assets/star_filled.png"
-import { useState } from 'react';
 import AwakeningCost from './AwakeningCost';
 import findLastIndex from '../../util/findLastIndex';
 
