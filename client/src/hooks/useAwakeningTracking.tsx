@@ -27,7 +27,14 @@ export const useAwakeningTracking = ({
     useEffect(() => {
         const unitIdx = units.findIndex(u => u.unitId === unitId)
         if(unitIdx !== -1) {
-            const { awakenings: {trackedAwakeningIds}} = units[unitIdx]
+            const trackedAwakeningIds = units[unitIdx].awakenings?.trackedAwakeningIds
+            if(!trackedAwakeningIds) {
+                if(awakenings !== undefined) {
+                    setCurrentAwakenings(awakenings.map(a => ({id: a.id, state: a.state, status: false})))
+                    setDesiredAwakenings(awakenings.map(a => ({id: a.id, state: a.state, status: false})))
+                }
+                return;
+            }
             const lowestTrackedAwakeningId = trackedAwakeningIds[0]
             const highestTrackedAwakeningId = trackedAwakeningIds[trackedAwakeningIds.length - 1]
 

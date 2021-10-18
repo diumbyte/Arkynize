@@ -1,4 +1,3 @@
-import { EnhancementCatalystCost } from "../../generated/graphql";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
@@ -30,7 +29,6 @@ export interface TrackedEnhancement {
 }
 export interface TrackedSkill {
     skillId: number,
-    type: number,
     currentEnhancement: TrackedEnhancement,
     desiredEnhancement: TrackedEnhancement,
     currentGold: number,
@@ -46,8 +44,15 @@ export interface TrackedUnit {
     unitId: number,
     unitCode: string,
     unitName: string,
-    awakenings: TrackedAwakening,
+    awakenings?: TrackedAwakening,
     skills: TrackedSkill[]
+}
+
+export interface TrackedSkillPayload {
+    unitId: number,
+    unitCode: string,
+    unitName: string,
+    skill: TrackedSkill
 }
 
 export interface TrackedUnitsState {
@@ -79,11 +84,34 @@ export const unitsSlice = createSlice({
                     }
                 })
             }   
+        },
+        editSkillEnhancement: (state, action: PayloadAction<TrackedSkillPayload>) => {
+            const unitToTrackIdx = state.units.findIndex(tu => tu.unitId === action.payload.unitId)
+            if(unitToTrackIdx === -1) {
+                const newUnit:TrackedUnit = {
+                    unitId: action.payload.unitId,
+                    unitCode: action.payload.unitCode,
+                    unitName: action.payload.unitName,
+                    skills: [action.payload.skill]
+                }
+                state.units = [...state.units, newUnit]
+            } else {
+                state.units = state.units.map(trackedUnit => {
+                    if(trackedUnit.unitId === action.payload.unitId) {
+                        return {
+                            ...trackedUnit,
+                            skills: [...trackedUnit.skills, action.payload.skill]
+                        }
+                    } else {
+                        return trackedUnit
+                    }
+                })
+            }
         }
     }
 })
 
-export const { editAwakening } = unitsSlice.actions
+export const { editAwakening, editSkillEnhancement } = unitsSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectUnits = (state: RootState) => state.units

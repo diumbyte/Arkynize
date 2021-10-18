@@ -3,7 +3,7 @@ import { useAppSelector, useAppDispatch } from "../../redux/hooks"
 import { editAwakening, TrackedRunes, TrackedUnit } from "../../redux/actions/unitsReducer"
 import { Awakening } from "../../generated/graphql"
 
-type CatalystCost = {
+export type CatalystCost = {
     id: number,
     name: string,
     code: string,
@@ -145,11 +145,11 @@ const AwakeningCosts = (
 
 
     // Local state management
-    const [basicCatalyst, setBasicCatalyst] = useState<number>(0)
-    const [epicCatalyst, setEpicCatalyst] = useState<number>(0)
-    const [basicRune, setBasicRune] = useState<number>(0)
-    const [midRune, setMidRune] = useState<number>(0)
-    const [topRune, setTopRune] = useState<number>(0)
+    const [basicCatalyst, setBasicCatalyst] = useState(0)
+    const [epicCatalyst, setEpicCatalyst] = useState(0)
+    const [basicRune, setBasicRune] = useState(0)
+    const [midRune, setMidRune] = useState(0)
+    const [topRune, setTopRune] = useState(0)
 
 
     // Update local state if materials are already being tracked and stored in redux store
@@ -157,9 +157,13 @@ const AwakeningCosts = (
         // Check if awakenings exist for current unit id
         const unitIdx = units.findIndex(unit => unit.unitId === unitId && unit.awakenings)
         if (unitIdx !== -1){
+            const foundUnit = units[unitIdx]
+            if(!foundUnit.awakenings) {
+                return
+            }
             // Update local states
             // Update catalysts
-            units[unitIdx].awakenings.currentCatalysts.forEach(catalyst => {
+            foundUnit.awakenings.currentCatalysts.forEach(catalyst => {
                 if(catalyst.isEpic) {
                     setEpicCatalyst(catalyst.currentCount)
                 }  else {
@@ -167,7 +171,7 @@ const AwakeningCosts = (
                 }
             })
             // Update runes
-            units[unitIdx].awakenings.currentRunes.forEach(rune => {
+            foundUnit.awakenings.currentRunes.forEach(rune => {
                 if(rune.runeType === "basic") {
                     setBasicRune(rune.currentCount)
                 } else if(rune.runeType === "greater") {

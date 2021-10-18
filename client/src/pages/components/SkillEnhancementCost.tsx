@@ -1,22 +1,302 @@
+import { useEffect, useState } from "react"
+import { Enhancement } from "../../generated/graphql"
+import { useAppSelector, useAppDispatch } from "../../redux/hooks"
+import { TrackedSkill, TrackedEnhancement, TrackedUnit, editSkillEnhancement, TrackedSkillPayload, TrackedCatalysts } from "../../redux/actions/unitsReducer"
+import { CatalystCost } from "./AwakeningCost"
+import GoldIcon from "../../assets/gold.png"
+import MolagoraIcon from "../../assets/molagora.png"
+import StigmaIcon from "../../assets/stigma.png"
 
 export type SkillEnhancementCostProps = {
     unitId: number,
     unitCode: string,
     unitName: string,
+    skillId: number,
     currentEnhancementId: number,
     desiredEnhancementId: number,
-    setModalOpen: Function
+    setModalOpen: Function,
+    enhancements: Enhancement[]
+}
+
+export type SkillEnhancementTotalCostData = {
+    gold: number,
+    molagora: number,
+    stigma: number,
+    catalysts: CatalystCost[]
+}
+
+const buildDispatchData = (
+    unitId: number, 
+    unitName: string, 
+    unitCode: string, 
+    skillId: number, 
+    enhancements: Enhancement[], 
+    currentEnhancementId: number,
+    desiredEnhancementId: number,
+    basicCatalystCount: number, 
+    epicCatalystCount: number, 
+    goldCount: number, 
+    molagoraCount: number, 
+    stigmaCount: number
+    ): TrackedSkillPayload => {
+        
+    const desiredEnhancement = enhancements.find(enh => enh.id === desiredEnhancementId) as Enhancement
+    const targetEnhancements = enhancements.filter(enh => enh.level <= desiredEnhancement.level)
+
+    const currentCatalysts:TrackedCatalysts[] = targetEnhancements.map(a => {
+        const catalystId = a.enhancementCatalystCost.catalyst.id
+        const isEpic = a.enhancementCatalystCost.catalyst.isEpic
+        const catalystName = a.enhancementCatalystCost.catalyst.name
+        const currentCount = a.enhancementCatalystCost.catalyst.isEpic ? epicCatalystCount : basicCatalystCount
+        const desiredCount = a.enhancementCatalystCost.count
+
+        return {
+            catalystId,
+            isEpic,
+            catalystName,
+            currentCount,
+            desiredCount
+        }
+    }).filter(ca => ca.catalystId !== 37 && ca.currentCount !== 0)
+
+    const totalEnhancementsCost = targetEnhancements.reduce((acc, curr) => {
+        acc.gold += curr.gold
+        acc.molagora += curr.molagora
+        acc.stigma += curr.stigma
+        return acc;
+    }, {
+        gold: 0,
+        molagora: 0,
+        stigma: 0,
+    });
+
+    // TODO: currentEnhancement, targetEnhancement
+    // Handle current being 0
+    const currentEnhancementPayload:TrackedEnhancement = currentEnhancementId === 0 ? {level: 0, enhancemenId: 0} : 
+            {
+                enhancemenId: currentEnhancementId,
+                level:enhancements.find(enh => enh.id === currentEnhancementId)?.level as number
+            }
+
+    const desiredEnhancementPayload:TrackedEnhancement = {
+        enhancemenId: desiredEnhancementId,
+        level: desiredEnhancement.level 
+    }
+
+    const skill:TrackedSkill = {
+        skillId,
+        currentCatalysts,
+        currentGold: goldCount,
+        desiredGold: totalEnhancementsCost.gold,
+        currentMolagora: molagoraCount,
+        desiredMolagora: totalEnhancementsCost.molagora,
+        currentStigma: stigmaCount,
+        desiredStigma: totalEnhancementsCost.stigma,
+        currentEnhancement: currentEnhancementPayload,
+        desiredEnhancement: desiredEnhancementPayload
+    }
+
+    return {
+        unitId,
+        unitName,
+        unitCode,
+        skill
+    }
 }
 
 export const SkillEnhancementCost = ({
     unitId,
     unitName,
     unitCode,
+    skillId,
     currentEnhancementId,
     desiredEnhancementId,
-    setModalOpen
+    setModalOpen,
+    enhancements
 }: SkillEnhancementCostProps) => {
+    const { units } = useAppSelector(state => state.units)
+    const dispatch = useAppDispatch()
+    
+    const [goldCount, setGoldCount] = useState(0)
+    const [molagoraCount, setMolagoraCount]  = useState(0)
+    const [stigmaCount, setStigmaCount] = useState(0)
+    const [basicCatalystCount, setBasicCatalystCount] = useState(0)
+    const [epicCatalystCount, setEpicCatalystCount] = useState(0)
+
+    // Update local state if materials are already being tracked by global store
+    useEffect(() => {
+        const unitIdx = units.findIndex(unit => unit.unitId === unitId)
+        const foundUnit = units[unitIdx]
+        const skillIdx = foundUnit.skills.findIndex(skill => skill.skillId === skillId)
+        const foundSkill = foundUnit.skills[skillIdx]
+
+        if (unitIdx !== -1 && skillIdx !== -1) {
+            // Update local states
+            foundSkill.currentCatalysts.forEach(catalyst => {
+                if(catalyst.isEpic) {
+                    setEpicCatalystCount(catalyst.currentCount)
+                }  else {
+                    setBasicCatalystCount(catalyst.currentCount)
+                }
+            })
+            setGoldCount(foundSkill.currentGold)
+            if(foundSkill.currentMolagora && foundSkill.currentMolagora) {
+                setMolagoraCount(foundSkill.currentMolagora)
+            }
+            if(foundSkill.currentStigma && foundSkill.currentStigma) {
+                setStigmaCount(foundSkill.currentStigma)
+            }
+        }
+    }, [units, unitId, skillId])
+
+    const desiredEnhancement = enhancements.find(enh => enh.id === desiredEnhancementId) as Enhancement
+    const targetEnhancements = enhancements.filter(enh => enh.level <= desiredEnhancement.level)
+
+    const totalEnhancementsCost = targetEnhancements.reduce<SkillEnhancementTotalCostData>((acc, curr) => {
+        const catalystIdx = acc.catalysts.findIndex(c => c.id === curr.enhancementCatalystCost.catalyst.id)
+        if (catalystIdx >= 0) {
+            acc.catalysts[catalystIdx].count += curr.enhancementCatalystCost.count
+        } else if (curr.enhancementCatalystCost.count !== 0) {
+            acc.catalysts.push({
+                id: curr.enhancementCatalystCost.catalyst.id,
+                name: curr.enhancementCatalystCost.catalyst.name,
+                code: curr.enhancementCatalystCost.catalyst.code,
+                count: curr.enhancementCatalystCost.count,
+                isEpic: curr.enhancementCatalystCost.catalyst.isEpic
+            })
+        }
+
+        acc.gold += curr.gold
+        acc.molagora += curr.molagora
+        acc.stigma += curr.stigma
+        return acc;
+    }, {
+        gold: 0,
+        molagora: 0,
+        stigma: 0,
+        catalysts: []
+    });
+        
     return (
-        <div>Test</div>
+        <>
+        {
+            totalEnhancementsCost.catalysts.map(catalystCost => {
+                return (
+                    <div key={catalystCost.id} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.code}.png`} alt={catalystCost.code}/>
+                        <div className="row justify-end">
+                            <input 
+                                className="py-2 px-2 text-black w-60" 
+                                type="number" 
+                                name={`catalyst_${catalystCost.id}_current`} 
+                                id={`catalyst_${catalystCost.id}_current`} 
+                                value={catalystCost.isEpic ? epicCatalystCount : basicCatalystCount}
+                                max={catalystCost.count}
+                                min={0}
+                                onChange={(e) => {
+                                    if(catalystCost.isEpic) {
+                                        setEpicCatalystCount(Number(e.target.value))
+                                    } else {
+                                        setBasicCatalystCount(Number(e.target.value))
+                                    }
+                                }}
+                            />
+                            <div className="min-w-45">
+                                <span className="pl-2">/ {catalystCost.count}</span>
+                            </div>
+                        </div>
+                    </div>
+                )
+            })
+        }
+        <div className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
+            <img src={GoldIcon} alt={"Gold icon"}/>
+            <div className="row justify-end">
+                <input 
+                    className="py-2 px-2 text-black w-60" 
+                    type="number" 
+                    name={`gold_current`} 
+                    id={`gold_current`} 
+                    value={goldCount}
+                    max={totalEnhancementsCost.gold}
+                    min={0}
+                    onChange={(e) => setGoldCount(Number(e.target.value))}
+                />
+                <div className="min-w-45">
+                    <span className="pl-2">/ {totalEnhancementsCost.gold}</span>
+                </div>
+            </div>
+        </div>
+        {
+            totalEnhancementsCost.molagora !== 0 ?
+                <div className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
+                    <img src={MolagoraIcon} alt={"Molagora icon"}/>
+                    <div className="row justify-end">
+                        <input 
+                            className="py-2 px-2 text-black w-60" 
+                            type="number" 
+                            name={`molagora_current`} 
+                            id={`molagora_current`} 
+                            value={molagoraCount}
+                            max={totalEnhancementsCost.molagora}
+                            min={0}
+                            onChange={(e) => setMolagoraCount(Number(e.target.value))}
+                        />
+                        <div className="min-w-45">
+                            <span className="pl-2">/ {totalEnhancementsCost.molagora}</span>
+                        </div>
+                    </div>
+                </div>
+            :
+                <div className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
+                    <img src={StigmaIcon} alt={"Stigma icon"}/>
+                    <div className="row justify-end">
+                        <input 
+                            className="py-2 px-2 text-black w-60" 
+                            type="number" 
+                            name={`stigma_current`} 
+                            id={`stigma_current`} 
+                            value={stigmaCount}
+                            max={totalEnhancementsCost.stigma}
+                            min={0}
+                            onChange={(e) => setStigmaCount(Number(e.target.value))}
+                        />
+                        <div className="min-w-45">
+                            <span className="pl-2">/ {totalEnhancementsCost.stigma}</span>
+                        </div>
+                    </div>
+            </div>
+        }
+        <div className="w-full row">
+            <button 
+                className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2 mt-2"
+                type="submit"
+                onClick={(e) => {
+                    e.preventDefault();
+                    dispatch(
+                        editSkillEnhancement(
+                            buildDispatchData(
+                                unitId as number, 
+                                unitCode as string, 
+                                unitName as string, 
+                                skillId, 
+                                enhancements as Enhancement[], 
+                                currentEnhancementId,
+                                desiredEnhancementId,
+                                basicCatalystCount, 
+                                epicCatalystCount, 
+                                goldCount, 
+                                molagoraCount, 
+                                stigmaCount
+                            )
+                        )
+                    )
+                    setModalOpen(false)
+                }}
+            >
+                Track!
+            </button>
+        </div>
+        </>
     )
 }

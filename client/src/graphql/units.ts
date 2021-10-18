@@ -69,6 +69,8 @@ gql`
                     catalyst {
                         id
                         name
+                        code
+                        isEpic
                     }
                 }
             }

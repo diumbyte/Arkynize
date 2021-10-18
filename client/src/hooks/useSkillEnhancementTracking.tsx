@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import { useAppSelector } from "../redux/hooks"
+import { editSkillEnhancement } from "../redux/actions/unitsReducer"
 import { Enhancement } from "../generated/graphql"
 
 // TODO: Send unitId in here in order to initialize state from redux store in case it's being tracked already

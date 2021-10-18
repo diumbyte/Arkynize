@@ -87,9 +87,11 @@ export const SkillDetail = ({
                             unitId={unitId}
                             unitName={unitName}
                             unitCode={unitCode}
+                            skillId={id}
                             currentEnhancementId={selectedCurrentEnhancementId}
                             desiredEnhancementId={selectedDesiredEnhancementId}
                             setModalOpen={setModalOpen}
+                            enhancements={enhancements}
                         />
                     </form>
                 </div>
