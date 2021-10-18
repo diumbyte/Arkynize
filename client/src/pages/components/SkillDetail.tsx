@@ -36,7 +36,7 @@ export const SkillDetail = ({
         onDesiredEnhancementClick,
         selectedCurrentEnhancementId,
         selectedDesiredEnhancementId
-    } = useSkillEnhancementTracking(id, enhancements)
+    } = useSkillEnhancementTracking(id, unitId, enhancements)
     
     return (
         <div className="row">
