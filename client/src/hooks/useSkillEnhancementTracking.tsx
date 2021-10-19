@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { useAppSelector } from "../redux/hooks"
-import { editSkillEnhancement } from "../redux/actions/unitsReducer"
 import { Enhancement } from "../generated/graphql"
 
 // TODO: Send unitId in here in order to initialize state from redux store in case it's being tracked already
@@ -13,6 +12,11 @@ export const useSkillEnhancementTracking = (skillId: number, unitId: number, enh
     useEffect(() => {
         const unitIdx = units.findIndex(unit => unit.unitId === unitId)
         const foundUnit = units[unitIdx]
+        if(!foundUnit) {
+            setSelectedCurrentEnhancementId(0)
+            setSelectedDesiredEnhancementId(enhancements[0].id)
+            return;
+        }
         const skillIdx = foundUnit.skills.findIndex(skill => skill.skillId === skillId)
         const foundSkill = foundUnit.skills[skillIdx]
 
@@ -23,7 +27,7 @@ export const useSkillEnhancementTracking = (skillId: number, unitId: number, enh
             setSelectedCurrentEnhancementId(0)
             setSelectedDesiredEnhancementId(enhancements[0].id)
         }
-    }, [enhancements])
+    }, [enhancements, skillId, unitId, units])
 
     const onCurrentEnhancementClick = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedCurrentEnhancementId(parseInt(e.target.value))

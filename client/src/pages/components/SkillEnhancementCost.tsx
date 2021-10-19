@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Enhancement } from "../../generated/graphql"
 import { useAppSelector, useAppDispatch } from "../../redux/hooks"
-import { TrackedSkill, TrackedEnhancement, TrackedUnit, editSkillEnhancement, TrackedSkillPayload, TrackedCatalysts } from "../../redux/actions/unitsReducer"
+import { TrackedSkill, TrackedEnhancement, editSkillEnhancement, TrackedSkillPayload, TrackedCatalysts } from "../../redux/actions/unitsReducer"
 import { CatalystCost } from "./AwakeningCost"
 import GoldIcon from "../../assets/gold.png"
 import MolagoraIcon from "../../assets/molagora.png"

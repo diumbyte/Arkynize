@@ -87,6 +87,7 @@ export const unitsSlice = createSlice({
         },
         editSkillEnhancement: (state, action: PayloadAction<TrackedSkillPayload>) => {
             const unitToTrackIdx = state.units.findIndex(tu => tu.unitId === action.payload.unitId)
+            
             if(unitToTrackIdx === -1) {
                 const newUnit:TrackedUnit = {
                     unitId: action.payload.unitId,
@@ -96,11 +97,26 @@ export const unitsSlice = createSlice({
                 }
                 state.units = [...state.units, newUnit]
             } else {
+                
                 state.units = state.units.map(trackedUnit => {
+                    // Handling when the unit is already being tracked
                     if(trackedUnit.unitId === action.payload.unitId) {
-                        return {
-                            ...trackedUnit,
-                            skills: [...trackedUnit.skills, action.payload.skill]
+                        // Handling when the skill is already being tracked
+                        if (trackedUnit.skills.some(skill => skill.skillId === action.payload.skill.skillId)) {
+                            trackedUnit.skills = trackedUnit.skills.map(skill => {
+                                if (skill.skillId === action.payload.skill.skillId) {
+                                    return action.payload.skill
+                                } else {
+                                    return skill
+                                }
+                            })
+                            return trackedUnit
+                        } else {
+                            // Handling when the skill ISN'T already being tracked
+                            return {
+                                ...trackedUnit,
+                                skills: [...trackedUnit.skills, action.payload.skill]
+                            }
                         }
                     } else {
                         return trackedUnit
