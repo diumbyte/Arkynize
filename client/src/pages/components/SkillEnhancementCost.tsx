@@ -57,7 +57,27 @@ const buildDispatchData = (
             currentCount,
             desiredCount
         }
-    }).filter(ca => ca.catalystId !== 37 && ca.currentCount !== 0)
+    })
+    .filter(ca => ca.catalystId !== 37 && ca.currentCount !== 0)
+    .reduce<TrackedCatalysts[]>((acc, curr) => {
+        const catalystIdx = acc.findIndex(c => c.catalystId === curr.catalystId)
+        if (catalystIdx >= 0) {
+            acc[catalystIdx].desiredCount += curr.desiredCount
+        } else if (curr.desiredCount !== 0) {
+            acc.push({
+                catalystId: curr.catalystId,
+                catalystName: curr.catalystName,
+                currentCount: curr.currentCount,
+                desiredCount: curr.desiredCount,
+                isEpic: curr.isEpic
+            })
+        }
+
+        return acc;
+    }, [])
+
+    console.log(currentCatalysts);
+    
 
     const totalEnhancementsCost = targetEnhancements.reduce((acc, curr) => {
         acc.gold += curr.gold
@@ -70,8 +90,6 @@ const buildDispatchData = (
         stigma: 0,
     });
 
-    // TODO: currentEnhancement, targetEnhancement
-    // Handle current being 0
     const currentEnhancementPayload:TrackedEnhancement = currentEnhancementId === 0 ? {level: 0, enhancemenId: 0} : 
             {
                 enhancemenId: currentEnhancementId,
@@ -127,24 +145,26 @@ export const SkillEnhancementCost = ({
     useEffect(() => {
         const unitIdx = units.findIndex(unit => unit.unitId === unitId)
         const foundUnit = units[unitIdx]
-        const skillIdx = foundUnit.skills.findIndex(skill => skill.skillId === skillId)
-        const foundSkill = foundUnit.skills[skillIdx]
-
-        if (unitIdx !== -1 && skillIdx !== -1) {
-            // Update local states
-            foundSkill.currentCatalysts.forEach(catalyst => {
-                if(catalyst.isEpic) {
-                    setEpicCatalystCount(catalyst.currentCount)
-                }  else {
-                    setBasicCatalystCount(catalyst.currentCount)
+        
+        if (unitIdx !== -1) {
+            const skillIdx = foundUnit.skills.findIndex(skill => skill.skillId === skillId)
+            const foundSkill = foundUnit.skills[skillIdx]
+            if(skillIdx !== -1) {
+                // Update local states
+                foundSkill.currentCatalysts.forEach(catalyst => {
+                    if(catalyst.isEpic) {
+                        setEpicCatalystCount(catalyst.currentCount)
+                    }  else {
+                        setBasicCatalystCount(catalyst.currentCount)
+                    }
+                })
+                setGoldCount(foundSkill.currentGold)
+                if(foundSkill.currentMolagora && foundSkill.currentMolagora) {
+                    setMolagoraCount(foundSkill.currentMolagora)
                 }
-            })
-            setGoldCount(foundSkill.currentGold)
-            if(foundSkill.currentMolagora && foundSkill.currentMolagora) {
-                setMolagoraCount(foundSkill.currentMolagora)
-            }
-            if(foundSkill.currentStigma && foundSkill.currentStigma) {
-                setStigmaCount(foundSkill.currentStigma)
+                if(foundSkill.currentStigma && foundSkill.currentStigma) {
+                    setStigmaCount(foundSkill.currentStigma)
+                }
             }
         }
     }, [units, unitId, skillId])
@@ -277,8 +297,8 @@ export const SkillEnhancementCost = ({
                         editSkillEnhancement(
                             buildDispatchData(
                                 unitId as number, 
-                                unitCode as string, 
                                 unitName as string, 
+                                unitCode as string, 
                                 skillId, 
                                 enhancements as Enhancement[], 
                                 currentEnhancementId,
