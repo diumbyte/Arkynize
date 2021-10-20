@@ -57,7 +57,6 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
     awakenings.forEach(a => {
         a.runeCosts.forEach(rc => {
             if (rc.rune.type === "basic") {
-                if(basicRune !== 0) {
                     const runeData = {
                         runeId: rc.rune.id,
                         runeType: rc.rune.type,
@@ -66,9 +65,8 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
                         desiredCount: rc.count
                     }
                     spreadRunes.push(runeData)
-                }
+                
             } else if(rc.rune.type === "greater") {
-                 if(midRune !== 0) {
                      const runeData = {
                         runeId: rc.rune.id,
                         runeType: rc.rune.type,
@@ -77,9 +75,8 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
                         desiredCount: rc.count
                      }
                      spreadRunes.push(runeData)
-                 }
+                 
             } else {
-                if(topRune !== 0) {
                     const runeData = {
                         runeId: rc.rune.id,
                         runeType: rc.rune.type,
@@ -88,7 +85,7 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
                         desiredCount: rc.count
                     }
                     spreadRunes.push(runeData)
-                }
+                
             }
         })
     })

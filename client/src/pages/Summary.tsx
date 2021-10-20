@@ -46,6 +46,10 @@ export const Summary = () => {
                                             </div>
                                         )
                                     })
+                                    
+                                }
+                                {
+                                    unit.awakenings 
                                     &&
                                     unit.awakenings.currentRunes.map(rune => {
                                         return (
