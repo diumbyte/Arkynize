@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
-import { useAppSelector, useAppDispatch } from "../../redux/hooks"
-import { editAwakening, TrackedRunes, TrackedUnit } from "../../redux/actions/unitsReducer"
-import { Awakening } from "../../generated/graphql"
+import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
+import { editAwakening, TrackedCatalysts, TrackedRunes, TrackedUnit } from "../../../redux/actions/unitsReducer"
+import { Awakening } from "../../../generated/graphql"
 
 export type CatalystCost = {
     id: number,
@@ -37,8 +37,9 @@ type RenderAwakeningCostsProps = {
 const buildDispatchData = (unitId: number, unitCode: string, unitName: string, awakenings: Awakening[], basicCatalystCount: number, epicCatalystCount: number, basicRune: number, midRune: number, topRune: number): TrackedUnit => {
     const trackedAwakeningIds = awakenings.map(a => a.id)
 
-    const currentCatalysts = awakenings.map(a => {
+    const currentCatalysts:TrackedCatalysts[] = awakenings.map(a => {
         const catalystId = a.awakeningCatalystCost.catalyst.id
+        const catalystCode = a.awakeningCatalystCost.catalyst.code
         const isEpic = a.awakeningCatalystCost.catalyst.isEpic
         const catalystName = a.awakeningCatalystCost.catalyst.name
         const currentCount = a.awakeningCatalystCost.catalyst.isEpic ? epicCatalystCount : basicCatalystCount
@@ -46,6 +47,7 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
 
         return {
             catalystId,
+            catalystCode,
             isEpic,
             catalystName,
             currentCount,
@@ -59,6 +61,7 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
             if (rc.rune.type === "basic") {
                     const runeData = {
                         runeId: rc.rune.id,
+                        runeCode: rc.rune.code,
                         runeType: rc.rune.type,
                         runeName: rc.rune.name,
                         currentCount: basicRune,
@@ -69,6 +72,7 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
             } else if(rc.rune.type === "greater") {
                      const runeData = {
                         runeId: rc.rune.id,
+                        runeCode: rc.rune.code,
                         runeType: rc.rune.type,
                         runeName: rc.rune.name,
                         currentCount: midRune,
@@ -79,6 +83,7 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
             } else {
                     const runeData = {
                         runeId: rc.rune.id,
+                        runeCode: rc.rune.code,
                         runeType: rc.rune.type,
                         runeName: rc.rune.name,
                         currentCount: topRune, 
@@ -100,6 +105,7 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
             // New entry. 
             acc.push({
                 runeId: currentRune.runeId,
+                runeCode: currentRune.runeCode,
                 runeType: currentRune.runeType,
                 runeName: currentRune.runeName,
                 currentCount: currentRune.currentCount,

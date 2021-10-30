@@ -1,8 +1,8 @@
 import React from 'react';
-import { Awakening, Enhancement, useGetUnitDetailsQuery } from "../generated/graphql"
+import { Awakening, Enhancement, useGetUnitDetailsQuery } from "../../generated/graphql"
 import { useParams } from "react-router-dom"
-import { SkillDetail } from './components/SkillDetail';
-import { AwakeningDetail } from './components/AwakeningDetail';
+import { SkillDetail } from './Skill/SkillDetail';
+import { AwakeningDetail } from './Awakening/AwakeningDetail';
 
 type UnitParams = {
     unitId: string

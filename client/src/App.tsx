@@ -2,9 +2,9 @@ import './App.css';
 import { useState } from "react"
 import { Switch, Route } from "react-router-dom"
 
-import { AllUnits } from "./pages/AllUnits"
-import { UnitDetail } from "./pages/UnitDetail"
-import { Summary } from "./pages/Summary"
+import { AllUnits } from "./pages/Units/AllUnits"
+import { UnitDetail } from "./pages/UnitDetail/UnitDetail"
+import { Summary } from "./pages/Summary/Summary"
 import { Sidebar } from "./pages/components/Sidebar"
 import { Home } from './pages/Home'
 import { Header } from './pages/components/Header'

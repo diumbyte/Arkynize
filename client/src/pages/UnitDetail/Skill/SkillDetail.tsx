@@ -1,9 +1,9 @@
 import { Modal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css'
 
-import { Enhancement } from "../../generated/graphql"
-import { ReactComponent as PlusIcon } from "../../assets/plus.svg"
-import { useSkillEnhancementTracking } from "../../hooks/useSkillEnhancementTracking"
+import { Enhancement } from "../../../generated/graphql"
+import { ReactComponent as PlusIcon } from "../../../assets/plus.svg"
+import { useSkillEnhancementTracking } from "../../../hooks/useSkillEnhancementTracking"
 import { useState } from 'react'
 import { SkillEnhancementCost } from './SkillEnhancementCost'
 

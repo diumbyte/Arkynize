@@ -3,6 +3,7 @@ import { RootState } from "../store";
 
 export interface TrackedCatalysts {
     catalystId: number,
+    catalystCode: string,
     catalystName: string,
     isEpic: boolean,
     currentCount: number,
@@ -11,6 +12,7 @@ export interface TrackedCatalysts {
 
 export interface TrackedRunes {
     runeId: number,
+    runeCode: string,
     runeName: string,
     runeType: string,
     currentCount: number,

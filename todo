@@ -3,6 +3,7 @@ General:
   ☐ When a user wants to edit their current progress it should ideally be done from the summary screen.
     ☐ BUT. We'll show a pencil edit icon at the top right corner of characters they're currently tracking
   ☐ Search bar for Units page
+  ☐ Missing units: Starting from Belian's release til today.
 Server:
   ☐ Add a field to `Rune` to differentiate the tiers. [Basic, Medium, High]
     ☐ It'll help for hardcoding the states on the frontend

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-import { Enhancement } from "../../generated/graphql"
-import { useAppSelector, useAppDispatch } from "../../redux/hooks"
-import { TrackedSkill, TrackedEnhancement, editSkillEnhancement, TrackedSkillPayload, TrackedCatalysts } from "../../redux/actions/unitsReducer"
-import { CatalystCost } from "./AwakeningCost"
-import GoldIcon from "../../assets/gold.png"
-import MolagoraIcon from "../../assets/molagora.png"
-import StigmaIcon from "../../assets/stigma.png"
+import { Enhancement } from "../../../generated/graphql"
+import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
+import { TrackedSkill, TrackedEnhancement, editSkillEnhancement, TrackedSkillPayload, TrackedCatalysts } from "../../../redux/actions/unitsReducer"
+import { CatalystCost } from "../Awakening/AwakeningCost"
+import GoldIcon from "../../../assets/gold.png"
+import MolagoraIcon from "../../../assets/molagora.png"
+import StigmaIcon from "../../../assets/stigma.png"
 
 export type SkillEnhancementCostProps = {
     unitId: number,
@@ -45,6 +45,7 @@ const buildDispatchData = (
 
     const currentCatalysts:TrackedCatalysts[] = targetEnhancements.map(a => {
         const catalystId = a.enhancementCatalystCost.catalyst.id
+        const catalystCode = a.enhancementCatalystCost.catalyst.code
         const isEpic = a.enhancementCatalystCost.catalyst.isEpic
         const catalystName = a.enhancementCatalystCost.catalyst.name
         const currentCount = a.enhancementCatalystCost.catalyst.isEpic ? epicCatalystCount : basicCatalystCount
@@ -52,6 +53,7 @@ const buildDispatchData = (
 
         return {
             catalystId,
+            catalystCode,
             isEpic,
             catalystName,
             currentCount,
@@ -66,6 +68,7 @@ const buildDispatchData = (
         } else if (curr.desiredCount !== 0) {
             acc.push({
                 catalystId: curr.catalystId,
+                catalystCode: curr.catalystCode,
                 catalystName: curr.catalystName,
                 currentCount: curr.currentCount,
                 desiredCount: curr.desiredCount,
