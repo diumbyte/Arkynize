@@ -19,7 +19,7 @@ export interface TrackedCatalysts {
     count: TrackedCount
 }
 
-export interface TrackedRunes {
+export interface TrackedRunes extends TrackedResource {
     runeId: number,
     runeCode: string,
     runeName: string,

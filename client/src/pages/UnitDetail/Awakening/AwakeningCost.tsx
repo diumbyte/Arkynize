@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
 import { editAwakening, TrackedCatalysts, TrackedRunes, TrackedUnit } from "../../../redux/actions/unitsReducer"
 import { Awakening } from "../../../generated/graphql"
-import { current } from "@reduxjs/toolkit"
 
 export type CatalystCost = {
     id: number,
@@ -25,6 +24,11 @@ type AwakeningCostsData = {
     runes: Array<RuneCost>
 }
 
+type LocalTrackedResource = {
+    currentCount: number,
+    isTracked: boolean
+}
+
 type RenderAwakeningCostsProps = {
     unitId?: number,
     unitCode?: string,
@@ -35,7 +39,17 @@ type RenderAwakeningCostsProps = {
     setModalOpen: Function
 }
 
-const buildDispatchData = (unitId: number, unitCode: string, unitName: string, awakenings: Awakening[], basicCatalystCount: number, epicCatalystCount: number, basicRune: number, midRune: number, topRune: number): TrackedUnit => {
+const buildDispatchData = (
+        unitId: number, 
+        unitCode: string, 
+        unitName: string, 
+        awakenings: Awakening[], 
+        basicCatalystCount: number, 
+        epicCatalystCount: number, 
+        basicRune: LocalTrackedResource, 
+        midRune: LocalTrackedResource, 
+        topRune: LocalTrackedResource
+    ): TrackedUnit => {
     const trackedAwakeningIds = awakenings.map(a => a.id)
 
     const currentCatalysts:TrackedCatalysts[] = awakenings.map(a => {
@@ -56,47 +70,50 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
                 required: requiredCount
             }
         }
-    }).filter(ca => ca.catalystId !== 37 && ca.count.current !== 0)
+    }).filter(ca => ca.catalystId !== 37)
 
     const spreadRunes: TrackedRunes[] = []
     awakenings.forEach(a => {
         a.runeCosts.forEach(rc => {
             if (rc.rune.type === "basic") {
-                    const runeData = {
+                    const runeData:TrackedRunes = {
                         runeId: rc.rune.id,
                         runeCode: rc.rune.code,
                         runeType: rc.rune.type,
                         runeName: rc.rune.name,
                         count: {
-                            current: basicRune,
+                            current: basicRune.currentCount,
                             required: rc.count
-                        }
+                        },
+                        isTracked: basicRune.isTracked
                     }
                     spreadRunes.push(runeData)
                 
             } else if(rc.rune.type === "greater") {
-                     const runeData = {
+                     const runeData:TrackedRunes = {
                         runeId: rc.rune.id,
                         runeCode: rc.rune.code,
                         runeType: rc.rune.type,
                         runeName: rc.rune.name,
                         count: {
-                            current: midRune,
+                            current: midRune.currentCount,
                             required: rc.count
-                        }
+                        },
+                        isTracked: midRune.isTracked
                      }
                      spreadRunes.push(runeData)
                  
             } else {
-                    const runeData = {
+                    const runeData:TrackedRunes = {
                         runeId: rc.rune.id,
                         runeCode: rc.rune.code,
                         runeType: rc.rune.type,
                         runeName: rc.rune.name,
                         count: {
-                            current: topRune,
+                            current: topRune.currentCount,
                             required: rc.count
-                        }
+                        },
+                        isTracked: topRune.isTracked
                     }
                     spreadRunes.push(runeData)
                 
@@ -120,7 +137,8 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
                 count: {
                     current: currentRune.count.current,
                     required: currentRune.count.required
-                }
+                },
+                isTracked: currentRune.isTracked
             })
         }
 
@@ -161,9 +179,9 @@ const AwakeningCosts = (
     // Local state management
     const [basicCatalyst, setBasicCatalyst] = useState(0)
     const [epicCatalyst, setEpicCatalyst] = useState(0)
-    const [basicRune, setBasicRune] = useState(0)
-    const [midRune, setMidRune] = useState(0)
-    const [topRune, setTopRune] = useState(0)
+    const [basicRune, setBasicRune] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
+    const [midRune, setMidRune] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
+    const [topRune, setTopRune] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
 
 
     // Update local state if materials are already being tracked and stored in redux store
@@ -187,11 +205,20 @@ const AwakeningCosts = (
             // Update runes
             foundUnit.awakenings.currentRunes.forEach(rune => {
                 if(rune.runeType === "basic") {
-                    setBasicRune(rune.count.current)
+                    setBasicRune({
+                        currentCount: rune.count.current,
+                        isTracked: rune.isTracked
+                    })
                 } else if(rune.runeType === "greater") {
-                    setMidRune(rune.count.current)
+                    setMidRune({
+                        currentCount: rune.count.current,
+                        isTracked: rune.isTracked
+                    })
                 } else {
-                    setTopRune(rune.count.current)
+                    setTopRune({
+                        currentCount: rune.count.current,
+                        isTracked: rune.isTracked
+                    })
                 }
             })
         }
@@ -291,16 +318,25 @@ const AwakeningCosts = (
                                         id={`rune_${runeCost.id}_current`} 
                                         min={0}
                                         max={runeCost.count}
-                                        value={runeCost.type === "basic" ? basicRune
-                                                : runeCost.type === "greater" ? midRune
-                                                : topRune }
+                                        value={runeCost.type === "basic" ? basicRune.currentCount
+                                                : runeCost.type === "greater" ? midRune.currentCount
+                                                : topRune.currentCount }
                                         onChange={(e) => {
                                             if(runeCost.type === "basic") {
-                                                setBasicRune(Number(e.target.value))
+                                                setBasicRune(prevState => ({
+                                                    currentCount: Number(e.target.value),
+                                                    isTracked: prevState.isTracked
+                                                }))
                                             } else if(runeCost.type === "greater") {
-                                                setMidRune(Number(e.target.value))
+                                                setMidRune(prevState => ({
+                                                    currentCount: Number(e.target.value),
+                                                    isTracked: prevState.isTracked
+                                                }))
                                             } else {
-                                                setTopRune(Number(e.target.value))
+                                                setTopRune(prevState => ({
+                                                    currentCount: Number(e.target.value),
+                                                    isTracked: prevState.isTracked
+                                                }))
                                             }
                                         }}
                                     />
@@ -318,7 +354,21 @@ const AwakeningCosts = (
                         type="submit"
                         onClick={(e) => {
                             e.preventDefault();
-                            dispatch(editAwakening(buildDispatchData(unitId as number, unitCode as string, unitName as string, targetAwakenings, basicCatalyst, epicCatalyst, basicRune, midRune, topRune)))
+                            dispatch(
+                                editAwakening(
+                                    buildDispatchData(
+                                        unitId as number, 
+                                        unitCode as string, 
+                                        unitName as string, 
+                                        targetAwakenings, 
+                                        basicCatalyst, 
+                                        epicCatalyst, 
+                                        basicRune, 
+                                        midRune, 
+                                        topRune
+                                    )
+                                )
+                            )
                             setModalOpen(false)
                         }}
                     >
