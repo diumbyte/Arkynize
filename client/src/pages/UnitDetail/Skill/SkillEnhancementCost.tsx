@@ -56,22 +56,26 @@ const buildDispatchData = (
             catalystCode,
             isEpic,
             catalystName,
-            currentCount,
-            desiredCount
+            count: {
+                current: currentCount,
+                required: desiredCount
+            }
         }
     })
-    .filter(ca => ca.catalystId !== 37 && ca.currentCount !== 0)
+    .filter(ca => ca.catalystId !== 37)
     .reduce<TrackedCatalysts[]>((acc, curr) => {
         const catalystIdx = acc.findIndex(c => c.catalystId === curr.catalystId)
         if (catalystIdx >= 0) {
-            acc[catalystIdx].desiredCount += curr.desiredCount
-        } else if (curr.desiredCount !== 0) {
+            acc[catalystIdx].count.required += curr.count.required
+        } else if (curr.count.required !== 0) {
             acc.push({
                 catalystId: curr.catalystId,
                 catalystCode: curr.catalystCode,
                 catalystName: curr.catalystName,
-                currentCount: curr.currentCount,
-                desiredCount: curr.desiredCount,
+                count: {
+                    current: curr.count.required,
+                    required: curr.count.required
+                },
                 isEpic: curr.isEpic
             })
         }
@@ -107,12 +111,18 @@ const buildDispatchData = (
     const skill:TrackedSkill = {
         skillId,
         currentCatalysts,
-        currentGold: goldCount,
-        desiredGold: totalEnhancementsCost.gold,
-        currentMolagora: molagoraCount,
-        desiredMolagora: totalEnhancementsCost.molagora,
-        currentStigma: stigmaCount,
-        desiredStigma: totalEnhancementsCost.stigma,
+        goldCount: {
+            current: goldCount,
+            required: totalEnhancementsCost.gold
+        },
+        molagoraCount: {
+            current: molagoraCount,
+            required: totalEnhancementsCost.molagora
+        },
+        stigmaCount: {
+            current: stigmaCount,
+            required: totalEnhancementsCost.stigma
+        },
         currentEnhancement: currentEnhancementPayload,
         desiredEnhancement: desiredEnhancementPayload
     }
@@ -156,18 +166,14 @@ export const SkillEnhancementCost = ({
                 // Update local states
                 foundSkill.currentCatalysts.forEach(catalyst => {
                     if(catalyst.isEpic) {
-                        setEpicCatalystCount(catalyst.currentCount)
+                        setEpicCatalystCount(catalyst.count.current)
                     }  else {
-                        setBasicCatalystCount(catalyst.currentCount)
+                        setBasicCatalystCount(catalyst.count.current)
                     }
                 })
-                setGoldCount(foundSkill.currentGold)
-                if(foundSkill.currentMolagora && foundSkill.currentMolagora) {
-                    setMolagoraCount(foundSkill.currentMolagora)
-                }
-                if(foundSkill.currentStigma && foundSkill.currentStigma) {
-                    setStigmaCount(foundSkill.currentStigma)
-                }
+                setGoldCount(foundSkill.goldCount.current)
+                setMolagoraCount(foundSkill.molagoraCount.current)
+                setStigmaCount(foundSkill.stigmaCount.current)
             }
         }
     }, [units, unitId, skillId])

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
 import { editAwakening, TrackedCatalysts, TrackedRunes, TrackedUnit } from "../../../redux/actions/unitsReducer"
 import { Awakening } from "../../../generated/graphql"
+import { current } from "@reduxjs/toolkit"
 
 export type CatalystCost = {
     id: number,
@@ -43,17 +44,19 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
         const isEpic = a.awakeningCatalystCost.catalyst.isEpic
         const catalystName = a.awakeningCatalystCost.catalyst.name
         const currentCount = a.awakeningCatalystCost.catalyst.isEpic ? epicCatalystCount : basicCatalystCount
-        const desiredCount = a.awakeningCatalystCost.count
+        const requiredCount = a.awakeningCatalystCost.count
 
         return {
             catalystId,
             catalystCode,
             isEpic,
             catalystName,
-            currentCount,
-            desiredCount
+            count: {
+                current: currentCount,
+                required: requiredCount
+            }
         }
-    }).filter(ca => ca.catalystId !== 37 && ca.currentCount !== 0)
+    }).filter(ca => ca.catalystId !== 37 && ca.count.current !== 0)
 
     const spreadRunes: TrackedRunes[] = []
     awakenings.forEach(a => {
@@ -64,8 +67,10 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
                         runeCode: rc.rune.code,
                         runeType: rc.rune.type,
                         runeName: rc.rune.name,
-                        currentCount: basicRune,
-                        desiredCount: rc.count
+                        count: {
+                            current: basicRune,
+                            required: rc.count
+                        }
                     }
                     spreadRunes.push(runeData)
                 
@@ -75,8 +80,10 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
                         runeCode: rc.rune.code,
                         runeType: rc.rune.type,
                         runeName: rc.rune.name,
-                        currentCount: midRune,
-                        desiredCount: rc.count
+                        count: {
+                            current: midRune,
+                            required: rc.count
+                        }
                      }
                      spreadRunes.push(runeData)
                  
@@ -86,8 +93,10 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
                         runeCode: rc.rune.code,
                         runeType: rc.rune.type,
                         runeName: rc.rune.name,
-                        currentCount: topRune, 
-                        desiredCount: rc.count
+                        count: {
+                            current: topRune,
+                            required: rc.count
+                        }
                     }
                     spreadRunes.push(runeData)
                 
@@ -100,7 +109,7 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
 
         if(runeIdx !== -1) {
             // It's found. Add it to the current object
-            acc[runeIdx].desiredCount += currentRune.desiredCount
+            acc[runeIdx].count.required += currentRune.count.required
         } else {
             // New entry. 
             acc.push({
@@ -108,8 +117,10 @@ const buildDispatchData = (unitId: number, unitCode: string, unitName: string, a
                 runeCode: currentRune.runeCode,
                 runeType: currentRune.runeType,
                 runeName: currentRune.runeName,
-                currentCount: currentRune.currentCount,
-                desiredCount: currentRune.desiredCount
+                count: {
+                    current: currentRune.count.current,
+                    required: currentRune.count.required
+                }
             })
         }
 
@@ -168,19 +179,19 @@ const AwakeningCosts = (
             // Update catalysts
             foundUnit.awakenings.currentCatalysts.forEach(catalyst => {
                 if(catalyst.isEpic) {
-                    setEpicCatalyst(catalyst.currentCount)
+                    setEpicCatalyst(catalyst.count.current)
                 }  else {
-                    setBasicCatalyst(catalyst.currentCount)
+                    setBasicCatalyst(catalyst.count.current)
                 }
             })
             // Update runes
             foundUnit.awakenings.currentRunes.forEach(rune => {
                 if(rune.runeType === "basic") {
-                    setBasicRune(rune.currentCount)
+                    setBasicRune(rune.count.current)
                 } else if(rune.runeType === "greater") {
-                    setMidRune(rune.currentCount)
+                    setMidRune(rune.count.current)
                 } else {
-                    setTopRune(rune.currentCount)
+                    setTopRune(rune.count.current)
                 }
             })
         }
