@@ -1,13 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
-export interface TrackedCount {
+export interface ITrackeableCount {
     current: number,
-    required: number
-}
-
-// TODO: Use this as the base for others to extend from
-export interface TrackedResource {
+    required: number,
     isTracked: boolean
 }
 
@@ -16,15 +12,15 @@ export interface TrackedCatalysts {
     catalystCode: string,
     catalystName: string,
     isEpic: boolean,
-    count: TrackedCount
+    count: ITrackeableCount
 }
 
-export interface TrackedRunes extends TrackedResource {
+export interface TrackedRunes {
     runeId: number,
     runeCode: string,
     runeName: string,
     runeType: string,
-    count: TrackedCount
+    count: ITrackeableCount
 }
 
 export interface TrackedAwakening {
@@ -34,16 +30,16 @@ export interface TrackedAwakening {
 }
 
 export interface TrackedEnhancement {
-    enhancemenId: number,
+    enhancementId: number,
     level: number
 }
 export interface TrackedSkill {
     skillId: number,
     currentEnhancement: TrackedEnhancement,
     desiredEnhancement: TrackedEnhancement,
-    goldCount: TrackedCount,
-    molagoraCount: TrackedCount,
-    stigmaCount: TrackedCount,
+    goldCount: ITrackeableCount,
+    molagoraCount: ITrackeableCount,
+    stigmaCount: ITrackeableCount,
     currentCatalysts: TrackedCatalysts[]
 }
 

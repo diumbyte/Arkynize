@@ -21,8 +21,8 @@ export const useSkillEnhancementTracking = (skillId: number, unitId: number, enh
         const foundSkill = foundUnit.skills[skillIdx]
 
         if(unitIdx !== -1 && skillIdx !== -1) {
-            setSelectedCurrentEnhancementId(foundSkill.currentEnhancement.enhancemenId)
-            setSelectedDesiredEnhancementId(foundSkill.desiredEnhancement.enhancemenId)
+            setSelectedCurrentEnhancementId(foundSkill.currentEnhancement.enhancementId)
+            setSelectedDesiredEnhancementId(foundSkill.desiredEnhancement.enhancementId)
         } else if(enhancements !== undefined) {
             setSelectedCurrentEnhancementId(0)
             setSelectedDesiredEnhancementId(enhancements[0].id)

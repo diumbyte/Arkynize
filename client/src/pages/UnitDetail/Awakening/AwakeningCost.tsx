@@ -1,15 +1,8 @@
 import { useState, useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
 import { editAwakening, TrackedCatalysts, TrackedRunes, TrackedUnit } from "../../../redux/actions/unitsReducer"
+import { LocalTrackedResource, CatalystCost } from "../types"
 import { Awakening } from "../../../generated/graphql"
-
-export type CatalystCost = {
-    id: number,
-    name: string,
-    code: string,
-    count: number,
-    isEpic: boolean
-}
 
 type RuneCost = {
     id: number,
@@ -22,11 +15,6 @@ type RuneCost = {
 type AwakeningCostsData = {
     catalysts: Array<CatalystCost>,
     runes: Array<RuneCost>
-}
-
-type LocalTrackedResource = {
-    currentCount: number,
-    isTracked: boolean
 }
 
 type RenderAwakeningCostsProps = {
@@ -44,8 +32,8 @@ const buildDispatchData = (
         unitCode: string, 
         unitName: string, 
         awakenings: Awakening[], 
-        basicCatalystCount: number, 
-        epicCatalystCount: number, 
+        basicCatalystCount: LocalTrackedResource, 
+        epicCatalystCount: LocalTrackedResource, 
         basicRune: LocalTrackedResource, 
         midRune: LocalTrackedResource, 
         topRune: LocalTrackedResource
@@ -57,7 +45,7 @@ const buildDispatchData = (
         const catalystCode = a.awakeningCatalystCost.catalyst.code
         const isEpic = a.awakeningCatalystCost.catalyst.isEpic
         const catalystName = a.awakeningCatalystCost.catalyst.name
-        const currentCount = a.awakeningCatalystCost.catalyst.isEpic ? epicCatalystCount : basicCatalystCount
+        const currentCount = a.awakeningCatalystCost.catalyst.isEpic ? epicCatalystCount.currentCount : basicCatalystCount.currentCount
         const requiredCount = a.awakeningCatalystCost.count
 
         return {
@@ -67,7 +55,8 @@ const buildDispatchData = (
             catalystName,
             count: {
                 current: currentCount,
-                required: requiredCount
+                required: requiredCount,
+                isTracked: isEpic ? epicCatalystCount.isTracked : basicCatalystCount.isTracked
             }
         }
     }).filter(ca => ca.catalystId !== 37)
@@ -83,9 +72,9 @@ const buildDispatchData = (
                         runeName: rc.rune.name,
                         count: {
                             current: basicRune.currentCount,
-                            required: rc.count
-                        },
-                        isTracked: basicRune.isTracked
+                            required: rc.count,
+                            isTracked: basicRune.isTracked
+                        }
                     }
                     spreadRunes.push(runeData)
                 
@@ -97,9 +86,9 @@ const buildDispatchData = (
                         runeName: rc.rune.name,
                         count: {
                             current: midRune.currentCount,
-                            required: rc.count
+                            required: rc.count,
+                            isTracked: midRune.isTracked
                         },
-                        isTracked: midRune.isTracked
                      }
                      spreadRunes.push(runeData)
                  
@@ -111,9 +100,9 @@ const buildDispatchData = (
                         runeName: rc.rune.name,
                         count: {
                             current: topRune.currentCount,
-                            required: rc.count
+                            required: rc.count,
+                            isTracked: topRune.isTracked
                         },
-                        isTracked: topRune.isTracked
                     }
                     spreadRunes.push(runeData)
                 
@@ -136,9 +125,9 @@ const buildDispatchData = (
                 runeName: currentRune.runeName,
                 count: {
                     current: currentRune.count.current,
-                    required: currentRune.count.required
+                    required: currentRune.count.required,
+                    isTracked: currentRune.count.isTracked
                 },
-                isTracked: currentRune.isTracked
             })
         }
 
@@ -177,8 +166,8 @@ const AwakeningCosts = (
 
 
     // Local state management
-    const [basicCatalyst, setBasicCatalyst] = useState(0)
-    const [epicCatalyst, setEpicCatalyst] = useState(0)
+    const [basicCatalyst, setBasicCatalyst] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
+    const [epicCatalyst, setEpicCatalyst] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
     const [basicRune, setBasicRune] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
     const [midRune, setMidRune] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
     const [topRune, setTopRune] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
@@ -197,9 +186,15 @@ const AwakeningCosts = (
             // Update catalysts
             foundUnit.awakenings.currentCatalysts.forEach(catalyst => {
                 if(catalyst.isEpic) {
-                    setEpicCatalyst(catalyst.count.current)
+                    setEpicCatalyst({
+                        currentCount: catalyst.count.current,
+                        isTracked: catalyst.count.isTracked
+                    })
                 }  else {
-                    setBasicCatalyst(catalyst.count.current)
+                    setBasicCatalyst({
+                        currentCount: catalyst.count.current,
+                        isTracked: catalyst.count.isTracked
+                    })
                 }
             })
             // Update runes
@@ -207,17 +202,17 @@ const AwakeningCosts = (
                 if(rune.runeType === "basic") {
                     setBasicRune({
                         currentCount: rune.count.current,
-                        isTracked: rune.isTracked
+                        isTracked: rune.count.isTracked
                     })
                 } else if(rune.runeType === "greater") {
                     setMidRune({
                         currentCount: rune.count.current,
-                        isTracked: rune.isTracked
+                        isTracked: rune.count.isTracked
                     })
                 } else {
                     setTopRune({
                         currentCount: rune.count.current,
-                        isTracked: rune.isTracked
+                        isTracked: rune.count.isTracked
                     })
                 }
             })
@@ -228,15 +223,8 @@ const AwakeningCosts = (
     if(currentAwakeningsIdx < desiredAwakeningsIdx) {
         // .slice() just goes to the end of the array even if the second arg goes past awakening.length
         const targetAwakenings = awakenings.slice(currentAwakeningsIdx + 1, desiredAwakeningsIdx + 1)
-
-        const mappedTargetAwakenings = targetAwakenings.map(a => ({
-            id: a.id,
-            state: a.state,
-            runeCosts: a.runeCosts,
-            awakeningCatalystCost: a.awakeningCatalystCost
-        }))
         
-        const res = mappedTargetAwakenings.reduce<AwakeningCostsData>( (acc, currObj) => {
+        const res = targetAwakenings.reduce<AwakeningCostsData>( (acc, currObj) => {
             const catalystIdx = acc.catalysts.findIndex(c => c.id === currObj.awakeningCatalystCost.id)
             if(catalystIdx >= 0) {
                 acc.catalysts[catalystIdx].count += currObj.awakeningCatalystCost.count
@@ -286,14 +274,20 @@ const AwakeningCosts = (
                                         type="number" 
                                         name={`catalyst_${catalystCost.id}_current`} 
                                         id={`catalyst_${catalystCost.id}_current`} 
-                                        value={catalystCost.isEpic ? epicCatalyst : basicCatalyst}
+                                        value={catalystCost.isEpic ? epicCatalyst.currentCount : basicCatalyst.currentCount}
                                         max={catalystCost.count}
                                         min={0}
                                         onChange={(e) => {
                                             if(catalystCost.isEpic) {
-                                                setEpicCatalyst(Number(e.target.value))
+                                                setEpicCatalyst(prev => ({
+                                                    currentCount: Number(e.target.value),
+                                                    isTracked: prev.isTracked
+                                                }))
                                             } else {
-                                                setBasicCatalyst(Number(e.target.value))
+                                                setBasicCatalyst(prev => ({
+                                                    currentCount: Number(e.target.value),
+                                                    isTracked: prev.isTracked
+                                                }))
                                             }
                                         }}
                                     />
