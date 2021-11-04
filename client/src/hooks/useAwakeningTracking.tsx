@@ -11,7 +11,7 @@ export type isAwakeningLevelComplete = {
 
 type UseAwakeningTrackingProps = {
     unitId?: number,
-    awakenings: Array<Awakening>
+    awakenings: Awakening[]
 }
 
 export const useAwakeningTracking = ({
@@ -19,9 +19,9 @@ export const useAwakeningTracking = ({
     awakenings
 }: UseAwakeningTrackingProps) => {
     // Current awakenings
-    const [currentAwakenings, setCurrentAwakenings] = useState<Array<isAwakeningLevelComplete>>([])
+    const [currentAwakenings, setCurrentAwakenings] = useState<isAwakeningLevelComplete[]>([])
     // Desired awakenings
-    const [desiredAwakenings, setDesiredAwakenings] = useState<Array<isAwakeningLevelComplete>>([])
+    const [desiredAwakenings, setDesiredAwakenings] = useState<isAwakeningLevelComplete[]>([])
     const {units} = useAppSelector(state => state.units)
 
     useEffect(() => {

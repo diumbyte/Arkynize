@@ -14,7 +14,7 @@ type AwakeningDetailProps = {
     unitId?: number,
     unitName?: string,
     unitCode?: string,
-    awakenings: Array<Awakening>
+    awakenings: Awakening[]
 }
 
 export const AwakeningDetail = ({

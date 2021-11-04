@@ -11,7 +11,7 @@ type RenderAwakeningCostsProps = {
     unitName?: string,
     currentAwakeningsIdx: number, 
     desiredAwakeningsIdx: number, 
-    awakenings: Array<Awakening>,
+    awakenings: Awakening[],
     setModalOpen: Function
 }
 

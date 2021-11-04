@@ -34,7 +34,7 @@ export const UnitDetail = () => {
                             name={skill.name} 
                             type={skill.type} 
                             code={skill.code}
-                            enhancements={skill.enhancements as Array<Enhancement>}
+                            enhancements={skill.enhancements as Enhancement[]}
                             unitId={data.unit.id}
                             unitCode={data.unit.code}
                             unitName={data.unit.name}
@@ -48,7 +48,7 @@ export const UnitDetail = () => {
                     </div>
                     <div className="row mt-4 flex-wrap">
                         <AwakeningDetail 
-                            awakenings={data?.getAwakeningsForUnit as Array<Awakening>} 
+                            awakenings={data?.getAwakeningsForUnit as Awakening[]} 
                             unitId={data?.unit.id}
                             unitCode={data?.unit.code}
                             unitName={data?.unit.name}

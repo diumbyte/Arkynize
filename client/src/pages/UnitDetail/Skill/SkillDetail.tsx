@@ -15,7 +15,7 @@ type SkillDetailProps = {
     name: string,
     type: number,
     code: string,
-    enhancements: Array<Enhancement>
+    enhancements: Enhancement[]
 }
 
 export const SkillDetail = ({

@@ -6,7 +6,7 @@ import { Unit, GetAllUnitsQuery } from '../generated/graphql';
 
 export const useSearch = (data: GetAllUnitsQuery | undefined) => {
     const [searchTerm, setSearchTerm] = useState("");
-    const [searchResults, setSearchResults] = useState<Array<Unit>>([]);
+    const [searchResults, setSearchResults] = useState<Unit[]>([]);
 
     useEffect(() => {
 
@@ -22,7 +22,7 @@ export const useSearch = (data: GetAllUnitsQuery | undefined) => {
             const results = Fuzzy.filter(searchTerm, data?.units, fuzzyOptions).map(item => item.original);
     
             if (inputLength !== 0) {
-                setSearchResults(results as unknown as Array<Unit>)
+                setSearchResults(results as unknown as Unit[])
             }
         }
 
