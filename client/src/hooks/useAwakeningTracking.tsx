@@ -3,7 +3,7 @@ import { Awakening } from "../generated/graphql"
 import findLastIndex from "../util/findLastIndex"
 import { useAppSelector } from "../redux/hooks"
 
-export type isAwakeningLevelComplete = {
+type isAwakeningLevelComplete = {
     id: number,
     state: number,
     status: boolean
@@ -22,12 +22,12 @@ export const useAwakeningTracking = ({
     const [currentAwakenings, setCurrentAwakenings] = useState<isAwakeningLevelComplete[]>([])
     // Desired awakenings
     const [desiredAwakenings, setDesiredAwakenings] = useState<isAwakeningLevelComplete[]>([])
-    const {units} = useAppSelector(state => state.units)
+    const {trackedUnits} = useAppSelector(state => state.units)
 
     useEffect(() => {
-        const unitIdx = units.findIndex(u => u.unitId === unitId)
+        const unitIdx = trackedUnits.findIndex(u => u.id === unitId)
         if(unitIdx !== -1) {
-            const trackedAwakeningIds = units[unitIdx].awakenings?.trackedAwakeningIds
+            const trackedAwakeningIds = trackedUnits[unitIdx].trackedAwakenings?.ids
             if(!trackedAwakeningIds) {
                 if(awakenings !== undefined) {
                     setCurrentAwakenings(awakenings.map(a => ({id: a.id, state: a.state, status: false})))
@@ -70,7 +70,7 @@ export const useAwakeningTracking = ({
                 setDesiredAwakenings(awakenings.map(a => ({id: a.id, state: a.state, status: false})))
             }
         }
-    }, [units, unitId, awakenings])
+    }, [trackedUnits, unitId, awakenings])
 
     const onCurrentAwakeningClick = (id: number) => {
         const clickedIdx = currentAwakenings.findIndex(ca => ca.id === id);

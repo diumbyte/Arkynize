@@ -1,55 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
-
-export interface ITrackeableCount {
-    current: number,
-    required: number,
-    isTracked: boolean
-}
-
-export interface TrackedCatalyst {
-    catalystId: number,
-    catalystCode: string,
-    catalystName: string,
-    isEpic: boolean,
-    count: ITrackeableCount
-}
-
-export interface TrackedRune {
-    runeId: number,
-    runeCode: string,
-    runeName: string,
-    runeType: string,
-    count: ITrackeableCount
-}
-
-export interface TrackedAwakening {
-    trackedAwakeningIds: number[],
-    currentCatalysts: TrackedCatalyst[],
-    currentRunes: TrackedRune[]
-}
-
-export interface TrackedEnhancement {
-    enhancementId: number,
-    level: number
-}
-export interface TrackedSkill {
-    skillId: number,
-    currentEnhancement: TrackedEnhancement,
-    desiredEnhancement: TrackedEnhancement,
-    goldCount: ITrackeableCount,
-    molagoraCount: ITrackeableCount,
-    stigmaCount: ITrackeableCount,
-    currentCatalysts: TrackedCatalyst[]
-}
-
-export interface TrackedUnit {
-    unitId: number,
-    unitCode: string,
-    unitName: string,
-    awakenings?: TrackedAwakening,
-    skills: TrackedSkill[]
-}
+import { TrackedSkill, TrackedUnit } from "../types";
 
 export interface TrackedSkillPayload {
     unitId: number,
@@ -58,12 +9,12 @@ export interface TrackedSkillPayload {
     skill: TrackedSkill
 }
 
-export interface TrackedUnitsState {
-    units: TrackedUnit[]
+interface TrackedUnitsState {
+    trackedUnits: TrackedUnit[]
 }
 
 const initialState: TrackedUnitsState = {
-    units: []
+    trackedUnits: []
 }
 
 export const unitsSlice = createSlice({
@@ -71,15 +22,15 @@ export const unitsSlice = createSlice({
     initialState,
     reducers: {
         editAwakening: (state, action: PayloadAction<TrackedUnit>) => {
-            const unitToTrackIdx = state.units.findIndex(tu => tu.unitId === action.payload.unitId)
+            const unitToTrackIdx = state.trackedUnits.findIndex(tu => tu.id === action.payload.id)
             if(unitToTrackIdx === -1) {
-                state.units = [...state.units, {...action.payload, skills: []}]
+                state.trackedUnits = [...state.trackedUnits, {...action.payload, trackedSkills: []}]
             } else {
-                state.units = state.units.map(trackedUnit => {
-                    if(trackedUnit.unitId === action.payload.unitId) {
+                state.trackedUnits = state.trackedUnits.map(trackedUnit => {
+                    if(trackedUnit.id === action.payload.id) {
                         return {
                             ...trackedUnit,
-                            awakenings: action.payload.awakenings
+                            awakenings: action.payload.trackedAwakenings
                         }
                         
                     } else {
@@ -89,25 +40,25 @@ export const unitsSlice = createSlice({
             }   
         },
         editSkillEnhancement: (state, action: PayloadAction<TrackedSkillPayload>) => {
-            const unitToTrackIdx = state.units.findIndex(tu => tu.unitId === action.payload.unitId)
+            const unitToTrackIdx = state.trackedUnits.findIndex(tu => tu.id === action.payload.unitId)
             
             if(unitToTrackIdx === -1) {
                 const newUnit:TrackedUnit = {
-                    unitId: action.payload.unitId,
-                    unitCode: action.payload.unitCode,
-                    unitName: action.payload.unitName,
-                    skills: [action.payload.skill]
+                    id: action.payload.unitId,
+                    code: action.payload.unitCode,
+                    name: action.payload.unitName,
+                    trackedSkills: [action.payload.skill]
                 }
-                state.units = [...state.units, newUnit]
+                state.trackedUnits = [...state.trackedUnits, newUnit]
             } else {
                 
-                state.units = state.units.map(trackedUnit => {
+                state.trackedUnits = state.trackedUnits.map(trackedUnit => {
                     // Handling when the unit is already being tracked
-                    if(trackedUnit.unitId === action.payload.unitId) {
+                    if(trackedUnit.id === action.payload.unitId) {
                         // Handling when the skill is already being tracked
-                        if (trackedUnit.skills.some(skill => skill.skillId === action.payload.skill.skillId)) {
-                            trackedUnit.skills = trackedUnit.skills.map(skill => {
-                                if (skill.skillId === action.payload.skill.skillId) {
+                        if (trackedUnit.trackedSkills.some(skill => skill.id === action.payload.skill.id)) {
+                            trackedUnit.trackedSkills = trackedUnit.trackedSkills.map(skill => {
+                                if (skill.id === action.payload.skill.id) {
                                     return action.payload.skill
                                 } else {
                                     return skill
@@ -118,7 +69,7 @@ export const unitsSlice = createSlice({
                             // Handling when the skill ISN'T already being tracked
                             return {
                                 ...trackedUnit,
-                                skills: [...trackedUnit.skills, action.payload.skill]
+                                skills: [...trackedUnit.trackedSkills, action.payload.skill]
                             }
                         }
                     } else {

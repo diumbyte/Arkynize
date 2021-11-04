@@ -3,7 +3,7 @@ import GoldIcon from "../../../assets/gold.png"
 import StigmaIcon from "../../../assets/stigma.png"
 import MolagoraIcon from "../../../assets/molagora.png"
 
-import { TrackedAwakening, TrackedSkill } from "../../../redux/actions/unitsReducer"
+import { TrackedAwakening, TrackedSkill } from "../../../redux/types"
 import { ResourceListItem } from "./ResourceListItem"
 
 type UnitSummaryProps = {
@@ -38,13 +38,13 @@ export const UnitSummary = ({
                 <>
                 <h2 className="text-white text-opacity-60">Awakenings</h2>
                 {
-                    awakenings.currentCatalysts.map(catalyst => {
+                    awakenings.trackedCatalysts.map(catalyst => {
                         return (
                             <ResourceListItem
-                                key={catalyst.catalystId}
-                                imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalyst.catalystCode}.png`}
-                                imageAlt={`${catalyst.catalystCode}'s icon`}
-                                resourceName={catalyst.catalystName}
+                                key={catalyst.id}
+                                imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalyst.code}.png`}
+                                imageAlt={`${catalyst.code}'s icon`}
+                                resourceName={catalyst.name}
                                 currentCount={catalyst.count.current}
                                 desiredCount={catalyst.count.required}
                             />  
@@ -52,13 +52,13 @@ export const UnitSummary = ({
                     })
                 }
                 {
-                    awakenings.currentRunes.map(rune => {
+                    awakenings.trackedRunes.map(rune => {
                         return (
                             <ResourceListItem
-                                key={rune.runeId}
-                                imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/rune/${rune.runeCode}.png`}
-                                imageAlt={`${rune.runeName}'s icon`}
-                                resourceName={rune.runeName}
+                                key={rune.id}
+                                imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/rune/${rune.code}.png`}
+                                imageAlt={`${rune.name}'s icon`}
+                                resourceName={rune.name}
                                 currentCount={rune.count.current}
                                 desiredCount={rune.count.required}
                             />  
@@ -74,13 +74,13 @@ export const UnitSummary = ({
                     return (
                         <>
                             <h2 className="text-white text-opacity-60 mt-2">Skills</h2>
-                            {skill.currentCatalysts.map(catalyst => {
+                            {skill.trackedCatalysts.map(catalyst => {
                                 return (
                                     <ResourceListItem
-                                        key={catalyst.catalystId}
-                                        imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalyst.catalystCode}.png`}
-                                        imageAlt={`${catalyst.catalystCode}'s icon`}
-                                        resourceName={catalyst.catalystName}
+                                        key={catalyst.id}
+                                        imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalyst.code}.png`}
+                                        imageAlt={`${catalyst.code}'s icon`}
+                                        resourceName={catalyst.name}
                                         currentCount={catalyst.count.current}
                                         desiredCount={catalyst.count.required}
                                     />
@@ -90,25 +90,25 @@ export const UnitSummary = ({
                             <ResourceListItem
                                 imageSourcePath={GoldIcon}
                                 imageAlt={"Gold icon"}
-                                currentCount={skill.goldCount.current}
-                                desiredCount={skill.goldCount.required}
+                                currentCount={skill.trackedGold.current}
+                                desiredCount={skill.trackedGold.required}
                                 resourceName={"Gold"}
                             />
                             {
-                                skill.stigmaCount.required !== 0 ?
+                                skill.trackedStigma.required !== 0 ?
                                 <ResourceListItem
                                     imageSourcePath={StigmaIcon}
                                     imageAlt={"Stigma icon"}
-                                    currentCount={skill.stigmaCount.current as number}
-                                    desiredCount={skill.stigmaCount.required as number}
+                                    currentCount={skill.trackedStigma.current as number}
+                                    desiredCount={skill.trackedStigma.required as number}
                                     resourceName={"Stigma"}
                                 />
                                 :
                                 <ResourceListItem
                                     imageSourcePath={MolagoraIcon}
                                     imageAlt={"Molagora icon"}
-                                    currentCount={skill.molagoraCount.current}
-                                    desiredCount={skill.molagoraCount.required}
+                                    currentCount={skill.trackedMolagora.current}
+                                    desiredCount={skill.trackedMolagora.required}
                                     resourceName={"Molagora"}
                                 />
                             }

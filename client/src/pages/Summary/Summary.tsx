@@ -1,37 +1,33 @@
 import { useEffect, useState } from 'react';
-import { TrackedAwakening, TrackedUnit } from '../../redux/actions/unitsReducer';
-// import { useGetAllUnitsQuery } from "../generated/graphql"
+import { TrackedAwakening, TrackedUnit } from '../../redux/types';
 import { useAppSelector } from "../../redux/hooks"
 
 import { UnitSummary } from "./UnitSummary/UnitSummary"
 
 export const Summary = () => {
-    // const history = useHistory();
-    // const { data, loading, error } = useGetAllUnitsQuery();
-
-    const [trackedUnits, setTrackedUnits] = useState<TrackedUnit[]>([]);
-    const { units } = useAppSelector(state => state.units)
+    const [ localedTrackedUnits, setLocalTrackedUnits] = useState<TrackedUnit[]>([]);
+    const { trackedUnits } = useAppSelector(state => state.units)
     useEffect( () => {
-        if(!units) {
+        if(!trackedUnits) {
             return;
         }
 
-        setTrackedUnits(units as [])
-    }, [units])
+        setLocalTrackedUnits(trackedUnits as [])
+    }, [trackedUnits])
     
     return (
         <div className="container">
             <div className="flex">
                 {
-                    trackedUnits.length !== 0 && 
-                    trackedUnits.map(unit => {
+                    localedTrackedUnits.length !== 0 && 
+                    localedTrackedUnits.map(unit => {
                         return (
                             <UnitSummary 
-                                key={unit.unitId}
-                                unitName={unit.unitName}
-                                unitCode={unit.unitCode}
-                                awakenings={unit.awakenings as TrackedAwakening}
-                                skills={unit.skills}
+                                key={unit.id}
+                                unitName={unit.name}
+                                unitCode={unit.code}
+                                awakenings={unit.trackedAwakenings as TrackedAwakening}
+                                skills={unit.trackedSkills}
                             />
                         )
                     })

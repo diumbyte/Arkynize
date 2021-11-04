@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
-import { editAwakening, TrackedAwakening, TrackedUnit } from "../../../redux/actions/unitsReducer"
+import { editAwakening } from "../../../redux/actions/unitsReducer"
+import { TrackedAwakening, TrackedUnit } from "../../../redux/types"
 import { LocalTrackedResource } from "../types"
 import { Awakening } from "../../../generated/graphql"
 import { calculateTotalAwakeningsCosts } from "../../../util/calculateCosts"
@@ -23,13 +24,13 @@ const buildDispatchData = (
     ): TrackedUnit => {
 
     return {
-        unitId,
-        unitCode,
-        unitName,
-        awakenings: {
+        id: unitId,
+        code: unitCode,
+        name: unitName,
+        trackedAwakenings: {
             ...awakeningsCost
         },
-        skills: []
+        trackedSkills: []
     }
 }
 
@@ -44,7 +45,7 @@ const AwakeningCosts = (
         setModalOpen
     }: RenderAwakeningCostsProps) => 
     {
-    const {units} = useAppSelector(state => state.units)
+    const {trackedUnits} = useAppSelector(state => state.units)
     const dispatch = useAppDispatch();
 
 
@@ -59,15 +60,15 @@ const AwakeningCosts = (
     // Update local state if materials are already being tracked and stored in redux store
     useEffect(() => {
         // Check if awakenings exist for current unit id
-        const unitIdx = units.findIndex(unit => unit.unitId === unitId && unit.awakenings)
+        const unitIdx = trackedUnits.findIndex(unit => unit.id === unitId && unit.trackedAwakenings)
         if (unitIdx !== -1){
-            const foundUnit = units[unitIdx]
-            if(!foundUnit.awakenings) {
+            const foundUnit = trackedUnits[unitIdx]
+            if(!foundUnit.trackedAwakenings) {
                 return
             }
             // Update local states
             // Update catalysts
-            foundUnit.awakenings.currentCatalysts.forEach(catalyst => {
+            foundUnit.trackedAwakenings.trackedCatalysts.forEach(catalyst => {
                 if(catalyst.isEpic) {
                     setEpicCatalyst({
                         currentCount: catalyst.count.current,
@@ -81,13 +82,13 @@ const AwakeningCosts = (
                 }
             })
             // Update runes
-            foundUnit.awakenings.currentRunes.forEach(rune => {
-                if(rune.runeType === "basic") {
+            foundUnit.trackedAwakenings.trackedRunes.forEach(rune => {
+                if(rune.type === "basic") {
                     setBasicRune({
                         currentCount: rune.count.current,
                         isTracked: rune.count.isTracked
                     })
-                } else if(rune.runeType === "greater") {
+                } else if(rune.type === "greater") {
                     setMidRune({
                         currentCount: rune.count.current,
                         isTracked: rune.count.isTracked
@@ -100,7 +101,7 @@ const AwakeningCosts = (
                 }
             })
         }
-    }, [unitId, units])
+    }, [unitId, trackedUnits])
 
     // Calculation 
     if(currentAwakeningsIdx < desiredAwakeningsIdx) {
@@ -118,16 +119,16 @@ const AwakeningCosts = (
         return (
             <>
                 {
-                    totalAwakeningsCost.currentCatalysts.map(catalystCost => {
+                    totalAwakeningsCost.trackedCatalysts.map(catalystCost => {
                         return (
-                            <div key={catalystCost.catalystId} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
-                                <img src={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.catalystCode}.png`} alt={catalystCost.catalystCode}/>
+                            <div key={catalystCost.id} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
+                                <img src={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.code}.png`} alt={catalystCost.code}/>
                                 <div className="row justify-end">
                                     <input 
                                         className="py-2 px-2 text-black w-60" 
                                         type="number" 
-                                        name={`catalyst_${catalystCost.catalystId}_current`} 
-                                        id={`catalyst_${catalystCost.catalystId}_current`} 
+                                        name={`catalyst_${catalystCost.id}_current`} 
+                                        id={`catalyst_${catalystCost.id}_current`} 
                                         value={catalystCost.isEpic ? epicCatalyst.currentCount : basicCatalyst.currentCount}
                                         max={catalystCost.count.required}
                                         min={0}
@@ -154,28 +155,28 @@ const AwakeningCosts = (
                     })
                 }
                 {
-                    totalAwakeningsCost.currentRunes.map(runeCost => {
+                    totalAwakeningsCost.trackedRunes.map(runeCost => {
                         return (
-                            <div key={runeCost.runeId} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40 last:border-b-0">
-                                <img src={`${process.env.PUBLIC_URL}/assets/images/rune/${runeCost.runeCode}.png`} alt={runeCost.runeCode}/>
+                            <div key={runeCost.id} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40 last:border-b-0">
+                                <img src={`${process.env.PUBLIC_URL}/assets/images/rune/${runeCost.code}.png`} alt={runeCost.code}/>
                                 <div className="row justify-end">
                                     <input 
                                         className="py-2 px-2 text-black w-60" 
                                         type="number" 
-                                        name={`rune_${runeCost.runeId}_current`} 
-                                        id={`rune_${runeCost.runeId}_current`} 
+                                        name={`rune_${runeCost.id}_current`} 
+                                        id={`rune_${runeCost.id}_current`} 
                                         min={0}
                                         max={runeCost.count.required}
-                                        value={runeCost.runeType === "basic" ? basicRune.currentCount
-                                                : runeCost.runeType === "greater" ? midRune.currentCount
+                                        value={runeCost.type === "basic" ? basicRune.currentCount
+                                                : runeCost.type === "greater" ? midRune.currentCount
                                                 : topRune.currentCount }
                                         onChange={(e) => {
-                                            if(runeCost.runeType === "basic") {
+                                            if(runeCost.type === "basic") {
                                                 setBasicRune(prevState => ({
                                                     currentCount: Number(e.target.value),
                                                     isTracked: prevState.isTracked
                                                 }))
-                                            } else if(runeCost.runeType === "greater") {
+                                            } else if(runeCost.type === "greater") {
                                                 setMidRune(prevState => ({
                                                     currentCount: Number(e.target.value),
                                                     isTracked: prevState.isTracked

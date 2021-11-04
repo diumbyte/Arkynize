@@ -1,6 +1,6 @@
 import { Awakening, Enhancement } from "../generated/graphql";
 import { LocalTrackedResource } from "../pages/UnitDetail/types";
-import { TrackedAwakening, TrackedEnhancement, TrackedSkill } from "../redux/actions/unitsReducer";
+import { TrackedAwakening, TrackedEnhancement, TrackedSkill } from "../redux/types";
 
 export const calculateTotalSkillEnhancementsCosts = (
     allEnhancements: Enhancement[],
@@ -13,27 +13,27 @@ export const calculateTotalSkillEnhancementsCosts = (
     molagoraCount: LocalTrackedResource,
     stigmaCount: LocalTrackedResource
 ):TrackedSkill => {
-    const currentEnhancement:TrackedEnhancement = currentEnhancementId === 0 ? {level: 0, enhancementId: 0} : 
+    const currentEnhancement:TrackedEnhancement = currentEnhancementId === 0 ? {level: 0, id: 0} : 
     {
-        enhancementId: currentEnhancementId,
+        id: currentEnhancementId,
         level:allEnhancements.find(enh => enh.id === currentEnhancementId)?.level as number
     }
     const desiredEnhancement:TrackedEnhancement = {
-        enhancementId: desiredEnhancementId,
+        id: desiredEnhancementId,
         level: allEnhancements.find(enh => enh.id === desiredEnhancementId)?.level as number 
     }
 
     const targetEnhancements = allEnhancements.filter(enh => enh.level <= desiredEnhancement.level)
 
     return targetEnhancements.reduce<TrackedSkill>((acc, curr) => {
-        const catalystIdx = acc.currentCatalysts.findIndex(c => c.catalystId === curr.enhancementCatalystCost.catalyst.id)
+        const catalystIdx = acc.trackedCatalysts.findIndex(c => c.id === curr.enhancementCatalystCost.catalyst.id)
         if (catalystIdx >= 0) {
-            acc.currentCatalysts[catalystIdx].count.required += curr.enhancementCatalystCost.count
+            acc.trackedCatalysts[catalystIdx].count.required += curr.enhancementCatalystCost.count
         } else if (curr.enhancementCatalystCost.count !== 0) {
-            acc.currentCatalysts.push({
-                catalystId: curr.enhancementCatalystCost.catalyst.id,
-                catalystName: curr.enhancementCatalystCost.catalyst.name,
-                catalystCode: curr.enhancementCatalystCost.catalyst.code,
+            acc.trackedCatalysts.push({
+                id: curr.enhancementCatalystCost.catalyst.id,
+                name: curr.enhancementCatalystCost.catalyst.name,
+                code: curr.enhancementCatalystCost.catalyst.code,
                 count: {
                     current: curr.enhancementCatalystCost.catalyst.isEpic ? epicCatalystCount.currentCount : basicCatalystCount.currentCount,
                     isTracked: curr.enhancementCatalystCost.catalyst.isEpic ? epicCatalystCount.isTracked : basicCatalystCount.isTracked,
@@ -43,30 +43,30 @@ export const calculateTotalSkillEnhancementsCosts = (
             })
         }
 
-        acc.goldCount.required += curr.gold
-        acc.molagoraCount.required += curr.molagora
-        acc.stigmaCount.required += curr.stigma
+        acc.trackedGold.required += curr.gold
+        acc.trackedMolagora.required += curr.molagora
+        acc.trackedStigma.required += curr.stigma
         return acc;
     }, {
-        skillId,
+        id: skillId,
         currentEnhancement,
         desiredEnhancement,
-        goldCount: {
+        trackedGold: {
             current: goldCount.currentCount,
             required: 0,
             isTracked: goldCount.isTracked
         },
-        molagoraCount: {
+        trackedMolagora: {
             current: molagoraCount.currentCount,
             required: 0,
             isTracked: molagoraCount.isTracked
         },
-        stigmaCount: {
+        trackedStigma: {
             current: stigmaCount.currentCount,
             required: 0,
             isTracked: stigmaCount.isTracked
         },
-        currentCatalysts: []
+        trackedCatalysts: []
     });
 }
 
@@ -84,9 +84,9 @@ export const calculateTotalAwakeningsCosts = (
     const targetAwakenings = allAwakenings.slice(currentAwakeningsIdx + 1, desiredAwakeningsIdx + 1)
     
     return targetAwakenings.reduce<TrackedAwakening>( (acc, currObj) => {
-        acc.trackedAwakeningIds.push(currObj.id)
+        acc.ids.push(currObj.id)
         
-        const catalystIdx = acc.currentCatalysts.findIndex(c => c.catalystId === currObj.awakeningCatalystCost.id)
+        const catalystIdx = acc.trackedCatalysts.findIndex(c => c.id === currObj.awakeningCatalystCost.id)
 
         // Calculate current, isTracked based off state
         let current, isTracked;
@@ -99,12 +99,12 @@ export const calculateTotalAwakeningsCosts = (
         }
         
         if(catalystIdx >= 0) {
-            acc.currentCatalysts[catalystIdx].count.required += currObj.awakeningCatalystCost.count
+            acc.trackedCatalysts[catalystIdx].count.required += currObj.awakeningCatalystCost.count
         } else if(currObj.awakeningCatalystCost.count !== 0) {
-            acc.currentCatalysts.push({
-                catalystId: currObj.awakeningCatalystCost.catalyst.id,
-                catalystName: currObj.awakeningCatalystCost.catalyst.name,
-                catalystCode: currObj.awakeningCatalystCost.catalyst.code,
+            acc.trackedCatalysts.push({
+                id: currObj.awakeningCatalystCost.catalyst.id,
+                name: currObj.awakeningCatalystCost.catalyst.name,
+                code: currObj.awakeningCatalystCost.catalyst.code,
                 isEpic: currObj.awakeningCatalystCost.catalyst.isEpic,
                 count: {
                     current,
@@ -115,7 +115,7 @@ export const calculateTotalAwakeningsCosts = (
         }
 
         currObj.runeCosts.forEach(runeCost => {
-            const runeIdx = acc.currentRunes.findIndex(r => r.runeId === runeCost.rune.id)
+            const runeIdx = acc.trackedRunes.findIndex(r => r.id === runeCost.rune.id)
 
             // Calculate current, isTracked count based off state
             let current, isTracked;
@@ -131,13 +131,13 @@ export const calculateTotalAwakeningsCosts = (
             }
             
             if(runeIdx >= 0) {
-                acc.currentRunes[runeIdx].count.required += runeCost.count
+                acc.trackedRunes[runeIdx].count.required += runeCost.count
             } else {
-                acc.currentRunes.push({
-                    runeId: runeCost.rune.id,
-                    runeCode: runeCost.rune.code,
-                    runeName: runeCost.rune.name,
-                    runeType: runeCost.rune.type,
+                acc.trackedRunes.push({
+                    id: runeCost.rune.id,
+                    code: runeCost.rune.code,
+                    name: runeCost.rune.name,
+                    type: runeCost.rune.type,
                     count: {
                         current,
                         required: runeCost.count,
@@ -148,8 +148,8 @@ export const calculateTotalAwakeningsCosts = (
         })
         return acc
     }, {
-        trackedAwakeningIds: [],
-        currentCatalysts: [],
-        currentRunes: []
+        ids: [],
+        trackedCatalysts: [],
+        trackedRunes: []
     })
 }

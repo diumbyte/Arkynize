@@ -7,27 +7,27 @@ export const useSkillEnhancementTracking = (skillId: number, unitId: number, enh
 
     const [selectedCurrentEnhancementId, setSelectedCurrentEnhancementId] = useState(0)
     const [selectedDesiredEnhancementId, setSelectedDesiredEnhancementId] = useState(0)
-    const {units} = useAppSelector(state => state.units)
+    const { trackedUnits } = useAppSelector(state => state.units)
 
     useEffect(() => {
-        const unitIdx = units.findIndex(unit => unit.unitId === unitId)
-        const foundUnit = units[unitIdx]
+        const unitIdx = trackedUnits.findIndex(unit => unit.id === unitId)
+        const foundUnit = trackedUnits[unitIdx]
         if(!foundUnit) {
             setSelectedCurrentEnhancementId(0)
             setSelectedDesiredEnhancementId(enhancements[0].id)
             return;
         }
-        const skillIdx = foundUnit.skills.findIndex(skill => skill.skillId === skillId)
-        const foundSkill = foundUnit.skills[skillIdx]
+        const skillIdx = foundUnit.trackedSkills.findIndex(skill => skill.id === skillId)
+        const foundSkill = foundUnit.trackedSkills[skillIdx]
 
         if(unitIdx !== -1 && skillIdx !== -1) {
-            setSelectedCurrentEnhancementId(foundSkill.currentEnhancement.enhancementId)
-            setSelectedDesiredEnhancementId(foundSkill.desiredEnhancement.enhancementId)
+            setSelectedCurrentEnhancementId(foundSkill.currentEnhancement.id)
+            setSelectedDesiredEnhancementId(foundSkill.desiredEnhancement.id)
         } else if(enhancements !== undefined) {
             setSelectedCurrentEnhancementId(0)
             setSelectedDesiredEnhancementId(enhancements[0].id)
         }
-    }, [enhancements, skillId, unitId, units])
+    }, [enhancements, skillId, unitId, trackedUnits])
 
     const onCurrentEnhancementClick = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedCurrentEnhancementId(parseInt(e.target.value))
