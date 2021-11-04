@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
-import { editAwakening, TrackedAwakening, TrackedCatalyst, TrackedRune, TrackedUnit } from "../../../redux/actions/unitsReducer"
+import { editAwakening, TrackedAwakening, TrackedUnit } from "../../../redux/actions/unitsReducer"
 import { LocalTrackedResource } from "../types"
 import { Awakening } from "../../../generated/graphql"
+import { calculateTotalAwakeningsCosts } from "../../../util/calculateCosts"
 
 type RenderAwakeningCostsProps = {
     unitId?: number,
@@ -103,83 +104,21 @@ const AwakeningCosts = (
 
     // Calculation 
     if(currentAwakeningsIdx < desiredAwakeningsIdx) {
-        // .slice() just goes to the end of the array even if the second arg goes past awakening.length
-        const targetAwakenings = awakenings.slice(currentAwakeningsIdx + 1, desiredAwakeningsIdx + 1)
-        
-        const res = targetAwakenings.reduce<TrackedAwakening>( (acc, currObj) => {
-            acc.trackedAwakeningIds.push(currObj.id)
-            
-            const catalystIdx = acc.currentCatalysts.findIndex(c => c.catalystId === currObj.awakeningCatalystCost.id)
-
-            // Calculate current, isTracked based off state
-            let current, isTracked;
-            if(currObj.awakeningCatalystCost.catalyst.isEpic) {
-                current = epicCatalyst.currentCount
-                isTracked = epicCatalyst.isTracked
-            } else {
-                current = basicCatalyst.currentCount
-                isTracked = basicCatalyst.isTracked
-            }
-            
-            if(catalystIdx >= 0) {
-                acc.currentCatalysts[catalystIdx].count.required += currObj.awakeningCatalystCost.count
-            } else if(currObj.awakeningCatalystCost.count !== 0) {
-                acc.currentCatalysts.push({
-                    catalystId: currObj.awakeningCatalystCost.catalyst.id,
-                    catalystName: currObj.awakeningCatalystCost.catalyst.name,
-                    catalystCode: currObj.awakeningCatalystCost.catalyst.code,
-                    isEpic: currObj.awakeningCatalystCost.catalyst.isEpic,
-                    count: {
-                        current,
-                        required: currObj.awakeningCatalystCost.count,
-                        isTracked
-                    }
-                })
-            }
-
-            currObj.runeCosts.forEach(runeCost => {
-                const runeIdx = acc.currentRunes.findIndex(r => r.runeId === runeCost.rune.id)
-
-                // Calculate current, isTracked count based off state
-                let current, isTracked;
-                if(runeCost.rune.type === "basic") {
-                    current = basicRune.currentCount
-                    isTracked = basicRune.isTracked
-                } else if(runeCost.rune.type === "greater") {
-                    current = midRune.currentCount
-                    isTracked = midRune.isTracked
-                } else {
-                    current = topRune.currentCount
-                    isTracked = topRune.isTracked
-                }
-                
-                if(runeIdx >= 0) {
-                    acc.currentRunes[runeIdx].count.required += runeCost.count
-                } else {
-                    acc.currentRunes.push({
-                        runeId: runeCost.rune.id,
-                        runeCode: runeCost.rune.code,
-                        runeName: runeCost.rune.name,
-                        runeType: runeCost.rune.type,
-                        count: {
-                            current,
-                            required: runeCost.count,
-                            isTracked
-                        }
-                    })
-                }
-            })
-            return acc
-        }, {
-            trackedAwakeningIds: [],
-            currentCatalysts: [],
-            currentRunes: []
-        })
+        const totalAwakeningsCost = calculateTotalAwakeningsCosts(
+            awakenings,
+            currentAwakeningsIdx,
+            desiredAwakeningsIdx,
+            basicCatalyst,
+            epicCatalyst,
+            basicRune,
+            midRune,
+            topRune
+        )
         
         return (
             <>
                 {
-                    res.currentCatalysts.map(catalystCost => {
+                    totalAwakeningsCost.currentCatalysts.map(catalystCost => {
                         return (
                             <div key={catalystCost.catalystId} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
                                 <img src={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.catalystCode}.png`} alt={catalystCost.catalystCode}/>
@@ -215,7 +154,7 @@ const AwakeningCosts = (
                     })
                 }
                 {
-                    res.currentRunes.map(runeCost => {
+                    totalAwakeningsCost.currentRunes.map(runeCost => {
                         return (
                             <div key={runeCost.runeId} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40 last:border-b-0">
                                 <img src={`${process.env.PUBLIC_URL}/assets/images/rune/${runeCost.runeCode}.png`} alt={runeCost.runeCode}/>
@@ -269,7 +208,7 @@ const AwakeningCosts = (
                                         unitId as number, 
                                         unitCode as string, 
                                         unitName as string, 
-                                        res
+                                        totalAwakeningsCost
                                     )
                                 )
                             )
