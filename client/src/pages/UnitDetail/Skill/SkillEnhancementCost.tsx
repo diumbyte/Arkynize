@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Enhancement } from "../../../generated/graphql"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
-import { TrackedSkill, TrackedEnhancement, editSkillEnhancement, TrackedSkillPayload, TrackedCatalysts } from "../../../redux/actions/unitsReducer"
+import { TrackedSkill, TrackedEnhancement, editSkillEnhancement, TrackedSkillPayload, TrackedCatalyst } from "../../../redux/actions/unitsReducer"
 import { CatalystCost, LocalTrackedResource } from "../types"
 import GoldIcon from "../../../assets/gold.png"
 import MolagoraIcon from "../../../assets/molagora.png"
@@ -43,7 +43,7 @@ const buildDispatchData = (
     const desiredEnhancement = enhancements.find(enh => enh.id === desiredEnhancementId) as Enhancement
     const targetEnhancements = enhancements.filter(enh => enh.level <= desiredEnhancement.level)
 
-    const currentCatalysts:TrackedCatalysts[] = targetEnhancements.map(a => {
+    const currentCatalysts:TrackedCatalyst[] = targetEnhancements.map(a => {
         const catalystId = a.enhancementCatalystCost.catalyst.id
         const catalystCode = a.enhancementCatalystCost.catalyst.code
         const isEpic = a.enhancementCatalystCost.catalyst.isEpic
@@ -64,7 +64,7 @@ const buildDispatchData = (
         }
     })
     .filter(ca => ca.catalystId !== 37)
-    .reduce<TrackedCatalysts[]>((acc, curr) => {
+    .reduce<TrackedCatalyst[]>((acc, curr) => {
         const catalystIdx = acc.findIndex(c => c.catalystId === curr.catalystId)
         if (catalystIdx >= 0) {
             acc[catalystIdx].count.required += curr.count.required

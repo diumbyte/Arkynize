@@ -1,20 +1,12 @@
 import { useState, useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
-import { editAwakening, TrackedCatalysts, TrackedRunes, TrackedUnit } from "../../../redux/actions/unitsReducer"
-import { LocalTrackedResource, CatalystCost } from "../types"
+import { editAwakening, TrackedCatalyst, TrackedRune, TrackedUnit } from "../../../redux/actions/unitsReducer"
+import { LocalTrackedResource } from "../types"
 import { Awakening } from "../../../generated/graphql"
 
-type RuneCost = {
-    id: number,
-    name: string,
-    code: string,
-    count: number,
-    type: string
-}
-
 type AwakeningCostsData = {
-    catalysts: Array<CatalystCost>,
-    runes: Array<RuneCost>
+    catalysts: Array<TrackedCatalyst>,
+    runes: Array<TrackedRune>
 }
 
 type RenderAwakeningCostsProps = {
@@ -32,122 +24,21 @@ const buildDispatchData = (
         unitCode: string, 
         unitName: string, 
         awakenings: Awakening[], 
-        basicCatalystCount: LocalTrackedResource, 
-        epicCatalystCount: LocalTrackedResource, 
-        basicRune: LocalTrackedResource, 
-        midRune: LocalTrackedResource, 
-        topRune: LocalTrackedResource
+        awakeningsCost: AwakeningCostsData
     ): TrackedUnit => {
     const trackedAwakeningIds = awakenings.map(a => a.id)
 
-    const currentCatalysts:TrackedCatalysts[] = awakenings.map(a => {
-        const catalystId = a.awakeningCatalystCost.catalyst.id
-        const catalystCode = a.awakeningCatalystCost.catalyst.code
-        const isEpic = a.awakeningCatalystCost.catalyst.isEpic
-        const catalystName = a.awakeningCatalystCost.catalyst.name
-        const currentCount = a.awakeningCatalystCost.catalyst.isEpic ? epicCatalystCount.currentCount : basicCatalystCount.currentCount
-        const requiredCount = a.awakeningCatalystCost.count
-
-        return {
-            catalystId,
-            catalystCode,
-            isEpic,
-            catalystName,
-            count: {
-                current: currentCount,
-                required: requiredCount,
-                isTracked: isEpic ? epicCatalystCount.isTracked : basicCatalystCount.isTracked
-            }
-        }
-    }).filter(ca => ca.catalystId !== 37)
-
-    const spreadRunes: TrackedRunes[] = []
-    awakenings.forEach(a => {
-        a.runeCosts.forEach(rc => {
-            if (rc.rune.type === "basic") {
-                    const runeData:TrackedRunes = {
-                        runeId: rc.rune.id,
-                        runeCode: rc.rune.code,
-                        runeType: rc.rune.type,
-                        runeName: rc.rune.name,
-                        count: {
-                            current: basicRune.currentCount,
-                            required: rc.count,
-                            isTracked: basicRune.isTracked
-                        }
-                    }
-                    spreadRunes.push(runeData)
-                
-            } else if(rc.rune.type === "greater") {
-                     const runeData:TrackedRunes = {
-                        runeId: rc.rune.id,
-                        runeCode: rc.rune.code,
-                        runeType: rc.rune.type,
-                        runeName: rc.rune.name,
-                        count: {
-                            current: midRune.currentCount,
-                            required: rc.count,
-                            isTracked: midRune.isTracked
-                        },
-                     }
-                     spreadRunes.push(runeData)
-                 
-            } else {
-                    const runeData:TrackedRunes = {
-                        runeId: rc.rune.id,
-                        runeCode: rc.rune.code,
-                        runeType: rc.rune.type,
-                        runeName: rc.rune.name,
-                        count: {
-                            current: topRune.currentCount,
-                            required: rc.count,
-                            isTracked: topRune.isTracked
-                        },
-                    }
-                    spreadRunes.push(runeData)
-                
-            }
-        })
-    })
-
-    const currentRunes: TrackedRunes[] = spreadRunes.reduce<TrackedRunes[]>((acc, currentRune) => {
-        const runeIdx = acc.findIndex(rune => rune.runeId === currentRune.runeId )
-
-        if(runeIdx !== -1) {
-            // It's found. Add it to the current object
-            acc[runeIdx].count.required += currentRune.count.required
-        } else {
-            // New entry. 
-            acc.push({
-                runeId: currentRune.runeId,
-                runeCode: currentRune.runeCode,
-                runeType: currentRune.runeType,
-                runeName: currentRune.runeName,
-                count: {
-                    current: currentRune.count.current,
-                    required: currentRune.count.required,
-                    isTracked: currentRune.count.isTracked
-                },
-            })
-        }
-
-        return acc;
-    }, []);
-
-    
-    const res: TrackedUnit = {
+    return {
         unitId,
         unitCode,
         unitName,
         awakenings: {
             trackedAwakeningIds,
-            currentCatalysts,
-            currentRunes
+            currentCatalysts: awakeningsCost.catalysts,
+            currentRunes: awakeningsCost.runes
         },
         skills: []
     }
-
-    return res
 }
 
 const AwakeningCosts = (
@@ -225,57 +116,87 @@ const AwakeningCosts = (
         const targetAwakenings = awakenings.slice(currentAwakeningsIdx + 1, desiredAwakeningsIdx + 1)
         
         const res = targetAwakenings.reduce<AwakeningCostsData>( (acc, currObj) => {
-            const catalystIdx = acc.catalysts.findIndex(c => c.id === currObj.awakeningCatalystCost.id)
+            const catalystIdx = acc.catalysts.findIndex(c => c.catalystId === currObj.awakeningCatalystCost.id)
+
+            // Calculate current, isTracked based off state
+            let current, isTracked;
+            if(currObj.awakeningCatalystCost.catalyst.isEpic) {
+                current = epicCatalyst.currentCount
+                isTracked = epicCatalyst.isTracked
+            } else {
+                current = basicCatalyst.currentCount
+                isTracked = basicCatalyst.isTracked
+            }
+            
             if(catalystIdx >= 0) {
-                acc.catalysts[catalystIdx].count += currObj.awakeningCatalystCost.count
+                acc.catalysts[catalystIdx].count.required += currObj.awakeningCatalystCost.count
             } else if(currObj.awakeningCatalystCost.count !== 0) {
                 acc.catalysts.push({
-                    id: currObj.awakeningCatalystCost.catalyst.id,
-                    name: currObj.awakeningCatalystCost.catalyst.name,
-                    code: currObj.awakeningCatalystCost.catalyst.code,
-                    count: currObj.awakeningCatalystCost.count,
-                    isEpic: currObj.awakeningCatalystCost.catalyst.isEpic
+                    catalystId: currObj.awakeningCatalystCost.catalyst.id,
+                    catalystName: currObj.awakeningCatalystCost.catalyst.name,
+                    catalystCode: currObj.awakeningCatalystCost.catalyst.code,
+                    isEpic: currObj.awakeningCatalystCost.catalyst.isEpic,
+                    count: {
+                        current,
+                        required: currObj.awakeningCatalystCost.count,
+                        isTracked
+                    }
                 })
             }
 
             currObj.runeCosts.forEach(runeCost => {
-                const runeIdx = acc.runes.findIndex(r => r.id === runeCost.rune.id)
+                const runeIdx = acc.runes.findIndex(r => r.runeId === runeCost.rune.id)
 
+                // Calculate current, isTracked count based off state
+                let current, isTracked;
+                if(runeCost.rune.type === "basic") {
+                    current = basicRune.currentCount
+                    isTracked = basicRune.isTracked
+                } else if(runeCost.rune.type === "greater") {
+                    current = midRune.currentCount
+                    isTracked = midRune.isTracked
+                } else {
+                    current = topRune.currentCount
+                    isTracked = topRune.isTracked
+                }
+                
                 if(runeIdx >= 0) {
-                    acc.runes[runeIdx].count += runeCost.count
+                    acc.runes[runeIdx].count.required += runeCost.count
                 } else {
                     acc.runes.push({
-                        id: runeCost.rune.id,
-                        name: runeCost.rune.name,
-                        code: runeCost.rune.code,
-                        count: runeCost.count,
-                        type: runeCost.rune.type
+                        runeId: runeCost.rune.id,
+                        runeCode: runeCost.rune.code,
+                        runeName: runeCost.rune.name,
+                        runeType: runeCost.rune.type,
+                        count: {
+                            current,
+                            required: runeCost.count,
+                            isTracked
+                        }
                     })
                 }
             })
-
             return acc
         }, {
             catalysts: [],
             runes: []
         })
-
         
         return (
             <>
                 {
                     res.catalysts.map(catalystCost => {
                         return (
-                            <div key={catalystCost.id} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
-                                <img src={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.code}.png`} alt={catalystCost.code}/>
+                            <div key={catalystCost.catalystId} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
+                                <img src={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.catalystCode}.png`} alt={catalystCost.catalystCode}/>
                                 <div className="row justify-end">
                                     <input 
                                         className="py-2 px-2 text-black w-60" 
                                         type="number" 
-                                        name={`catalyst_${catalystCost.id}_current`} 
-                                        id={`catalyst_${catalystCost.id}_current`} 
+                                        name={`catalyst_${catalystCost.catalystId}_current`} 
+                                        id={`catalyst_${catalystCost.catalystId}_current`} 
                                         value={catalystCost.isEpic ? epicCatalyst.currentCount : basicCatalyst.currentCount}
-                                        max={catalystCost.count}
+                                        max={catalystCost.count.required}
                                         min={0}
                                         onChange={(e) => {
                                             if(catalystCost.isEpic) {
@@ -292,7 +213,7 @@ const AwakeningCosts = (
                                         }}
                                     />
                                     <div className="min-w-45">
-                                        <span className="pl-2">/ {catalystCost.count}</span>
+                                        <span className="pl-2">/ {catalystCost.count.required}</span>
                                     </div>
                                 </div>
                             </div>
@@ -302,26 +223,26 @@ const AwakeningCosts = (
                 {
                     res.runes.map(runeCost => {
                         return (
-                            <div key={runeCost.id} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40 last:border-b-0">
-                                <img src={`${process.env.PUBLIC_URL}/assets/images/rune/${runeCost.code}.png`} alt={runeCost.code}/>
+                            <div key={runeCost.runeId} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40 last:border-b-0">
+                                <img src={`${process.env.PUBLIC_URL}/assets/images/rune/${runeCost.runeCode}.png`} alt={runeCost.runeCode}/>
                                 <div className="row justify-end">
                                     <input 
                                         className="py-2 px-2 text-black w-60" 
                                         type="number" 
-                                        name={`rune_${runeCost.id}_current`} 
-                                        id={`rune_${runeCost.id}_current`} 
+                                        name={`rune_${runeCost.runeId}_current`} 
+                                        id={`rune_${runeCost.runeId}_current`} 
                                         min={0}
-                                        max={runeCost.count}
-                                        value={runeCost.type === "basic" ? basicRune.currentCount
-                                                : runeCost.type === "greater" ? midRune.currentCount
+                                        max={runeCost.count.required}
+                                        value={runeCost.runeType === "basic" ? basicRune.currentCount
+                                                : runeCost.runeType === "greater" ? midRune.currentCount
                                                 : topRune.currentCount }
                                         onChange={(e) => {
-                                            if(runeCost.type === "basic") {
+                                            if(runeCost.runeType === "basic") {
                                                 setBasicRune(prevState => ({
                                                     currentCount: Number(e.target.value),
                                                     isTracked: prevState.isTracked
                                                 }))
-                                            } else if(runeCost.type === "greater") {
+                                            } else if(runeCost.runeType === "greater") {
                                                 setMidRune(prevState => ({
                                                     currentCount: Number(e.target.value),
                                                     isTracked: prevState.isTracked
@@ -335,7 +256,7 @@ const AwakeningCosts = (
                                         }}
                                     />
                                     <div className="min-w-45">
-                                        <span className="pl-2">/ {runeCost.count}</span>
+                                        <span className="pl-2">/ {runeCost.count.required}</span>
                                     </div>
                                 </div>
                             </div>
@@ -355,11 +276,7 @@ const AwakeningCosts = (
                                         unitCode as string, 
                                         unitName as string, 
                                         targetAwakenings, 
-                                        basicCatalyst, 
-                                        epicCatalyst, 
-                                        basicRune, 
-                                        midRune, 
-                                        topRune
+                                        res
                                     )
                                 )
                             )

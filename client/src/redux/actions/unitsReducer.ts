@@ -7,7 +7,7 @@ export interface ITrackeableCount {
     isTracked: boolean
 }
 
-export interface TrackedCatalysts {
+export interface TrackedCatalyst {
     catalystId: number,
     catalystCode: string,
     catalystName: string,
@@ -15,7 +15,7 @@ export interface TrackedCatalysts {
     count: ITrackeableCount
 }
 
-export interface TrackedRunes {
+export interface TrackedRune {
     runeId: number,
     runeCode: string,
     runeName: string,
@@ -25,8 +25,8 @@ export interface TrackedRunes {
 
 export interface TrackedAwakening {
     trackedAwakeningIds: number[],
-    currentCatalysts: TrackedCatalysts[],
-    currentRunes: TrackedRunes[]
+    currentCatalysts: TrackedCatalyst[],
+    currentRunes: TrackedRune[]
 }
 
 export interface TrackedEnhancement {
@@ -40,7 +40,7 @@ export interface TrackedSkill {
     goldCount: ITrackeableCount,
     molagoraCount: ITrackeableCount,
     stigmaCount: ITrackeableCount,
-    currentCatalysts: TrackedCatalysts[]
+    currentCatalysts: TrackedCatalyst[]
 }
 
 export interface TrackedUnit {
