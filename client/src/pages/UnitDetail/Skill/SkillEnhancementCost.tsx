@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react"
 import { Enhancement } from "../../../generated/graphql"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
-import { TrackedEnhancement, editSkillEnhancement, TrackedSkillPayload, TrackedCatalyst, ITrackeableCount } from "../../../redux/actions/unitsReducer"
+import { editSkillEnhancement, TrackedSkillPayload, TrackedSkill } from "../../../redux/actions/unitsReducer"
 import { LocalTrackedResource } from "../types"
 import GoldIcon from "../../../assets/gold.png"
 import MolagoraIcon from "../../../assets/molagora.png"
 import StigmaIcon from "../../../assets/stigma.png"
+
+import { calculateTotalSkillEnhancementsCosts } from "../../../util/calculateCosts"
 
 type SkillEnhancementCostProps = {
     unitId: number,
@@ -18,49 +20,19 @@ type SkillEnhancementCostProps = {
     enhancements: Enhancement[]
 }
 
-type SkillEnhancementTotalCostData = {
-    gold: ITrackeableCount,
-    molagora: ITrackeableCount,
-    stigma: ITrackeableCount,
-    catalysts: TrackedCatalyst[]
-}
-
 const buildDispatchData = (
     unitId: number, 
     unitName: string, 
     unitCode: string, 
-    skillId: number, 
-    enhancements: Enhancement[], 
-    currentEnhancementId: number,
-    desiredEnhancementId: number,
-    totalCosts: SkillEnhancementTotalCostData
+    totalSkillCosts: TrackedSkill
     ): TrackedSkillPayload => {
         
-    const desiredEnhancement = enhancements.find(enh => enh.id === desiredEnhancementId) as Enhancement
-
-    const currentEnhancementPayload:TrackedEnhancement = currentEnhancementId === 0 ? {level: 0, enhancementId: 0} : 
-            {
-                enhancementId: currentEnhancementId,
-                level:enhancements.find(enh => enh.id === currentEnhancementId)?.level as number
-            }
-
-    const desiredEnhancementPayload:TrackedEnhancement = {
-        enhancementId: desiredEnhancementId,
-        level: desiredEnhancement.level 
-    }
-
     return {
         unitId,
         unitName,
         unitCode,
         skill: {
-            skillId,
-            currentCatalysts: totalCosts.catalysts,
-            goldCount: totalCosts.gold,
-            molagoraCount: totalCosts.molagora,
-            stigmaCount: totalCosts.stigma,
-            currentEnhancement: currentEnhancementPayload,
-            desiredEnhancement: desiredEnhancementPayload
+            ...totalSkillCosts
         }
     }
 }
@@ -123,54 +95,22 @@ export const SkillEnhancementCost = ({
         }
     }, [units, unitId, skillId])
 
-    const desiredEnhancement = enhancements.find(enh => enh.id === desiredEnhancementId) as Enhancement
-    const targetEnhancements = enhancements.filter(enh => enh.level <= desiredEnhancement.level)
+    const totalEnhancementsCost = calculateTotalSkillEnhancementsCosts(
+        enhancements,
+        skillId,
+        currentEnhancementId,
+        desiredEnhancementId,
+        basicCatalystCount,
+        epicCatalystCount,
+        goldCount,
+        molagoraCount,
+        stigmaCount
+    )
 
-    const totalEnhancementsCost = targetEnhancements.reduce<SkillEnhancementTotalCostData>((acc, curr) => {
-        const catalystIdx = acc.catalysts.findIndex(c => c.catalystId === curr.enhancementCatalystCost.catalyst.id)
-        if (catalystIdx >= 0) {
-            acc.catalysts[catalystIdx].count.required += curr.enhancementCatalystCost.count
-        } else if (curr.enhancementCatalystCost.count !== 0) {
-            acc.catalysts.push({
-                catalystId: curr.enhancementCatalystCost.catalyst.id,
-                catalystName: curr.enhancementCatalystCost.catalyst.name,
-                catalystCode: curr.enhancementCatalystCost.catalyst.code,
-                count: {
-                    current: curr.enhancementCatalystCost.catalyst.isEpic ? epicCatalystCount.currentCount : basicCatalystCount.currentCount,
-                    isTracked: curr.enhancementCatalystCost.catalyst.isEpic ? epicCatalystCount.isTracked : basicCatalystCount.isTracked,
-                    required: curr.enhancementCatalystCost.count,
-                },
-                isEpic: curr.enhancementCatalystCost.catalyst.isEpic
-            })
-        }
-
-        acc.gold.required += curr.gold
-        acc.molagora.required += curr.molagora
-        acc.stigma.required += curr.stigma
-        return acc;
-    }, {
-        gold: {
-            current: goldCount.currentCount,
-            required: 0,
-            isTracked: goldCount.isTracked
-        },
-        molagora: {
-            current: molagoraCount.currentCount,
-            required: 0,
-            isTracked: molagoraCount.isTracked
-        },
-        stigma: {
-            current: stigmaCount.currentCount,
-            required: 0,
-            isTracked: stigmaCount.isTracked
-        },
-        catalysts: []
-    });
-        
     return (
         <>
         {
-            totalEnhancementsCost.catalysts.map(catalystCost => {
+            totalEnhancementsCost.currentCatalysts.map(catalystCost => {
                 return (
                     <div key={catalystCost.catalystId} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
                         <img src={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.catalystCode}.png`} alt={catalystCost.catalystCode}/>
@@ -214,7 +154,7 @@ export const SkillEnhancementCost = ({
                     name={`gold_current`} 
                     id={`gold_current`} 
                     value={goldCount.currentCount}
-                    max={totalEnhancementsCost.gold.required}
+                    max={totalEnhancementsCost.goldCount.required}
                     min={0}
                     onChange={(e) => setGoldCount(prevState => ({
                         currentCount: Number(e.target.value),
@@ -222,12 +162,12 @@ export const SkillEnhancementCost = ({
                     }))}
                 />
                 <div className="min-w-45">
-                    <span className="pl-2">/ {totalEnhancementsCost.gold.required}</span>
+                    <span className="pl-2">/ {totalEnhancementsCost.goldCount.required}</span>
                 </div>
             </div>
         </div>
         {
-            totalEnhancementsCost.molagora.required !== 0 ?
+            totalEnhancementsCost.molagoraCount.required !== 0 ?
                 <div className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
                     <img src={MolagoraIcon} alt={"Molagora icon"}/>
                     <div className="row justify-end">
@@ -237,7 +177,7 @@ export const SkillEnhancementCost = ({
                             name={`molagora_current`} 
                             id={`molagora_current`} 
                             value={molagoraCount.currentCount}
-                            max={totalEnhancementsCost.molagora.required}
+                            max={totalEnhancementsCost.molagoraCount.required}
                             min={0}
                             onChange={(e) => setMolagoraCount(prevState => ({
                                 currentCount: Number(e.target.value),
@@ -245,7 +185,7 @@ export const SkillEnhancementCost = ({
                             }))}
                         />
                         <div className="min-w-45">
-                            <span className="pl-2">/ {totalEnhancementsCost.molagora.required}</span>
+                            <span className="pl-2">/ {totalEnhancementsCost.molagoraCount.required}</span>
                         </div>
                     </div>
                 </div>
@@ -259,7 +199,7 @@ export const SkillEnhancementCost = ({
                             name={`stigma_current`} 
                             id={`stigma_current`} 
                             value={stigmaCount.currentCount}
-                            max={totalEnhancementsCost.stigma.required}
+                            max={totalEnhancementsCost.stigmaCount.required}
                             min={0}
                             onChange={(e) => setStigmaCount(prevState => ({
                                 currentCount: Number(e.target.value),
@@ -267,7 +207,7 @@ export const SkillEnhancementCost = ({
                             }))}
                         />
                         <div className="min-w-45">
-                            <span className="pl-2">/ {totalEnhancementsCost.stigma.required}</span>
+                            <span className="pl-2">/ {totalEnhancementsCost.stigmaCount.required}</span>
                         </div>
                     </div>
             </div>
@@ -284,10 +224,6 @@ export const SkillEnhancementCost = ({
                                 unitId as number, 
                                 unitName as string, 
                                 unitCode as string, 
-                                skillId, 
-                                enhancements as Enhancement[], 
-                                currentEnhancementId,
-                                desiredEnhancementId,
                                 totalEnhancementsCost
                             )
                         )
