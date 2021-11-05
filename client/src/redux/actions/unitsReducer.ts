@@ -9,6 +9,7 @@ export interface TrackedSkillPayload {
     skill: TrackedSkill
 }
 
+
 interface TrackedUnitsState {
     trackedUnits: TrackedUnit[]
 }
@@ -26,11 +27,11 @@ export const unitsSlice = createSlice({
             if(unitToTrackIdx === -1) {
                 state.trackedUnits = [...state.trackedUnits, {...action.payload, trackedSkills: []}]
             } else {
-                state.trackedUnits = state.trackedUnits.map(trackedUnit => {
+                state.trackedUnits = state.trackedUnits.map<TrackedUnit>(trackedUnit => {
                     if(trackedUnit.id === action.payload.id) {
                         return {
                             ...trackedUnit,
-                            awakenings: action.payload.trackedAwakenings
+                            trackedAwakenings: action.payload.trackedAwakenings
                         }
                         
                     } else {
@@ -52,7 +53,7 @@ export const unitsSlice = createSlice({
                 state.trackedUnits = [...state.trackedUnits, newUnit]
             } else {
                 
-                state.trackedUnits = state.trackedUnits.map(trackedUnit => {
+                state.trackedUnits = state.trackedUnits.map<TrackedUnit>(trackedUnit => {
                     // Handling when the unit is already being tracked
                     if(trackedUnit.id === action.payload.unitId) {
                         // Handling when the skill is already being tracked

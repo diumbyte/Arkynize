@@ -5,7 +5,9 @@ type ResourceListItemProp = {
     imageAlt: string,
     resourceName: string,
     currentCount: number,
-    desiredCount: number
+    desiredCount: number,
+    isTracked: boolean,
+    onCurrentCountChange: (value: number) => void
 }
 
 export const ResourceListItem = ({
@@ -13,7 +15,9 @@ export const ResourceListItem = ({
     imageAlt,
     resourceName,
     currentCount,
-    desiredCount
+    desiredCount,
+    isTracked,
+    onCurrentCountChange
 }:ResourceListItemProp) => {
     return (
         <div className="flex flex-nowrap w-full">
@@ -24,6 +28,13 @@ export const ResourceListItem = ({
                     width={30}
                     src={imageSourcePath} 
                     alt={imageAlt}
+                    onClick={(e) => {
+                        // TODO: Some error alert when trying to increase past max
+                        let newValue = currentCount + 1;
+                        if (newValue <= desiredCount) {
+                            onCurrentCountChange(newValue)
+                        }
+                    }}
                 />
                 <span className="pl-1 text-center">
                     {resourceName}

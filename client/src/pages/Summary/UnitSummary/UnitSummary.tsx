@@ -1,12 +1,14 @@
-import React from 'react';
 import GoldIcon from "../../../assets/gold.png"
 import StigmaIcon from "../../../assets/stigma.png"
 import MolagoraIcon from "../../../assets/molagora.png"
 
+import { useAppDispatch } from "../../../redux/hooks"
+import { editAwakening, editSkillEnhancement } from "../../../redux/actions/unitsReducer"
 import { TrackedAwakening, TrackedSkill } from "../../../redux/types"
 import { ResourceListItem } from "./ResourceListItem"
 
 type UnitSummaryProps = {
+    unitId: number,
     unitName: string,
     unitCode: string,
     awakenings: TrackedAwakening,
@@ -14,11 +16,14 @@ type UnitSummaryProps = {
 }
 
 export const UnitSummary = ({
+    unitId,
     unitName,
     unitCode,
     awakenings,
     skills
 }: UnitSummaryProps) => {
+    const dispatch = useAppDispatch();
+
     return (
         <div className="bg-tavernBrown-light bg-opacity-80 rounded p-2 border border-black w-auto">
         <div className="row border-b border-black border-opacity-20 py-1">
@@ -38,7 +43,7 @@ export const UnitSummary = ({
                 <>
                 <h2 className="text-white text-opacity-60">Awakenings</h2>
                 {
-                    awakenings.trackedCatalysts.map(catalyst => {
+                    awakenings.trackedCatalysts.map((catalyst) => {
                         return (
                             <ResourceListItem
                                 key={catalyst.id}
@@ -47,12 +52,42 @@ export const UnitSummary = ({
                                 resourceName={catalyst.name}
                                 currentCount={catalyst.count.current}
                                 desiredCount={catalyst.count.required}
+                                isTracked={catalyst.count.isTracked}
+                                onCurrentCountChange={(value) => {
+                                    const trackedCatalystsCopy = awakenings.trackedCatalysts.map(catalystCopy => {
+                                        if (catalystCopy.id === catalyst.id) {
+                                            return {
+                                                ...catalystCopy,
+                                                count: {
+                                                    ...catalystCopy.count,
+                                                    current: value
+                                                }
+                                            }
+                                        } else {
+                                            return catalystCopy
+                                        }
+                                    })
+
+                                    dispatch(
+                                        editAwakening({
+                                            id: unitId,
+                                            code: unitCode,
+                                            name: unitName,
+                                            trackedSkills: [],
+                                            trackedAwakenings: {
+                                                ids: awakenings.ids,
+                                                trackedRunes: awakenings.trackedRunes,
+                                                trackedCatalysts: trackedCatalystsCopy
+                                            }
+                                        })
+                                    )
+                                }}
                             />  
                         )
                     })
                 }
                 {
-                    awakenings.trackedRunes.map(rune => {
+                    awakenings.trackedRunes.map((rune) => {
                         return (
                             <ResourceListItem
                                 key={rune.id}
@@ -61,6 +96,36 @@ export const UnitSummary = ({
                                 resourceName={rune.name}
                                 currentCount={rune.count.current}
                                 desiredCount={rune.count.required}
+                                isTracked={rune.count.isTracked}
+                                onCurrentCountChange={(value) => {
+                                    const trackedRunesCopy = awakenings.trackedRunes.map(runeCopy => {
+                                        if (runeCopy.id === rune.id) {
+                                            return {
+                                                ...runeCopy,
+                                                count: {
+                                                    ...runeCopy.count,
+                                                    current: value
+                                                }
+                                            }
+                                        } else {
+                                            return runeCopy
+                                        }
+                                    })
+
+                                    dispatch(
+                                        editAwakening({
+                                            id: unitId,
+                                            code: unitCode,
+                                            name: unitName,
+                                            trackedSkills: [],
+                                            trackedAwakenings: {
+                                                ids: awakenings.ids,
+                                                trackedCatalysts: awakenings.trackedCatalysts,
+                                                trackedRunes: trackedRunesCopy
+                                            }
+                                        })
+                                    )
+                                }}
                             />  
                         )
                     })
@@ -70,11 +135,11 @@ export const UnitSummary = ({
             } 
             {
                 skills.length !== 0 &&
-                skills.map(skill => {
+                skills.map((skill) => {
                     return (
                         <>
                             <h2 className="text-white text-opacity-60 mt-2">Skills</h2>
-                            {skill.trackedCatalysts.map(catalyst => {
+                            {skill.trackedCatalysts.map((catalyst) => {
                                 return (
                                     <ResourceListItem
                                         key={catalyst.id}
@@ -83,25 +148,93 @@ export const UnitSummary = ({
                                         resourceName={catalyst.name}
                                         currentCount={catalyst.count.current}
                                         desiredCount={catalyst.count.required}
+                                        isTracked={catalyst.count.isTracked}
+                                        onCurrentCountChange={ (value) => {
+                                            const skillTrackedCatalystsCopy = skill.trackedCatalysts.map(catalystCopy => {
+                                                if (catalystCopy.id === catalyst.id) {
+                                                    return {
+                                                        ...catalystCopy,
+                                                        count: {
+                                                            ...catalystCopy.count,
+                                                            current: value
+                                                        }
+                                                    }
+                                                } else {
+                                                    return catalystCopy
+                                                }
+                                            })
+
+                                            const skillCopy = {
+                                                ...skill,
+                                                trackedCatalysts: skillTrackedCatalystsCopy
+                                            }
+
+                                            dispatch(
+                                                editSkillEnhancement({
+                                                    unitId,
+                                                    unitCode,
+                                                    unitName,
+                                                    skill: skillCopy
+                                                })
+                                            )
+                                        }
+                                        }
                                     />
                                 )
                             })}
-                            {/* TODO: Other Skill Resources like Gold/Mola/Stigma */}
                             <ResourceListItem
                                 imageSourcePath={GoldIcon}
                                 imageAlt={"Gold icon"}
                                 currentCount={skill.trackedGold.current}
                                 desiredCount={skill.trackedGold.required}
                                 resourceName={"Gold"}
+                                isTracked={skill.trackedGold.isTracked}
+                                onCurrentCountChange={ (value) => {
+                                    const skillCopy:TrackedSkill = {
+                                        ...skill,
+                                        trackedGold: {
+                                            ...skill.trackedGold,
+                                            current: value
+                                        } 
+                                    }
+
+                                    dispatch(
+                                        editSkillEnhancement({
+                                            unitId,
+                                            unitCode,
+                                            unitName,
+                                            skill: skillCopy
+                                        })
+                                    )
+                                }}
                             />
                             {
                                 skill.trackedStigma.required !== 0 ?
                                 <ResourceListItem
                                     imageSourcePath={StigmaIcon}
                                     imageAlt={"Stigma icon"}
-                                    currentCount={skill.trackedStigma.current as number}
-                                    desiredCount={skill.trackedStigma.required as number}
+                                    currentCount={skill.trackedStigma.current}
+                                    desiredCount={skill.trackedStigma.required}
                                     resourceName={"Stigma"}
+                                    isTracked={skill.trackedStigma.isTracked }
+                                    onCurrentCountChange={ (value) => {
+                                        const skillCopy:TrackedSkill = {
+                                            ...skill,
+                                            trackedStigma: {
+                                                ...skill.trackedStigma,
+                                                current: value
+                                            } 
+                                        }
+                                        
+                                        dispatch(
+                                            editSkillEnhancement({
+                                                unitId,
+                                                unitCode,
+                                                unitName,
+                                                skill: skillCopy
+                                            })
+                                        )
+                                    }}
                                 />
                                 :
                                 <ResourceListItem
@@ -110,6 +243,25 @@ export const UnitSummary = ({
                                     currentCount={skill.trackedMolagora.current}
                                     desiredCount={skill.trackedMolagora.required}
                                     resourceName={"Molagora"}
+                                    isTracked={skill.trackedMolagora.isTracked}
+                                    onCurrentCountChange={ (value) => {
+                                        const skillCopy:TrackedSkill = {
+                                            ...skill,
+                                            trackedMolagora: {
+                                                ...skill.trackedMolagora,
+                                                current: value
+                                            } 
+                                        }
+    
+                                        dispatch(
+                                            editSkillEnhancement({
+                                                unitId,
+                                                unitCode,
+                                                unitName,
+                                                skill: skillCopy
+                                            })
+                                        )
+                                    }}
                                 />
                             }
                         </>
