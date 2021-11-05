@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
-import { TrackedSkill, TrackedUnit } from "../types";
+import { TrackedAwakening, TrackedSkill, TrackedUnit } from "../types";
 
 export interface TrackedSkillPayload {
     unitId: number,
@@ -9,6 +9,12 @@ export interface TrackedSkillPayload {
     skill: TrackedSkill
 }
 
+export interface TrackedAwakeningPayload {
+    unitId: number,
+    unitCode: string,
+    unitName: string,
+    awakening: TrackedAwakening
+}
 
 interface TrackedUnitsState {
     trackedUnits: TrackedUnit[]
@@ -22,16 +28,23 @@ export const unitsSlice = createSlice({
     name: "units",
     initialState,
     reducers: {
-        editAwakening: (state, action: PayloadAction<TrackedUnit>) => {
-            const unitToTrackIdx = state.trackedUnits.findIndex(tu => tu.id === action.payload.id)
+        editAwakening: (state, action: PayloadAction<TrackedAwakeningPayload>) => {
+            const unitToTrackIdx = state.trackedUnits.findIndex(tu => tu.id === action.payload.unitId)
             if(unitToTrackIdx === -1) {
-                state.trackedUnits = [...state.trackedUnits, {...action.payload, trackedSkills: []}]
+                const newUnit:TrackedUnit = {
+                    id: action.payload.unitId,
+                    code: action.payload.unitCode,
+                    name: action.payload.unitName,
+                    trackedSkills: [],
+                    trackedAwakenings: action.payload.awakening
+                }
+                state.trackedUnits = [...state.trackedUnits, newUnit]
             } else {
                 state.trackedUnits = state.trackedUnits.map<TrackedUnit>(trackedUnit => {
-                    if(trackedUnit.id === action.payload.id) {
+                    if(trackedUnit.id === action.payload.unitId) {
                         return {
                             ...trackedUnit,
-                            trackedAwakenings: action.payload.trackedAwakenings
+                            trackedAwakenings: action.payload.awakening
                         }
                         
                     } else {

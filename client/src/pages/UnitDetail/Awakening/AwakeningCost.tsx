@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
-import { editAwakening } from "../../../redux/actions/unitsReducer"
-import { TrackedAwakening, TrackedUnit } from "../../../redux/types"
+import { editAwakening, TrackedAwakeningPayload } from "../../../redux/actions/unitsReducer"
+import { TrackedAwakening } from "../../../redux/types"
 import { LocalTrackedResource } from "../types"
 import { Awakening } from "../../../generated/graphql"
 import { calculateTotalAwakeningsCosts } from "../../../util/calculateCosts"
@@ -21,16 +21,15 @@ const buildDispatchData = (
         unitCode: string, 
         unitName: string, 
         awakeningsCost: TrackedAwakening
-    ): TrackedUnit => {
+    ): TrackedAwakeningPayload => {
 
     return {
-        id: unitId,
-        code: unitCode,
-        name: unitName,
-        trackedAwakenings: {
+        unitId,
+        unitCode,
+        unitName,
+        awakening: {
             ...awakeningsCost
-        },
-        trackedSkills: []
+        }
     }
 }
 

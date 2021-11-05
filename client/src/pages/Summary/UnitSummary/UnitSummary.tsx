@@ -70,11 +70,10 @@ export const UnitSummary = ({
 
                                     dispatch(
                                         editAwakening({
-                                            id: unitId,
-                                            code: unitCode,
-                                            name: unitName,
-                                            trackedSkills: [],
-                                            trackedAwakenings: {
+                                            unitId,
+                                            unitCode,
+                                            unitName,
+                                            awakening: {
                                                 ids: awakenings.ids,
                                                 trackedRunes: awakenings.trackedRunes,
                                                 trackedCatalysts: trackedCatalystsCopy
@@ -114,11 +113,10 @@ export const UnitSummary = ({
 
                                     dispatch(
                                         editAwakening({
-                                            id: unitId,
-                                            code: unitCode,
-                                            name: unitName,
-                                            trackedSkills: [],
-                                            trackedAwakenings: {
+                                            unitId,
+                                            unitCode,
+                                            unitName,
+                                            awakening: {
                                                 ids: awakenings.ids,
                                                 trackedCatalysts: awakenings.trackedCatalysts,
                                                 trackedRunes: trackedRunesCopy
