@@ -5,7 +5,7 @@ import MolagoraIcon from "../../../assets/molagora.png"
 import { useAppDispatch } from "../../../redux/hooks"
 import { editAwakening, editSkillEnhancement } from "../../../redux/actions/unitsReducer"
 import { TrackedAwakening, TrackedSkill } from "../../../redux/types"
-import { ResourceListItem } from "./ResourceListItem"
+import { ResourceListItem } from "../../components/ResourceListItem"
 
 type UnitSummaryProps = {
     unitId: number,

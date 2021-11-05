@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
+
 import { editAwakening, TrackedAwakeningPayload } from "../../../redux/actions/unitsReducer"
 import { TrackedAwakening } from "../../../redux/types"
 import { LocalTrackedResource } from "../types"
 import { Awakening } from "../../../generated/graphql"
+
+import { ResourceListItem } from "../../components/ResourceListItem"
 import { calculateTotalAwakeningsCosts } from "../../../util/calculateCosts"
 
 type RenderAwakeningCostsProps = {
@@ -120,79 +123,65 @@ const AwakeningCosts = (
                 {
                     totalAwakeningsCost.trackedCatalysts.map(catalystCost => {
                         return (
-                            <div key={catalystCost.id} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
-                                <img src={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.code}.png`} alt={catalystCost.code}/>
-                                <div className="row justify-end">
-                                    <input 
-                                        className="py-2 px-2 text-black w-60" 
-                                        type="number" 
-                                        name={`catalyst_${catalystCost.id}_current`} 
-                                        id={`catalyst_${catalystCost.id}_current`} 
-                                        value={catalystCost.isEpic ? epicCatalyst.currentCount : basicCatalyst.currentCount}
-                                        max={catalystCost.count.required}
-                                        min={0}
-                                        onChange={(e) => {
-                                            if(catalystCost.isEpic) {
-                                                setEpicCatalyst(prev => ({
-                                                    currentCount: Number(e.target.value),
-                                                    isTracked: prev.isTracked
-                                                }))
-                                            } else {
-                                                setBasicCatalyst(prev => ({
-                                                    currentCount: Number(e.target.value),
-                                                    isTracked: prev.isTracked
-                                                }))
-                                            }
-                                        }}
-                                    />
-                                    <div className="min-w-45">
-                                        <span className="pl-2">/ {catalystCost.count.required}</span>
-                                    </div>
-                                </div>
-                            </div>
+                            <ResourceListItem
+                                key={catalystCost.id}
+                                imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.code}.png`}
+                                imageAlt={catalystCost.code}
+                                currentCount={catalystCost.isEpic ? epicCatalyst.currentCount : basicCatalyst.currentCount}
+                                desiredCount={catalystCost.count.required}
+                                isTracked={catalystCost.count.isTracked}
+                                resourceName={catalystCost.name}
+                                onCurrentCountChange={(value) => {
+                                    if(catalystCost.isEpic) {
+                                        setEpicCatalyst(prev => ({
+                                            currentCount: value,
+                                            isTracked: prev.isTracked
+                                        }))
+                                    } else {
+                                        setBasicCatalyst(prev => ({
+                                            currentCount: value,
+                                            isTracked: prev.isTracked
+                                        }))
+                                    }
+                                }}
+                            />
                         )
                     })
                 }
                 {
                     totalAwakeningsCost.trackedRunes.map(runeCost => {
                         return (
-                            <div key={runeCost.id} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40 last:border-b-0">
-                                <img src={`${process.env.PUBLIC_URL}/assets/images/rune/${runeCost.code}.png`} alt={runeCost.code}/>
-                                <div className="row justify-end">
-                                    <input 
-                                        className="py-2 px-2 text-black w-60" 
-                                        type="number" 
-                                        name={`rune_${runeCost.id}_current`} 
-                                        id={`rune_${runeCost.id}_current`} 
-                                        min={0}
-                                        max={runeCost.count.required}
-                                        value={runeCost.type === "basic" ? basicRune.currentCount
-                                                : runeCost.type === "greater" ? midRune.currentCount
-                                                : topRune.currentCount }
-                                        onChange={(e) => {
-                                            if(runeCost.type === "basic") {
-                                                setBasicRune(prevState => ({
-                                                    currentCount: Number(e.target.value),
-                                                    isTracked: prevState.isTracked
-                                                }))
-                                            } else if(runeCost.type === "greater") {
-                                                setMidRune(prevState => ({
-                                                    currentCount: Number(e.target.value),
-                                                    isTracked: prevState.isTracked
-                                                }))
-                                            } else {
-                                                setTopRune(prevState => ({
-                                                    currentCount: Number(e.target.value),
-                                                    isTracked: prevState.isTracked
-                                                }))
-                                            }
-                                        }}
-                                    />
-                                    <div className="min-w-45">
-                                        <span className="pl-2">/ {runeCost.count.required}</span>
-                                    </div>
-                                </div>
-                            </div>
+                            <ResourceListItem
+                                key={runeCost.id}
+                                imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/rune/${runeCost.code}.png`}
+                                imageAlt={runeCost.code}
+                                resourceName={runeCost.name}
+                                currentCount={
+                                    runeCost.type === "basic" ? basicRune.currentCount
+                                    : runeCost.type === "greater" ? midRune.currentCount
+                                    : topRune.currentCount
+                                }
+                                desiredCount={runeCost.count.required}
+                                isTracked={runeCost.count.isTracked}
+                                onCurrentCountChange={(value) => {
+                                    if(runeCost.type === "basic") {
+                                        setBasicRune(prevState => ({
+                                            currentCount: value,
+                                            isTracked: prevState.isTracked
+                                        }))
+                                    } else if(runeCost.type === "greater") {
+                                        setMidRune(prevState => ({
+                                            currentCount: value,
+                                            isTracked: prevState.isTracked
+                                        }))
+                                    } else {
+                                        setTopRune(prevState => ({
+                                            currentCount: value,
+                                            isTracked: prevState.isTracked
+                                        }))
+                                    }
+                                }}
+                            />
                         )
                     })
                 }
