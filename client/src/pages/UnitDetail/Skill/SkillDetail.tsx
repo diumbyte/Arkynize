@@ -82,18 +82,16 @@ export const SkillDetail = ({
             <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "customModalOverlay"}}>
                 <div className="text-offWhite">
                     <h2 className="text-center text-2xl">Materials Required</h2>
-                    <form className="flex flex-col items-center py-6" onSubmit={(e) => e.preventDefault()}>
-                        <SkillEnhancementCost
-                            unitId={unitId}
-                            unitName={unitName}
-                            unitCode={unitCode}
-                            skillId={id}
-                            currentEnhancementId={selectedCurrentEnhancementId}
-                            desiredEnhancementId={selectedDesiredEnhancementId}
-                            setModalOpen={setModalOpen}
-                            enhancements={enhancements}
-                        />
-                    </form>
+                    <SkillEnhancementCost
+                        unitId={unitId}
+                        unitName={unitName}
+                        unitCode={unitCode}
+                        skillId={id}
+                        currentEnhancementId={selectedCurrentEnhancementId}
+                        desiredEnhancementId={selectedDesiredEnhancementId}
+                        setModalOpen={setModalOpen}
+                        enhancements={enhancements}
+                    />
                 </div>
             </Modal>
         </div>

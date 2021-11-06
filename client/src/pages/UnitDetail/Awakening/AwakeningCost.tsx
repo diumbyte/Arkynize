@@ -120,6 +120,10 @@ const AwakeningCosts = (
         
         return (
             <>
+            <form
+                className="grid py-6 grid-cols-resource md:grid-cols-resource-full items-center"
+                onSubmit={(e) => e.preventDefault()}
+            >
                 {
                     totalAwakeningsCost.trackedCatalysts.map(catalystCost => {
                         return (
@@ -185,28 +189,29 @@ const AwakeningCosts = (
                         )
                     })
                 }
-                <div className="w-full row">
-                    <button 
-                        className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2 mt-2"
-                        type="submit"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            dispatch(
-                                editAwakening(
-                                    buildDispatchData(
-                                        unitId as number, 
-                                        unitCode as string, 
-                                        unitName as string, 
-                                        totalAwakeningsCost
-                                    )
+            </form>
+            <div className="w-full row">
+                <button 
+                    className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2 mt-2"
+                    type="submit"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        dispatch(
+                            editAwakening(
+                                buildDispatchData(
+                                    unitId as number, 
+                                    unitCode as string, 
+                                    unitName as string, 
+                                    totalAwakeningsCost
                                 )
                             )
-                            setModalOpen(false)
-                        }}
-                    >
-                        Track!
-                    </button>
-                </div>
+                        )
+                        setModalOpen(false)
+                    }}
+                >
+                    Track!
+                </button>
+            </div>
             </>
         )
     }

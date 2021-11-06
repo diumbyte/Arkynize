@@ -63,6 +63,10 @@ module.exports = {
         "45": "45px",
         "60": "65px",
         "90": "90px"
+      },
+      gridTemplateColumns: {
+        "resource": "auto auto 1fr auto",
+        "resource-full": "4fr auto 1fr auto"
       }
     },
   },

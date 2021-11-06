@@ -1,4 +1,5 @@
 import { ReactComponent as CrossIcon } from "../../assets/cross.svg"
+import { ReactComponent as CancelIcon } from "../../assets/cancel.svg"
 
 type ResourceListItemProp = {
     imageSourcePath: string,
@@ -20,11 +21,12 @@ export const ResourceListItem = ({
     onCurrentCountChange
 }:ResourceListItemProp) => {
     return (
-        <div className="flex flex-nowrap w-full">
-            <div className="flex justify-start items-center">
+        isTracked ?
+        <>
+            <div className="flex justify-start items-center" >
                 {/* TODO: If catalyst -> open modal with drop/shop info */}
                 <img 
-                    className="h-full object-contain cursor-pointer"
+                    className="h-full object-contain cursor-pointer mx-2 md:mx-0"
                     width={30}
                     src={imageSourcePath} 
                     alt={imageAlt}
@@ -36,24 +38,25 @@ export const ResourceListItem = ({
                         }
                     }}
                 />
-                <span className="pl-1 text-center">
+                <span className="pl-1 text-center hidden md:inline">
                     {resourceName}
                 </span>
             </div>
-            <div className="ml-auto pl-4 flex justify-between items-center">
-                <CrossIcon fill={"#fff"} width={12} />
-                <div className="pl-1 w-20 text-right">
-                    <div className="inline-block w-6 text-left">
-                        {currentCount}
-                    </div>
-                    <span>
-                        {` / `}
-                    </span>
-                    <div className="inline-block w-6">
-                        {desiredCount}
-                    </div>
+            <CrossIcon fill={"#fff"} width={12}/>
+            <div className="flex justify-between px-8 md:px-3">
+                <div className="inline-block">
+                    {currentCount}
+                </div>
+                <span>
+                    {` / `}
+                </span>
+                <div className="inline-block">
+                    {desiredCount}
                 </div>
             </div>
-        </div>
+            <CancelIcon fill={"#bbb"} width={20} className="mx-2"/>
+        </>
+        :
+        <></>
     )
 }

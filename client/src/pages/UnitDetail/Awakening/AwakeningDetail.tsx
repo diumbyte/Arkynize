@@ -71,7 +71,6 @@ export const AwakeningDetail = ({
             <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "customModalOverlay"}}>
                 <div className="text-offWhite">
                     <h2 className="text-center text-2xl">Materials Required</h2>
-                    <form className="flex flex-col items-center py-6" onSubmit={(e) => e.preventDefault()}>
                         <AwakeningCost 
                             unitId={unitId}
                             unitName={unitName}
@@ -81,7 +80,6 @@ export const AwakeningDetail = ({
                             awakenings={awakenings}   
                             setModalOpen={setModalOpen}
                         />
-                    </form>
                 </div>
             </Modal>
         </>

@@ -37,7 +37,7 @@ export const UnitSummary = ({
                 {unitName}
             </span>
         </div>
-        <div className="p-2">
+        <div className="p-2 grid">
             {
                 awakenings !== null && awakenings !== undefined ? 
                 <>

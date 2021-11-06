@@ -8,6 +8,7 @@ import GoldIcon from "../../../assets/gold.png"
 import MolagoraIcon from "../../../assets/molagora.png"
 import StigmaIcon from "../../../assets/stigma.png"
 
+import { ResourceListItem } from "../../components/ResourceListItem"
 import { calculateTotalSkillEnhancementsCosts } from "../../../util/calculateCosts"
 
 type SkillEnhancementCostProps = {
@@ -110,109 +111,85 @@ export const SkillEnhancementCost = ({
 
     return (
         <>
+        <form 
+            className="grid py-6 grid-cols-resource md:grid-cols-resource-full items-center" 
+            onSubmit={(e) => e.preventDefault()}
+        >
         {
             totalEnhancementsCost.trackedCatalysts.map(catalystCost => {
                 return (
-                    <div key={catalystCost.id} className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
-                        <img src={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.code}.png`} alt={catalystCost.code}/>
-                        <div className="row justify-end">
-                            <input 
-                                className="py-2 px-2 text-black w-60" 
-                                type="number" 
-                                name={`catalyst_${catalystCost.id}_current`} 
-                                id={`catalyst_${catalystCost.id}_current`} 
-                                value={catalystCost.isEpic ? epicCatalystCount.currentCount : basicCatalystCount.currentCount}
-                                max={catalystCost.count.required}
-                                min={0}
-                                onChange={(e) => {
-                                    if(catalystCost.isEpic) {
-                                        setEpicCatalystCount(prev => ({
-                                            currentCount: Number(e.target.value),
-                                            isTracked: prev.isTracked
-                                        }))
-                                    } else {
-                                        setBasicCatalystCount(prev => ({
-                                            currentCount: Number(e.target.value),
-                                            isTracked: prev.isTracked
-                                        }))
-                                    }
-                                }}
-                            />
-                            <div className="min-w-45">
-                                <span className="pl-2">/ {catalystCost.count.required}</span>
-                            </div>
-                        </div>
-                    </div>
+                    <ResourceListItem
+                        key={catalystCost.id}
+                        resourceName={catalystCost.name}
+                        imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.code}.png`}
+                        imageAlt={catalystCost.code}
+                        currentCount={catalystCost.isEpic ? epicCatalystCount.currentCount : basicCatalystCount.currentCount}
+                        desiredCount={catalystCost.count.required}
+                        isTracked={catalystCost.count.isTracked}
+                        onCurrentCountChange={(value) => {
+                            if(catalystCost.isEpic) {
+                                setBasicCatalystCount(prev => ({
+                                    currentCount: value,
+                                    isTracked: prev.isTracked
+                                }))
+                            } else {
+                                setEpicCatalystCount(prev => ({
+                                    currentCount: value,
+                                    isTracked: prev.isTracked
+                                }))
+                            }
+                        }}
+                    />
                 )
             })
         }
-        <div className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
-            <img src={GoldIcon} alt={"Gold icon"}/>
-            <div className="row justify-end">
-                <input 
-                    className="py-2 px-2 text-black w-60" 
-                    type="number" 
-                    name={`gold_current`} 
-                    id={`gold_current`} 
-                    value={goldCount.currentCount}
-                    max={totalEnhancementsCost.trackedGold.required}
-                    min={0}
-                    onChange={(e) => setGoldCount(prevState => ({
-                        currentCount: Number(e.target.value),
-                        isTracked: prevState.isTracked
-                    }))}
-                />
-                <div className="min-w-45">
-                    <span className="pl-2">/ {totalEnhancementsCost.trackedGold.required}</span>
-                </div>
-            </div>
-        </div>
+        <ResourceListItem
+            resourceName={"Gold"}
+            imageSourcePath={GoldIcon}
+            imageAlt={"Gold icon"}
+            isTracked={totalEnhancementsCost.trackedGold.isTracked}
+            currentCount={goldCount.currentCount}
+            desiredCount={totalEnhancementsCost.trackedGold.required}
+            onCurrentCountChange={(value) => {
+                setGoldCount(prevState => ({
+                    currentCount: value,
+                    isTracked: prevState.isTracked
+                }))
+            }}
+        />
         {
             totalEnhancementsCost.trackedMolagora.required !== 0 ?
-                <div className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
-                    <img src={MolagoraIcon} alt={"Molagora icon"}/>
-                    <div className="row justify-end">
-                        <input 
-                            className="py-2 px-2 text-black w-60" 
-                            type="number" 
-                            name={`molagora_current`} 
-                            id={`molagora_current`} 
-                            value={molagoraCount.currentCount}
-                            max={totalEnhancementsCost.trackedMolagora.required}
-                            min={0}
-                            onChange={(e) => setMolagoraCount(prevState => ({
-                                currentCount: Number(e.target.value),
-                                isTracked: prevState.isTracked
-                            }))}
-                        />
-                        <div className="min-w-45">
-                            <span className="pl-2">/ {totalEnhancementsCost.trackedMolagora.required}</span>
-                        </div>
-                    </div>
-                </div>
+                <ResourceListItem
+                    resourceName={"Molagora"}
+                    imageSourcePath={MolagoraIcon}
+                    imageAlt={"Molagora icon"}
+                    isTracked={molagoraCount.isTracked}
+                    currentCount={molagoraCount.currentCount}
+                    desiredCount={totalEnhancementsCost.trackedMolagora.required}
+                    onCurrentCountChange={(value) => {
+                        setMolagoraCount(prevState => ({
+                            currentCount: value,
+                            isTracked: prevState.isTracked
+                        }))
+                    }}
+                />
             :
-                <div className="row w-80 md:w-3/4 justify-between border-b-2 border-tavernBrown-light border-opacity-40">
-                    <img src={StigmaIcon} alt={"Stigma icon"}/>
-                    <div className="row justify-end">
-                        <input 
-                            className="py-2 px-2 text-black w-60" 
-                            type="number" 
-                            name={`stigma_current`} 
-                            id={`stigma_current`} 
-                            value={stigmaCount.currentCount}
-                            max={totalEnhancementsCost.trackedStigma.required}
-                            min={0}
-                            onChange={(e) => setStigmaCount(prevState => ({
-                                currentCount: Number(e.target.value),
-                                isTracked: prevState.isTracked
-                            }))}
-                        />
-                        <div className="min-w-45">
-                            <span className="pl-2">/ {totalEnhancementsCost.trackedStigma.required}</span>
-                        </div>
-                    </div>
-            </div>
+                <ResourceListItem
+                    resourceName={"Stigma"}
+                    imageSourcePath={StigmaIcon}
+                    imageAlt={"Stigma icon"}
+                    isTracked={stigmaCount.isTracked}
+                    currentCount={stigmaCount.currentCount}
+                    desiredCount={totalEnhancementsCost.trackedStigma.required}
+                    onCurrentCountChange={(value) => {
+                        setStigmaCount(prevState => ({
+                            currentCount: value,
+                            isTracked: prevState.isTracked
+                        }))
+                    }}
+                />
         }
+        </form>
         <div className="w-full row">
             <button 
                 className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2 mt-2"
