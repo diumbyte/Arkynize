@@ -128,15 +128,22 @@ export const SkillEnhancementCost = ({
                         isTracked={catalystCost.count.isTracked}
                         onCurrentCountChange={(value) => {
                             if(catalystCost.isEpic) {
-                                setBasicCatalystCount(prev => ({
-                                    currentCount: value,
-                                    isTracked: prev.isTracked
-                                }))
-                            } else {
                                 setEpicCatalystCount(prev => ({
                                     currentCount: value,
                                     isTracked: prev.isTracked
                                 }))
+                            } else {
+                                setBasicCatalystCount(prev => ({
+                                    currentCount: value,
+                                    isTracked: prev.isTracked
+                                }))
+                            }
+                        }}
+                        onItemUntracked={() => {
+                            if(catalystCost.isEpic) {
+                                setEpicCatalystCount(prev => ({...prev, isTracked: false}))
+                            } else {
+                                setBasicCatalystCount(prev => ({...prev, isTracked: false}))
                             }
                         }}
                     />
@@ -156,6 +163,9 @@ export const SkillEnhancementCost = ({
                     isTracked: prevState.isTracked
                 }))
             }}
+            onItemUntracked={() => {
+                setGoldCount(prev => ({...prev, isTracked: false}))
+            }}
         />
         {
             totalEnhancementsCost.trackedMolagora.required !== 0 ?
@@ -172,6 +182,9 @@ export const SkillEnhancementCost = ({
                             isTracked: prevState.isTracked
                         }))
                     }}
+                    onItemUntracked={() => {
+                        setMolagoraCount(prev => ({...prev, isTracked: false}))
+                    }}
                 />
             :
                 <ResourceListItem
@@ -186,6 +199,9 @@ export const SkillEnhancementCost = ({
                             currentCount: value,
                             isTracked: prevState.isTracked
                         }))
+                    }}
+                    onItemUntracked={() => {
+                        setStigmaCount(prev => ({...prev, isTracked: false}))
                     }}
                 />
         }

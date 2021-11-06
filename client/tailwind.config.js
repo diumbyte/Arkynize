@@ -65,8 +65,8 @@ module.exports = {
         "90": "90px"
       },
       gridTemplateColumns: {
-        "resource": "auto auto 1fr auto",
-        "resource-full": "4fr auto 1fr auto"
+        "resource": "auto auto minmax(0,1fr) auto",
+        "resource-full": "2fr auto 1fr auto"
       }
     },
   },
@@ -75,7 +75,8 @@ module.exports = {
       background: ['active'],
       backgroundColor: ['active'],
       backgroundImage: ['active'],
-      borderWidth: ['last']
+      borderWidth: ['last'],
+      fill: ['hover', 'focus']
     },
   },
   plugins: [],

@@ -9,6 +9,7 @@ type ResourceListItemProp = {
     desiredCount: number,
     isTracked: boolean,
     onCurrentCountChange: (value: number) => void
+    onItemUntracked: () => void
 }
 
 export const ResourceListItem = ({
@@ -18,7 +19,8 @@ export const ResourceListItem = ({
     currentCount,
     desiredCount,
     isTracked,
-    onCurrentCountChange
+    onCurrentCountChange,
+    onItemUntracked
 }:ResourceListItemProp) => {
     return (
         isTracked ?
@@ -30,31 +32,37 @@ export const ResourceListItem = ({
                     width={30}
                     src={imageSourcePath} 
                     alt={imageAlt}
-                    onClick={(e) => {
-                        // TODO: Some error alert when trying to increase past max
-                        let newValue = currentCount + 1;
+                    onClick={() => {
+                        const newValue = currentCount + 1;
                         if (newValue <= desiredCount) {
                             onCurrentCountChange(newValue)
                         }
                     }}
                 />
-                <span className="pl-1 text-center hidden md:inline">
+                <span className="pl-1 text-center hidden lg:inline">
                     {resourceName}
                 </span>
             </div>
             <CrossIcon fill={"#fff"} width={12}/>
-            <div className="flex justify-between px-8 md:px-3">
-                <div className="inline-block">
+            <div className="px-6">
+                <div className="inline-block w-1/3">
                     {currentCount}
                 </div>
-                <span>
+                <div className="inline-block w-1/3">
                     {` / `}
-                </span>
-                <div className="inline-block">
+                </div>
+                <div className="inline-block w-1/3">
                     {desiredCount}
                 </div>
             </div>
-            <CancelIcon fill={"#bbb"} width={20} className="mx-2"/>
+            <CancelIcon 
+                // fill={"#bbb"} 
+                width={20} 
+                className="mx-2 text-gray-400 fill-current cursor-pointer hover:fill-current hover:text-white"
+                onClick={() => {
+                    onItemUntracked()
+                }}
+            />
         </>
         :
         <></>

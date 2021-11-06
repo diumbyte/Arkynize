@@ -148,6 +148,13 @@ const AwakeningCosts = (
                                         }))
                                     }
                                 }}
+                                onItemUntracked={() => {
+                                    if(catalystCost.isEpic) {
+                                        setEpicCatalyst(prev => ({...prev, isTracked: false}))
+                                    } else {
+                                        setBasicCatalyst(prev => ({...prev, isTracked: false}))
+                                    }
+                                }}
                             />
                         )
                     })
@@ -183,6 +190,15 @@ const AwakeningCosts = (
                                             currentCount: value,
                                             isTracked: prevState.isTracked
                                         }))
+                                    }
+                                }}
+                                onItemUntracked={() => {
+                                    if(runeCost.type === "basic") {
+                                        setBasicRune(prev => ({...prev, isTracked: false}))
+                                    } else if(runeCost.type === "greater") {
+                                        setMidRune(prev => ({...prev, isTracked: false}))
+                                    } else {
+                                        setTopRune(prev => ({...prev, isTracked: false}))
                                     }
                                 }}
                             />
