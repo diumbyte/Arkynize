@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
 
-import { editAwakening, TrackedAwakeningPayload } from "../../../redux/actions/unitsReducer"
+import { clearUnitTrackedAwakenings, editAwakening, TrackedAwakeningPayload } from "../../../redux/actions/unitsReducer"
 import { TrackedAwakening } from "../../../redux/types"
 import { LocalTrackedResource } from "../types"
 import { Awakening } from "../../../generated/graphql"
@@ -206,9 +206,9 @@ const AwakeningCosts = (
                     })
                 }
             </form>
-            <div className="w-full row">
+            <div className="w-full row items-center">
                 <button 
-                    className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2 mt-2"
+                    className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2"
                     type="submit"
                     onClick={(e) => {
                         e.preventDefault();
@@ -225,8 +225,19 @@ const AwakeningCosts = (
                         setModalOpen(false)
                     }}
                 >
-                    Track!
+                    Track
                 </button>
+                <div
+                    className="cursor-pointer ml-4 p-4 bg-red-500 rounded-lg text-center border-black border-opacity-20 border-2 outline-none w-1/2 md:w-1/5"
+                    onClick={(e) => {
+                        e.preventDefault()
+                        dispatch(clearUnitTrackedAwakenings({unitId: unitId as number}))
+
+                        setModalOpen(false)
+                    }}
+                >
+                    Reset
+                </div>
             </div>
             </>
         )

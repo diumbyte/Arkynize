@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Enhancement } from "../../../generated/graphql"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
-import { editSkillEnhancement, TrackedSkillPayload } from "../../../redux/actions/unitsReducer"
+import { clearUnitTrackedSkill, editSkillEnhancement, TrackedSkillPayload } from "../../../redux/actions/unitsReducer"
 import { TrackedSkill } from "../../../redux/types"
 import { LocalTrackedResource } from "../types"
 import GoldIcon from "../../../assets/gold.png"
@@ -206,9 +206,9 @@ export const SkillEnhancementCost = ({
                 />
         }
         </form>
-        <div className="w-full row">
+        <div className="w-full row items-center">
             <button 
-                className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2 mt-2"
+                className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2"
                 type="submit"
                 onClick={(e) => {
                     e.preventDefault();
@@ -225,8 +225,19 @@ export const SkillEnhancementCost = ({
                     setModalOpen(false)
                 }}
             >
-                Track!
+                Track
             </button>
+            <div
+                className="cursor-pointer ml-4 p-4 bg-red-500 rounded-lg text-center border-black border-opacity-20 border-2 outline-none w-1/2 md:w-1/5"
+                onClick={(e) => {
+                    e.preventDefault()
+                    dispatch(clearUnitTrackedSkill({unitId: unitId as number, skillId: skillId as number}))
+
+                    setModalOpen(false)
+                }}
+            >
+                Reset
+            </div>
         </div>
         </>
     )

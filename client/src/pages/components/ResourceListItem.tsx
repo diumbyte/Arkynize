@@ -25,7 +25,7 @@ export const ResourceListItem = ({
     return (
         isTracked ?
         <>
-            <div className="flex justify-start items-center" >
+            <div className="flex justify-start items-center py-1" >
                 {/* TODO: If catalyst -> open modal with drop/shop info */}
                 <img 
                     className="h-full object-contain cursor-pointer mx-2 md:mx-0"

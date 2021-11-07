@@ -9,6 +9,15 @@ export interface TrackedSkillPayload {
     skill: TrackedSkill
 }
 
+export interface ClearUnitTrackedSkillPayload {
+    unitId: number,
+    skillId: number
+}
+
+export interface ClearUnitTrackedAwakeningsPayload {
+    unitId: number
+}
+
 export interface TrackedAwakeningPayload {
     unitId: number,
     unitCode: string,
@@ -53,6 +62,27 @@ export const unitsSlice = createSlice({
                 })
             }   
         },
+        clearUnitTrackedAwakenings: (state, action: PayloadAction<ClearUnitTrackedAwakeningsPayload>) => {
+            const unitToTrackIdx = state.trackedUnits.findIndex(tu => tu.id === action.payload.unitId)
+            
+            if(unitToTrackIdx !== -1) {
+                // Handle the case when only the Awakenings are being tracked -> Remove entirely off store
+                if(state.trackedUnits[unitToTrackIdx].trackedSkills.length === 0) {
+                    state.trackedUnits = state.trackedUnits.filter(trackedUnit => trackedUnit.id !== action.payload.unitId)
+                } else {
+                    state.trackedUnits = state.trackedUnits.map<TrackedUnit>(trackedUnit => {
+                        if(trackedUnit.id === action.payload.unitId) {
+                            return {
+                                ...trackedUnit,
+                                trackedAwakenings: undefined
+                            }
+                        } else {
+                            return trackedUnit
+                        }
+                    })
+                }
+            }
+        },
         editSkillEnhancement: (state, action: PayloadAction<TrackedSkillPayload>) => {
             const unitToTrackIdx = state.trackedUnits.findIndex(tu => tu.id === action.payload.unitId)
             
@@ -83,7 +113,7 @@ export const unitsSlice = createSlice({
                             // Handling when the skill ISN'T already being tracked
                             return {
                                 ...trackedUnit,
-                                skills: [...trackedUnit.trackedSkills, action.payload.skill]
+                                trackedSkills: [...trackedUnit.trackedSkills, action.payload.skill]
                             }
                         }
                     } else {
@@ -91,11 +121,21 @@ export const unitsSlice = createSlice({
                     }
                 })
             }
+        },
+        clearUnitTrackedSkill: (state, action: PayloadAction<ClearUnitTrackedSkillPayload>) => {
+            const trackedUnitIdx = state.trackedUnits.findIndex(tu => tu.id === action.payload.unitId)
+            if(trackedUnitIdx !== -1) {
+                state.trackedUnits[trackedUnitIdx].trackedSkills = state.trackedUnits[trackedUnitIdx].trackedSkills.filter(trackedSkill => trackedSkill.id !== action.payload.skillId)
+
+                if(state.trackedUnits[trackedUnitIdx].trackedSkills.length === 0 && state.trackedUnits[trackedUnitIdx].trackedAwakenings === undefined) {
+                    state.trackedUnits = state.trackedUnits.filter(trackedUnit => trackedUnit.id !== action.payload.unitId)
+                }
+            }
         }
     }
 })
 
-export const { editAwakening, editSkillEnhancement } = unitsSlice.actions
+export const { editAwakening, editSkillEnhancement, clearUnitTrackedAwakenings, clearUnitTrackedSkill } = unitsSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectUnits = (state: RootState) => state.units
