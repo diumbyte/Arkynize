@@ -1,6 +1,7 @@
 import { TrackedAwakening } from '../../redux/types';
 import { useAppSelector } from "../../redux/hooks"
 
+import { OverallResourceSummary } from './OverallResourceSummary';
 import { UnitSummary } from "./UnitSummary/UnitSummary"
 
 export const Summary = () => {
@@ -8,6 +9,10 @@ export const Summary = () => {
     
     return (
         <div className="container">
+            <div className="flex flex-nowrap">
+                <OverallResourceSummary
+                />
+            </div>
             <div className="flex flex-wrap">
                 {
                     trackedUnits.length !== 0 && 
