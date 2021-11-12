@@ -62,11 +62,12 @@ module.exports = {
       minWidth: {
         "45": "45px",
         "60": "65px",
-        "90": "90px"
+        "90": "90px",
+        "450": "450px"
       },
       gridTemplateColumns: {
         "resource": "auto auto minmax(0,1fr) auto",
-        "resource-full": "2fr auto 1fr auto"
+        "resource-full": "minmax(0,1fr) auto minmax(0,1fr) auto"
       }
     },
   },
@@ -76,7 +77,8 @@ module.exports = {
       backgroundColor: ['active'],
       backgroundImage: ['active'],
       borderWidth: ['last'],
-      fill: ['hover', 'focus']
+      fill: ['hover', 'focus'],
+      appearance: ['hover', 'focus']
     },
   },
   plugins: [],

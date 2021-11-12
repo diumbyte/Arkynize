@@ -8,7 +8,7 @@ import GoldIcon from "../../../assets/gold.png"
 import MolagoraIcon from "../../../assets/molagora.png"
 import StigmaIcon from "../../../assets/stigma.png"
 
-import { ResourceListItem } from "../../components/ResourceListItem"
+import { ResourceListItem } from "../../components/EditableResourceListItem"
 import { calculateTotalSkillEnhancementsCosts } from "../../../util/calculateCosts"
 
 type SkillEnhancementCostProps = {

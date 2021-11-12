@@ -2,10 +2,11 @@ import GoldIcon from "../../../assets/gold.png"
 import StigmaIcon from "../../../assets/stigma.png"
 import MolagoraIcon from "../../../assets/molagora.png"
 
+import { useHistory } from "react-router"
 import { useAppDispatch } from "../../../redux/hooks"
 import { editAwakening, editSkillEnhancement } from "../../../redux/actions/unitsReducer"
 import { TrackedAwakening, TrackedSkill } from "../../../redux/types"
-import { ResourceListItem } from "../../components/ResourceListItem"
+import { ResourceListItem } from "../../components/EditableResourceListItem"
 
 type UnitSummaryProps = {
     unitId: number,
@@ -23,24 +24,26 @@ export const UnitSummary = ({
     skills
 }: UnitSummaryProps) => {
     const dispatch = useAppDispatch();
+    const history = useHistory();
 
     return (
-        <div className="bg-tavernBrown-light bg-opacity-80 rounded p-2 border border-black w-full md:w-1/2 max-w-4xl">
+        <div className="bg-tavernBrown-light bg-opacity-80 rounded p-2 border border-black w-full md:w-1/3 md:min-w-450 max-w-4xl text-sm my-2 md:mx-2">
             <div className="row border-b border-black border-opacity-20 py-1">
                 <img 
-                    className="object-contain"
+                    className="object-contain cursor-pointer"
                     width={40}
                     src={`${process.env.PUBLIC_URL}/assets/images/hero/icon/${unitCode}.png`} 
                     alt={`${unitName}'s icon`}
+                    onClick={() => history.push(`/unit/${unitId}`)}
                 />
-                <span className="text-2xl px-2">
+                <span className="text-2xl px-2 text-center">
                     {unitName}
                 </span>
             </div>
-            <div className="p-2 grid grid-cols-resource md:grid-cols-resource-full items-center">
+            <div className="p-2">
                 {
                     awakenings !== null && awakenings !== undefined ? 
-                    <>
+                    <div className="grid grid-cols-resource md:grid-cols-resource-full items-center">
                         <h2 className="text-white text-opacity-60" style={{gridColumn: "1 / -1"}}>Awakenings</h2>
                         {
                             awakenings.trackedCatalysts.map((catalyst) => {
@@ -184,14 +187,14 @@ export const UnitSummary = ({
                                 )
                             })
                         }
-                    </>
+                    </div>
                     : <></>
                 } 
                 {
                     skills.length !== 0 &&
                     skills.map((skill) => {
                         return (
-                            <>
+                            <div key={skill.id} className="grid grid-cols-resource md:grid-cols-resource-full items-center">
                                 <h2 className="text-white text-opacity-60 mt-2" style={{gridColumn: "1 / -1"}}>Skills</h2>
                                 {skill.trackedCatalysts.map((catalyst) => {
                                     return (
@@ -401,7 +404,7 @@ export const UnitSummary = ({
                                         }}
                                     />
                                 }
-                            </>
+                            </div>
                         )
                     })
                 }

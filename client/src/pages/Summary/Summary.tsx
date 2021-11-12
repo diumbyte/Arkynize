@@ -8,7 +8,7 @@ export const Summary = () => {
     
     return (
         <div className="container">
-            <div className="flex">
+            <div className="flex flex-wrap">
                 {
                     trackedUnits.length !== 0 && 
                     trackedUnits.map(unit => {

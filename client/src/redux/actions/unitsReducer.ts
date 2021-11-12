@@ -60,6 +60,22 @@ export const unitsSlice = createSlice({
                         return trackedUnit;
                     }
                 })
+
+                // After updates committed - If no resources are being tracked then remove the awakening
+                let areAllResourcesUntracked = state.trackedUnits[unitToTrackIdx].trackedAwakenings
+                    ?.trackedCatalysts.every(c => c.count.isTracked === false)
+                    &&
+                    state.trackedUnits[unitToTrackIdx].trackedAwakenings
+                    ?.trackedRunes.every(r => r.count.isTracked === false)
+                    
+                if(areAllResourcesUntracked) {
+                    state.trackedUnits[unitToTrackIdx].trackedAwakenings = undefined
+                }
+
+                // If both awakening+skills are empty then remove the unit from being tracked
+                if(state.trackedUnits[unitToTrackIdx].trackedSkills.length === 0 && state.trackedUnits[unitToTrackIdx].trackedAwakenings === undefined ) {
+                    state.trackedUnits = state.trackedUnits.filter(trackedUnit => trackedUnit.id !== action.payload.unitId)
+                }
             }   
         },
         clearUnitTrackedAwakenings: (state, action: PayloadAction<ClearUnitTrackedAwakeningsPayload>) => {
@@ -116,10 +132,29 @@ export const unitsSlice = createSlice({
                                 trackedSkills: [...trackedUnit.trackedSkills, action.payload.skill]
                             }
                         }
+
                     } else {
                         return trackedUnit
                     }
                 })
+                // After updates committed - If no resources are being tracked then remove the skill
+                state.trackedUnits[unitToTrackIdx].trackedSkills = state.trackedUnits[unitToTrackIdx].trackedSkills.filter(trackedSkill => {
+                    let areAllResourcesUntracked = false;
+                    if(trackedSkill.trackedMolagora.required !== 0) {
+                        areAllResourcesUntracked = !(trackedSkill.trackedGold.isTracked || trackedSkill.trackedMolagora.isTracked)
+                    } else {
+                        areAllResourcesUntracked = !(trackedSkill.trackedGold.isTracked || trackedSkill.trackedStigma.isTracked)
+                    }
+
+                    areAllResourcesUntracked = areAllResourcesUntracked && trackedSkill.trackedCatalysts.every(c => c.count.isTracked === false)
+
+                    return !areAllResourcesUntracked
+                })
+
+                // If both awakening+skills are empty then remove the unit from being tracked
+                if(state.trackedUnits[unitToTrackIdx].trackedSkills.length === 0 && state.trackedUnits[unitToTrackIdx].trackedAwakenings === undefined ) {
+                    state.trackedUnits = state.trackedUnits.filter(trackedUnit => trackedUnit.id !== action.payload.unitId)
+                }
             }
         },
         clearUnitTrackedSkill: (state, action: PayloadAction<ClearUnitTrackedSkillPayload>) => {
