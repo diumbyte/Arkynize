@@ -9,7 +9,7 @@ export const Summary = () => {
     
     return (
         <div className="container">
-            <div className="flex flex-nowrap">
+            <div className="flex flex-nowrap justify-center">
                 <OverallResourceSummary
                 />
             </div>

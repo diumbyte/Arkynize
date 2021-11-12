@@ -6,7 +6,7 @@ import { TrackedAwakening } from "../../../redux/types"
 import { LocalTrackedResource } from "../types"
 import { Awakening } from "../../../generated/graphql"
 
-import { ResourceListItem } from "../../components/EditableResourceListItem"
+import { EditableResourceListItem } from "../../components/EditableResourceListItem"
 import { calculateTotalAwakeningsCosts } from "../../../util/calculateCosts"
 
 type RenderAwakeningCostsProps = {
@@ -127,7 +127,7 @@ const AwakeningCosts = (
                 {
                     totalAwakeningsCost.trackedCatalysts.map(catalystCost => {
                         return (
-                            <ResourceListItem
+                            <EditableResourceListItem
                                 key={catalystCost.id}
                                 imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.code}.png`}
                                 imageAlt={catalystCost.code}
@@ -162,7 +162,7 @@ const AwakeningCosts = (
                 {
                     totalAwakeningsCost.trackedRunes.map(runeCost => {
                         return (
-                            <ResourceListItem
+                            <EditableResourceListItem
                                 key={runeCost.id}
                                 imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/rune/${runeCost.code}.png`}
                                 imageAlt={runeCost.code}

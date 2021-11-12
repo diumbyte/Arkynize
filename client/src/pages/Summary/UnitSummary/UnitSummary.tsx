@@ -6,7 +6,7 @@ import { useHistory } from "react-router"
 import { useAppDispatch } from "../../../redux/hooks"
 import { editAwakening, editSkillEnhancement } from "../../../redux/actions/unitsReducer"
 import { TrackedAwakening, TrackedSkill } from "../../../redux/types"
-import { ResourceListItem } from "../../components/EditableResourceListItem"
+import { EditableResourceListItem } from "../../components/EditableResourceListItem"
 
 type UnitSummaryProps = {
     unitId: number,
@@ -48,7 +48,7 @@ export const UnitSummary = ({
                         {
                             awakenings.trackedCatalysts.map((catalyst) => {
                                 return (
-                                    <ResourceListItem
+                                    <EditableResourceListItem
                                         key={catalyst.id}
                                         imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalyst.code}.png`}
                                         imageAlt={`${catalyst.code}'s icon`}
@@ -119,7 +119,7 @@ export const UnitSummary = ({
                         {
                             awakenings.trackedRunes.map((rune) => {
                                 return (
-                                    <ResourceListItem
+                                    <EditableResourceListItem
                                         key={rune.id}
                                         imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/rune/${rune.code}.png`}
                                         imageAlt={`${rune.name}'s icon`}
@@ -198,7 +198,7 @@ export const UnitSummary = ({
                                 <h2 className="text-white text-opacity-60 mt-2" style={{gridColumn: "1 / -1"}}>Skills</h2>
                                 {skill.trackedCatalysts.map((catalyst) => {
                                     return (
-                                        <ResourceListItem
+                                        <EditableResourceListItem
                                             key={catalyst.id}
                                             imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalyst.code}.png`}
                                             imageAlt={`${catalyst.code}'s icon`}
@@ -268,7 +268,7 @@ export const UnitSummary = ({
                                         />
                                     )
                                 })}
-                                <ResourceListItem
+                                <EditableResourceListItem
                                     imageSourcePath={GoldIcon}
                                     imageAlt={"Gold icon"}
                                     currentCount={skill.trackedGold.current}
@@ -314,7 +314,7 @@ export const UnitSummary = ({
                                 />
                                 {
                                     skill.trackedStigma.required !== 0 ?
-                                    <ResourceListItem
+                                    <EditableResourceListItem
                                         imageSourcePath={StigmaIcon}
                                         imageAlt={"Stigma icon"}
                                         currentCount={skill.trackedStigma.current}
@@ -359,7 +359,7 @@ export const UnitSummary = ({
                                         }}
                                     />
                                     :
-                                    <ResourceListItem
+                                    <EditableResourceListItem
                                         imageSourcePath={MolagoraIcon}
                                         imageAlt={"Molagora icon"}
                                         currentCount={skill.trackedMolagora.current}

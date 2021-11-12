@@ -8,7 +8,7 @@ import GoldIcon from "../../../assets/gold.png"
 import MolagoraIcon from "../../../assets/molagora.png"
 import StigmaIcon from "../../../assets/stigma.png"
 
-import { ResourceListItem } from "../../components/EditableResourceListItem"
+import { EditableResourceListItem } from "../../components/EditableResourceListItem"
 import { calculateTotalSkillEnhancementsCosts } from "../../../util/calculateCosts"
 
 type SkillEnhancementCostProps = {
@@ -118,7 +118,7 @@ export const SkillEnhancementCost = ({
         {
             totalEnhancementsCost.trackedCatalysts.map(catalystCost => {
                 return (
-                    <ResourceListItem
+                    <EditableResourceListItem
                         key={catalystCost.id}
                         resourceName={catalystCost.name}
                         imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.code}.png`}
@@ -150,7 +150,7 @@ export const SkillEnhancementCost = ({
                 )
             })
         }
-        <ResourceListItem
+        <EditableResourceListItem
             resourceName={"Gold"}
             imageSourcePath={GoldIcon}
             imageAlt={"Gold icon"}
@@ -169,7 +169,7 @@ export const SkillEnhancementCost = ({
         />
         {
             totalEnhancementsCost.trackedMolagora.required !== 0 ?
-                <ResourceListItem
+                <EditableResourceListItem
                     resourceName={"Molagora"}
                     imageSourcePath={MolagoraIcon}
                     imageAlt={"Molagora icon"}
@@ -187,7 +187,7 @@ export const SkillEnhancementCost = ({
                     }}
                 />
             :
-                <ResourceListItem
+                <EditableResourceListItem
                     resourceName={"Stigma"}
                     imageSourcePath={StigmaIcon}
                     imageAlt={"Stigma icon"}
