@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Enhancement } from "../../../generated/graphql"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
-import { clearUnitTrackedSkill, editSkillEnhancement, TrackedSkillPayload } from "../../../redux/actions/unitsReducer"
+import { clearUnitTrackedSkill, editSkillEnhancement, editTotalFromSkill, TrackedSkillPayload } from "../../../redux/actions/unitsReducer"
 import { TrackedSkill } from "../../../redux/types"
 import { LocalTrackedResource } from "../types"
 import GoldIcon from "../../../assets/gold.png"
@@ -225,6 +225,11 @@ export const SkillEnhancementCost = ({
                             )
                         )
                     )
+
+                    dispatch(
+                        editTotalFromSkill(totalEnhancementsCost)
+                    )
+                    
                     setModalOpen(false)
                 }}
             >

@@ -223,6 +223,56 @@ export const unitsSlice = createSlice({
                 }
             }
         },
+        editTotalFromSkill: (state, action: PayloadAction<TrackedSkill>) => {
+            // Catalysts
+            state.totalResources.catalysts = action.payload.trackedCatalysts.reduce<TrackedCatalyst[]>((total, currentCatalyst) => {
+                const catalystIdx = state.totalResources.catalysts.findIndex(c => c.id === currentCatalyst.id)
+                
+                if(catalystIdx !== -1) {
+                    total[catalystIdx] = {
+                        ...total[catalystIdx],
+                        count: {
+                            ...total[catalystIdx].count,
+                            required: total[catalystIdx].count.required + currentCatalyst.count.required
+                        }
+                    }
+                } else {
+                    total.push(currentCatalyst)
+                }
+
+                return total
+            }, [...state.totalResources.catalysts])
+            // Gold
+            if(action.payload.trackedGold.isTracked) {
+                state.totalResources = {
+                    ...state.totalResources,
+                    gold: {
+                        ...state.totalResources.gold,
+                        required: state.totalResources.gold.required + action.payload.trackedGold.required
+                    }
+                }
+            }
+            // Stigma
+            if(action.payload.trackedStigma.isTracked) {
+                state.totalResources = {
+                    ...state.totalResources,
+                    stigma: {
+                        ...state.totalResources.stigma,
+                        required: state.totalResources.stigma.required + action.payload.trackedStigma.required
+                    }
+                }
+            }
+            // Molagora
+            if(action.payload.trackedMolagora.isTracked) {
+                state.totalResources = {
+                    ...state.totalResources,
+                    molagora: {
+                        ...state.totalResources.molagora,
+                        required: state.totalResources.molagora.required + action.payload.trackedMolagora.required
+                    }
+                }
+            }
+        },
         clearUnitTrackedSkill: (state, action: PayloadAction<ClearUnitTrackedSkillPayload>) => {
             const trackedUnitIdx = state.trackedUnits.findIndex(tu => tu.id === action.payload.unitId)
             if(trackedUnitIdx !== -1) {
@@ -240,6 +290,7 @@ export const {
     editAwakening, 
     editTotalFromAwakenings,
     editSkillEnhancement, 
+    editTotalFromSkill,
     clearUnitTrackedAwakenings, 
     clearUnitTrackedSkill 
 } = unitsSlice.actions
