@@ -1,6 +1,3 @@
-import React from "react"
-import APIcon from "../../assets/ap.png"
-
 type DropListingProps = {
     chapter: string,
     instance: string,

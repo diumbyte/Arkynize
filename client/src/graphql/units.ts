@@ -79,6 +79,7 @@ gql`
 
     query getCatalystInfo($catalystId: Int!) {
         drops(catalystId: $catalystId) {
+            id
             stage {
             id
             instance

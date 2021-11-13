@@ -1,7 +1,7 @@
 import BattleIcon from "../../assets/battle.png"
 import ShopIcon from "../../assets/shop.png"
 
-import { useGetCatalystInfoQuery } from "../../generated/graphql"
+import { Drop, ShopItem, useGetCatalystInfoQuery } from "../../generated/graphql"
 import { EpisodeList } from "./EpisodeList"
 import { ShopListing } from "./ShopListing"
 import { DropListing } from "./DropListing"
@@ -14,6 +14,16 @@ type CatalystDetailProps = {
     imageAlt: string
 }
 
+type GroupedDrop = {
+    episode: string,
+    drops?: Drop[],
+}
+
+type GroupedShopItem = {
+    episode: string,
+    shopItems?: ShopItem[]
+}
+
 export const CatalystDetail = ({
     id,
     name,
@@ -22,15 +32,35 @@ export const CatalystDetail = ({
 }: CatalystDetailProps) => {
     const { data } = useGetCatalystInfoQuery({variables: {catalystId: id}})
 
-    const episodeOneDrops = data?.drops.filter(d => d.stage.region.episode === "1")
-    const episodeOneEpilogueDrops = data?.drops.filter(d => d.stage.region.episode === "1 Epilogue")
-    const episodeTwoDrops = data?.drops.filter(d => d.stage.region.episode === "2")
-    const episodeThreeDrops = data?.drops.filter(d => d.stage.region.episode === "3")
-    
-    const episodeOneShops = data?.shopItems.filter(si => si.region.episode === "1")
-    const episodeOneEpilogueShops = data?.shopItems.filter(si => si.region.episode === "1 Epilogue")
-    const episodeTwoShops = data?.shopItems.filter(si => si.region.episode === "2")
-    const episodeThreeShops = data?.shopItems.filter(si => si.region.episode === "3")
+    const groupedDropsByEpisode = data?.drops.reduce<GroupedDrop[]>((total, currentDrop) => {
+        const dropIdx = total.findIndex(d => d.episode === currentDrop.stage.region.episode)
+
+        if(dropIdx !== -1) {
+            total.at(dropIdx)?.drops?.push(currentDrop)
+        } else {
+            total.push({
+                episode: currentDrop.stage.region.episode,
+                drops: [currentDrop]
+            })
+        }
+
+        return total
+    }, [])
+
+    const groupedShopsByEpisode = data?.shopItems.reduce<GroupedShopItem[]>((total, currentShopItem) => {
+        const shopItemIdx = total.findIndex(si => si.episode === currentShopItem.region.episode)
+        
+        if(shopItemIdx !== -1) {
+            total.at(shopItemIdx)?.shopItems?.push(currentShopItem)
+        } else {
+            total.push({
+                episode: currentShopItem.region.episode,
+                shopItems: [currentShopItem]
+            })
+        }
+        
+        return total
+    }, [])
     
     return (
         <div>
@@ -51,108 +81,50 @@ export const CatalystDetail = ({
                         <img src={BattleIcon} alt="Battle icon" className="object-contain" width={36}/>
                         <h2 className="text-2xl">Drops</h2>
                     </div>
-                    <EpisodeList name="Episode 1">
-                        {
-                            episodeOneDrops?.map(drop => {
-                                return <DropListing
-                                    key={drop.stage.id}
-                                    chapter={drop.stage.region.chapter}
-                                    instance={drop.stage.instance}
-                                    energyCost={drop.stage.energy}
-                                    pointsGained={drop.stage.points}
-                                />
-                            })
-                        }
-                    </EpisodeList>
-                    <EpisodeList name="Episode 1 Epilogue">
-                        {
-                            episodeOneEpilogueDrops?.map(drop => {
-                                return <DropListing
-                                    key={drop.stage.id}
-                                    chapter={drop.stage.region.chapter}
-                                    instance={drop.stage.instance}
-                                    energyCost={drop.stage.energy}
-                                    pointsGained={drop.stage.points}
-                                />
-                            })
-                        }
-                    </EpisodeList>
-                    <EpisodeList name="Episode 2">
-                        {
-                            episodeTwoDrops?.map(drop => {
-                                return <DropListing
-                                    key={drop.stage.id}
-                                    chapter={drop.stage.region.chapter}
-                                    instance={drop.stage.instance}
-                                    energyCost={drop.stage.energy}
-                                    pointsGained={drop.stage.points}
-                                />
-                            })
-                        }
-                    </EpisodeList>
-                    <EpisodeList name="Episode 3">
-                        {
-                            episodeThreeDrops?.map(drop => {
-                                return <DropListing
-                                    key={drop.stage.id}
-                                    chapter={drop.stage.region.chapter}
-                                    instance={drop.stage.instance}
-                                    energyCost={drop.stage.energy}
-                                    pointsGained={drop.stage.points}
-                                />
-                            })
-                        }
-                    </EpisodeList>
+                    {
+                        groupedDropsByEpisode
+                            ?.map(groupedDrops => 
+                                (
+                                    <EpisodeList name={`Episode ${groupedDrops.episode}`}>
+                                        {
+                                            groupedDrops.drops?.map(drop => {
+                                                return <DropListing
+                                                    key={drop.stage.id}
+                                                    chapter={drop.stage.region.chapter}
+                                                    instance={drop.stage.instance}
+                                                    energyCost={drop.stage.energy}
+                                                    pointsGained={drop.stage.points}
+                                                />
+                                            })
+                                        }
+                                    </EpisodeList>
+                                )
+                            )
+                    }
                 </div>
                 <div className="">
                     <div className="flex items-end justify-center">
                         <img src={ShopIcon} alt="Shop icon" className="object-contain" width={36}/>
                         <h2 className="text-2xl">Shops</h2>
                     </div>
-                    <EpisodeList name="Episode 1">
-                        {
-                            episodeOneShops?.map(shop => {
-                                return <ShopListing 
-                                    key={shop.region.chapter}
-                                    chapter={shop.region.chapter}
-                                    price={shop.price}
-                                />
-                            })
-                        }
-                    </EpisodeList>
-                    <EpisodeList name="Episode 1 Epilogue">
-                        {
-                            episodeOneEpilogueShops?.map(shop => {
-                                return <ShopListing
-                                    key={shop.region.chapter}
-                                    chapter={shop.region.chapter}
-                                    price={shop.price}
-                                 />
-                            })
-                        }
-                    </EpisodeList>
-                    <EpisodeList name="Episode 2">
-                        {
-                            episodeTwoShops?.map(shop => {
-                                return <ShopListing
-                                    key={shop.region.chapter}
-                                    chapter={shop.region.chapter}
-                                    price={shop.price}
-                                 />
-                            })
-                        }
-                    </EpisodeList>
-                    <EpisodeList name="Episode 3">
-                        {
-                            episodeThreeShops?.map(shop => {
-                                return <ShopListing
-                                    key={shop.region.chapter}
-                                    chapter={shop.region.chapter}
-                                    price={shop.price}
-                                 />
-                            })
-                        }
-                    </EpisodeList>
+                    {
+                        groupedShopsByEpisode
+                            ?.map(groupedShopItems => 
+                                (
+                                    <EpisodeList name={`Episode ${groupedShopItems.episode}`}>
+                                        {
+                                            groupedShopItems.shopItems?.map(shop => (
+                                                <ShopListing 
+                                                    key={shop.region.chapter}
+                                                    chapter={shop.region.chapter}
+                                                    price={shop.price}
+                                                />
+                                            ))
+                                        }
+                                    </EpisodeList>
+                                )
+                            )
+                    }
                 </div>
             </div>
         </div>

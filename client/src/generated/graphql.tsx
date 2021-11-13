@@ -207,7 +207,7 @@ export type GetCatalystInfoQueryVariables = Exact<{
 }>;
 
 
-export type GetCatalystInfoQuery = { __typename?: 'Query', drops: Array<{ __typename?: 'Drop', stage: { __typename?: 'Stage', id: number, instance: string, name: string, energy: number, points: number, region: { __typename?: 'Region', id: number, name: string, episode: string, chapter: string } } }>, shopItems: Array<{ __typename?: 'ShopItem', price: number, region: { __typename?: 'Region', id: number, name: string, episode: string, chapter: string } }> };
+export type GetCatalystInfoQuery = { __typename?: 'Query', drops: Array<{ __typename?: 'Drop', id: number, stage: { __typename?: 'Stage', id: number, instance: string, name: string, energy: number, points: number, region: { __typename?: 'Region', id: number, name: string, episode: string, chapter: string } } }>, shopItems: Array<{ __typename?: 'ShopItem', price: number, region: { __typename?: 'Region', id: number, name: string, episode: string, chapter: string } }> };
 
 
 export const GetAllUnitsDocument = gql`
@@ -344,6 +344,7 @@ export type GetUnitDetailsQueryResult = Apollo.QueryResult<GetUnitDetailsQuery, 
 export const GetCatalystInfoDocument = gql`
     query getCatalystInfo($catalystId: Int!) {
   drops(catalystId: $catalystId) {
+    id
     stage {
       id
       instance
