@@ -19,7 +19,7 @@ export const OverallResourceSummary = () => {
             <div className="text-2xl px-2 text-center">
                 Total Costs
             </div>
-            <div className="p-2 flex flex-wrap justify-between">
+            <div className="p-2 flex flex-wrap justify-around">
                 {
                     trackedCatalysts.map((catalyst) => {
                         return (

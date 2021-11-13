@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import useCollapse from 'react-collapsed';
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link"
 
 type SidebarItemProps = {

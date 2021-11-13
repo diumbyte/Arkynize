@@ -9,7 +9,7 @@ type SkillResources = {
 
 export const useOverallResourceCosts = () => {
     const { trackedUnits } = useAppSelector(state => state.units)
-
+    
     // Values to return: Catalysts[], Runes[], Gold, Molagora/Stigma
     // Awakenings
     const totalAwakeningCatalystCosts = trackedUnits
@@ -20,8 +20,14 @@ export const useOverallResourceCosts = () => {
                 const catalystIdx = total.findIndex(c => c.id === catalyst.id)
                 if(catalystIdx !== -1) {
                     if(catalyst.count.isTracked) {
-                        total[catalystIdx].count.current += catalyst.count.current
-                        total[catalystIdx].count.required += catalyst.count.required
+                        total[catalystIdx] = {
+                            ...total[catalystIdx],
+                            count: {
+                                ...total[catalystIdx].count,
+                                current: total[catalystIdx].count.current + catalyst.count.current,
+                                required: total[catalystIdx].count.required + catalyst.count.required
+                            }
+                        }
                     }
                 } else {
                     total.push(catalyst)
@@ -39,8 +45,14 @@ export const useOverallResourceCosts = () => {
                 const runeIdx = total.findIndex(r => r.id === rune.id)
                 if(runeIdx !== -1) {
                     if(rune.count.isTracked) {
-                        total[runeIdx].count.current += rune.count.current
-                        total[runeIdx].count.required += rune.count.required
+                        total[runeIdx] = {
+                            ...total[runeIdx],
+                            count: {
+                                ...total[runeIdx].count,
+                                current: total[runeIdx].count.current + rune.count.current,
+                                required: total[runeIdx].count.required + rune.count.required
+                            }
+                        }
                     }
                 } else {
                     total.push(rune)
@@ -57,8 +69,14 @@ export const useOverallResourceCosts = () => {
                     const catalystIdx = total.findIndex(c => c.id === catalyst.id)
                     if(catalystIdx !== -1) {
                         if(catalyst.count.isTracked) {
-                            total[catalystIdx].count.current += catalyst.count.current
-                            total[catalystIdx].count.required += catalyst.count.required
+                            total[catalystIdx] = {
+                                ...total[catalystIdx],
+                                count: {
+                                    ...total[catalystIdx].count,
+                                    current: total[catalystIdx].count.current + catalyst.count.current,
+                                    required: total[catalystIdx].count.required + catalyst.count.required
+                                }
+                            }
                         }
                     } else {
                         total.push(catalyst)
@@ -73,18 +91,36 @@ export const useOverallResourceCosts = () => {
         .reduce<SkillResources>((total, skills) => {
             skills.forEach(skill => {
                 if(skill.trackedGold.isTracked) {
-                    total.trackedGold.current += skill.trackedGold.current
-                    total.trackedGold.required += skill.trackedGold.required
+                    total = {
+                        ...total,
+                        trackedGold: {
+                            ...total.trackedGold,
+                            current: total.trackedGold.current + skill.trackedGold.current,
+                            required:total.trackedGold.required + skill.trackedGold.required
+                        }
+                    }
                 }
                 
                 if(skill.trackedMolagora.isTracked) {
-                    total.trackedMolagora.current += skill.trackedMolagora.current
-                    total.trackedMolagora.required += skill.trackedMolagora.required
+                    total = {
+                        ...total,
+                        trackedMolagora: {
+                            ...total.trackedMolagora,
+                            current: total.trackedMolagora.current + skill.trackedMolagora.current,
+                            required:total.trackedMolagora.required + skill.trackedMolagora.required
+                        }
+                    }
                 }
                 
                 if(skill.trackedStigma.isTracked) {
-                    total.trackedStigma.current += skill.trackedStigma.current
-                    total.trackedStigma.required += skill.trackedStigma.required
+                    total = {
+                        ...total,
+                        trackedStigma: {
+                            ...total.trackedStigma,
+                            current: total.trackedStigma.current + skill.trackedStigma.current,
+                            required:total.trackedStigma.required + skill.trackedStigma.required
+                        }
+                    }
                 }
             })
 
@@ -106,15 +142,26 @@ export const useOverallResourceCosts = () => {
                 isTracked: true
             }
         })
+    
+    console.log("awakenings", totalAwakeningCatalystCosts);
+    console.log("skills", totalSkillCatalystCosts);
+    
+        
     // Sum catalysts
     const totalCatalystsCost = totalAwakeningCatalystCosts.concat(totalSkillCatalystCosts)
         .reduce<TrackedCatalyst[]>((total, catalyst) => {
             const catalystIdx = total.findIndex(c => c.id === catalyst.id)
             if(catalystIdx !== -1) {
-                total[catalystIdx].count.current += catalyst.count.current
-                total[catalystIdx].count.required += catalyst.count.required
+                total[catalystIdx] = {
+                    ...total[catalystIdx],
+                    count: {
+                        ...total[catalystIdx].count,
+                        current: total[catalystIdx].count.current + catalyst.count.current,
+                        required: total[catalystIdx].count.required + catalyst.count.required
+                    }
+                }
             } else {
-                total.push(catalyst)
+                total.push({...catalyst})
             }
 
             return total

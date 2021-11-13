@@ -70,7 +70,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         "resource": "auto auto minmax(0,1fr) auto",
-        "resource-full": "minmax(0,1fr) auto minmax(0,1fr) auto"
+        "resource-full": "auto auto minmax(0,1fr) auto"
       }
     },
   },

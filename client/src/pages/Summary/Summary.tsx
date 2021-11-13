@@ -10,8 +10,13 @@ export const Summary = () => {
     return (
         <div className="container">
             <div className="flex flex-nowrap justify-center">
-                <OverallResourceSummary
-                />
+                { trackedUnits.length > 0 
+                    ?
+                    <OverallResourceSummary
+                    />
+                    :
+                    <div className="div">No units tracked.</div>
+                }
             </div>
             <div className="flex flex-wrap justify-around">
                 {
