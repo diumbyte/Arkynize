@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 import BattleIcon from "../../assets/battle.png"
 import ShopIcon from "../../assets/shop.png"
 
@@ -31,7 +33,8 @@ export const CatalystDetail = ({
     imageAlt
 }: CatalystDetailProps) => {
     const { data } = useGetCatalystInfoQuery({variables: {catalystId: id}})
-
+    const [isDropsSelected, setIsDropsSelected] = useState(true)
+    
     const groupedDropsByEpisode = data?.drops.reduce<GroupedDrop[]>((total, currentDrop) => {
         const dropIdx = total.findIndex(d => d.episode === currentDrop.stage.region.episode)
 
@@ -64,7 +67,7 @@ export const CatalystDetail = ({
     
     return (
         <div>
-            <div className="row border-b border-black border-opacity-20 py-1">
+            <div className="row border-b border-black border-opacity-20 py-1 mb-2">
                 <img 
                     className="object-contain"
                     width={40}
@@ -75,9 +78,26 @@ export const CatalystDetail = ({
                     {name}
                 </span>
             </div>
+            {/* Tabbed navigation for mobile view */}
+            <div className="flex md:hidden">
+                <div 
+                    className={`flex-1 pb-2 flex items-end justify-center ${isDropsSelected ? "border-b-2 border-white border-opacity-40" : ""}`}
+                    onClick={() => setIsDropsSelected(true)}
+                >
+                        <img src={BattleIcon} alt="Battle icon" className="object-contain" width={36}/>
+                        <h2 className="text-2xl">Drops</h2>
+                </div>
+                <div 
+                    className={`flex-1 pb-2 flex items-end justify-center ${isDropsSelected ? "" : "border-b-2 border-white border-opacity-40"}`}
+                    onClick={() => setIsDropsSelected(false)}
+                >
+                        <img src={ShopIcon} alt="Shop icon" className="object-contain" width={36}/>
+                        <h2 className="text-2xl">Shops</h2>
+                </div>
+            </div>
             <div className="block md:flex md:justify-around">
-                <div className="">
-                    <div className="flex items-end justify-center">
+                <div className={`md:block ${isDropsSelected ? "block" : "hidden"}`}>
+                    <div className="hidden md:flex items-end justify-center">
                         <img src={BattleIcon} alt="Battle icon" className="object-contain" width={36}/>
                         <h2 className="text-2xl">Drops</h2>
                     </div>
@@ -102,8 +122,8 @@ export const CatalystDetail = ({
                             )
                     }
                 </div>
-                <div className="">
-                    <div className="flex items-end justify-center">
+                <div className={`md:block ${isDropsSelected ? "hidden" : "block"}`}>
+                    <div className="hidden md:flex items-end justify-center">
                         <img src={ShopIcon} alt="Shop icon" className="object-contain" width={36}/>
                         <h2 className="text-2xl">Shops</h2>
                     </div>

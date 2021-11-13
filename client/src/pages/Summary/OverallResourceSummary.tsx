@@ -15,17 +15,18 @@ export const OverallResourceSummary = () => {
     } = useOverallResourceCosts();
 
     return (
-        <div className="bg-tavernBrown-light bg-opacity-80 rounded p-2 border border-black w-full md:w-1/3 md:min-w-450 max-w-4xl text-sm my-2 md:mx-2">
+        <div className="bg-tavernBrown-light bg-opacity-80 rounded p-2 border border-black w-full md:w-11/12 md:min-w-450 max-w-4xl text-sm my-2 md:mx-2">
             <div className="text-2xl px-2 text-center">
                 Total Costs
             </div>
-            <div className="p-2">
+            <div className="p-2 flex flex-wrap justify-between">
                 {
                     trackedCatalysts.map((catalyst) => {
                         return (
                             <ResourceListItem
+                                className="w-full md:w-1/3"
                                 key={catalyst.id}
-                                id={catalyst.id}
+                                resourceId={catalyst.id}
                                 imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalyst.code}.png`}
                                 imageAlt={`${catalyst.code}'s icon`}
                                 resourceName={catalyst.name}
@@ -40,6 +41,7 @@ export const OverallResourceSummary = () => {
                     trackedRunes.map((rune) => {
                         return (
                             <ResourceListItem
+                                className="w-full md:w-1/3"
                                 key={rune.id}
                                 imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/rune/${rune.code}.png`}
                                 imageAlt={`${rune.name}'s icon`}
@@ -52,6 +54,7 @@ export const OverallResourceSummary = () => {
 
                 }
                 <ResourceListItem
+                    className="w-full md:w-1/3"
                     imageSourcePath={GoldIcon}
                     imageAlt={"Gold icon"}
                     currentCount={trackedGold.current}
@@ -59,6 +62,7 @@ export const OverallResourceSummary = () => {
                     resourceName={"Gold"}
                 />
                 <ResourceListItem
+                    className="w-full md:w-1/3"
                     imageSourcePath={MolagoraIcon}
                     imageAlt={"Molagora icon"}
                     currentCount={trackedMolagora.current}
@@ -66,6 +70,7 @@ export const OverallResourceSummary = () => {
                     resourceName={"Molagora"}
                 />
                 <ResourceListItem
+                    className="w-full md:w-1/3"
                     imageSourcePath={StigmaIcon}
                     imageAlt={"Stigma icon"}
                     currentCount={trackedStigma.current}

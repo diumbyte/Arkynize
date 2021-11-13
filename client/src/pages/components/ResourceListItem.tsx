@@ -5,13 +5,13 @@ import 'react-responsive-modal/styles.css'
 import { ReactComponent as CrossIcon } from "../../assets/cross.svg"
 import { CatalystDetail } from '../CatalystDetail/CatalystDetail'
 
-type ResourceListItemProp = {
+type ResourceListItemProp = React.HTMLAttributes<HTMLDivElement> & {
     imageSourcePath: string,
     imageAlt: string,
     resourceName: string,
     currentCount: number,
     desiredCount: number,
-    id?: number
+    resourceId?: number
 }
 
 const isResourceACatalyst = (path: string) => path.includes("catalyst");
@@ -23,14 +23,15 @@ export const ResourceListItem = ({
     resourceName,
     currentCount,
     desiredCount,
-    id
+    resourceId,
+    ...props
 }:ResourceListItemProp) => {
     const [modalOpen, setModalOpen] = useState(false);
     
     return (
         desiredCount !== 0 ?
         <>
-            <div className="flex w-full items-center py-2">
+            <div className={`flex items-center py-2 ${props.className}`}>
                 <div className="md:flex-1 flex justify-start items-center" >
                     {/* TODO: If catalyst -> open modal with drop/shop info */}
                     <img 
@@ -43,7 +44,6 @@ export const ResourceListItem = ({
                                 return
                             } 
 
-                            // console.log("Catalyst clicked!");
                             setModalOpen(true)
                         }}
                     />
@@ -69,7 +69,7 @@ export const ResourceListItem = ({
                 <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "customModalOverlay"}}>
                     <div className="text-offWhite">
                         <CatalystDetail
-                            id={id as number}
+                            id={resourceId as number}
                             name={resourceName}
                             imageSourcePath={imageSourcePath}
                             imageAlt={imageAlt}

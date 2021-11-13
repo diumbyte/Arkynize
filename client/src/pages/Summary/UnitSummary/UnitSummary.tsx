@@ -27,7 +27,7 @@ export const UnitSummary = ({
     const history = useHistory();
 
     return (
-        <div className="bg-tavernBrown-light bg-opacity-80 rounded p-2 border border-black w-full md:w-1/3 md:min-w-450 max-w-4xl text-sm my-2 md:mx-2">
+        <div className="bg-tavernBrown-light bg-opacity-80 rounded p-2 border border-black w-full md:w-5/12 md:min-w-450 max-w-4xl text-sm my-2 md:mx-2">
             <div className="row border-b border-black border-opacity-20 py-1">
                 <img 
                     className="object-contain cursor-pointer"

@@ -10,7 +10,7 @@ export const ShopListing = ({
     price
 }: ShopListingProps) => {
     return (
-        <div className="mx-4 py-2 border-b border-gray-300 last:border-0 flex flex-nowrap justify-between text-sm">
+        <div className="mx-4 py-2 border-b border-gray-300 border-opacity-30 last:border-0 flex flex-nowrap justify-between text-sm">
             <div className="">
                 <span>Chapter </span>
                 <span className="font-medium">{chapter}</span>

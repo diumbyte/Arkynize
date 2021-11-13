@@ -13,7 +13,7 @@ export const Summary = () => {
                 <OverallResourceSummary
                 />
             </div>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap justify-around">
                 {
                     trackedUnits.length !== 0 && 
                     trackedUnits.map(unit => {
