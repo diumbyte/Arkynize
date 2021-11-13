@@ -198,7 +198,7 @@ export const UnitSummary = ({
                     skills.map((skill) => {
                         return (
                             <div key={skill.id} className="grid grid-cols-resource md:grid-cols-resource-full items-center">
-                                <h2 className="text-white text-opacity-60 mt-2" style={{gridColumn: "1 / -1"}}>Skills</h2>
+                                <h2 className="text-white text-opacity-60 mt-2" style={{gridColumn: "1 / -1"}}>{`Skill ${skill.type}`}</h2>
                                 {skill.trackedCatalysts.map((catalyst) => {
                                     return (
                                         <EditableResourceListItem

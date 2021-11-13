@@ -5,6 +5,7 @@ import { TrackedAwakening, TrackedEnhancement, TrackedSkill } from "../redux/typ
 export const calculateTotalSkillEnhancementsCosts = (
     allEnhancements: Enhancement[],
     skillId: number,
+    type: number,
     currentEnhancementId: number,
     desiredEnhancementId: number,
     basicCatalystCount: LocalTrackedResource,
@@ -49,6 +50,7 @@ export const calculateTotalSkillEnhancementsCosts = (
         return acc;
     }, {
         id: skillId,
+        type,
         currentEnhancement,
         desiredEnhancement,
         trackedGold: {

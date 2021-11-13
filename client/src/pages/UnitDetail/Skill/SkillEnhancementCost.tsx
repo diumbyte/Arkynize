@@ -16,6 +16,7 @@ type SkillEnhancementCostProps = {
     unitCode: string,
     unitName: string,
     skillId: number,
+    type: number,
     currentEnhancementId: number,
     desiredEnhancementId: number,
     setModalOpen: Function,
@@ -44,6 +45,7 @@ export const SkillEnhancementCost = ({
     unitName,
     unitCode,
     skillId,
+    type,
     currentEnhancementId,
     desiredEnhancementId,
     setModalOpen,
@@ -100,6 +102,7 @@ export const SkillEnhancementCost = ({
     const totalEnhancementsCost = calculateTotalSkillEnhancementsCosts(
         enhancements,
         skillId,
+        type,
         currentEnhancementId,
         desiredEnhancementId,
         basicCatalystCount,

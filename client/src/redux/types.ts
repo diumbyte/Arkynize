@@ -32,6 +32,7 @@ export interface TrackedEnhancement {
 }
 export interface TrackedSkill {
     id: number,
+    type: number,
     currentEnhancement: TrackedEnhancement,
     desiredEnhancement: TrackedEnhancement,
     trackedGold: ITrackeableCount,
