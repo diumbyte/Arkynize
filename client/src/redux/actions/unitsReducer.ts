@@ -148,6 +148,51 @@ export const unitsSlice = createSlice({
             const unitToTrackIdx = state.trackedUnits.findIndex(tu => tu.id === action.payload.unitId)
             
             if(unitToTrackIdx !== -1) {
+                /***** Handling `totalResources` *****/
+                const unitFound = state.trackedUnits.find(tu => tu.id === action.payload.unitId)
+                if(unitFound?.trackedAwakenings !== undefined) {
+                    // Catalysts
+                    state.totalResources.catalysts = unitFound?.trackedAwakenings?.trackedCatalysts
+                        ?.reduce<TrackedCatalyst[]>((total, currentCatalyst) => {
+                            if(currentCatalyst.count.isTracked) {
+                                const catalystIdx = state.totalResources.catalysts.findIndex(c => c.id === currentCatalyst.id)
+
+                                if(catalystIdx !== -1) {
+                                    total[catalystIdx] = {
+                                        ...total[catalystIdx],
+                                        count: {
+                                            ...total[catalystIdx].count,
+                                            required: total[catalystIdx].count.required - currentCatalyst.count.required
+                                        }
+                                    }
+                                }
+                            }
+                            return total
+                        }, [...state.totalResources.catalysts])
+                    state.totalResources.catalysts = state.totalResources.catalysts.filter(c => c.count.required !== 0)
+                    
+                    // Runes
+                    state.totalResources.runes = unitFound?.trackedAwakenings?.trackedRunes
+                        ?.reduce<TrackedRune[]>((total, currentRune) => {
+                            if(currentRune.count.isTracked) {
+                                const runeIdx = state.totalResources.runes.findIndex(c => c.id === currentRune.id)
+
+                                if(runeIdx !== -1) {
+                                    total[runeIdx] = {
+                                        ...total[runeIdx],
+                                        count: {
+                                            ...total[runeIdx].count,
+                                            required: total[runeIdx].count.required - currentRune.count.required
+                                        }
+                                    }
+                                }
+                            }
+                            return total
+                        }, [...state.totalResources.runes])
+                    state.totalResources.runes = state.totalResources.runes.filter(r => r.count.required !== 0)
+                }
+                
+                /***** Handling `trackedUnits` *****/
                 // Handle the case when only the Awakenings are being tracked -> Remove entirely off store
                 if(state.trackedUnits[unitToTrackIdx].trackedSkills.length === 0) {
                     state.trackedUnits = state.trackedUnits.filter(trackedUnit => trackedUnit.id !== action.payload.unitId)
