@@ -202,6 +202,13 @@ export type GetUnitDetailsQueryVariables = Exact<{
 
 export type GetUnitDetailsQuery = { __typename?: 'Query', unit: { __typename?: 'Unit', id: number, name: string, code: string }, getAwakeningsForUnit: Array<{ __typename?: 'Awakening', id: number, state: number, awakeningCatalystCost: { __typename?: 'AwakeningCatalystCost', id: number, count: number, catalyst: { __typename?: 'Catalyst', id: number, name: string, code: string, isEpic: boolean } }, runeCosts: Array<{ __typename?: 'RuneCost', count: number, rune: { __typename?: 'Rune', id: number, name: string, code: string, type: string } }> }>, getUnitSkills: Array<{ __typename?: 'Skill', id: number, name: string, type: number, code: string, enhancements: Array<{ __typename?: 'Enhancement', id: number, level: number, stigma: number, molagora: number, gold: number, enhancementCatalystCost: { __typename?: 'EnhancementCatalystCost', id: number, count: number, catalyst: { __typename?: 'Catalyst', id: number, name: string, code: string, isEpic: boolean } } }> }> };
 
+export type GetCatalystInfoQueryVariables = Exact<{
+  catalystId: Scalars['Int'];
+}>;
+
+
+export type GetCatalystInfoQuery = { __typename?: 'Query', drops: Array<{ __typename?: 'Drop', stage: { __typename?: 'Stage', id: number, instance: string, name: string, energy: number, points: number, region: { __typename?: 'Region', id: number, name: string, episode: string, chapter: string } } }>, shopItems: Array<{ __typename?: 'ShopItem', price: number, region: { __typename?: 'Region', id: number, name: string, episode: string, chapter: string } }> };
+
 
 export const GetAllUnitsDocument = gql`
     query getAllUnits {
@@ -334,6 +341,62 @@ export function useGetUnitDetailsLazyQuery(baseOptions?: Apollo.LazyQueryHookOpt
 export type GetUnitDetailsQueryHookResult = ReturnType<typeof useGetUnitDetailsQuery>;
 export type GetUnitDetailsLazyQueryHookResult = ReturnType<typeof useGetUnitDetailsLazyQuery>;
 export type GetUnitDetailsQueryResult = Apollo.QueryResult<GetUnitDetailsQuery, GetUnitDetailsQueryVariables>;
+export const GetCatalystInfoDocument = gql`
+    query getCatalystInfo($catalystId: Int!) {
+  drops(catalystId: $catalystId) {
+    stage {
+      id
+      instance
+      name
+      energy
+      points
+      region {
+        id
+        name
+        episode
+        chapter
+      }
+    }
+  }
+  shopItems(catalystId: $catalystId) {
+    price
+    region {
+      id
+      name
+      episode
+      chapter
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetCatalystInfoQuery__
+ *
+ * To run a query within a React component, call `useGetCatalystInfoQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetCatalystInfoQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetCatalystInfoQuery({
+ *   variables: {
+ *      catalystId: // value for 'catalystId'
+ *   },
+ * });
+ */
+export function useGetCatalystInfoQuery(baseOptions: Apollo.QueryHookOptions<GetCatalystInfoQuery, GetCatalystInfoQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetCatalystInfoQuery, GetCatalystInfoQueryVariables>(GetCatalystInfoDocument, options);
+      }
+export function useGetCatalystInfoLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetCatalystInfoQuery, GetCatalystInfoQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetCatalystInfoQuery, GetCatalystInfoQueryVariables>(GetCatalystInfoDocument, options);
+        }
+export type GetCatalystInfoQueryHookResult = ReturnType<typeof useGetCatalystInfoQuery>;
+export type GetCatalystInfoLazyQueryHookResult = ReturnType<typeof useGetCatalystInfoLazyQuery>;
+export type GetCatalystInfoQueryResult = Apollo.QueryResult<GetCatalystInfoQuery, GetCatalystInfoQueryVariables>;
 
       export interface PossibleTypesResultData {
         possibleTypes: {

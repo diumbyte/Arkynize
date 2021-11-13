@@ -78,7 +78,8 @@ module.exports = {
       backgroundImage: ['active'],
       borderWidth: ['last'],
       fill: ['hover', 'focus'],
-      appearance: ['hover', 'focus']
+      appearance: ['hover', 'focus'],
+      border: ['last']
     },
   },
   plugins: [],

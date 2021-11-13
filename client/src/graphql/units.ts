@@ -76,4 +76,32 @@ gql`
             }
         }
     }
+
+    query getCatalystInfo($catalystId: Int!) {
+        drops(catalystId: $catalystId) {
+            stage {
+            id
+            instance
+            name
+            energy
+            points
+            region {
+                id
+                name
+                episode
+                chapter
+            }
+            }
+        }
+
+        shopItems(catalystId: $catalystId) {
+            price
+            region {
+            id
+            name
+            episode
+            chapter
+            }
+        }
+    }
 `;

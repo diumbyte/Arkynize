@@ -25,6 +25,7 @@ export const OverallResourceSummary = () => {
                         return (
                             <ResourceListItem
                                 key={catalyst.id}
+                                id={catalyst.id}
                                 imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalyst.code}.png`}
                                 imageAlt={`${catalyst.code}'s icon`}
                                 resourceName={catalyst.name}

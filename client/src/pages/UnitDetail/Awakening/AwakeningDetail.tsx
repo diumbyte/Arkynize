@@ -71,15 +71,15 @@ export const AwakeningDetail = ({
             <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "customModalOverlay"}}>
                 <div className="text-offWhite">
                     <h2 className="text-center text-2xl">Materials Required</h2>
-                        <AwakeningCost 
-                            unitId={unitId}
-                            unitName={unitName}
-                            unitCode={unitCode}
-                            currentAwakeningsIdx={findLastIndex(currentAwakenings, ca => ca.status === true)}
-                            desiredAwakeningsIdx={findLastIndex(desiredAwakenings, da => da.status === true)}
-                            awakenings={awakenings}   
-                            setModalOpen={setModalOpen}
-                        />
+                    <AwakeningCost 
+                        unitId={unitId}
+                        unitName={unitName}
+                        unitCode={unitCode}
+                        currentAwakeningsIdx={findLastIndex(currentAwakenings, ca => ca.status === true)}
+                        desiredAwakeningsIdx={findLastIndex(desiredAwakenings, da => da.status === true)}
+                        awakenings={awakenings}   
+                        setModalOpen={setModalOpen}
+                    />
                 </div>
             </Modal>
         </>
