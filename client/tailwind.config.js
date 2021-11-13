@@ -59,6 +59,9 @@ module.exports = {
         "60": "60px",
         "80": "80%"
       },
+      maxWidth: {
+        "70": "70px"
+      },
       minWidth: {
         "45": "45px",
         "60": "65px",

@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { useAppSelector } from "../../redux/hooks"
 import { Logo as LogoComponent } from './Logo';
 import { SidebarItem } from './SidebarItem';
 import {ReactComponent as AddIcon} from "../../assets/add.svg" 
 import {ReactComponent as SummaryIcon} from "../../assets/summary.svg" 
 // import {ReactComponent as UnitIcon} from "../../assets/unit.svg" 
+
 
 type SidebarProps = {
     isExpanded: boolean,
@@ -15,6 +17,8 @@ export const Sidebar = ({
     isExpanded,
     setIsExpanded
 }: SidebarProps) => {
+
+    const { trackedUnits } = useAppSelector(state => state.units)
 
     const mobileSidebarExpansion = () => {
         if(isExpanded) {
@@ -28,7 +32,6 @@ export const Sidebar = ({
             transform translate-x-0
             ${isExpanded ? "ease-out translate-x-0" : "ease-in -translate-x-full md:translate-x-0"}`
             }
-            onClick={mobileSidebarExpansion}
         >
             <LogoComponent />
             <div className={``}>
@@ -36,12 +39,25 @@ export const Sidebar = ({
                     title="All Units"
                     destination="units"
                     Icon={AddIcon}
+                    onClick={mobileSidebarExpansion}
                 />
                 <SidebarItem
                     title="Summary"
                     destination="summary"
                     Icon={SummaryIcon}
-                />
+                >
+                    {
+                        trackedUnits.map(unit => (
+                            <SidebarItem 
+                                key={unit.id}
+                                destination={`summary#${unit.id}`}
+                                title={unit.name}
+                                imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/hero/icon/${unit.code}.png`}
+                                onClick={mobileSidebarExpansion}
+                            />
+                        ))
+                    }
+                </SidebarItem>
             </div>
         </nav>
     )
