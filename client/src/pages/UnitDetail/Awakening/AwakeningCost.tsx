@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
 
-import { clearUnitTrackedAwakenings, editAwakening, TrackedAwakeningPayload } from "../../../redux/actions/unitsReducer"
+import { clearUnitTrackedAwakenings, editAwakening, editTotalFromAwakenings, TrackedAwakeningPayload } from "../../../redux/actions/unitsReducer"
 import { TrackedAwakening } from "../../../redux/types"
 import { LocalTrackedResource } from "../types"
 import { Awakening } from "../../../generated/graphql"
 
 import { EditableResourceListItem } from "../../components/EditableResourceListItem"
+import { TrackableResourceListItem } from "../../components/TrackableResourceListItem"
 import { calculateTotalAwakeningsCosts } from "../../../util/calculateCosts"
 
 type RenderAwakeningCostsProps = {
@@ -121,33 +122,19 @@ const AwakeningCosts = (
         return (
             <>
             <form
-                className="grid py-6 grid-cols-resource md:grid-cols-resource-full items-center"
+                className="py-6"
                 onSubmit={(e) => e.preventDefault()}
             >
                 {
                     totalAwakeningsCost.trackedCatalysts.map(catalystCost => {
                         return (
-                            <EditableResourceListItem
+                            <TrackableResourceListItem
                                 key={catalystCost.id}
                                 imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.code}.png`}
                                 imageAlt={catalystCost.code}
-                                currentCount={catalystCost.isEpic ? epicCatalyst.currentCount : basicCatalyst.currentCount}
                                 desiredCount={catalystCost.count.required}
                                 isTracked={catalystCost.count.isTracked}
                                 resourceName={catalystCost.name}
-                                onCurrentCountChange={(value) => {
-                                    if(catalystCost.isEpic) {
-                                        setEpicCatalyst(prev => ({
-                                            currentCount: value,
-                                            isTracked: prev.isTracked
-                                        }))
-                                    } else {
-                                        setBasicCatalyst(prev => ({
-                                            currentCount: value,
-                                            isTracked: prev.isTracked
-                                        }))
-                                    }
-                                }}
                                 onItemUntracked={() => {
                                     if(catalystCost.isEpic) {
                                         setEpicCatalyst(prev => ({...prev, isTracked: false}))
@@ -162,36 +149,13 @@ const AwakeningCosts = (
                 {
                     totalAwakeningsCost.trackedRunes.map(runeCost => {
                         return (
-                            <EditableResourceListItem
+                            <TrackableResourceListItem
                                 key={runeCost.id}
                                 imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/rune/${runeCost.code}.png`}
                                 imageAlt={runeCost.code}
                                 resourceName={runeCost.name}
-                                currentCount={
-                                    runeCost.type === "basic" ? basicRune.currentCount
-                                    : runeCost.type === "greater" ? midRune.currentCount
-                                    : topRune.currentCount
-                                }
                                 desiredCount={runeCost.count.required}
                                 isTracked={runeCost.count.isTracked}
-                                onCurrentCountChange={(value) => {
-                                    if(runeCost.type === "basic") {
-                                        setBasicRune(prevState => ({
-                                            currentCount: value,
-                                            isTracked: prevState.isTracked
-                                        }))
-                                    } else if(runeCost.type === "greater") {
-                                        setMidRune(prevState => ({
-                                            currentCount: value,
-                                            isTracked: prevState.isTracked
-                                        }))
-                                    } else {
-                                        setTopRune(prevState => ({
-                                            currentCount: value,
-                                            isTracked: prevState.isTracked
-                                        }))
-                                    }
-                                }}
                                 onItemUntracked={() => {
                                     if(runeCost.type === "basic") {
                                         setBasicRune(prev => ({...prev, isTracked: false}))
@@ -221,6 +185,10 @@ const AwakeningCosts = (
                                     totalAwakeningsCost
                                 )
                             )
+                        )
+
+                        dispatch(
+                            editTotalFromAwakenings(totalAwakeningsCost)
                         )
                         setModalOpen(false)
                     }}

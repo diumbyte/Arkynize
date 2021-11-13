@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
-import { TrackedAwakening, TrackedSkill, TrackedUnit } from "../types";
+import { ITrackeableCount, TrackedAwakening, TrackedCatalyst, TrackedRune, TrackedSkill, TrackedUnit } from "../types";
 
 export interface TrackedSkillPayload {
     unitId: number,
@@ -25,12 +25,40 @@ export interface TrackedAwakeningPayload {
     awakening: TrackedAwakening
 }
 
+export interface TrackedTotalResources {
+    catalysts: TrackedCatalyst[],
+    runes: TrackedRune[],
+    gold: ITrackeableCount,
+    stigma: ITrackeableCount,
+    molagora: ITrackeableCount
+}
+
 interface TrackedUnitsState {
-    trackedUnits: TrackedUnit[]
+    trackedUnits: TrackedUnit[],
+    totalResources: TrackedTotalResources
 }
 
 const initialState: TrackedUnitsState = {
-    trackedUnits: []
+    trackedUnits: [],
+    totalResources: {
+        catalysts: [],
+        runes: [],
+        gold: {
+            current: 0,
+            required: 0,
+            isTracked: true
+        },
+        stigma: {
+            current: 0,
+            required: 0,
+            isTracked: true
+        },
+        molagora: {
+            current: 0,
+            required: 0,
+            isTracked: true
+        }
+    }
 }
 
 export const unitsSlice = createSlice({
@@ -76,7 +104,45 @@ export const unitsSlice = createSlice({
                 if(state.trackedUnits[unitToTrackIdx].trackedSkills.length === 0 && state.trackedUnits[unitToTrackIdx].trackedAwakenings === undefined ) {
                     state.trackedUnits = state.trackedUnits.filter(trackedUnit => trackedUnit.id !== action.payload.unitId)
                 }
+
             }   
+        },
+        editTotalFromAwakenings: (state, action: PayloadAction<TrackedAwakening>) => {
+            state.totalResources.catalysts = action.payload.trackedCatalysts.reduce<TrackedCatalyst[]>((total, currentCatalyst) => {
+                const catalystIdx = state.totalResources.catalysts.findIndex(c => c.id === currentCatalyst.id)
+                
+                if(catalystIdx !== -1) {
+                    total[catalystIdx] = {
+                        ...total[catalystIdx],
+                        count: {
+                            ...total[catalystIdx].count,
+                            required: total[catalystIdx].count.required + currentCatalyst.count.required
+                        }
+                    }
+                } else {
+                    total.push(currentCatalyst)
+                }
+
+                return total
+            }, [...state.totalResources.catalysts])
+
+            state.totalResources.runes = action.payload.trackedRunes.reduce<TrackedRune[]>((total, currentRune) => {
+                const runeIdx = state.totalResources.runes.findIndex(c => c.id === currentRune.id)
+                
+                if(runeIdx !== -1 && currentRune.count.isTracked) {
+                    total[runeIdx] = {
+                        ...total[runeIdx],
+                        count: {
+                            ...total[runeIdx].count,
+                            required: total[runeIdx].count.required + currentRune.count.required
+                        }
+                    }
+                } else {
+                    total.push(currentRune)
+                }
+
+                return total
+            }, [...state.totalResources.runes])
         },
         clearUnitTrackedAwakenings: (state, action: PayloadAction<ClearUnitTrackedAwakeningsPayload>) => {
             const unitToTrackIdx = state.trackedUnits.findIndex(tu => tu.id === action.payload.unitId)
@@ -170,7 +236,13 @@ export const unitsSlice = createSlice({
     }
 })
 
-export const { editAwakening, editSkillEnhancement, clearUnitTrackedAwakenings, clearUnitTrackedSkill } = unitsSlice.actions
+export const { 
+    editAwakening, 
+    editTotalFromAwakenings,
+    editSkillEnhancement, 
+    clearUnitTrackedAwakenings, 
+    clearUnitTrackedSkill 
+} = unitsSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectUnits = (state: RootState) => state.units
