@@ -484,6 +484,64 @@ export const unitsSlice = createSlice({
                 }
             }
         },
+        editTotalCatalyst: (state, action: PayloadAction<TrackedCatalyst>) => {
+            // Calculation
+            state.totalResources.catalysts = state.totalResources.catalysts.map(catalyst => {
+                if(catalyst.id === action.payload.id) {
+                    return {
+                        ...catalyst,
+                        count: {
+                            ...catalyst.count,
+                            current: action.payload.count.current
+                        }
+                    }
+                } else {
+                    return catalyst
+                }
+            })
+        },
+        editTotalRune: (state, action: PayloadAction<TrackedRune>) => {
+            state.totalResources.runes = state.totalResources.runes.map(rune => {
+                if(rune.id === action.payload.id) {
+                    return {
+                        ...rune,
+                        count: {
+                            ...rune.count,
+                            current: action.payload.count.current
+                        }
+                    }
+                } else {
+                    return rune
+                }
+            })
+        },
+        editTotalGold: (state, action: PayloadAction<ITrackeableCount>) => {
+            state.totalResources = {
+                ...state.totalResources,
+                gold: {
+                    ...state.totalResources.gold,
+                    current: action.payload.current
+                }
+            }
+        }, 
+        editTotalStigma: (state, action: PayloadAction<ITrackeableCount>) => {
+            state.totalResources = {
+                ...state.totalResources,
+                stigma: {
+                    ...state.totalResources.stigma,
+                    current: action.payload.current
+                }
+            }
+        },
+        editTotalMolagora: (state, action: PayloadAction<ITrackeableCount>) => {
+            state.totalResources = {
+                ...state.totalResources,
+                molagora: {
+                    ...state.totalResources.molagora,
+                    current: action.payload.current
+                }
+            }
+        }
     }
 })
 
@@ -498,7 +556,12 @@ export const {
     toggleTotalRune,
     toggleTotalGold,
     toggleTotalStigma,
-    toggleTotalMolagora
+    toggleTotalMolagora,
+    editTotalCatalyst,
+    editTotalRune,
+    editTotalGold,
+    editTotalStigma,
+    editTotalMolagora
 } = unitsSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type

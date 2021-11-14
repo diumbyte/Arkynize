@@ -21,8 +21,8 @@ export const TrackableResourceListItem = ({
     onItemUntracked
 }:ResourceListItemProp) => {
     return (
-        <div className="flex items-center justify-around">
-            <div className={`flex justify-start items-center py-4 ${isTracked ? "opacity-100" : "opacity-30"}`} >
+        <div className="flex items-center justify-center px-4">
+            <div className={`flex-1 flex justify-start items-center py-4 px-2 ${isTracked ? "opacity-100" : "opacity-30"}`} >
                 {/* TODO: If catalyst -> open modal with drop/shop info */}
                 <img 
                     className="h-full object-contain mx-2 md:mx-0"
@@ -40,21 +40,26 @@ export const TrackableResourceListItem = ({
                     {desiredCount}
                 </div>
             </div>
-            <Switch
-                checked={isTracked}
-                onChange={onItemUntracked}
-                className={`${
-                    isTracked ? 'bg-blue-600' : 'bg-gray-200'} 
-                    transition-colors ease-linear duration-200
-                    relative inline-flex items-center h-6 rounded-full w-11`}
-            >
-                <span className="sr-only">Toggle tracking</span>
-                <span
-                    className={`${
-                    isTracked ? 'translate-x-6' : 'translate-x-1'
-                    } inline-block w-4 h-4 transform bg-white rounded-full transition ease-in-out duration-200`}
-                />
-            </Switch>
+            <div className="flex-1 ">
+                <div className="ml-auto w-min">
+                    <Switch
+                        checked={isTracked}
+                        onChange={onItemUntracked}
+                        className={`${
+                            isTracked ? 'bg-blue-600' : 'bg-gray-200'} 
+                            mx-auto
+                            transition-colors ease-linear duration-200
+                            relative inline-flex items-center h-6 rounded-full w-11`}
+                    >
+                        <span className="sr-only">Toggle tracking</span>
+                        <span
+                            className={`${
+                            isTracked ? 'translate-x-6' : 'translate-x-1'
+                            } inline-block w-4 h-4 transform bg-white rounded-full transition ease-in-out duration-200`}
+                        />
+                    </Switch>
+                </div>
+            </div>
         </div>
     )
 }

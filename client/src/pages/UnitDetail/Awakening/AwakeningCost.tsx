@@ -137,9 +137,9 @@ const AwakeningCosts = (
                                 resourceName={catalystCost.name}
                                 onItemUntracked={() => {
                                     if(catalystCost.isEpic) {
-                                        setEpicCatalyst(prev => ({...prev, isTracked: false}))
+                                        setEpicCatalyst(prev => ({...prev, isTracked: !prev.isTracked}))
                                     } else {
-                                        setBasicCatalyst(prev => ({...prev, isTracked: false}))
+                                        setBasicCatalyst(prev => ({...prev, isTracked: !prev.isTracked}))
                                     }
                                 }}
                             />
@@ -158,11 +158,11 @@ const AwakeningCosts = (
                                 isTracked={runeCost.count.isTracked}
                                 onItemUntracked={() => {
                                     if(runeCost.type === "basic") {
-                                        setBasicRune(prev => ({...prev, isTracked: false}))
+                                        setBasicRune(prev => ({...prev, isTracked: !prev.isTracked}))
                                     } else if(runeCost.type === "greater") {
-                                        setMidRune(prev => ({...prev, isTracked: false}))
+                                        setMidRune(prev => ({...prev, isTracked: !prev.isTracked}))
                                     } else {
-                                        setTopRune(prev => ({...prev, isTracked: false}))
+                                        setTopRune(prev => ({...prev, isTracked: !prev.isTracked}))
                                     }
                                 }}
                             />

@@ -8,7 +8,7 @@ import GoldIcon from "../../../assets/gold.png"
 import MolagoraIcon from "../../../assets/molagora.png"
 import StigmaIcon from "../../../assets/stigma.png"
 
-import { EditableResourceListItem } from "../../components/EditableResourceListItem"
+import { TrackableResourceListItem } from "../../components/TrackableResourceListItem"
 import { calculateTotalSkillEnhancementsCosts } from "../../../util/calculateCosts"
 
 type SkillEnhancementCostProps = {
@@ -115,33 +115,19 @@ export const SkillEnhancementCost = ({
     return (
         <>
         <form 
-            className="grid py-6 grid-cols-resource md:grid-cols-resource-full items-center" 
+            className="py-6" 
             onSubmit={(e) => e.preventDefault()}
         >
         {
             totalEnhancementsCost.trackedCatalysts.map(catalystCost => {
                 return (
-                    <EditableResourceListItem
+                    <TrackableResourceListItem
                         key={catalystCost.id}
                         resourceName={catalystCost.name}
                         imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalystCost.code}.png`}
                         imageAlt={catalystCost.code}
-                        currentCount={catalystCost.isEpic ? epicCatalystCount.currentCount : basicCatalystCount.currentCount}
                         desiredCount={catalystCost.count.required}
                         isTracked={catalystCost.count.isTracked}
-                        onCurrentCountChange={(value) => {
-                            if(catalystCost.isEpic) {
-                                setEpicCatalystCount(prev => ({
-                                    currentCount: value,
-                                    isTracked: prev.isTracked
-                                }))
-                            } else {
-                                setBasicCatalystCount(prev => ({
-                                    currentCount: value,
-                                    isTracked: prev.isTracked
-                                }))
-                            }
-                        }}
                         onItemUntracked={() => {
                             if(catalystCost.isEpic) {
                                 setEpicCatalystCount(prev => ({...prev, isTracked: false}))
@@ -153,56 +139,35 @@ export const SkillEnhancementCost = ({
                 )
             })
         }
-        <EditableResourceListItem
+        <TrackableResourceListItem
             resourceName={"Gold"}
             imageSourcePath={GoldIcon}
             imageAlt={"Gold icon"}
             isTracked={totalEnhancementsCost.trackedGold.isTracked}
-            currentCount={goldCount.currentCount}
             desiredCount={totalEnhancementsCost.trackedGold.required}
-            onCurrentCountChange={(value) => {
-                setGoldCount(prevState => ({
-                    currentCount: value,
-                    isTracked: prevState.isTracked
-                }))
-            }}
             onItemUntracked={() => {
                 setGoldCount(prev => ({...prev, isTracked: false}))
             }}
         />
         {
             totalEnhancementsCost.trackedMolagora.required !== 0 ?
-                <EditableResourceListItem
+                <TrackableResourceListItem
                     resourceName={"Molagora"}
                     imageSourcePath={MolagoraIcon}
                     imageAlt={"Molagora icon"}
                     isTracked={molagoraCount.isTracked}
-                    currentCount={molagoraCount.currentCount}
                     desiredCount={totalEnhancementsCost.trackedMolagora.required}
-                    onCurrentCountChange={(value) => {
-                        setMolagoraCount(prevState => ({
-                            currentCount: value,
-                            isTracked: prevState.isTracked
-                        }))
-                    }}
                     onItemUntracked={() => {
                         setMolagoraCount(prev => ({...prev, isTracked: false}))
                     }}
                 />
             :
-                <EditableResourceListItem
+                <TrackableResourceListItem
                     resourceName={"Stigma"}
                     imageSourcePath={StigmaIcon}
                     imageAlt={"Stigma icon"}
                     isTracked={stigmaCount.isTracked}
-                    currentCount={stigmaCount.currentCount}
                     desiredCount={totalEnhancementsCost.trackedStigma.required}
-                    onCurrentCountChange={(value) => {
-                        setStigmaCount(prevState => ({
-                            currentCount: value,
-                            isTracked: prevState.isTracked
-                        }))
-                    }}
                     onItemUntracked={() => {
                         setStigmaCount(prev => ({...prev, isTracked: false}))
                     }}

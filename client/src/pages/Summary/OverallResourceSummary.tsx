@@ -2,17 +2,17 @@ import GoldIcon from "../../assets/gold.png"
 import StigmaIcon from "../../assets/stigma.png"
 import MolagoraIcon from "../../assets/molagora.png"
 
+import { useAppDispatch, useAppSelector } from "../../redux/hooks"
 import { useOverallResourceCosts } from "../../hooks/useOverallResourceCosts"
 import { ResourceListItem } from "../components/ResourceListItem";
+import { EditableResourceListItem } from "../components/EditableResourceListItem"
+import { ITrackeableCount, TrackedCatalyst, TrackedRune } from "../../redux/types"
+import { editTotalCatalyst, editTotalGold, editTotalMolagora, editTotalRune, editTotalStigma } from "../../redux/actions/unitsReducer"
 
 export const OverallResourceSummary = () => {
-    const { 
-        trackedCatalysts,
-        trackedGold,
-        trackedMolagora,
-        trackedRunes,
-        trackedStigma
-    } = useOverallResourceCosts();
+    const dispatch = useAppDispatch();
+    const { totalResources } = useAppSelector(state => state.units)
+    
 
     return (
         <div className="bg-tavernBrown-light bg-opacity-80 rounded p-2 border border-black w-full md:w-11/12 md:min-w-450 max-w-4xl text-sm my-2 md:mx-2">
@@ -21,9 +21,9 @@ export const OverallResourceSummary = () => {
             </div>
             <div className="p-2 flex flex-wrap justify-around">
                 {
-                    trackedCatalysts.map((catalyst) => {
+                    totalResources.catalysts.map((catalyst) => {
                         return (
-                            <ResourceListItem
+                            <EditableResourceListItem
                                 className="w-full md:w-1/3"
                                 key={catalyst.id}
                                 resourceId={catalyst.id}
@@ -32,50 +32,101 @@ export const OverallResourceSummary = () => {
                                 resourceName={catalyst.name}
                                 currentCount={catalyst.count.current}
                                 desiredCount={catalyst.count.required}
+                                isTracked={true}
+                                onCurrentCountChange={(value) => {
+                                    const updatedCatalyst:TrackedCatalyst = {
+                                        ...catalyst,
+                                        count: {
+                                            ...catalyst.count,
+                                            current: value
+                                        }
+                                    }
+
+                                    dispatch(editTotalCatalyst(updatedCatalyst))
+                                }}
                             />  
                         )
                     })
 
                 }
                 {
-                    trackedRunes.map((rune) => {
+                    totalResources.runes.map((rune) => {
                         return (
-                            <ResourceListItem
+                            <EditableResourceListItem
                                 className="w-full md:w-1/3"
+                                resourceId={rune.id}
                                 key={rune.id}
                                 imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/rune/${rune.code}.png`}
                                 imageAlt={`${rune.name}'s icon`}
                                 resourceName={rune.name}
                                 currentCount={rune.count.current}
                                 desiredCount={rune.count.required}
+                                isTracked={true}
+                                onCurrentCountChange={(value) => {
+                                    const updatedRune:TrackedRune = {
+                                        ...rune,
+                                        count: {
+                                            ...rune.count,
+                                            current: value
+                                        }
+                                    }
+
+                                    dispatch(editTotalRune(updatedRune))
+                                }}
                             />  
                         )
                     })
 
                 }
-                <ResourceListItem
+                <EditableResourceListItem
                     className="w-full md:w-1/3"
                     imageSourcePath={GoldIcon}
                     imageAlt={"Gold icon"}
-                    currentCount={trackedGold.current}
-                    desiredCount={trackedGold.required}
+                    currentCount={totalResources.gold.current}
+                    desiredCount={totalResources.gold.required}
                     resourceName={"Gold"}
+                    isTracked={true}
+                    onCurrentCountChange={(value) => {
+                        const updatedGold:ITrackeableCount = {
+                            ...totalResources.gold,
+                            current: value
+                        }
+                        dispatch(editTotalGold(updatedGold))
+                    }}
                 />
-                <ResourceListItem
+                <EditableResourceListItem
                     className="w-full md:w-1/3"
                     imageSourcePath={MolagoraIcon}
                     imageAlt={"Molagora icon"}
-                    currentCount={trackedMolagora.current}
-                    desiredCount={trackedMolagora.required}
+                    currentCount={totalResources.molagora.current}
+                    desiredCount={totalResources.molagora.required}
                     resourceName={"Molagora"}
+                    isTracked={true}
+                    onCurrentCountChange={(value) => {
+                        const updatedMolagora:ITrackeableCount = {
+                            ...totalResources.molagora,
+                            current: value
+                        }
+
+                        dispatch(editTotalMolagora(updatedMolagora))
+                    }}
                 />
-                <ResourceListItem
+                <EditableResourceListItem
                     className="w-full md:w-1/3"
                     imageSourcePath={StigmaIcon}
                     imageAlt={"Stigma icon"}
-                    currentCount={trackedStigma.current}
-                    desiredCount={trackedStigma.required}
+                    currentCount={totalResources.stigma.current}
+                    desiredCount={totalResources.stigma.required}
                     resourceName={"Stigma"}
+                    isTracked={true}
+                    onCurrentCountChange={(value) => {
+                        const updatedStigma:ITrackeableCount = {
+                            ...totalResources.stigma,
+                            current: value
+                        }
+
+                        dispatch(editTotalStigma(updatedStigma))
+                    }}
                 />
             </div>
         </div>
