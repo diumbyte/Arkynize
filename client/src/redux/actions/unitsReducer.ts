@@ -386,49 +386,61 @@ export const unitsSlice = createSlice({
             }
         },
         toggleTotalCatalyst: (state, action: PayloadAction<TrackedCatalyst>) => {
+            const idx = state.totalResources.catalysts.findIndex(c => c.id === action.payload.id)
+            
             // Calculation
-            state.totalResources.catalysts = state.totalResources.catalysts.map(catalyst => {
-                if(catalyst.id === action.payload.id) {
-                    const modifiedRequired = !action.payload.count.isTracked ? 
-                        catalyst.count.required + action.payload.count.required 
-                        : 
-                        catalyst.count.required - action.payload.count.required 
-                    return {
-                        ...catalyst,
-                        count: {
-                            ...catalyst.count,
-                            isTracked: !action.payload.count.isTracked,
-                            required: modifiedRequired
+            if(idx !== -1) {
+                state.totalResources.catalysts = state.totalResources.catalysts.map(catalyst => {
+                    if(catalyst.id === action.payload.id) {
+                        const modifiedRequired = !action.payload.count.isTracked ? 
+                            catalyst.count.required + action.payload.count.required 
+                            : 
+                            catalyst.count.required - action.payload.count.required 
+                        return {
+                            ...catalyst,
+                            count: {
+                                ...catalyst.count,
+                                isTracked: !action.payload.count.isTracked,
+                                required: modifiedRequired
+                            }
                         }
+                    } else {
+                        return catalyst
                     }
-                } else {
-                    return catalyst
-                }
-            })
+                })
+            } else {
+                state.totalResources.catalysts.push(action.payload)
+            }
 
             // Cleanup
             state.totalResources.catalysts = state.totalResources.catalysts.filter(c => c.count.required !== 0)
         },
         toggleTotalRune: (state, action: PayloadAction<TrackedRune>) => {
+            const idx = state.totalResources.runes.findIndex(c => c.id === action.payload.id)
+
             // Calculation
-            state.totalResources.runes = state.totalResources.runes.map(rune => {
-                if(rune.id === action.payload.id) {
-                    const modifiedRequired = !action.payload.count.isTracked ? 
-                        rune.count.required + action.payload.count.required 
-                        : 
-                        rune.count.required - action.payload.count.required 
-                    return {
-                        ...rune,
-                        count: {
-                            ...rune.count,
-                            // isTracked: !action.payload.count.isTracked,
-                            required: modifiedRequired
+            if(idx !== -1) {
+                state.totalResources.runes = state.totalResources.runes.map(rune => {
+                    if(rune.id === action.payload.id) {
+                        const modifiedRequired = !action.payload.count.isTracked ? 
+                            rune.count.required + action.payload.count.required 
+                            : 
+                            rune.count.required - action.payload.count.required 
+                        return {
+                            ...rune,
+                            count: {
+                                ...rune.count,
+                                // isTracked: !action.payload.count.isTracked,
+                                required: modifiedRequired
+                            }
                         }
+                    } else {
+                        return rune
                     }
-                } else {
-                    return rune
-                }
-            })
+                })
+            } else {
+                state.totalResources.runes.push(action.payload)
+            }
 
             // Cleanup
             state.totalResources.runes = state.totalResources.runes.filter(c => c.count.required !== 0)

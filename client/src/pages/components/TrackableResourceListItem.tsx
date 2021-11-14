@@ -1,3 +1,4 @@
+import { Switch } from "@headlessui/react"
 import { ReactComponent as CrossIcon } from "../../assets/cross.svg"
 import { ReactComponent as CancelIcon } from "../../assets/cancel.svg"
 import { NumberInput } from "./NumberInput"
@@ -20,9 +21,9 @@ export const TrackableResourceListItem = ({
     onItemUntracked
 }:ResourceListItemProp) => {
     return (
-        isTracked ?
-        <div className="flex items-center justify-between mx-8">
-            <div className="flex-1 flex justify-start items-center py-4" >
+        <div className="flex items-center justify-around">
+            <div className={`flex justify-start items-center py-4 ${isTracked ? "opacity-100" : "opacity-30"}`} >
+                {/* TODO: If catalyst -> open modal with drop/shop info */}
                 <img 
                     className="h-full object-contain mx-2 md:mx-0"
                     width={30}
@@ -33,19 +34,27 @@ export const TrackableResourceListItem = ({
                     {resourceName}
                 </span>
             </div>
-            <div className="flex text-center md:text-left">
-                <CrossIcon fill={"#fff"} width={12} className="mx-2"/>
-                {desiredCount}
+            <CrossIcon fill={"#fff"} width={12} className={`mx-2 ${isTracked ? "opacity-100" : "opacity-30"}`}/>
+            <div className="flex flex-row items-center">
+                <div className={`flex-1 text-center md:text-left ${isTracked ? "opacity-100" : "opacity-30"}`}>
+                    {desiredCount}
+                </div>
             </div>
-            <div className="flex-1">
-                <CancelIcon 
-                    width={20} 
-                    className=" ml-auto text-gray-400 fill-current cursor-pointer hover:fill-current hover:text-white"
-                    onClick={onItemUntracked}
+            <Switch
+                checked={isTracked}
+                onChange={onItemUntracked}
+                className={`${
+                    isTracked ? 'bg-blue-600' : 'bg-gray-200'} 
+                    transition-colors ease-linear duration-200
+                    relative inline-flex items-center h-6 rounded-full w-11`}
+            >
+                <span className="sr-only">Toggle tracking</span>
+                <span
+                    className={`${
+                    isTracked ? 'translate-x-6' : 'translate-x-1'
+                    } inline-block w-4 h-4 transform bg-white rounded-full transition ease-in-out duration-200`}
                 />
-            </div>
+            </Switch>
         </div>
-        :
-        <></>
     )
 }

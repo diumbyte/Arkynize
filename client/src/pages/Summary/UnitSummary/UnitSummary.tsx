@@ -94,7 +94,7 @@ export const UnitSummary = ({
                                                         ...catalystCopy,
                                                         count: {
                                                             ...catalystCopy.count,
-                                                            isTracked: false
+                                                            isTracked: !catalystCopy.count.isTracked
                                                         }
                                                     }
                                                 } else {
@@ -169,7 +169,7 @@ export const UnitSummary = ({
                                                         ...runeCopy,
                                                         count: {
                                                             ...runeCopy.count,
-                                                            isTracked: false
+                                                            isTracked: !runeCopy.count.isTracked
                                                         }
                                                     }
                                                 } else {
@@ -254,7 +254,7 @@ export const UnitSummary = ({
                                                             ...catalystCopy,
                                                             count: {
                                                                 ...catalystCopy.count,
-                                                                isTracked: false
+                                                                isTracked: !catalystCopy.count.isTracked
                                                             }
                                                         }
                                                     } else {
@@ -313,7 +313,7 @@ export const UnitSummary = ({
                                             ...skill,
                                             trackedGold: {
                                                 ...skill.trackedGold,
-                                                isTracked: false
+                                                isTracked: !skill.trackedGold.isTracked
                                             } 
                                         }
 
@@ -363,7 +363,7 @@ export const UnitSummary = ({
                                                 ...skill,
                                                 trackedStigma: {
                                                     ...skill.trackedStigma,
-                                                    isTracked: false
+                                                    isTracked: !skill.trackedStigma.isTracked
                                                 } 
                                             }
                                             
@@ -412,7 +412,7 @@ export const UnitSummary = ({
                                                 ...skill,
                                                 trackedMolagora: {
                                                     ...skill.trackedMolagora,
-                                                    isTracked: false
+                                                    isTracked: !skill.trackedMolagora.isTracked
                                                 } 
                                             }
         
