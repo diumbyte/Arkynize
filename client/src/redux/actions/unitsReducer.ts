@@ -344,7 +344,7 @@ export const unitsSlice = createSlice({
                             return total
                         }, [...state.totalResources.catalysts])
                     state.totalResources.catalysts = state.totalResources.catalysts.filter(c => c.count.required !== 0)
-                    
+
                     // Gold
                     if(skill.trackedGold.isTracked) {
                         state.totalResources = {
@@ -384,7 +384,94 @@ export const unitsSlice = createSlice({
                     state.trackedUnits = state.trackedUnits.filter(trackedUnit => trackedUnit.id !== action.payload.unitId)
                 }
             }
-        }
+        },
+        toggleTotalCatalyst: (state, action: PayloadAction<TrackedCatalyst>) => {
+            // Calculation
+            state.totalResources.catalysts = state.totalResources.catalysts.map(catalyst => {
+                if(catalyst.id === action.payload.id) {
+                    const modifiedRequired = !action.payload.count.isTracked ? 
+                        catalyst.count.required + action.payload.count.required 
+                        : 
+                        catalyst.count.required - action.payload.count.required 
+                    return {
+                        ...catalyst,
+                        count: {
+                            ...catalyst.count,
+                            isTracked: !action.payload.count.isTracked,
+                            required: modifiedRequired
+                        }
+                    }
+                } else {
+                    return catalyst
+                }
+            })
+
+            // Cleanup
+            state.totalResources.catalysts = state.totalResources.catalysts.filter(c => c.count.required !== 0)
+        },
+        toggleTotalRune: (state, action: PayloadAction<TrackedRune>) => {
+            // Calculation
+            state.totalResources.runes = state.totalResources.runes.map(rune => {
+                if(rune.id === action.payload.id) {
+                    const modifiedRequired = !action.payload.count.isTracked ? 
+                        rune.count.required + action.payload.count.required 
+                        : 
+                        rune.count.required - action.payload.count.required 
+                    return {
+                        ...rune,
+                        count: {
+                            ...rune.count,
+                            // isTracked: !action.payload.count.isTracked,
+                            required: modifiedRequired
+                        }
+                    }
+                } else {
+                    return rune
+                }
+            })
+
+            // Cleanup
+            state.totalResources.runes = state.totalResources.runes.filter(c => c.count.required !== 0)
+        },
+        toggleTotalGold: (state, action: PayloadAction<ITrackeableCount>) => {
+            const newRequired = !action.payload.isTracked ? 
+                state.totalResources.gold.required + action.payload.required
+                :
+                state.totalResources.gold.required - action.payload.required
+            state.totalResources = {
+                ...state.totalResources,
+                gold: {
+                    ...state.totalResources.gold,
+                    required: newRequired 
+                }
+            }
+        },
+        toggleTotalStigma: (state, action: PayloadAction<ITrackeableCount>) => {
+            const newRequired = !action.payload.isTracked ? 
+                state.totalResources.stigma.required + action.payload.required
+                :
+                state.totalResources.stigma.required - action.payload.required
+            state.totalResources = {
+                ...state.totalResources,
+                stigma: {
+                    ...state.totalResources.stigma,
+                    required: newRequired 
+                }
+            }
+        },
+        toggleTotalMolagora: (state, action: PayloadAction<ITrackeableCount>) => {
+            const newRequired = !action.payload.isTracked ? 
+                state.totalResources.molagora.required + action.payload.required
+                :
+                state.totalResources.molagora.required - action.payload.required
+            state.totalResources = {
+                ...state.totalResources,
+                molagora: {
+                    ...state.totalResources.molagora,
+                    required: newRequired 
+                }
+            }
+        },
     }
 })
 
@@ -394,10 +481,15 @@ export const {
     editSkillEnhancement, 
     editTotalFromSkill,
     clearUnitTrackedAwakenings, 
-    clearUnitTrackedSkill 
+    clearUnitTrackedSkill,
+    toggleTotalCatalyst,
+    toggleTotalRune,
+    toggleTotalGold,
+    toggleTotalStigma,
+    toggleTotalMolagora
 } = unitsSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
-export const selectUnits = (state: RootState) => state.units
+// export const selectUnits = (state: RootState) => state.units
 
 export default unitsSlice.reducer

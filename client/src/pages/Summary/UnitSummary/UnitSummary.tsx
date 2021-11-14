@@ -4,7 +4,7 @@ import MolagoraIcon from "../../../assets/molagora.png"
 
 import { useHistory } from "react-router"
 import { useAppDispatch } from "../../../redux/hooks"
-import { editAwakening, editSkillEnhancement } from "../../../redux/actions/unitsReducer"
+import { editAwakening, editSkillEnhancement, toggleTotalCatalyst, toggleTotalRune, toggleTotalGold, toggleTotalStigma, toggleTotalMolagora } from "../../../redux/actions/unitsReducer"
 import { TrackedAwakening, TrackedSkill } from "../../../redux/types"
 import { EditableResourceListItem } from "../../components/EditableResourceListItem"
 
@@ -114,6 +114,10 @@ export const UnitSummary = ({
                                                     }
                                                 })
                                             )
+
+                                            dispatch(
+                                                toggleTotalCatalyst(catalyst)
+                                            )
                                         }}
                                     />  
                                 )
@@ -184,6 +188,10 @@ export const UnitSummary = ({
                                                         trackedRunes: trackedRunesCopy
                                                     }
                                                 })
+                                            )
+
+                                            dispatch(
+                                                toggleTotalRune(rune)
                                             )
                                         }}
                                     />  
@@ -267,6 +275,10 @@ export const UnitSummary = ({
                                                         skill: skillCopy
                                                     })
                                                 )
+
+                                                dispatch(
+                                                    toggleTotalCatalyst(catalyst)
+                                                )
                                             }}
                                         />
                                     )
@@ -312,6 +324,10 @@ export const UnitSummary = ({
                                                 unitName,
                                                 skill: skillCopy
                                             })
+                                        )
+
+                                        dispatch(
+                                            toggleTotalGold(skill.trackedGold)
                                         )
                                     }}
                                 />
@@ -359,6 +375,10 @@ export const UnitSummary = ({
                                                     skill: skillCopy
                                                 })
                                             )
+
+                                            dispatch(
+                                                toggleTotalStigma(skill.trackedStigma)
+                                            )
                                         }}
                                     />
                                     :
@@ -403,6 +423,10 @@ export const UnitSummary = ({
                                                     unitName,
                                                     skill: skillCopy
                                                 })
+                                            )
+
+                                            dispatch(
+                                                toggleTotalMolagora(skill.trackedMolagora)
                                             )
                                         }}
                                     />

@@ -229,7 +229,7 @@ export const SkillEnhancementCost = ({
                     dispatch(
                         editTotalFromSkill(totalEnhancementsCost)
                     )
-                    
+
                     setModalOpen(false)
                 }}
             >
