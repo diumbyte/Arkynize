@@ -1,7 +1,5 @@
 import { Switch } from "@headlessui/react"
 import { ReactComponent as CrossIcon } from "../../assets/cross.svg"
-import { ReactComponent as CancelIcon } from "../../assets/cancel.svg"
-import { NumberInput } from "./NumberInput"
 
 type ResourceListItemProp = {
     imageSourcePath: string,

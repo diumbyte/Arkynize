@@ -1,8 +1,10 @@
+import { useHistory } from "react-router"
+import { Tab } from "@headlessui/react"
+
 import GoldIcon from "../../../assets/gold.png"
 import StigmaIcon from "../../../assets/stigma.png"
 import MolagoraIcon from "../../../assets/molagora.png"
 
-import { useHistory } from "react-router"
 import { useAppDispatch } from "../../../redux/hooks"
 import { editAwakening, editSkillEnhancement, toggleTotalCatalyst, toggleTotalRune, toggleTotalGold, toggleTotalStigma, toggleTotalMolagora } from "../../../redux/actions/unitsReducer"
 import { TrackedAwakening, TrackedSkill } from "../../../redux/types"
@@ -14,6 +16,36 @@ type UnitSummaryProps = {
     unitCode: string,
     awakenings: TrackedAwakening,
     skills: TrackedSkill[]
+}
+
+// Verbose definition is needed if we want to immediately type destructured parameters
+const tabClasses = (selected: boolean, isDisabled: boolean) => {
+    console.log(isDisabled);
+    
+    return `w-full py-2.5 text-sm leading-5 font-medium
+    ${selected ? "bg-transparent text-blue-600 border-b-2 border-blue-600" : 
+        isDisabled ? "cursor-not-allowed text-white text-opacity-30"
+            : "text-white hover:text-opacity-90"
+    }`
+}
+
+const calculateDefaultTab = (awakenings: TrackedAwakening) => {
+    const awakeningTabIdx = 0
+    const skillsTabIdx = 1
+
+    if(isAwakeningsValid(awakenings)) {
+        return awakeningTabIdx
+    } else {
+        return skillsTabIdx
+    }
+}
+
+const isAwakeningsValid = (awakenings: TrackedAwakening) => {
+    return awakenings !== null && awakenings !== undefined
+}
+
+const isSkillsValid = (skills: TrackedSkill[]) => {
+    return skills.length !== 0
 }
 
 export const UnitSummary = ({
@@ -44,10 +76,15 @@ export const UnitSummary = ({
                 </span>
             </div>
             <div className="p-2">
-                {
-                    awakenings !== null && awakenings !== undefined ? 
+                <Tab.Group defaultIndex={calculateDefaultTab(awakenings)}>
+                    <Tab.List className="flex space-x-1 border-b border-white border-opacity-30">
+                        <Tab className={({selected}) => tabClasses(selected, !isAwakeningsValid(awakenings))} disabled={!isAwakeningsValid(awakenings)}>Awakenings</Tab>
+                        <Tab className={({selected}) => tabClasses(selected, !isSkillsValid(skills))} disabled={!isSkillsValid(skills)}>Skills</Tab>
+                    </Tab.List>
+                    <Tab.Panel>
+                    {
+                    isAwakeningsValid(awakenings) ? 
                     <>
-                        <h2 className="text-white text-opacity-60" style={{gridColumn: "1 / -1"}}>Awakenings</h2>
                         {
                             awakenings.trackedCatalysts.map((catalyst) => {
                                 return (
@@ -142,9 +179,11 @@ export const UnitSummary = ({
                         }
                     </>
                     : <></>
-                } 
-                {
-                    skills.length !== 0 &&
+                    } 
+                    </Tab.Panel>
+                    <Tab.Panel>
+                    {
+                    isSkillsValid(skills) &&
                     skills.map((skill) => {
                         return (
                             <div key={skill.id} className="p-2">
@@ -289,6 +328,10 @@ export const UnitSummary = ({
                         )
                     })
                 }
+                    </Tab.Panel>
+                </Tab.Group>
+
+
             </div>
         </div>
     )

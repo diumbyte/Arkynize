@@ -3,8 +3,6 @@ import StigmaIcon from "../../assets/stigma.png"
 import MolagoraIcon from "../../assets/molagora.png"
 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
-import { useOverallResourceCosts } from "../../hooks/useOverallResourceCosts"
-import { ResourceListItem } from "../components/ResourceListItem";
 import { EditableResourceListItem } from "../components/EditableResourceListItem"
 import { ITrackeableCount, TrackedCatalyst, TrackedRune } from "../../redux/types"
 import { editTotalCatalyst, editTotalGold, editTotalMolagora, editTotalRune, editTotalStigma } from "../../redux/actions/unitsReducer"
@@ -24,7 +22,6 @@ export const OverallResourceSummary = () => {
                     totalResources.catalysts.map((catalyst) => {
                         return (
                             <EditableResourceListItem
-                                className=""
                                 key={catalyst.id}
                                 resourceId={catalyst.id}
                                 imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalyst.code}.png`}
@@ -53,7 +50,6 @@ export const OverallResourceSummary = () => {
                     totalResources.runes.map((rune) => {
                         return (
                             <EditableResourceListItem
-                                className=""
                                 resourceId={rune.id}
                                 key={rune.id}
                                 imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/rune/${rune.code}.png`}
@@ -79,7 +75,6 @@ export const OverallResourceSummary = () => {
 
                 }
                 <EditableResourceListItem
-                    className=""
                     imageSourcePath={GoldIcon}
                     imageAlt={"Gold icon"}
                     currentCount={totalResources.gold.current}
@@ -95,7 +90,6 @@ export const OverallResourceSummary = () => {
                     }}
                 />
                 <EditableResourceListItem
-                    className=""
                     imageSourcePath={MolagoraIcon}
                     imageAlt={"Molagora icon"}
                     currentCount={totalResources.molagora.current}
@@ -112,7 +106,6 @@ export const OverallResourceSummary = () => {
                     }}
                 />
                 <EditableResourceListItem
-                    className=""
                     imageSourcePath={StigmaIcon}
                     imageAlt={"Stigma icon"}
                     currentCount={totalResources.stigma.current}

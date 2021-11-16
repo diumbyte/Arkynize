@@ -6,7 +6,6 @@ import { TrackedAwakening } from "../../../redux/types"
 import { LocalTrackedResource } from "../types"
 import { Awakening } from "../../../generated/graphql"
 
-import { EditableResourceListItem } from "../../components/EditableResourceListItem"
 import { TrackableResourceListItem } from "../../components/TrackableResourceListItem"
 import { calculateTotalAwakeningsCosts } from "../../../util/calculateCosts"
 
