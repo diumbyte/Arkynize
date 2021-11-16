@@ -26,8 +26,8 @@ export const EditableResourceListItem = ({
     ...props
 }:ResourceListItemProp) => {
     return (
-        <div className={`${className}`}>
-            <div className={`flex justify-start items-center py-4 ${isTracked ? "opacity-100" : "opacity-30"}`} >
+        <div className={`${className} w-full md:w-1/2 flex items-center`}>
+            <div className={`flex md:w-1/2 justify-start items-center py-4 ${isTracked ? "opacity-100" : "opacity-30"}`} >
                 {/* TODO: If catalyst -> open modal with drop/shop info */}
                 <img 
                     className="h-full object-contain mx-2 md:mx-0"
@@ -39,19 +39,21 @@ export const EditableResourceListItem = ({
                     {resourceName}
                 </span>
             </div>
-            <CrossIcon fill={"#fff"} width={12} className={`mx-2 ${isTracked ? "opacity-100" : "opacity-30"}`}/>
-            <div className="flex flex-row items-center">
-                <NumberInput
-                    className="flex-1"
-                    currentValue={currentCount}
-                    desiredValue={desiredCount}
-                    onCountChange={onCurrentCountChange}
-                />
-                <div className="px-2">
-                    {` / `}
-                </div>
-                <div className={`flex-1 text-center md:text-left ${isTracked ? "opacity-100" : "opacity-30"}`}>
-                    {desiredCount}
+            <div className="flex w-auto justify-center items-center">
+                <CrossIcon fill={"#fff"} width={12} className={`mx-2 block w-min ${isTracked ? "opacity-100" : "opacity-30"}`}/>
+                <div className="flex flex-row items-center">
+                    <NumberInput
+                        className="flex-1"
+                        currentValue={currentCount}
+                        desiredValue={desiredCount}
+                        onCountChange={onCurrentCountChange}
+                    />
+                    <div className="px-2">
+                        {` / `}
+                    </div>
+                    <div className={`flex-1 text-center md:text-left ${isTracked ? "opacity-100" : "opacity-30"}`}>
+                        {desiredCount}
+                    </div>
                 </div>
             </div>
         </div>

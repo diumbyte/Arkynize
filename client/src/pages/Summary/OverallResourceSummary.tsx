@@ -24,7 +24,7 @@ export const OverallResourceSummary = () => {
                     totalResources.catalysts.map((catalyst) => {
                         return (
                             <EditableResourceListItem
-                                className="w-full md:w-1/3"
+                                className=""
                                 key={catalyst.id}
                                 resourceId={catalyst.id}
                                 imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/catalyst/${catalyst.code}.png`}
@@ -53,7 +53,7 @@ export const OverallResourceSummary = () => {
                     totalResources.runes.map((rune) => {
                         return (
                             <EditableResourceListItem
-                                className="w-full md:w-1/3"
+                                className=""
                                 resourceId={rune.id}
                                 key={rune.id}
                                 imageSourcePath={`${process.env.PUBLIC_URL}/assets/images/rune/${rune.code}.png`}
@@ -79,7 +79,7 @@ export const OverallResourceSummary = () => {
 
                 }
                 <EditableResourceListItem
-                    className="w-full md:w-1/3"
+                    className=""
                     imageSourcePath={GoldIcon}
                     imageAlt={"Gold icon"}
                     currentCount={totalResources.gold.current}
@@ -95,7 +95,7 @@ export const OverallResourceSummary = () => {
                     }}
                 />
                 <EditableResourceListItem
-                    className="w-full md:w-1/3"
+                    className=""
                     imageSourcePath={MolagoraIcon}
                     imageAlt={"Molagora icon"}
                     currentCount={totalResources.molagora.current}
@@ -112,7 +112,7 @@ export const OverallResourceSummary = () => {
                     }}
                 />
                 <EditableResourceListItem
-                    className="w-full md:w-1/3"
+                    className=""
                     imageSourcePath={StigmaIcon}
                     imageAlt={"Stigma icon"}
                     currentCount={totalResources.stigma.current}
