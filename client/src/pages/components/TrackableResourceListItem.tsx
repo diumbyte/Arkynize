@@ -7,7 +7,7 @@ type ResourceListItemProp = {
     resourceName: string,
     desiredCount: number,
     isTracked: boolean,
-    onItemUntracked: () => void
+    onItemToggled: () => void
 }
 
 export const TrackableResourceListItem = ({
@@ -16,7 +16,7 @@ export const TrackableResourceListItem = ({
     resourceName,
     desiredCount,
     isTracked,
-    onItemUntracked
+    onItemToggled
 }:ResourceListItemProp) => {
     return (
         <div className="flex items-center justify-center px-4">
@@ -42,7 +42,7 @@ export const TrackableResourceListItem = ({
                 <div className="ml-auto w-min">
                     <Switch
                         checked={isTracked}
-                        onChange={onItemUntracked}
+                        onChange={onItemToggled}
                         className={`${
                             isTracked ? 'bg-blue-600' : 'bg-gray-200'} 
                             mx-auto

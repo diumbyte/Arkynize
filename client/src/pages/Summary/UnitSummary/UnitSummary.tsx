@@ -95,7 +95,7 @@ export const UnitSummary = ({
                                         resourceName={catalyst.name}
                                         desiredCount={catalyst.count.required}
                                         isTracked={catalyst.count.isTracked}
-                                        onItemUntracked={() => {
+                                        onItemToggled={() => {
                                             const trackedCatalystsCopy = awakenings.trackedCatalysts.map(catalystCopy => {
                                                 if (catalystCopy.id === catalyst.id) {
                                                     return {
@@ -141,7 +141,7 @@ export const UnitSummary = ({
                                         resourceName={rune.name}
                                         desiredCount={rune.count.required}
                                         isTracked={rune.count.isTracked}
-                                        onItemUntracked={() => {
+                                        onItemToggled={() => {
                                             const trackedRunesCopy = awakenings.trackedRunes.map(runeCopy => {
                                                 if (runeCopy.id === rune.id) {
                                                     return {
@@ -197,7 +197,7 @@ export const UnitSummary = ({
                                             resourceName={catalyst.name}
                                             desiredCount={catalyst.count.required}
                                             isTracked={catalyst.count.isTracked}
-                                            onItemUntracked={() => {
+                                            onItemToggled={() => {
                                                 const skillTrackedCatalystsCopy = skill.trackedCatalysts.map(catalystCopy => {
                                                     if (catalystCopy.id === catalyst.id) {
                                                         return {
@@ -239,7 +239,7 @@ export const UnitSummary = ({
                                     desiredCount={skill.trackedGold.required}
                                     resourceName={"Gold"}
                                     isTracked={skill.trackedGold.isTracked}
-                                    onItemUntracked={() => {
+                                    onItemToggled={() => {
                                         const skillCopy:TrackedSkill = {
                                             ...skill,
                                             trackedGold: {
@@ -270,7 +270,7 @@ export const UnitSummary = ({
                                         desiredCount={skill.trackedStigma.required}
                                         resourceName={"Stigma"}
                                         isTracked={skill.trackedStigma.isTracked }
-                                        onItemUntracked={() => {
+                                        onItemToggled={() => {
                                             const skillCopy:TrackedSkill = {
                                                 ...skill,
                                                 trackedStigma: {
@@ -300,7 +300,7 @@ export const UnitSummary = ({
                                         desiredCount={skill.trackedMolagora.required}
                                         resourceName={"Molagora"}
                                         isTracked={skill.trackedMolagora.isTracked}
-                                        onItemUntracked={() => {
+                                        onItemToggled={() => {
                                             const skillCopy:TrackedSkill = {
                                                 ...skill,
                                                 trackedMolagora: {

@@ -3,7 +3,6 @@ import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
 
 import { clearUnitTrackedAwakenings, editAwakening, editTotalFromAwakenings, TrackedAwakeningPayload } from "../../../redux/actions/unitsReducer"
 import { TrackedAwakening } from "../../../redux/types"
-import { LocalTrackedResource } from "../types"
 import { Awakening } from "../../../generated/graphql"
 
 import { TrackableResourceListItem } from "../../components/TrackableResourceListItem"
@@ -52,11 +51,11 @@ const AwakeningCosts = (
 
 
     // Local state management
-    const [basicCatalyst, setBasicCatalyst] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
-    const [epicCatalyst, setEpicCatalyst] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
-    const [basicRune, setBasicRune] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
-    const [midRune, setMidRune] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
-    const [topRune, setTopRune] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
+    const [basicCatalystTracked, setBasicCatalystTracked] = useState(true)
+    const [epicCatalystTracked, setEpicCatalystTracked] = useState(true)
+    const [basicRuneTracked, setBasicRuneTracked] = useState(true)
+    const [midRuneTracked, setMidRuneTracked] = useState(true)
+    const [topRuneTracked, setTopRuneTracked] = useState(true)
 
 
     // Update local state if materials are already being tracked and stored in redux store
@@ -72,34 +71,19 @@ const AwakeningCosts = (
             // Update catalysts
             foundUnit.trackedAwakenings.trackedCatalysts.forEach(catalyst => {
                 if(catalyst.isEpic) {
-                    setEpicCatalyst({
-                        currentCount: catalyst.count.current,
-                        isTracked: catalyst.count.isTracked
-                    })
+                    setEpicCatalystTracked(catalyst.count.isTracked)
                 }  else {
-                    setBasicCatalyst({
-                        currentCount: catalyst.count.current,
-                        isTracked: catalyst.count.isTracked
-                    })
+                    setBasicCatalystTracked(catalyst.count.isTracked)
                 }
             })
             // Update runes
             foundUnit.trackedAwakenings.trackedRunes.forEach(rune => {
                 if(rune.type === "basic") {
-                    setBasicRune({
-                        currentCount: rune.count.current,
-                        isTracked: rune.count.isTracked
-                    })
+                    setBasicRuneTracked(rune.count.isTracked)
                 } else if(rune.type === "greater") {
-                    setMidRune({
-                        currentCount: rune.count.current,
-                        isTracked: rune.count.isTracked
-                    })
+                    setMidRuneTracked(rune.count.isTracked)
                 } else {
-                    setTopRune({
-                        currentCount: rune.count.current,
-                        isTracked: rune.count.isTracked
-                    })
+                    setTopRuneTracked(rune.count.isTracked)
                 }
             })
         }
@@ -111,11 +95,11 @@ const AwakeningCosts = (
             awakenings,
             currentAwakeningsIdx,
             desiredAwakeningsIdx,
-            basicCatalyst,
-            epicCatalyst,
-            basicRune,
-            midRune,
-            topRune
+            basicCatalystTracked,
+            epicCatalystTracked,
+            basicRuneTracked,
+            midRuneTracked,
+            topRuneTracked
         )
         
         return (
@@ -134,11 +118,11 @@ const AwakeningCosts = (
                                 desiredCount={catalystCost.count.required}
                                 isTracked={catalystCost.count.isTracked}
                                 resourceName={catalystCost.name}
-                                onItemUntracked={() => {
+                                onItemToggled={() => {
                                     if(catalystCost.isEpic) {
-                                        setEpicCatalyst(prev => ({...prev, isTracked: !prev.isTracked}))
+                                        setEpicCatalystTracked(prev => !prev)
                                     } else {
-                                        setBasicCatalyst(prev => ({...prev, isTracked: !prev.isTracked}))
+                                        setBasicCatalystTracked(prev => !prev)
                                     }
                                 }}
                             />
@@ -155,13 +139,13 @@ const AwakeningCosts = (
                                 resourceName={runeCost.name}
                                 desiredCount={runeCost.count.required}
                                 isTracked={runeCost.count.isTracked}
-                                onItemUntracked={() => {
+                                onItemToggled={() => {
                                     if(runeCost.type === "basic") {
-                                        setBasicRune(prev => ({...prev, isTracked: !prev.isTracked}))
+                                        setBasicRuneTracked(prev => !prev)
                                     } else if(runeCost.type === "greater") {
-                                        setMidRune(prev => ({...prev, isTracked: !prev.isTracked}))
+                                        setMidRuneTracked(prev => !prev)
                                     } else {
-                                        setTopRune(prev => ({...prev, isTracked: !prev.isTracked}))
+                                        setTopRuneTracked(prev => !prev)
                                     }
                                 }}
                             />

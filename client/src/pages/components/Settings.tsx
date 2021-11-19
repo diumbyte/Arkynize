@@ -33,11 +33,8 @@ export const Settings = () => {
             const reader = new FileReader()
 
             reader.onload = e => {
-                console.log("File loaded");
-                
                 const fileContents = e.target?.result
                 const res = JSON.parse(fileContents?.toString() as string) as TrackedUnitsState
-                console.log(res);
                 dispatch(importStore(res))
                 saveState({units: res})
             }
@@ -58,7 +55,6 @@ export const Settings = () => {
                 className="hidden"
                 href={fileDownloadURL}
                 download={"e7planner.json"}
-                onClick={() => console.log("Anchor clicked", fileDownloadURL)}
                 ref={downloadRef}
             >Export data</a>
             <button 

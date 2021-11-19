@@ -3,7 +3,6 @@ import { Enhancement } from "../../../generated/graphql"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
 import { clearUnitTrackedSkill, editSkillEnhancement, editTotalFromSkill, TrackedSkillPayload } from "../../../redux/actions/unitsReducer"
 import { TrackedSkill } from "../../../redux/types"
-import { LocalTrackedResource } from "../types"
 import GoldIcon from "../../../assets/gold.png"
 import MolagoraIcon from "../../../assets/molagora.png"
 import StigmaIcon from "../../../assets/stigma.png"
@@ -54,11 +53,11 @@ export const SkillEnhancementCost = ({
     const { trackedUnits } = useAppSelector(state => state.units)
     const dispatch = useAppDispatch()
     
-    const [goldCount, setGoldCount] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
-    const [molagoraCount, setMolagoraCount]  = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
-    const [stigmaCount, setStigmaCount] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
-    const [basicCatalystCount, setBasicCatalystCount] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
-    const [epicCatalystCount, setEpicCatalystCount] = useState<LocalTrackedResource>({currentCount: 0, isTracked: true})
+    const [goldTracked, setGoldTracked] = useState(true)
+    const [molagoraTracked, setMolagoraTracked]  = useState(true)
+    const [stigmaTracked, setStigmaTracked] = useState(true)
+    const [basicCatalystTracked, setBasicCatalystTracked] = useState(true)
+    const [epicCatalystTracked, setEpicCatalystTracked] = useState(true)
 
     // Update local state if materials are already being tracked by global store
     useEffect(() => {
@@ -72,29 +71,14 @@ export const SkillEnhancementCost = ({
                 // Update local states
                 foundSkill.trackedCatalysts.forEach(catalyst => {
                     if(catalyst.isEpic) {
-                        setEpicCatalystCount({
-                            currentCount: catalyst.count.current,
-                            isTracked: catalyst.count.isTracked
-                        })
+                        setEpicCatalystTracked(catalyst.count.isTracked)
                     }  else {
-                        setBasicCatalystCount({
-                            currentCount: catalyst.count.current,
-                            isTracked: catalyst.count.isTracked
-                        })
+                        setBasicCatalystTracked(catalyst.count.isTracked)
                     }
                 })
-                setGoldCount({
-                    currentCount: foundSkill.trackedGold.current,
-                    isTracked: foundSkill.trackedGold.isTracked
-                })
-                setMolagoraCount({
-                    currentCount: foundSkill.trackedMolagora.current,
-                    isTracked: foundSkill.trackedMolagora.isTracked
-                })
-                setStigmaCount({
-                    currentCount: foundSkill.trackedStigma.current,
-                    isTracked: foundSkill.trackedStigma.isTracked
-                })
+                setGoldTracked(foundSkill.trackedGold.isTracked)
+                setMolagoraTracked(foundSkill.trackedMolagora.isTracked)
+                setStigmaTracked(foundSkill.trackedStigma.isTracked)           
             }
         }
     }, [trackedUnits, unitId, skillId])
@@ -105,11 +89,11 @@ export const SkillEnhancementCost = ({
         type,
         currentEnhancementId,
         desiredEnhancementId,
-        basicCatalystCount,
-        epicCatalystCount,
-        goldCount,
-        molagoraCount,
-        stigmaCount
+        basicCatalystTracked,
+        epicCatalystTracked,
+        goldTracked,
+        molagoraTracked,
+        stigmaTracked
     )
 
     return (
@@ -128,11 +112,11 @@ export const SkillEnhancementCost = ({
                         imageAlt={catalystCost.code}
                         desiredCount={catalystCost.count.required}
                         isTracked={catalystCost.count.isTracked}
-                        onItemUntracked={() => {
+                        onItemToggled={() => {
                             if(catalystCost.isEpic) {
-                                setEpicCatalystCount(prev => ({...prev, isTracked: false}))
+                                setEpicCatalystTracked(prev => !prev)
                             } else {
-                                setBasicCatalystCount(prev => ({...prev, isTracked: false}))
+                                setBasicCatalystTracked(prev => !prev)
                             }
                         }}
                     />
@@ -145,8 +129,8 @@ export const SkillEnhancementCost = ({
             imageAlt={"Gold icon"}
             isTracked={totalEnhancementsCost.trackedGold.isTracked}
             desiredCount={totalEnhancementsCost.trackedGold.required}
-            onItemUntracked={() => {
-                setGoldCount(prev => ({...prev, isTracked: false}))
+            onItemToggled={() => {
+                setGoldTracked(prev => !prev)
             }}
         />
         {
@@ -155,10 +139,10 @@ export const SkillEnhancementCost = ({
                     resourceName={"Molagora"}
                     imageSourcePath={MolagoraIcon}
                     imageAlt={"Molagora icon"}
-                    isTracked={molagoraCount.isTracked}
+                    isTracked={totalEnhancementsCost.trackedMolagora.isTracked}
                     desiredCount={totalEnhancementsCost.trackedMolagora.required}
-                    onItemUntracked={() => {
-                        setMolagoraCount(prev => ({...prev, isTracked: false}))
+                    onItemToggled={() => {
+                        setMolagoraTracked(prev => !prev)
                     }}
                 />
             :
@@ -166,11 +150,11 @@ export const SkillEnhancementCost = ({
                     resourceName={"Stigma"}
                     imageSourcePath={StigmaIcon}
                     imageAlt={"Stigma icon"}
-                    isTracked={stigmaCount.isTracked}
+                    isTracked={totalEnhancementsCost.trackedStigma.isTracked}
                     desiredCount={totalEnhancementsCost.trackedStigma.required}
-                    onItemUntracked={() => {
-                        setStigmaCount(prev => ({...prev, isTracked: false}))
-                    }}
+                    onItemToggled={() => {
+                        setStigmaTracked(prev => !prev) }
+                    }
                 />
         }
         </form>
