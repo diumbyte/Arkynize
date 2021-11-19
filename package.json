@@ -9,7 +9,7 @@
   "main": "./server/dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --project ./server/tsconfig.json",
+    "build": "npx tsc --project ./server/tsconfig.json",
     "prestart": "npm run build",
     "start": "node ./server/dist/index.js",
     "server": "nodemon --config ./server/nodemon.json",
