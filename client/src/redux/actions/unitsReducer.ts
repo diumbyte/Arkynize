@@ -33,7 +33,7 @@ export interface TrackedTotalResources {
     molagora: ITrackeableCount
 }
 
-interface TrackedUnitsState {
+export interface TrackedUnitsState {
     trackedUnits: TrackedUnit[],
     totalResources: TrackedTotalResources
 }
@@ -541,8 +541,12 @@ export const unitsSlice = createSlice({
                     current: action.payload.current
                 }
             }
-        }
-    }
+        },
+        importStore: (state, action: PayloadAction<TrackedUnitsState>) => {
+            state = action.payload
+        },
+        resetStore: (state) => state = initialState
+    } 
 })
 
 export const { 
@@ -561,10 +565,10 @@ export const {
     editTotalRune,
     editTotalGold,
     editTotalStigma,
-    editTotalMolagora
+    editTotalMolagora,
+    importStore,
+    resetStore
 } = unitsSlice.actions
 
-// Other code such as selectors can use the imported `RootState` type
-// export const selectUnits = (state: RootState) => state.units
 
 export default unitsSlice.reducer

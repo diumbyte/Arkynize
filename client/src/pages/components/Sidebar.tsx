@@ -3,8 +3,9 @@ import React from 'react';
 import { useAppSelector } from "../../redux/hooks"
 import { Logo as LogoComponent } from './Logo';
 import { SidebarItem } from './SidebarItem';
-import {ReactComponent as AddIcon} from "../../assets/add.svg" 
-import {ReactComponent as SummaryIcon} from "../../assets/summary.svg" 
+import { ReactComponent as AddIcon } from "../../assets/add.svg" 
+import { ReactComponent as SummaryIcon } from "../../assets/summary.svg" 
+import { ReactComponent as SettingsIcon } from "../../assets/settings.svg"
 // import {ReactComponent as UnitIcon} from "../../assets/unit.svg" 
 
 
@@ -58,6 +59,11 @@ export const Sidebar = ({
                         ))
                     }
                 </SidebarItem>
+                <SidebarItem
+                    title="Settings"
+                    destination="settings"
+                    Icon={SettingsIcon}
+                />
             </div>
         </nav>
     )

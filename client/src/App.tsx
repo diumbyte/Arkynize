@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router-dom"
 import { AllUnits } from "./pages/Units/AllUnits"
 import { UnitDetail } from "./pages/UnitDetail/UnitDetail"
 import { Summary } from "./pages/Summary/Summary"
+import { Settings } from './pages/components/Settings';
 import { Sidebar } from "./pages/components/Sidebar"
 import { Home } from './pages/Home'
 import { Header } from './pages/components/Header'
@@ -31,8 +32,10 @@ function App() {
           <Route component={AllUnits} exact path="/units"/>
           <Route component={Summary} exact path="/summary"/>
           <Route component={UnitDetail} exact path="/unit/:unitId"/>
-          {/* Default Route */}
+          <Route component={Settings} exact path="/settings"/>
           <Route component={Home} exact path="/" />
+          {/* Default Route */}
+          <Route component={Home}/>
         </Switch>
       </div>
     </div>
