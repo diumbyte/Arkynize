@@ -6,7 +6,8 @@ import { TrackedAwakening } from "../../../redux/types"
 import { Awakening } from "../../../generated/graphql"
 
 import { TrackableResourceListItem } from "../../components/TrackableResourceListItem"
-import { calculateTotalAwakeningsCosts } from "../../../util/calculateCosts"
+import { calculateTotalAwakeningsCosts,  } from "../../../util/calculateCosts"
+import { useTrackAwakeningCostChanges } from "../../../hooks/useAwakeningTracking"
 
 type RenderAwakeningCostsProps = {
     unitId?: number,
@@ -89,6 +90,17 @@ const AwakeningCosts = (
         }
     }, [unitId, trackedUnits])
 
+    // Warn user if changes haven't been committed
+    const { areResourcesModified } = useTrackAwakeningCostChanges(
+        trackedUnits, 
+        unitId as number,
+        basicCatalystTracked,
+        epicCatalystTracked,
+        basicRuneTracked,
+        midRuneTracked,
+        topRuneTracked
+    )
+
     // Calculation 
     if(currentAwakeningsIdx < desiredAwakeningsIdx) {
         const totalAwakeningsCost = calculateTotalAwakeningsCosts(
@@ -153,9 +165,15 @@ const AwakeningCosts = (
                     })
                 }
             </form>
+            {
+                areResourcesModified &&
+                <div className="w-full row items-center py-4">
+                    <p>Changes have not been committed!</p>
+                </div>
+            }
             <div className="w-full row items-center">
                 <button 
-                    className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2"
+                    className={`primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2`}
                     type="submit"
                     onClick={(e) => {
                         e.preventDefault();

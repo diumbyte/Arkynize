@@ -2,7 +2,6 @@ import { Awakening, Enhancement, useGetUnitDetailsQuery } from "../../generated/
 import { useParams } from "react-router-dom"
 import { SkillDetail } from './Skill/SkillDetail';
 import { AwakeningDetail } from './Awakening/AwakeningDetail';
-import { LoadingComponent } from '../components/LoadingComponent'
 
 type UnitParams = {
     unitId: string

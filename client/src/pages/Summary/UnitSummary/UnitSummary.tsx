@@ -18,7 +18,6 @@ type UnitSummaryProps = {
     skills: TrackedSkill[]
 }
 
-// Verbose definition is needed if we want to immediately type destructured parameters
 const tabClasses = (selected: boolean, isDisabled: boolean) => {
     console.log(isDisabled);
     

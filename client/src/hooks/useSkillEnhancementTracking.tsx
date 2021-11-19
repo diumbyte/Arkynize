@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useAppSelector } from "../redux/hooks"
 import { Enhancement } from "../generated/graphql"
+import { TrackedUnit } from "../redux/types"
 
 // TODO: Send unitId in here in order to initialize state from redux store in case it's being tracked already
 export const useSkillEnhancementTracking = (skillId: number, unitId: number, enhancements: Enhancement[]) => {
@@ -65,5 +66,103 @@ export const useSkillEnhancementTracking = (skillId: number, unitId: number, enh
         selectedDesiredEnhancementId,
         onCurrentEnhancementClick,
         onDesiredEnhancementClick
+    }
+}
+
+export const useTrackSkillCostChanges = (
+    trackedUnits: TrackedUnit[],
+    unitId: number,
+    skillId: number,
+    basicCatalystTracked: boolean, 
+    epicCatalystTracked: boolean, 
+    goldTracked: boolean,
+    molagoraTracked: boolean,
+    stigmaTracked: boolean,
+) => {
+    const [areResourcesModified, setAreResourcesModified] = useState(false)
+
+    const [isBasicCatalystChanged, setIsBasicCatalystChanged] = useState(false)
+    const [isEpicCatalystChanged, setIsEpicCatalystChanged] = useState(false)
+    const [isGoldChanged, setIsGoldChanged] = useState(false)
+    const [isMolagoraChanged, setIsMolagoraChanged] = useState(false)
+    const [isStigmaChanged, setIsStigmaChanged] = useState(false)
+
+    const unitIdx = trackedUnits.findIndex(unit => unit.id === unitId && unit.trackedAwakenings)
+
+    useEffect(() => {
+        if(unitIdx !== -1) {
+            const skillIdx = trackedUnits[unitIdx].trackedSkills.findIndex(s => s.id === skillId)
+            if(skillIdx !== -1) {
+                if(basicCatalystTracked !== trackedUnits[unitIdx].trackedSkills[skillIdx].trackedCatalysts.find(c => c.isEpic === false)?.count.isTracked) {
+                    setIsBasicCatalystChanged(true)
+                } else {
+                    setIsBasicCatalystChanged(false)
+                }
+            }
+        }
+    }, [basicCatalystTracked])
+
+    useEffect(() => {
+        if(unitIdx !== -1) {
+            const skillIdx = trackedUnits[unitIdx].trackedSkills.findIndex(s => s.id === skillId)
+            if(skillIdx !== -1) {
+                if(epicCatalystTracked !== trackedUnits[unitIdx].trackedSkills[skillIdx].trackedCatalysts.find(c => c.isEpic === true)?.count.isTracked) {
+                    setIsEpicCatalystChanged(true)
+                } else {
+                    setIsEpicCatalystChanged(false)
+                }
+            }
+        }
+    }, [epicCatalystTracked])
+
+    useEffect(() => {
+        if(unitIdx !== -1) {
+            const skillIdx = trackedUnits[unitIdx].trackedSkills.findIndex(s => s.id === skillId)
+            if(skillIdx !== -1) {
+                if(goldTracked !== trackedUnits[unitIdx].trackedSkills[skillIdx].trackedGold.isTracked) {
+                    setIsGoldChanged(true)
+                } else {
+                    setIsGoldChanged(false)
+                }
+            }
+        }
+    }, [goldTracked])
+
+    useEffect(() => {
+        if(unitIdx !== -1) {
+            const skillIdx = trackedUnits[unitIdx].trackedSkills.findIndex(s => s.id === skillId)
+            if(skillIdx !== -1) {
+                if(molagoraTracked !== trackedUnits[unitIdx].trackedSkills[skillIdx].trackedMolagora.isTracked) {
+                    setIsMolagoraChanged(true)
+                } else {
+                    setIsMolagoraChanged(false)
+                }
+            }
+        }
+    }, [molagoraTracked])
+
+    useEffect(() => {
+        if(unitIdx !== -1) {
+            const skillIdx = trackedUnits[unitIdx].trackedSkills.findIndex(s => s.id === skillId)
+            if(skillIdx !== -1) {
+                if(stigmaTracked !== trackedUnits[unitIdx].trackedSkills[skillIdx].trackedStigma.isTracked) {
+                    setIsStigmaChanged(true)
+                } else {
+                    setIsStigmaChanged(false)
+                }
+            }
+        }
+    }, [stigmaTracked])
+
+    useEffect(() => {
+        if([isBasicCatalystChanged, isEpicCatalystChanged, isGoldChanged, isMolagoraChanged, isStigmaChanged].some(value => value === true)) {
+            setAreResourcesModified(true)
+        } else {
+            setAreResourcesModified(false)
+        }
+    }, [isBasicCatalystChanged, isEpicCatalystChanged, isGoldChanged, isMolagoraChanged, isStigmaChanged])
+
+    return {
+        areResourcesModified
     }
 }

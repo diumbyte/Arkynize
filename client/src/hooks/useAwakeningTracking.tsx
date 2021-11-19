@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { Awakening } from "../generated/graphql"
 import findLastIndex from "../util/findLastIndex"
 import { useAppSelector } from "../redux/hooks"
+import { TrackedUnit } from "../redux/types"
 
 type isAwakeningLevelComplete = {
     id: number,
@@ -124,5 +125,87 @@ export const useAwakeningTracking = ({
         desiredAwakenings,
         onCurrentAwakeningClick,
         onDesiredAwakeningClick
+    }
+}
+
+export const useTrackAwakeningCostChanges = (
+    trackedUnits: TrackedUnit[], 
+    unitId: number,
+    basicCatalystTracked: boolean, 
+    epicCatalystTracked: boolean, 
+    basicRuneTracked: boolean, 
+    midRuneTracked: boolean, 
+    topRuneTracked: boolean) => {
+
+    const [areResourcesModified, setAreResourcesModified] = useState(false)
+
+    const [isBasicCatalystChanged, setIsBasicCatalystChanged] = useState(false)
+    const [isEpicCatalystChanged, setIsEpicCatalystChanged] = useState(false)
+    const [isBasicRuneChanged, setIsBasicRuneChanged] = useState(false)
+    const [isMidRuneChanged, setIsMidRuneChanged] = useState(false)
+    const [isTopRuneChanged, setIsTopRuneChanged] = useState(false)
+     
+    const unitIdx = trackedUnits.findIndex(unit => unit.id === unitId && unit.trackedAwakenings)
+
+    useEffect(() => {
+        if(unitIdx !== -1) {
+            if(basicCatalystTracked !== trackedUnits[unitIdx].trackedAwakenings?.trackedCatalysts.find(c => c.isEpic === false)?.count.isTracked) {
+                setIsBasicCatalystChanged(true)
+            } else {
+                setIsBasicCatalystChanged(false)
+            }
+        }
+    }, [basicCatalystTracked])
+
+    useEffect(() => {
+        if(unitIdx !== -1) {
+            if(epicCatalystTracked !== trackedUnits[unitIdx].trackedAwakenings?.trackedCatalysts.find(c => c.isEpic === true)?.count.isTracked) {
+                setIsEpicCatalystChanged(true)
+            } else {
+                setIsEpicCatalystChanged(false)
+            }
+        }
+    }, [epicCatalystTracked])
+
+    useEffect(() => {
+        if(unitIdx !== -1) {
+            if(basicRuneTracked !== trackedUnits[unitIdx].trackedAwakenings?.trackedRunes.find(r => r.type === "basic")?.count.isTracked) {
+                setIsBasicRuneChanged(true)
+            } else {
+                setIsBasicRuneChanged(false)
+            }
+        }
+    }, [basicRuneTracked])
+
+    useEffect(() => {
+        if(unitIdx !== -1) {
+            if(midRuneTracked !== trackedUnits[unitIdx].trackedAwakenings?.trackedRunes.find(r => r.type === "greater")?.count.isTracked) {
+                setIsMidRuneChanged(true)
+            } else {
+                setIsMidRuneChanged(false)
+            }
+        }
+    }, [midRuneTracked])
+
+    useEffect(() => {
+        if(unitIdx !== -1) {
+            if(topRuneTracked !== trackedUnits[unitIdx].trackedAwakenings?.trackedRunes.find(r => r.type === "epic")?.count.isTracked) {
+                setIsTopRuneChanged(true)
+            } else {
+                setIsTopRuneChanged(false)
+            }
+        }
+    }, [topRuneTracked])
+
+    useEffect(() => {
+        if([isBasicCatalystChanged, isEpicCatalystChanged, isBasicRuneChanged, isMidRuneChanged, isTopRuneChanged].some(value => value === true)) {
+            setAreResourcesModified(true)
+        } else {
+            setAreResourcesModified(false)
+        }
+    }, [isBasicCatalystChanged, isEpicCatalystChanged, isBasicRuneChanged, isMidRuneChanged, isTopRuneChanged])
+
+    return {
+        areResourcesModified
     }
 }
