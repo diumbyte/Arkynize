@@ -1,5 +1,6 @@
 {
   "name": "epicsevenplanner-client",
+  "homepage": "https://e7planner.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
