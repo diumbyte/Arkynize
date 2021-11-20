@@ -100,7 +100,7 @@ export const useTrackSkillCostChanges = (
                 }
             }
         }
-    }, [basicCatalystTracked])
+    }, [basicCatalystTracked, trackedUnits, unitIdx, skillId])
 
     useEffect(() => {
         if(unitIdx !== -1) {
@@ -113,7 +113,7 @@ export const useTrackSkillCostChanges = (
                 }
             }
         }
-    }, [epicCatalystTracked])
+    }, [epicCatalystTracked, trackedUnits, unitIdx, skillId])
 
     useEffect(() => {
         if(unitIdx !== -1) {
@@ -126,7 +126,7 @@ export const useTrackSkillCostChanges = (
                 }
             }
         }
-    }, [goldTracked])
+    }, [goldTracked, trackedUnits, unitIdx, skillId])
 
     useEffect(() => {
         if(unitIdx !== -1) {
@@ -139,7 +139,7 @@ export const useTrackSkillCostChanges = (
                 }
             }
         }
-    }, [molagoraTracked])
+    }, [molagoraTracked, trackedUnits, unitIdx, skillId])
 
     useEffect(() => {
         if(unitIdx !== -1) {
@@ -152,7 +152,7 @@ export const useTrackSkillCostChanges = (
                 }
             }
         }
-    }, [stigmaTracked])
+    }, [stigmaTracked, trackedUnits, unitIdx, skillId])
 
     useEffect(() => {
         if([isBasicCatalystChanged, isEpicCatalystChanged, isGoldChanged, isMolagoraChanged, isStigmaChanged].some(value => value === true)) {

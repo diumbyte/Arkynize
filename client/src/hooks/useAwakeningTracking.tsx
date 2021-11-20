@@ -155,7 +155,7 @@ export const useTrackAwakeningCostChanges = (
                 setIsBasicCatalystChanged(false)
             }
         }
-    }, [basicCatalystTracked])
+    }, [basicCatalystTracked, trackedUnits, unitIdx])
 
     useEffect(() => {
         if(unitIdx !== -1) {
@@ -165,7 +165,7 @@ export const useTrackAwakeningCostChanges = (
                 setIsEpicCatalystChanged(false)
             }
         }
-    }, [epicCatalystTracked])
+    }, [epicCatalystTracked, trackedUnits, unitIdx])
 
     useEffect(() => {
         if(unitIdx !== -1) {
@@ -175,7 +175,7 @@ export const useTrackAwakeningCostChanges = (
                 setIsBasicRuneChanged(false)
             }
         }
-    }, [basicRuneTracked])
+    }, [basicRuneTracked, trackedUnits, unitIdx])
 
     useEffect(() => {
         if(unitIdx !== -1) {
@@ -185,7 +185,7 @@ export const useTrackAwakeningCostChanges = (
                 setIsMidRuneChanged(false)
             }
         }
-    }, [midRuneTracked])
+    }, [midRuneTracked, trackedUnits, unitIdx])
 
     useEffect(() => {
         if(unitIdx !== -1) {
@@ -195,7 +195,7 @@ export const useTrackAwakeningCostChanges = (
                 setIsTopRuneChanged(false)
             }
         }
-    }, [topRuneTracked])
+    }, [topRuneTracked, trackedUnits, unitIdx])
 
     useEffect(() => {
         if([isBasicCatalystChanged, isEpicCatalystChanged, isBasicRuneChanged, isMidRuneChanged, isTopRuneChanged].some(value => value === true)) {

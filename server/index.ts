@@ -1,5 +1,5 @@
 import express from 'express';
-import { ApolloServer, gql } from 'apollo-server-express';
+import { ApolloServer } from 'apollo-server-express';
 import { PrismaClient } from '@prisma/client';
 
 import { typeDefs } from "./graphql/schema";
@@ -15,7 +15,6 @@ const PORT = process.env.PORT || 3001;
 // The GraphQL schema
 async function startApolloServer(): Promise<void>{    
     // A map of functions which return data for the schema.    
-    // typeDefs: "/server/graphql/schema.graphql",
     const apolloServer = new ApolloServer({
         typeDefs,
         resolvers,
@@ -37,10 +36,6 @@ if (process.env.NODE_ENV === 'production') {
     // Express will serve up index.html if it doesn't recognize route (e.g when it's not a defined API request)
     app.get('*', (req, res) => {
         const servePath = path.resolve(__dirname, '..', '..', 'client', 'build', 'index.html')
-        console.log("__dirname", path.resolve(__dirname));
-        
-        console.log("servePath", servePath);
-        
         res.sendFile(servePath);
     })
 }

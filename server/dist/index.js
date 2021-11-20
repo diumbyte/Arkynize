@@ -25,7 +25,6 @@ const PORT = process.env.PORT || 3001;
 function startApolloServer() {
     return __awaiter(this, void 0, void 0, function* () {
         // A map of functions which return data for the schema.    
-        // typeDefs: "/server/graphql/schema.graphql",
         const apolloServer = new apollo_server_express_1.ApolloServer({
             typeDefs: schema_1.typeDefs,
             resolvers: resolvers_1.resolvers,
@@ -40,13 +39,11 @@ function startApolloServer() {
 startApolloServer();
 if (process.env.NODE_ENV === 'production') {
     // Express will serve up production assets like main.js/css file
-    app.use(express_1.default.static('../client/build'));
-    // Express will serve up index.html if it doesn't recognize route (e.g when it's not a defined API request)
     const path = require('path');
+    app.use(express_1.default.static(path.join(__dirname, '..', '..', 'client', 'build')));
+    // Express will serve up index.html if it doesn't recognize route (e.g when it's not a defined API request)
     app.get('*', (req, res) => {
         const servePath = path.resolve(__dirname, '..', '..', 'client', 'build', 'index.html');
-        console.log("__dirname", path.resolve(__dirname));
-        console.log("servePath", servePath);
         res.sendFile(servePath);
     });
 }

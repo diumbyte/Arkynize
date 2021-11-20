@@ -27,7 +27,6 @@ export const Settings = () => {
     }, [fileDownloadURL])
 
     const openFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const status = []
         if(e.target.files !== null){
             const fileObj = e.target.files[0]
             const reader = new FileReader()
