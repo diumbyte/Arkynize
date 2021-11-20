@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from "react"
 import { Switch, Route } from "react-router-dom"
+import { TitledRoute } from "./pages/components/TitledRoute"
 
 import { AllUnits } from "./pages/Units/AllUnits"
 import { UnitDetail } from "./pages/UnitDetail/UnitDetail"
@@ -29,13 +30,12 @@ function App() {
           setIsExpanded={setIsExpanded}
         />
         <Switch>
-          <Route component={AllUnits} exact path="/units"/>
-          <Route component={Summary} exact path="/summary"/>
+          <TitledRoute title={"All Units"} component={AllUnits} exact path="/units" />
+          <TitledRoute title={"Cost Summary"} component={Summary} exact path="/summary"/>
           <Route component={UnitDetail} exact path="/unit/:unitId"/>
-          <Route component={Settings} exact path="/settings"/>
-          <Route component={Home} exact path="/" />
+          <TitledRoute title={"Settings"} component={Settings} exact path="/settings"/>
           {/* Default Route */}
-          <Route component={Home}/>
+          <TitledRoute title={"Home"} component={Home}/>
         </Switch>
       </div>
     </div>

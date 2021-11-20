@@ -2,6 +2,7 @@ import { Awakening, Enhancement, useGetUnitDetailsQuery } from "../../generated/
 import { useParams } from "react-router-dom"
 import { SkillDetail } from './Skill/SkillDetail';
 import { AwakeningDetail } from './Awakening/AwakeningDetail';
+import { Helmet } from "react-helmet"
 
 type UnitParams = {
     unitId: string
@@ -13,6 +14,12 @@ export const UnitDetail = () => {
     
     return (
         <div className="w-full">
+            <Helmet>
+                {
+                    data !== undefined &&
+                    <title>{data?.unit.name} - Arkynized</title>
+                }
+            </Helmet>
             <div>
                 <div className="row justify-start">
                     <span className="text-2xl">{data?.unit.name}</span>
