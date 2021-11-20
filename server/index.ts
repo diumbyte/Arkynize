@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === 'production') {
     // Express will serve up index.html if it doesn't recognize route (e.g when it's not a defined API request)
     const path = require('path');
     app.get('*', (req, res) => {
-        const servePath = path.resolve(__dirname, '..', 'client', 'build', 'index.html')
+        const servePath = path.resolve(__dirname, '..', '..', 'client', 'build', 'index.html')
         console.log("__dirname", path.resolve(__dirname));
         
         console.log("servePath", servePath);
