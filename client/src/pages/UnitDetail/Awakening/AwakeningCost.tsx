@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
+import { toast } from "react-hot-toast"
 
 import { clearUnitTrackedAwakenings, editAwakening, editTotalFromAwakenings, TrackedAwakeningPayload } from "../../../redux/actions/unitsReducer"
 import { TrackedAwakening } from "../../../redux/types"
@@ -101,6 +102,15 @@ const AwakeningCosts = (
         topRuneTracked
     )
 
+    if(areResourcesModified) {
+        toast.error("Changes not committed", {
+            id: "resourcesModified",
+            duration: Infinity
+        })
+    } else {
+        toast.dismiss("resourcesModified")
+    }
+
     // Calculation 
     if(currentAwakeningsIdx < desiredAwakeningsIdx) {
         const totalAwakeningsCost = calculateTotalAwakeningsCosts(
@@ -165,12 +175,6 @@ const AwakeningCosts = (
                     })
                 }
             </form>
-            {
-                areResourcesModified &&
-                <div className="w-full row items-center py-4">
-                    <p>Changes have not been committed!</p>
-                </div>
-            }
             <div className="w-full row items-center">
                 <button 
                     className={`primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2`}

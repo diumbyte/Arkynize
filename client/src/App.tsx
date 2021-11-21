@@ -1,8 +1,9 @@
 import './App.css';
 import { useState } from "react"
 import { Switch, Route } from "react-router-dom"
-import { TitledRoute } from "./pages/components/TitledRoute"
+import { Toaster, toast, ToastBar } from "react-hot-toast"
 
+import { TitledRoute } from "./pages/components/TitledRoute"
 import { AllUnits } from "./pages/Units/AllUnits"
 import { UnitDetail } from "./pages/UnitDetail/UnitDetail"
 import { Summary } from "./pages/Summary/Summary"
@@ -16,6 +17,18 @@ function App() {
   
   return (
     <div className="relative row bg-tavernBrown h-screen ml-0 mr-0 overflow-hidden font-mulish text-offWhite">
+      <Toaster>
+      {(t) => (
+        <ToastBar toast={t}>
+          {({ icon, message }) => (
+            <div className="flex flex-nowrap cursor-pointer" onClick={() => toast.dismiss(t.id)}>
+              {icon}
+              {message}
+            </div>
+          )}
+        </ToastBar>
+      )}
+      </Toaster>
       <div 
         onClick={() => setIsExpanded(false)}
         className={`fixed inset-0 z-20 transition-opacity bg-black opacity-50

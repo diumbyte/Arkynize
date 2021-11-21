@@ -143,10 +143,6 @@ export const useOverallResourceCosts = () => {
             }
         })
     
-    console.log("awakenings", totalAwakeningCatalystCosts);
-    console.log("skills", totalSkillCatalystCosts);
-    
-        
     // Sum catalysts
     const totalCatalystsCost = totalAwakeningCatalystCosts.concat(totalSkillCatalystCosts)
         .reduce<TrackedCatalyst[]>((total, catalyst) => {

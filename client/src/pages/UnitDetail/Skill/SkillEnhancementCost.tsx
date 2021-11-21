@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { Enhancement } from "../../../generated/graphql"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
+import { toast } from "react-hot-toast"
+
 import { clearUnitTrackedSkill, editSkillEnhancement, editTotalFromSkill, TrackedSkillPayload } from "../../../redux/actions/unitsReducer"
 import { TrackedSkill } from "../../../redux/types"
 import GoldIcon from "../../../assets/gold.png"
@@ -110,6 +112,15 @@ export const SkillEnhancementCost = ({
         stigmaTracked
     )
 
+    if(areResourcesModified) {
+        toast.error("Changes not committed", {
+            id: "resourcesModified",
+            duration: Infinity
+        })
+    } else {
+        toast.dismiss("resourcesModified")
+    }
+
     return (
         <>
         <form 
@@ -172,12 +183,6 @@ export const SkillEnhancementCost = ({
                 />
         }
         </form>
-        {
-            areResourcesModified &&
-            <div className="w-full row items-center py-4">
-                <p>Changes not committed!</p>
-            </div>
-        }
         <div className="w-full row items-center">
             <button 
                 className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2"

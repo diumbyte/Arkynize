@@ -1,0 +1,915 @@
+{
+    "title": "An object value",
+    "required": [
+        "trackedUnits",
+        "totalResources"
+    ],
+    "properties": {
+        "trackedUnits": {
+            "title": "An array of items",
+            "items": {
+                "title": "An object value",
+                "required": [
+                    "id",
+                    "code",
+                    "name",
+                    "trackedSkills",
+                    "trackedAwakenings"
+                ],
+                "properties": {
+                    "id": {
+                        "title": "An integer value",
+                        "default": 0,
+                        "examples": [
+                            88
+                        ],
+                        "$id": "#/properties/trackedUnits/items/properties/id",
+                        "type": "integer"
+                    },
+                    "code": {
+                        "title": "A string value",
+                        "default": "",
+                        "pattern": "^(.*)$",
+                        "examples": [
+                            "c1017"
+                        ],
+                        "$id": "#/properties/trackedUnits/items/properties/code",
+                        "type": "string"
+                    },
+                    "name": {
+                        "title": "A string value",
+                        "default": "",
+                        "pattern": "^(.*)$",
+                        "examples": [
+                            "Achates"
+                        ],
+                        "$id": "#/properties/trackedUnits/items/properties/name",
+                        "type": "string"
+                    },
+                    "trackedSkills": {
+                        "title": "An array of items",
+                        "items": {
+                            "title": "An object value",
+                            "required": [
+                                "id",
+                                "type",
+                                "currentEnhancement",
+                                "desiredEnhancement",
+                                "trackedGold",
+                                "trackedMolagora",
+                                "trackedStigma",
+                                "trackedCatalysts"
+                            ],
+                            "properties": {
+                                "id": {
+                                    "title": "An integer value",
+                                    "default": 0,
+                                    "examples": [
+                                        241
+                                    ],
+                                    "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/id",
+                                    "type": "integer"
+                                },
+                                "type": {
+                                    "title": "An integer value",
+                                    "default": 0,
+                                    "examples": [
+                                        1
+                                    ],
+                                    "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/type",
+                                    "type": "integer"
+                                },
+                                "currentEnhancement": {
+                                    "title": "An object value",
+                                    "required": [
+                                        "level",
+                                        "id"
+                                    ],
+                                    "properties": {
+                                        "level": {
+                                            "title": "An integer value",
+                                            "default": 0,
+                                            "examples": [
+                                                0
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/currentEnhancement/properties/level",
+                                            "type": "integer"
+                                        },
+                                        "id": {
+                                            "title": "An integer value",
+                                            "default": 0,
+                                            "examples": [
+                                                0
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/currentEnhancement/properties/id",
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/currentEnhancement",
+                                    "type": "object"
+                                },
+                                "desiredEnhancement": {
+                                    "title": "An object value",
+                                    "required": [
+                                        "id",
+                                        "level"
+                                    ],
+                                    "properties": {
+                                        "id": {
+                                            "title": "An integer value",
+                                            "default": 0,
+                                            "examples": [
+                                                3114
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/desiredEnhancement/properties/id",
+                                            "type": "integer"
+                                        },
+                                        "level": {
+                                            "title": "An integer value",
+                                            "default": 0,
+                                            "examples": [
+                                                5
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/desiredEnhancement/properties/level",
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/desiredEnhancement",
+                                    "type": "object"
+                                },
+                                "trackedGold": {
+                                    "title": "An object value",
+                                    "required": [
+                                        "current",
+                                        "required",
+                                        "isTracked"
+                                    ],
+                                    "properties": {
+                                        "current": {
+                                            "title": "An integer value",
+                                            "default": 0,
+                                            "examples": [
+                                                0
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedGold/properties/current",
+                                            "type": "integer"
+                                        },
+                                        "required": {
+                                            "title": "An integer value",
+                                            "default": 0,
+                                            "examples": [
+                                                120000
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedGold/properties/required",
+                                            "type": "integer"
+                                        },
+                                        "isTracked": {
+                                            "title": "A boolean value",
+                                            "default": false,
+                                            "examples": [
+                                                true
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedGold/properties/isTracked",
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedGold",
+                                    "type": "object"
+                                },
+                                "trackedMolagora": {
+                                    "title": "An object value",
+                                    "required": [
+                                        "current",
+                                        "required",
+                                        "isTracked"
+                                    ],
+                                    "properties": {
+                                        "current": {
+                                            "title": "An integer value",
+                                            "default": 0,
+                                            "examples": [
+                                                0
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedMolagora/properties/current",
+                                            "type": "integer"
+                                        },
+                                        "required": {
+                                            "title": "An integer value",
+                                            "default": 0,
+                                            "examples": [
+                                                9
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedMolagora/properties/required",
+                                            "type": "integer"
+                                        },
+                                        "isTracked": {
+                                            "title": "A boolean value",
+                                            "default": false,
+                                            "examples": [
+                                                true
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedMolagora/properties/isTracked",
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedMolagora",
+                                    "type": "object"
+                                },
+                                "trackedStigma": {
+                                    "title": "An object value",
+                                    "required": [
+                                        "current",
+                                        "required",
+                                        "isTracked"
+                                    ],
+                                    "properties": {
+                                        "current": {
+                                            "title": "An integer value",
+                                            "default": 0,
+                                            "examples": [
+                                                0
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedStigma/properties/current",
+                                            "type": "integer"
+                                        },
+                                        "required": {
+                                            "title": "An integer value",
+                                            "default": 0,
+                                            "examples": [
+                                                0
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedStigma/properties/required",
+                                            "type": "integer"
+                                        },
+                                        "isTracked": {
+                                            "title": "A boolean value",
+                                            "default": false,
+                                            "examples": [
+                                                true
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedStigma/properties/isTracked",
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedStigma",
+                                    "type": "object"
+                                },
+                                "trackedCatalysts": {
+                                    "title": "An array of items",
+                                    "items": {
+                                        "title": "An object value",
+                                        "required": [
+                                            "id",
+                                            "name",
+                                            "code",
+                                            "count",
+                                            "isEpic"
+                                        ],
+                                        "properties": {
+                                            "id": {
+                                                "title": "An integer value",
+                                                "default": 0,
+                                                "examples": [
+                                                    28
+                                                ],
+                                                "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedCatalysts/items/properties/id",
+                                                "type": "integer"
+                                            },
+                                            "name": {
+                                                "title": "A string value",
+                                                "default": "",
+                                                "pattern": "^(.*)$",
+                                                "examples": [
+                                                    "Ring of Glory"
+                                                ],
+                                                "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedCatalysts/items/properties/name",
+                                                "type": "string"
+                                            },
+                                            "code": {
+                                                "title": "A string value",
+                                                "default": "",
+                                                "pattern": "^(.*)$",
+                                                "examples": [
+                                                    "Ring-of-Glory"
+                                                ],
+                                                "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedCatalysts/items/properties/code",
+                                                "type": "string"
+                                            },
+                                            "count": {
+                                                "title": "An object value",
+                                                "required": [
+                                                    "current",
+                                                    "isTracked",
+                                                    "required"
+                                                ],
+                                                "properties": {
+                                                    "current": {
+                                                        "title": "An integer value",
+                                                        "default": 0,
+                                                        "examples": [
+                                                            0
+                                                        ],
+                                                        "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedCatalysts/items/properties/count/properties/current",
+                                                        "type": "integer"
+                                                    },
+                                                    "isTracked": {
+                                                        "title": "A boolean value",
+                                                        "default": false,
+                                                        "examples": [
+                                                            true
+                                                        ],
+                                                        "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedCatalysts/items/properties/count/properties/isTracked",
+                                                        "type": "boolean"
+                                                    },
+                                                    "required": {
+                                                        "title": "An integer value",
+                                                        "default": 0,
+                                                        "examples": [
+                                                            4
+                                                        ],
+                                                        "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedCatalysts/items/properties/count/properties/required",
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedCatalysts/items/properties/count",
+                                                "type": "object"
+                                            },
+                                            "isEpic": {
+                                                "title": "A boolean value",
+                                                "default": false,
+                                                "examples": [
+                                                    false
+                                                ],
+                                                "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedCatalysts/items/properties/isEpic",
+                                                "type": "boolean"
+                                            }
+                                        },
+                                        "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedCatalysts/items",
+                                        "type": "object"
+                                    },
+                                    "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items/properties/trackedCatalysts",
+                                    "type": "array"
+                                }
+                            },
+                            "$id": "#/properties/trackedUnits/items/properties/trackedSkills/items",
+                            "type": "object"
+                        },
+                        "$id": "#/properties/trackedUnits/items/properties/trackedSkills",
+                        "type": "array"
+                    },
+                    "trackedAwakenings": {
+                        "title": "An object value",
+                        "required": [
+                            "ids",
+                            "trackedRunes",
+                            "trackedCatalysts"
+                        ],
+                        "properties": {
+                            "ids": {
+                                "title": "An array of items",
+                                "items": {
+                                    "title": "An integer value",
+                                    "default": 0,
+                                    "examples": [
+                                        63
+                                    ],
+                                    "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/ids/items",
+                                    "type": "integer"
+                                },
+                                "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/ids",
+                                "type": "array"
+                            },
+                            "trackedRunes": {
+                                "title": "An array of items",
+                                "items": {
+                                    "title": "An object value",
+                                    "required": [
+                                        "id",
+                                        "code",
+                                        "name",
+                                        "type",
+                                        "count"
+                                    ],
+                                    "properties": {
+                                        "id": {
+                                            "title": "An integer value",
+                                            "default": 0,
+                                            "examples": [
+                                                4
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedRunes/items/properties/id",
+                                            "type": "integer"
+                                        },
+                                        "code": {
+                                            "title": "A string value",
+                                            "default": "",
+                                            "pattern": "^(.*)$",
+                                            "examples": [
+                                                "flame_1"
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedRunes/items/properties/code",
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "title": "A string value",
+                                            "default": "",
+                                            "pattern": "^(.*)$",
+                                            "examples": [
+                                                "Flame Rune"
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedRunes/items/properties/name",
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "title": "A string value",
+                                            "default": "",
+                                            "pattern": "^(.*)$",
+                                            "examples": [
+                                                "basic"
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedRunes/items/properties/type",
+                                            "type": "string"
+                                        },
+                                        "count": {
+                                            "title": "An object value",
+                                            "required": [
+                                                "current",
+                                                "required",
+                                                "isTracked"
+                                            ],
+                                            "properties": {
+                                                "current": {
+                                                    "title": "An integer value",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        0
+                                                    ],
+                                                    "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedRunes/items/properties/count/properties/current",
+                                                    "type": "integer"
+                                                },
+                                                "required": {
+                                                    "title": "An integer value",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        37
+                                                    ],
+                                                    "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedRunes/items/properties/count/properties/required",
+                                                    "type": "integer"
+                                                },
+                                                "isTracked": {
+                                                    "title": "A boolean value",
+                                                    "default": false,
+                                                    "examples": [
+                                                        true
+                                                    ],
+                                                    "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedRunes/items/properties/count/properties/isTracked",
+                                                    "type": "boolean"
+                                                }
+                                            },
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedRunes/items/properties/count",
+                                            "type": "object"
+                                        }
+                                    },
+                                    "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedRunes/items",
+                                    "type": "object"
+                                },
+                                "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedRunes",
+                                "type": "array"
+                            },
+                            "trackedCatalysts": {
+                                "title": "An array of items",
+                                "items": {
+                                    "title": "An object value",
+                                    "required": [
+                                        "id",
+                                        "name",
+                                        "code",
+                                        "isEpic",
+                                        "count"
+                                    ],
+                                    "properties": {
+                                        "id": {
+                                            "title": "An integer value",
+                                            "default": 0,
+                                            "examples": [
+                                                32
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedCatalysts/items/properties/id",
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "title": "A string value",
+                                            "default": "",
+                                            "pattern": "^(.*)$",
+                                            "examples": [
+                                                "Small Sun Badge"
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedCatalysts/items/properties/name",
+                                            "type": "string"
+                                        },
+                                        "code": {
+                                            "title": "A string value",
+                                            "default": "",
+                                            "pattern": "^(.*)$",
+                                            "examples": [
+                                                "Small-Sun-Badge"
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedCatalysts/items/properties/code",
+                                            "type": "string"
+                                        },
+                                        "isEpic": {
+                                            "title": "A boolean value",
+                                            "default": false,
+                                            "examples": [
+                                                false
+                                            ],
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedCatalysts/items/properties/isEpic",
+                                            "type": "boolean"
+                                        },
+                                        "count": {
+                                            "title": "An object value",
+                                            "required": [
+                                                "current",
+                                                "required",
+                                                "isTracked"
+                                            ],
+                                            "properties": {
+                                                "current": {
+                                                    "title": "An integer value",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        0
+                                                    ],
+                                                    "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedCatalysts/items/properties/count/properties/current",
+                                                    "type": "integer"
+                                                },
+                                                "required": {
+                                                    "title": "An integer value",
+                                                    "default": 0,
+                                                    "examples": [
+                                                        12
+                                                    ],
+                                                    "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedCatalysts/items/properties/count/properties/required",
+                                                    "type": "integer"
+                                                },
+                                                "isTracked": {
+                                                    "title": "A boolean value",
+                                                    "default": false,
+                                                    "examples": [
+                                                        true
+                                                    ],
+                                                    "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedCatalysts/items/properties/count/properties/isTracked",
+                                                    "type": "boolean"
+                                                }
+                                            },
+                                            "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedCatalysts/items/properties/count",
+                                            "type": "object"
+                                        }
+                                    },
+                                    "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedCatalysts/items",
+                                    "type": "object"
+                                },
+                                "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings/properties/trackedCatalysts",
+                                "type": "array"
+                            }
+                        },
+                        "$id": "#/properties/trackedUnits/items/properties/trackedAwakenings",
+                        "type": "object"
+                    }
+                },
+                "$id": "#/properties/trackedUnits/items",
+                "type": "object"
+            },
+            "$id": "#/properties/trackedUnits",
+            "type": "array"
+        },
+        "totalResources": {
+            "title": "An object value",
+            "required": [
+                "catalysts",
+                "runes",
+                "gold",
+                "stigma",
+                "molagora"
+            ],
+            "properties": {
+                "catalysts": {
+                    "title": "An array of items",
+                    "items": {
+                        "title": "An object value",
+                        "required": [
+                            "id",
+                            "name",
+                            "code",
+                            "isEpic",
+                            "count"
+                        ],
+                        "properties": {
+                            "id": {
+                                "title": "An integer value",
+                                "default": 0,
+                                "examples": [
+                                    32
+                                ],
+                                "$id": "#/properties/totalResources/properties/catalysts/items/properties/id",
+                                "type": "integer"
+                            },
+                            "name": {
+                                "title": "A string value",
+                                "default": "",
+                                "pattern": "^(.*)$",
+                                "examples": [
+                                    "Small Sun Badge"
+                                ],
+                                "$id": "#/properties/totalResources/properties/catalysts/items/properties/name",
+                                "type": "string"
+                            },
+                            "code": {
+                                "title": "A string value",
+                                "default": "",
+                                "pattern": "^(.*)$",
+                                "examples": [
+                                    "Small-Sun-Badge"
+                                ],
+                                "$id": "#/properties/totalResources/properties/catalysts/items/properties/code",
+                                "type": "string"
+                            },
+                            "isEpic": {
+                                "title": "A boolean value",
+                                "default": false,
+                                "examples": [
+                                    false
+                                ],
+                                "$id": "#/properties/totalResources/properties/catalysts/items/properties/isEpic",
+                                "type": "boolean"
+                            },
+                            "count": {
+                                "title": "An object value",
+                                "required": [
+                                    "current",
+                                    "required",
+                                    "isTracked"
+                                ],
+                                "properties": {
+                                    "current": {
+                                        "title": "An integer value",
+                                        "default": 0,
+                                        "examples": [
+                                            0
+                                        ],
+                                        "$id": "#/properties/totalResources/properties/catalysts/items/properties/count/properties/current",
+                                        "type": "integer"
+                                    },
+                                    "required": {
+                                        "title": "An integer value",
+                                        "default": 0,
+                                        "examples": [
+                                            12
+                                        ],
+                                        "$id": "#/properties/totalResources/properties/catalysts/items/properties/count/properties/required",
+                                        "type": "integer"
+                                    },
+                                    "isTracked": {
+                                        "title": "A boolean value",
+                                        "default": false,
+                                        "examples": [
+                                            false
+                                        ],
+                                        "$id": "#/properties/totalResources/properties/catalysts/items/properties/count/properties/isTracked",
+                                        "type": "boolean"
+                                    }
+                                },
+                                "$id": "#/properties/totalResources/properties/catalysts/items/properties/count",
+                                "type": "object"
+                            }
+                        },
+                        "$id": "#/properties/totalResources/properties/catalysts/items",
+                        "type": "object"
+                    },
+                    "$id": "#/properties/totalResources/properties/catalysts",
+                    "type": "array"
+                },
+                "runes": {
+                    "title": "An array of items",
+                    "items": {
+                        "title": "An object value",
+                        "required": [
+                            "id",
+                            "code",
+                            "name",
+                            "type",
+                            "count"
+                        ],
+                        "properties": {
+                            "id": {
+                                "title": "An integer value",
+                                "default": 0,
+                                "examples": [
+                                    4
+                                ],
+                                "$id": "#/properties/totalResources/properties/runes/items/properties/id",
+                                "type": "integer"
+                            },
+                            "code": {
+                                "title": "A string value",
+                                "default": "",
+                                "pattern": "^(.*)$",
+                                "examples": [
+                                    "flame_1"
+                                ],
+                                "$id": "#/properties/totalResources/properties/runes/items/properties/code",
+                                "type": "string"
+                            },
+                            "name": {
+                                "title": "A string value",
+                                "default": "",
+                                "pattern": "^(.*)$",
+                                "examples": [
+                                    "Flame Rune"
+                                ],
+                                "$id": "#/properties/totalResources/properties/runes/items/properties/name",
+                                "type": "string"
+                            },
+                            "type": {
+                                "title": "A string value",
+                                "default": "",
+                                "pattern": "^(.*)$",
+                                "examples": [
+                                    "basic"
+                                ],
+                                "$id": "#/properties/totalResources/properties/runes/items/properties/type",
+                                "type": "string"
+                            },
+                            "count": {
+                                "title": "An object value",
+                                "required": [
+                                    "current",
+                                    "required",
+                                    "isTracked"
+                                ],
+                                "properties": {
+                                    "current": {
+                                        "title": "An integer value",
+                                        "default": 0,
+                                        "examples": [
+                                            0
+                                        ],
+                                        "$id": "#/properties/totalResources/properties/runes/items/properties/count/properties/current",
+                                        "type": "integer"
+                                    },
+                                    "required": {
+                                        "title": "An integer value",
+                                        "default": 0,
+                                        "examples": [
+                                            37
+                                        ],
+                                        "$id": "#/properties/totalResources/properties/runes/items/properties/count/properties/required",
+                                        "type": "integer"
+                                    },
+                                    "isTracked": {
+                                        "title": "A boolean value",
+                                        "default": false,
+                                        "examples": [
+                                            true
+                                        ],
+                                        "$id": "#/properties/totalResources/properties/runes/items/properties/count/properties/isTracked",
+                                        "type": "boolean"
+                                    }
+                                },
+                                "$id": "#/properties/totalResources/properties/runes/items/properties/count",
+                                "type": "object"
+                            }
+                        },
+                        "$id": "#/properties/totalResources/properties/runes/items",
+                        "type": "object"
+                    },
+                    "$id": "#/properties/totalResources/properties/runes",
+                    "type": "array"
+                },
+                "gold": {
+                    "title": "An object value",
+                    "required": [
+                        "current",
+                        "required",
+                        "isTracked"
+                    ],
+                    "properties": {
+                        "current": {
+                            "title": "An integer value",
+                            "default": 0,
+                            "examples": [
+                                0
+                            ],
+                            "$id": "#/properties/totalResources/properties/gold/properties/current",
+                            "type": "integer"
+                        },
+                        "required": {
+                            "title": "An integer value",
+                            "default": 0,
+                            "examples": [
+                                120000
+                            ],
+                            "$id": "#/properties/totalResources/properties/gold/properties/required",
+                            "type": "integer"
+                        },
+                        "isTracked": {
+                            "title": "A boolean value",
+                            "default": false,
+                            "examples": [
+                                true
+                            ],
+                            "$id": "#/properties/totalResources/properties/gold/properties/isTracked",
+                            "type": "boolean"
+                        }
+                    },
+                    "$id": "#/properties/totalResources/properties/gold",
+                    "type": "object"
+                },
+                "stigma": {
+                    "title": "An object value",
+                    "required": [
+                        "current",
+                        "required",
+                        "isTracked"
+                    ],
+                    "properties": {
+                        "current": {
+                            "title": "An integer value",
+                            "default": 0,
+                            "examples": [
+                                0
+                            ],
+                            "$id": "#/properties/totalResources/properties/stigma/properties/current",
+                            "type": "integer"
+                        },
+                        "required": {
+                            "title": "An integer value",
+                            "default": 0,
+                            "examples": [
+                                0
+                            ],
+                            "$id": "#/properties/totalResources/properties/stigma/properties/required",
+                            "type": "integer"
+                        },
+                        "isTracked": {
+                            "title": "A boolean value",
+                            "default": false,
+                            "examples": [
+                                true
+                            ],
+                            "$id": "#/properties/totalResources/properties/stigma/properties/isTracked",
+                            "type": "boolean"
+                        }
+                    },
+                    "$id": "#/properties/totalResources/properties/stigma",
+                    "type": "object"
+                },
+                "molagora": {
+                    "title": "An object value",
+                    "required": [
+                        "current",
+                        "required",
+                        "isTracked"
+                    ],
+                    "properties": {
+                        "current": {
+                            "title": "An integer value",
+                            "default": 0,
+                            "examples": [
+                                0
+                            ],
+                            "$id": "#/properties/totalResources/properties/molagora/properties/current",
+                            "type": "integer"
+                        },
+                        "required": {
+                            "title": "An integer value",
+                            "default": 0,
+                            "examples": [
+                                9
+                            ],
+                            "$id": "#/properties/totalResources/properties/molagora/properties/required",
+                            "type": "integer"
+                        },
+                        "isTracked": {
+                            "title": "A boolean value",
+                            "default": false,
+                            "examples": [
+                                true
+                            ],
+                            "$id": "#/properties/totalResources/properties/molagora/properties/isTracked",
+                            "type": "boolean"
+                        }
+                    },
+                    "$id": "#/properties/totalResources/properties/molagora",
+                    "type": "object"
+                }
+            },
+            "$id": "#/properties/totalResources",
+            "type": "object"
+        }
+    },
+    "$id": "http://example.org/root.json#",
+    "type": "object",
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#"
+}

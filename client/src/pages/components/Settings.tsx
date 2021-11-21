@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react"
-import { saveState } from "../../redux/localStorage"
 import { importStore, resetStore, TrackedUnitsState } from "../../redux/actions/unitsReducer"
 import { useAppDispatch } from "../../redux/hooks"
+import { toast } from "react-hot-toast"
+import validateImportFile from "../../util/validateImportFile"
 
 import store from "../../redux/store"
 
@@ -27,19 +28,28 @@ export const Settings = () => {
     }, [fileDownloadURL])
 
     const openFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if(e.target.files !== null){
-            const fileObj = e.target.files[0]
-            const reader = new FileReader()
-
-            reader.onload = e => {
-                const fileContents = e.target?.result
-                const res = JSON.parse(fileContents?.toString() as string) as TrackedUnitsState
-                dispatch(importStore(res))
-                saveState({units: res})
+        if(e.target.files?.length !== 0){
+            if(e.target.files !== null) {
+                const fileObj = e.target.files[0] as File
+                const reader = new FileReader()
+    
+                reader.onload = e => {
+                    const fileContents = e.target?.result?.toString() as string
+                    if(validateImportFile(fileContents)) {
+                        const res = JSON.parse(fileContents) as TrackedUnitsState
+                        console.log("PASSED");
+                        console.log(res);
+                        
+                        dispatch(importStore(res))
+                        toast.success("File imported")                        
+                    } else {
+                        console.error("FAILED")
+                        toast.error("File invalid")
+                    }
+                }
+                reader.readAsText(fileObj)
             }
-            reader.readAsText(fileObj)
         }
-        window.location.reload()
     }
 
     return (
@@ -74,7 +84,7 @@ export const Settings = () => {
                     className="cursor-pointer p-4 bg-red-500 rounded-lg text-center border-black border-opacity-20 border-2 outline-none w-1/2 md:w-1/5"
                     onClick={() => {
                         dispatch(resetStore())
-                        window.location.reload()
+                        toast.success("Data successfully cleared")
                     }}
                 >
                     Clear Data

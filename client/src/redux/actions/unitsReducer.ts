@@ -543,7 +543,8 @@ export const unitsSlice = createSlice({
             }
         },
         importStore: (state, action: PayloadAction<TrackedUnitsState>) => {
-            state = action.payload
+            state.totalResources = action.payload.totalResources
+            state.trackedUnits = action.payload.trackedUnits
         },
         resetStore: (state) => state = initialState
     } 

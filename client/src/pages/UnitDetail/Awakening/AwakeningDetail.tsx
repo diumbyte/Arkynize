@@ -1,6 +1,7 @@
 import { Modal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css';
 import { useState } from 'react';
+import { toast } from "react-hot-toast"
 
 import { Awakening } from "../../../generated/graphql";
 import { useAwakeningTracking } from "../../../hooks/useAwakeningTracking"; 
@@ -30,6 +31,9 @@ export const AwakeningDetail = ({
         onCurrentAwakeningClick,
         onDesiredAwakeningClick
     } = useAwakeningTracking({unitId, awakenings})
+    
+    const currentAwakeningsIdx = findLastIndex(currentAwakenings, ca => ca.status === true)
+    const desiredAwakeningsIdx = findLastIndex(desiredAwakenings, da => da.status === true)
     
     return (
         <>
@@ -66,7 +70,14 @@ export const AwakeningDetail = ({
                 </div>
             </div>
             <div className="flex-auto md:w-auto w-full my-4">
-                <PlusIcon fill={`#fff`} width={32} height={32} className="cursor-pointer" onClick={() => setModalOpen(true)}/>
+                <PlusIcon fill={`#fff`} width={32} height={32} className="cursor-pointer" onClick={() => {
+                        if( currentAwakeningsIdx < desiredAwakeningsIdx) {
+                            setModalOpen(true)
+                        } else {
+                            toast.error("Current awakening level must be less than desired awakening level")
+                        }
+                    }
+                }/>
             </div>
             <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "customModalOverlay"}}>
                 <div className="text-offWhite">
@@ -75,8 +86,8 @@ export const AwakeningDetail = ({
                         unitId={unitId}
                         unitName={unitName}
                         unitCode={unitCode}
-                        currentAwakeningsIdx={findLastIndex(currentAwakenings, ca => ca.status === true)}
-                        desiredAwakeningsIdx={findLastIndex(desiredAwakenings, da => da.status === true)}
+                        currentAwakeningsIdx={currentAwakeningsIdx}
+                        desiredAwakeningsIdx={desiredAwakeningsIdx}
                         awakenings={awakenings}   
                         setModalOpen={setModalOpen}
                     />

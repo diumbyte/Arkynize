@@ -19,8 +19,6 @@ type UnitSummaryProps = {
 }
 
 const tabClasses = (selected: boolean, isDisabled: boolean) => {
-    console.log(isDisabled);
-    
     return `w-full py-2.5 text-sm leading-5 font-medium
     ${selected ? "bg-transparent text-blue-600 border-b-2 border-blue-600" : 
         isDisabled ? "cursor-not-allowed text-white text-opacity-30"
