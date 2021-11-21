@@ -21,7 +21,6 @@ export const TrackableResourceListItem = ({
     return (
         <div className="flex items-center justify-center px-4">
             <div className={`flex-1 flex justify-start items-center py-4 px-2 ${isTracked ? "opacity-100" : "opacity-30"}`} >
-                {/* TODO: If catalyst -> open modal with drop/shop info */}
                 <img 
                     className="h-full object-contain mx-2 md:mx-0"
                     width={30}

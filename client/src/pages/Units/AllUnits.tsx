@@ -26,7 +26,6 @@ export const AllUnits = () => {
                 value={searchTerm}
                 onChange={onSearchTermChange}
             />
-            <h1>List of Units:</h1>
             <div className="max-w-screen-xl mx-auto flex flex-row flex-wrap mt-2 justify-between md:justify-start">
                 { loading || data === null ? (
                     <LoadingComponent />

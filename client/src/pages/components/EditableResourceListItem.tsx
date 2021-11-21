@@ -37,7 +37,6 @@ export const EditableResourceListItem = ({
         <>
             <div className={`w-full md:w-1/2 flex items-center`}>
                 <div className={`flex md:w-1/2 justify-start items-center py-4 ${isTracked ? "opacity-100" : "opacity-30"}`} >
-                    {/* TODO: If catalyst -> open modal with drop/shop info */}
                     <img 
                         className="h-full object-contain mx-2 md:mx-0 cursor-pointer"
                         width={30}

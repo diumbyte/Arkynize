@@ -3,7 +3,6 @@ import { useAppSelector } from "../redux/hooks"
 import { Enhancement } from "../generated/graphql"
 import { TrackedUnit } from "../redux/types"
 
-// TODO: Send unitId in here in order to initialize state from redux store in case it's being tracked already
 export const useSkillEnhancementTracking = (skillId: number, unitId: number, enhancements: Enhancement[]) => {
 
     const [selectedCurrentEnhancementId, setSelectedCurrentEnhancementId] = useState(0)

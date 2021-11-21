@@ -17,6 +17,6 @@ export const saveState = (state: ReturnType<typeof store.getState>) => {
         const serializedState = JSON.stringify(state)
         localStorage.setItem('store', serializedState)
     } catch(e) {
-        console.log(e);
+        console.error(e);
     }
 }

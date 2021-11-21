@@ -37,9 +37,6 @@ export const Settings = () => {
                     const fileContents = e.target?.result?.toString() as string
                     if(validateImportFile(fileContents)) {
                         const res = JSON.parse(fileContents) as TrackedUnitsState
-                        console.log("PASSED");
-                        console.log(res);
-                        
                         dispatch(importStore(res))
                         toast.success("File imported")                        
                     } else {
