@@ -31,7 +31,7 @@ function App() {
         />
         <Switch>
           <TitledRoute title={"All Units"} component={AllUnits} exact path="/units" />
-          <TitledRoute title={"Cost Summary"} component={Summary} exact path="/summary"/>
+          <TitledRoute title={"Summary"} component={Summary} exact path="/summary"/>
           <Route component={UnitDetail} exact path="/unit/:unitId"/>
           <TitledRoute title={"Settings"} component={Settings} exact path="/settings"/>
           {/* Default Route */}

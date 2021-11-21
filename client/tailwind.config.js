@@ -43,7 +43,8 @@ module.exports = {
         }
       },
       backgroundImage: {
-        "primary-button": "linear-gradient(180deg, rgba(5,32,18,1) 0%, rgba(6,34,18,1) 48%, rgba(14,58,13,1) 85%, rgba(43,99,10,1) 100%)"
+        "primary-button": "linear-gradient(180deg, rgba(5,32,18,1) 0%, rgba(6,34,18,1) 48%, rgba(14,58,13,1) 85%, rgba(43,99,10,1) 100%)",
+        "logo": "url(/src/assets/logo.png)"
       },
       fontFamily: {
         "mulish": ["Mulish", "sans-serif"]
