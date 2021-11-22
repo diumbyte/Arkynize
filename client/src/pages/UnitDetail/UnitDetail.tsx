@@ -1,8 +1,10 @@
-import { Awakening, Enhancement, useGetUnitDetailsQuery } from "../../generated/graphql"
+import { Helmet } from "react-helmet"
 import { useParams } from "react-router-dom"
+
+import { Awakening, Enhancement, useGetUnitDetailsQuery } from "../../generated/graphql"
 import { SkillDetail } from './Skill/SkillDetail';
 import { AwakeningDetail } from './Awakening/AwakeningDetail';
-import { Helmet } from "react-helmet"
+import { UnitImagePreview } from "./UnitImagePreview"
 
 type UnitParams = {
     unitId: string
@@ -24,13 +26,11 @@ export const UnitDetail = () => {
                 <div className="row justify-start">
                     <span className="text-2xl">{data?.unit.name}</span>
                 </div>
-                <div className="row py-4">
-                    <img 
-                        className=""
-                        src={`${process.env.PUBLIC_URL}/assets/images/hero/thumbnail/${data?.unit.code}.png`} 
-                        alt={`Unit's thumbnail`}
-                    />
-                </div>
+                <UnitImagePreview 
+                    name={data?.unit.name as string}
+                    imageSource={`${process.env.PUBLIC_URL}/assets/images/hero/thumbnail/${data?.unit.code}.png`}
+                    imageAlt={`Unit's thumbnail`}
+                />
                 <div className="container border-tavernBrown-light border-opacity-20 border-t border-b py-4">
                     <span className="text-2xl">Skills</span>
                     <div className="flex flex-col mt-4">
