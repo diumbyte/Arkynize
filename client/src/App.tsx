@@ -17,7 +17,22 @@ function App() {
   
   return (
     <div className="relative row bg-tavernBrown h-screen ml-0 mr-0 overflow-hidden font-mulish text-offWhite">
-      <Toaster>
+      <Toaster
+        toastOptions={{
+          success: {
+            style: {
+              color: "white",
+              background: "#10b981"
+            }
+          },
+          error: {
+            style: {
+              color: "white",
+              background: "#ef4444"
+            }
+          }
+        }}
+      >
       {(t) => (
         <ToastBar toast={t}>
           {({ icon, message }) => (
@@ -38,7 +53,7 @@ function App() {
         isExpanded={isExpanded}
         setIsExpanded={setIsExpanded}
       />
-      <div className={`h-full flex flex-col flex-grow flex-nowrap p-8 overflow-auto`}>
+      <div className={`h-full flex flex-col flex-grow flex-nowrap pr-8 pl-8 pb-8 overflow-auto`}>
         <Header 
           setIsExpanded={setIsExpanded}
         />

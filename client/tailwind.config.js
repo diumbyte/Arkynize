@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
@@ -40,7 +42,9 @@ module.exports = {
         tavernBrown: {
           DEFAULT: "rgba(28,20,16,1)",
           light: "#9c7f59"
-        }
+        },
+        blueGray: colors.blueGray,
+        emerald: colors.emerald
       },
       backgroundImage: {
         "primary-button": "linear-gradient(180deg, rgba(5,32,18,1) 0%, rgba(6,34,18,1) 48%, rgba(14,58,13,1) 85%, rgba(43,99,10,1) 100%)",

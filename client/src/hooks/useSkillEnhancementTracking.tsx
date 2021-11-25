@@ -77,6 +77,8 @@ export const useTrackSkillCostChanges = (
     goldTracked: boolean,
     molagoraTracked: boolean,
     stigmaTracked: boolean,
+    onModified: Function,
+    onUnchanged: Function
 ) => {
     const [areResourcesModified, setAreResourcesModified] = useState(false)
 
@@ -161,7 +163,12 @@ export const useTrackSkillCostChanges = (
         }
     }, [isBasicCatalystChanged, isEpicCatalystChanged, isGoldChanged, isMolagoraChanged, isStigmaChanged])
 
-    return {
-        areResourcesModified
-    }
+
+    useEffect(() => {
+        if(areResourcesModified) {
+            onModified()
+        } else {
+            onUnchanged()
+        }
+    }, [areResourcesModified, onModified, onUnchanged])
 }

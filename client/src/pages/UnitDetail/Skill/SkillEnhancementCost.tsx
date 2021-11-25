@@ -4,6 +4,7 @@ import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
 import { toast } from "react-hot-toast"
 
 import { clearUnitTrackedSkill, editSkillEnhancement, editTotalFromSkill, TrackedSkillPayload } from "../../../redux/actions/unitsReducer"
+import { SuccessButton, ErrorButton } from "../../components/FormButton"
 import { TrackedSkill } from "../../../redux/types"
 import GoldIcon from "../../../assets/gold.png"
 import MolagoraIcon from "../../../assets/molagora.png"
@@ -99,9 +100,7 @@ export const SkillEnhancementCost = ({
         stigmaTracked
     )
 
-    const {
-        areResourcesModified
-    } = useTrackSkillCostChanges(
+    useTrackSkillCostChanges(
         trackedUnits,
         unitId,
         skillId,
@@ -109,17 +108,13 @@ export const SkillEnhancementCost = ({
         epicCatalystTracked,
         goldTracked,
         molagoraTracked,
-        stigmaTracked
-    )
-
-    if(areResourcesModified) {
-        toast.error("Changes not committed", {
+        stigmaTracked,
+        () => toast.error("Changes not committed", {
             id: "resourcesModified",
             duration: Infinity
-        })
-    } else {
-        toast.dismiss("resourcesModified")
-    }
+        }), 
+        () => toast.dismiss("resourcesModified")
+    )
 
     return (
         <>
@@ -183,10 +178,9 @@ export const SkillEnhancementCost = ({
                 />
         }
         </form>
-        <div className="w-full row items-center">
-            <button 
-                className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2"
-                type="submit"
+        <div className="w-full row items-center space-x-4 md:space-x-10">
+            <SuccessButton
+                className="w-1/2 md:w-1/5"
                 onClick={(e) => {
                     e.preventDefault();
                     dispatch(
@@ -208,9 +202,9 @@ export const SkillEnhancementCost = ({
                 }}
             >
                 Track
-            </button>
-            <div
-                className="cursor-pointer ml-4 p-4 bg-red-500 rounded-lg text-center border-black border-opacity-20 border-2 outline-none w-1/2 md:w-1/5"
+            </SuccessButton>
+            <ErrorButton 
+                className="w-1/2 md:w-1/5"
                 onClick={(e) => {
                     e.preventDefault()
                     dispatch(clearUnitTrackedSkill({unitId: unitId as number, skillId: skillId as number}))
@@ -218,8 +212,8 @@ export const SkillEnhancementCost = ({
                     setModalOpen(false)
                 }}
             >
-                Reset
-            </div>
+                Reset                
+            </ErrorButton>
         </div>
         </>
     )

@@ -3,6 +3,7 @@ import { importStore, resetStore, TrackedUnitsState } from "../../redux/actions/
 import { useAppDispatch } from "../../redux/hooks"
 import { toast } from "react-hot-toast"
 import validateImportFile from "../../util/validateImportFile"
+import { ErrorButton, NeutralButton } from "./FormButton"
 
 import store from "../../redux/store"
 
@@ -51,41 +52,41 @@ export const Settings = () => {
 
     return (
         <div className="mx-auto w-4/5 max-w-7xl flex flex-col items-center justify-center space-y-10">
-            <button 
-                    className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2"
-                    onClick={downloadJSON}
-                >
-                    Export Data
-            </button>
+            <NeutralButton
+                className="w-1/2 md:w-1/5"
+                onClick={downloadJSON}
+            >
+                Export Data
+            </NeutralButton>
             <a
                 className="hidden"
                 href={fileDownloadURL}
                 download={"e7planner.json"}
                 ref={downloadRef}
             >Export data</a>
-            <button 
-                    className="primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2"
-                    onClick={() => {
-                        uploadRef.current?.click()
-                    }}
-                >
-                    Import Data
-            </button>
+            <NeutralButton
+                className="w-1/2 md:w-1/5"
+                onClick={() => {
+                    uploadRef.current?.click()
+                }}
+            >
+                Import Data
+            </NeutralButton>
             <input type="file" className="hidden"
                 multiple={false}
                 accept=".json,application/json"
                 ref={uploadRef}
                 onChange={openFile}
             />
-            <div
-                    className="cursor-pointer p-4 bg-red-500 rounded-lg text-center border-black border-opacity-20 border-2 outline-none w-1/2 md:w-1/5"
-                    onClick={() => {
-                        dispatch(resetStore())
-                        toast.success("Data successfully cleared")
-                    }}
-                >
-                    Clear Data
-                </div>
+            <ErrorButton
+                className="w-1/2 md:w-1/5"
+                onClick={() => {
+                    dispatch(resetStore())
+                    toast.success("Data successfully cleared")
+                }}
+            >
+                Clear Data
+            </ErrorButton>
         </div>
     )
 }

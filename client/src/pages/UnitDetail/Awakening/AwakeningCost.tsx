@@ -5,6 +5,7 @@ import { toast } from "react-hot-toast"
 import { clearUnitTrackedAwakenings, editAwakening, editTotalFromAwakenings, TrackedAwakeningPayload } from "../../../redux/actions/unitsReducer"
 import { TrackedAwakening } from "../../../redux/types"
 import { Awakening } from "../../../generated/graphql"
+import { SuccessButton, ErrorButton } from "../../components/FormButton"
 
 import { TrackableResourceListItem } from "../../components/TrackableResourceListItem"
 import { calculateTotalAwakeningsCosts,  } from "../../../util/calculateCosts"
@@ -92,24 +93,20 @@ const AwakeningCosts = (
     }, [unitId, trackedUnits])
 
     // Warn user if changes haven't been committed
-    const { areResourcesModified } = useTrackAwakeningCostChanges(
+    useTrackAwakeningCostChanges(
         trackedUnits, 
         unitId as number,
         basicCatalystTracked,
         epicCatalystTracked,
         basicRuneTracked,
         midRuneTracked,
-        topRuneTracked
-    )
-
-    if(areResourcesModified) {
-        toast.error("Changes not committed", {
+        topRuneTracked,
+        () => toast.error("Changes not committed", {
             id: "resourcesModified",
             duration: Infinity
-        })
-    } else {
-        toast.dismiss("resourcesModified")
-    }
+        }),
+        () => toast.dismiss("resourcesModified")
+    )
 
     // Calculation 
     if(currentAwakeningsIdx < desiredAwakeningsIdx) {
@@ -175,10 +172,9 @@ const AwakeningCosts = (
                     })
                 }
             </form>
-            <div className="w-full row items-center">
-                <button 
-                    className={`primaryButton active:bg-buttonGreen-dark md:w-1/5 w-1/2`}
-                    type="submit"
+            <div className="w-full row items-center space-x-4 md:space-x-10">
+                <SuccessButton
+                    className="w-1/2 md:w-1/5"
                     onClick={(e) => {
                         e.preventDefault();
                         dispatch(
@@ -199,9 +195,9 @@ const AwakeningCosts = (
                     }}
                 >
                     Track
-                </button>
-                <div
-                    className="cursor-pointer ml-4 p-4 bg-red-500 rounded-lg text-center border-black border-opacity-20 border-2 outline-none w-1/2 md:w-1/5"
+                </SuccessButton>
+                <ErrorButton
+                    className="w-1/2 md:w-1/5"
                     onClick={(e) => {
                         e.preventDefault()
                         dispatch(clearUnitTrackedAwakenings({unitId: unitId as number}))
@@ -210,7 +206,7 @@ const AwakeningCosts = (
                     }}
                 >
                     Reset
-                </div>
+                </ErrorButton>
             </div>
             </>
         )

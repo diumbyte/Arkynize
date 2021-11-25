@@ -135,7 +135,10 @@ export const useTrackAwakeningCostChanges = (
     epicCatalystTracked: boolean, 
     basicRuneTracked: boolean, 
     midRuneTracked: boolean, 
-    topRuneTracked: boolean) => {
+    topRuneTracked: boolean,
+    onModified: Function,
+    onUnchanged: Function
+    ) => {
 
     const [areResourcesModified, setAreResourcesModified] = useState(false)
 
@@ -205,7 +208,11 @@ export const useTrackAwakeningCostChanges = (
         }
     }, [isBasicCatalystChanged, isEpicCatalystChanged, isBasicRuneChanged, isMidRuneChanged, isTopRuneChanged])
 
-    return {
-        areResourcesModified
-    }
+    useEffect(() => {
+        if(areResourcesModified) {
+            onModified()
+        } else {
+            onUnchanged()
+        }
+    }, [areResourcesModified, onModified, onUnchanged])
 }
