@@ -55,7 +55,7 @@ export const EditableResourceListItem = ({
                     </span>
                 </div>
                 <div className="flex w-auto justify-center items-center">
-                    <CrossIcon fill={"#fff"} width={12} className={`mx-2 block w-min ${isTracked ? "opacity-100" : "opacity-30"}`}/>
+                    <CrossIcon fill={"#263645"} width={12} className={`mx-2 block w-min ${isTracked ? "opacity-100" : "opacity-30"}`}/>
                     <div className="flex flex-row items-center">
                         <NumberInput
                             className="flex-1"
@@ -75,7 +75,7 @@ export const EditableResourceListItem = ({
             {
                 isResourceACatalyst(imageSourcePath) ?
                 <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "customModalOverlay"}}>
-                    <div className="text-offWhite">
+                    <div className="text-midnightBlue">
                         <CatalystDetail
                             id={resourceId as number}
                             name={resourceName}

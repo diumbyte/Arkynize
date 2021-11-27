@@ -19,10 +19,10 @@ type UnitSummaryProps = {
 }
 
 const tabClasses = (selected: boolean, isDisabled: boolean) => {
-    return `w-full py-2.5 text-sm leading-5 font-medium
-    ${selected ? "bg-transparent text-blue-600 border-b-2 border-blue-600" : 
-        isDisabled ? "cursor-not-allowed text-white text-opacity-30"
-            : "text-white hover:text-opacity-90"
+    return `w-full py-2.5 text-sm leading-5 font-semibold
+    ${selected ? "bg-transparent text-midnightBlue border-b-2 border-midnightBlue" : 
+        isDisabled ? "cursor-not-allowed text-gray-400"
+            : "text-gray-400 hover:text-midnightBlue hover:text-opacity-90"
     }`
 }
 
@@ -58,7 +58,7 @@ export const UnitSummary = ({
     return (
         <div 
             id={unitId.toString()}
-            className="bg-tavernBrown-light bg-opacity-80 rounded p-2 border border-black w-full md:w-1/4 max-w-4xl text-sm my-2 md:mx-2"
+            className="bg-white rounded shadow p-2 text-midnightBlue w-full md:w-1/4 max-w-4xl text-sm my-2 md:mx-2"
         >
             <div className="row border-b border-black border-opacity-20 py-1">
                 <img 

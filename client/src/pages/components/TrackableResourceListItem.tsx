@@ -31,7 +31,7 @@ export const TrackableResourceListItem = ({
                     {resourceName}
                 </span>
             </div>
-            <CrossIcon fill={"#fff"} width={12} className={`mx-2 ${isTracked ? "opacity-100" : "opacity-30"}`}/>
+            <CrossIcon fill={"#263645"} width={12} className={`mx-2 ${isTracked ? "opacity-100" : "opacity-30"}`}/>
             <div className="flex flex-row items-center">
                 <div className={`flex-1 text-center md:text-left ${isTracked ? "opacity-100" : "opacity-30"}`}>
                     {desiredCount}

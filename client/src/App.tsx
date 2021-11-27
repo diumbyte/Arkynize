@@ -16,7 +16,7 @@ function App() {
   const [isExpanded, setIsExpanded] = useState(false)
   
   return (
-    <div className="relative row bg-tavernBrown h-screen ml-0 mr-0 overflow-hidden font-mulish text-offWhite">
+    <div className="relative row bg-aliceBlue h-screen ml-0 mr-0 overflow-hidden font-mulish">
       <Toaster
         toastOptions={{
           success: {

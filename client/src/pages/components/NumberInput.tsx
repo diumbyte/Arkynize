@@ -42,9 +42,9 @@ export const NumberInput = ({
     
     return (
         <div className={props.className}>
-            <div className="flex border border-gray-100 border-opacity-30 rounded">
+            <div className="flex border border-gray-100 border-opacity-30 bg-aliceBlue rounded shadow">
                 <input 
-                    className="w-full text-white bg-transparent text-center py-1 px-2"
+                    className="w-full text-gray-400 bg-transparent text-center rounded py-1 px-2 outline-none focus:outline-none focus:ring"
                     type="text" 
                     value={currentValue}
                     onChange={(e) => {

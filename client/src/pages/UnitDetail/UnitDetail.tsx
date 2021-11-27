@@ -23,7 +23,7 @@ export const UnitDetail = () => {
             </Helmet>
             <div>
                 <div className="row justify-start">
-                    <span className="text-2xl">{data?.unit.name}</span>
+                    <span className="text-2xl text-midnightBlue font-semibold">{data?.unit.name}</span>
                 </div>
                 <div className="row py-4">
                     <img 
@@ -31,8 +31,8 @@ export const UnitDetail = () => {
                         alt={`Unit's thumbnail`}
                     />
                 </div>
-                <div className="container border-tavernBrown-light border-opacity-20 border-t border-b py-4">
-                    <span className="text-2xl">Skills</span>
+                <div className="">
+                    <span className="text-2xl text-midnightBlue">Skills</span>
                     <div className="flex flex-col mt-4">
                         {data?.getUnitSkills.map(skill => 
                             <SkillDetail 
@@ -49,11 +49,11 @@ export const UnitDetail = () => {
                         }
                     </div>
                 </div>
-                <div className="container pt-4">
+                <div className="container mt-4">
                         <div className="row justify-start">
-                            <span className="text-2xl pr-4">Awakenings</span>
+                            <span className="text-2xl text-midnightBlue">Awakenings</span>
                         </div>
-                        <div className="row mt-4 flex-wrap">
+                        <div className="row mt-4 flex-wrap bg-white p-4 rounded shadow">
                             <AwakeningDetail 
                                 awakenings={data?.getAwakeningsForUnit as Awakening[]} 
                                 unitId={data?.unit.id}

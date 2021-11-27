@@ -13,11 +13,11 @@ export const OverallResourceSummary = () => {
     
 
     return (
-        <div className="bg-tavernBrown-light bg-opacity-80 rounded p-2 border border-black w-full md:w-11/12 md:min-w-450 max-w-4xl text-sm my-2 md:mx-2">
-            <div className="text-2xl px-2 text-center">
+        <div className="w-full md:w-11/12 md:min-w-450 max-w-4xl text-midnightBlue my-2 md:mx-2">
+            <div className="text-2xl px-2 mb-4">
                 Total Costs
             </div>
-            <div className="p-2 flex flex-wrap justify-around">
+            <div className="p-2 flex flex-wrap justify-around bg-white rounded shadow p-4  text-sm ">
                 {
                     totalResources.catalysts.map((catalyst) => {
                         return (

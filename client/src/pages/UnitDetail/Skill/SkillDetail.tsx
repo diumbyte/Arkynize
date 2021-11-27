@@ -39,12 +39,12 @@ export const SkillDetail = ({
     } = useSkillEnhancementTracking(id, unitId, enhancements)
     
     return (
-        <div className="row">
+        <div className="row bg-white p-4 rounded shadow">
             {/* Skill Info */}
             <div className="w-1/3">
                 <div className="row justify-start">
-                    <PlusIcon fill="#fff" className="mr-4 cursor-pointer" onClick={() => setModalOpen(true)}/>
-                    <span className="text-xl">{name}</span>
+                    <PlusIcon fill="#263645" className="mr-4 cursor-pointer" onClick={() => setModalOpen(true)}/>
+                    <span className="text-xl text-midnightBlue">{name}</span>
                 </div>
                 <div>
                     <img 
@@ -55,9 +55,9 @@ export const SkillDetail = ({
             </div>
             {/* Current */}
             <div className="w-1/3 align-start">
-                <p className="text-xl">Current</p>
+                <p className="text-gray-300">Current</p>
                 <select 
-                    className="w-1/2 p-2 text-black" 
+                    className="w-1/2 p-2 bg-aliceBlue text-black shadow-md rounded" 
                     name={`startSkill${id}`} 
                     id={`startSkill${id}`}
                     value={selectedCurrentEnhancementId}
@@ -68,9 +68,9 @@ export const SkillDetail = ({
             </div>
             {/* Goal */}
             <div className="w-1/3">
-                <p className="text-xl">Desired</p>
+                <p className="text-gray-300">Desired</p>
                 <select 
-                    className="w-1/2 p-2 text-black" 
+                    className="w-1/2 p-2 bg-aliceBlue text-black shadow-md rounded" 
                     name={`desiredSkill${id}`} 
                     id={`desiredSkill${id}`}
                     value={selectedDesiredEnhancementId}
@@ -80,8 +80,8 @@ export const SkillDetail = ({
                 </select>
             </div>
             <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "customModalOverlay"}}>
-                <div className="text-offWhite">
-                    <h2 className="text-center text-2xl">Materials Required</h2>
+                <div className="text-midnightBlue">
+                    <h2 className="text-center text-2xl font-semibold pb-4">Materials Required</h2>
                     <SkillEnhancementCost
                         unitId={unitId}
                         unitName={unitName}

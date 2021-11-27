@@ -38,7 +38,7 @@ export const AwakeningDetail = ({
     return (
         <>
             <div className="flex-auto">
-                <p className="text-2xl">Current</p>
+                <p className="text-2xl text-midnightBlue">Current</p>
                 <div className="row justify-start">
                     {currentAwakenings?.map(a => 
                         <img
@@ -54,7 +54,7 @@ export const AwakeningDetail = ({
                 </div>
             </div>
             <div className="flex-auto my-4 md:my-0">
-                <p className="text-2xl">Desired</p>
+                <p className="text-2xl text-midnightBlue">Desired</p>
                 <div className="row justify-start">
                     {desiredAwakenings?.map(a => 
                         <img 
@@ -70,7 +70,7 @@ export const AwakeningDetail = ({
                 </div>
             </div>
             <div className="flex-auto md:w-auto w-full my-4">
-                <PlusIcon fill={`#fff`} width={32} height={32} className="cursor-pointer" onClick={() => {
+                <PlusIcon fill="#263645" width={32} height={32} className="cursor-pointer" onClick={() => {
                         if( currentAwakeningsIdx < desiredAwakeningsIdx) {
                             setModalOpen(true)
                         } else {
@@ -80,8 +80,8 @@ export const AwakeningDetail = ({
                 }/>
             </div>
             <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "customModalOverlay"}}>
-                <div className="text-offWhite">
-                    <h2 className="text-center text-2xl">Materials Required</h2>
+                <div className="text-midnightBlue">
+                    <h2 className="text-center text-2xl font-semibold pb-4">Materials Required</h2>
                     <AwakeningCost 
                         unitId={unitId}
                         unitName={unitName}
