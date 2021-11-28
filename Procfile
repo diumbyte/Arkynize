@@ -1,2 +1,2 @@
 web: npm start
-release: npx prisma migrate reset && npx prisma migrate deploy
+release: npx prisma migrate reset --force && npx prisma migrate deploy
