@@ -116,6 +116,7 @@ async function main() {
         data: awakeningCatalystCostList,
         skipDuplicates: true
     })
+    
 }
 
 main()
