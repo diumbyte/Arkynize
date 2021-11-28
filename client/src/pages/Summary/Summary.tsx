@@ -9,16 +9,16 @@ export const Summary = () => {
     
     return (
         <div className="container">
-            <div className="flex flex-nowrap justify-center">
+            <div className="">
                 { trackedUnits.length > 0 
                     ?
                     <OverallResourceSummary
                     />
                     :
-                    <div className="div">No units tracked.</div>
+                    <p>No units tracked.</p>
                 }
             </div>
-            <div className="flex flex-wrap justify-around">
+            <div className="flex flex-wrap items-stretch justify-around lg:space-x-10 xl:space-x-16">
                 {
                     trackedUnits.length !== 0 && 
                     trackedUnits.map(unit => {

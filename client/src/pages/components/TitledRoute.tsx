@@ -7,6 +7,7 @@ type TitledRouteProps = RouteProps & {
 
 export const TitledRoute:React.FC<TitledRouteProps> = ({
     title,
+    children,
     ...props
 }) => {
     return (
@@ -14,7 +15,9 @@ export const TitledRoute:React.FC<TitledRouteProps> = ({
             <Helmet>
                 <title>{title} - Arkynized</title>
             </Helmet>
-            <Route {...props}/>
+            <Route {...props}>
+                {children}
+            </Route>
         </>
     )
 }

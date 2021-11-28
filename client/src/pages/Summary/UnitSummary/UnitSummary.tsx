@@ -20,7 +20,7 @@ type UnitSummaryProps = {
 
 const tabClasses = (selected: boolean, isDisabled: boolean) => {
     return `w-full py-2.5 text-sm leading-5 font-semibold
-    ${selected ? "bg-transparent text-midnightBlue border-b-2 border-midnightBlue" : 
+    ${selected ? "bg-transparent border-b-2 border-midnightBlue" : 
         isDisabled ? "cursor-not-allowed text-gray-400"
             : "text-gray-400 hover:text-midnightBlue hover:text-opacity-90"
     }`
@@ -58,7 +58,7 @@ export const UnitSummary = ({
     return (
         <div 
             id={unitId.toString()}
-            className="bg-white rounded shadow p-2 text-midnightBlue w-full md:w-1/4 max-w-4xl text-sm my-2 md:mx-2"
+            className="bg-white rounded shadow p-2 w-full md:w-2/5 xl:w-1/5 text-sm my-2"
         >
             <div className="row border-b border-black border-opacity-20 py-1">
                 <img 
@@ -184,7 +184,7 @@ export const UnitSummary = ({
                     skills.map((skill) => {
                         return (
                             <div key={skill.id} className="p-2">
-                                <h2 className="text-white text-opacity-60 mt-2">{`Skill ${skill.type}`}</h2>
+                                <h2 className="text-gray-400 mt-2">{`Skill ${skill.type}`}</h2>
                                 {skill.trackedCatalysts.map((catalyst) => {
                                     return (
                                         <TrackableResourceListItem

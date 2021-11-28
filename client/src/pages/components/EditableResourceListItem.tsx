@@ -35,10 +35,10 @@ export const EditableResourceListItem = ({
     
     return (
         <>
-            <div className={`w-full md:w-1/2 flex items-center`}>
-                <div className={`flex md:w-1/2 justify-start items-center py-4 ${isTracked ? "opacity-100" : "opacity-30"}`} >
+            <div className={`w-full sm:w-1/2 md:w-1/3 flex items-center`}>
+                <div className={`flex w-auto md:w-1/2 justify-start items-center py-4`} >
                     <img 
-                        className="h-full object-contain mx-2 md:mx-0 cursor-pointer"
+                        className="object-contain mx-2 md:mx-0 cursor-pointer"
                         width={30}
                         src={imageSourcePath} 
                         alt={imageAlt}
@@ -54,28 +54,26 @@ export const EditableResourceListItem = ({
                         {resourceName}
                     </span>
                 </div>
-                <div className="flex w-auto justify-center items-center">
-                    <CrossIcon fill={"#263645"} width={12} className={`mx-2 block w-min ${isTracked ? "opacity-100" : "opacity-30"}`}/>
-                    <div className="flex flex-row items-center">
-                        <NumberInput
-                            className="flex-1"
-                            currentValue={currentCount}
-                            desiredValue={desiredCount}
-                            onCountChange={onCurrentCountChange}
-                        />
-                        <div className="px-2">
-                            {` / `}
-                        </div>
-                        <div className={`flex-1 text-center md:text-left ${isTracked ? "opacity-100" : "opacity-30"}`}>
-                            {desiredCount}
-                        </div>
+                <div className="flex w-auto items-center">
+                    <CrossIcon fill="#263645" width={12} className="mx-2"/>
+                    <NumberInput
+                        className="flex-1"
+                        currentValue={currentCount}
+                        desiredValue={desiredCount}
+                        onCountChange={onCurrentCountChange}
+                    />
+                    <div className="mx-2 text-center">
+                        {` / `}
+                    </div>
+                    <div className={`flex-1 text-center md:text-left ${isTracked ? "opacity-100" : "opacity-30"}`}>
+                        {desiredCount}
                     </div>
                 </div>
             </div>
             {
                 isResourceACatalyst(imageSourcePath) ?
                 <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "customModalOverlay"}}>
-                    <div className="text-midnightBlue">
+                    <div>
                         <CatalystDetail
                             id={resourceId as number}
                             name={resourceName}

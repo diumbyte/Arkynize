@@ -52,7 +52,7 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
                     imageSourcePath &&
                     <img src={imageSourcePath} alt={"Unit icon"} className="object-contain w-8"/>
                 }
-                <div className={`text-3x1 text-white ml-12 max-w-70 text-center`}>
+                <div className={`text-3x1 text-white ml-12 text-center`}>
                     <p>{title}</p>
                 </div>
             </NavHashLink>

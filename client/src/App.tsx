@@ -1,6 +1,5 @@
-import './App.css';
 import { useState } from "react"
-import { Switch, Route } from "react-router-dom"
+import { Switch, Route, Redirect } from "react-router-dom"
 import { Toaster, toast, ToastBar } from "react-hot-toast"
 
 import { TitledRoute } from "./pages/components/TitledRoute"
@@ -16,7 +15,7 @@ function App() {
   const [isExpanded, setIsExpanded] = useState(false)
   
   return (
-    <div className="relative row bg-aliceBlue h-screen ml-0 mr-0 overflow-hidden font-mulish">
+    <div className="relative row bg-aliceBlue h-screen ml-0 mr-0 overflow-hidden font-mulish text-midnightBlue">
       <Toaster
         toastOptions={{
           success: {
@@ -46,7 +45,7 @@ function App() {
       </Toaster>
       <div 
         onClick={() => setIsExpanded(false)}
-        className={`fixed inset-0 z-20 transition-opacity bg-black opacity-50
+        className={`fixed inset-0 z-40 transition-opacity bg-black opacity-50
         ${isExpanded ? "md:hidden block" : "hidden" }`}
       />
       <Sidebar 
@@ -63,7 +62,9 @@ function App() {
           <Route component={UnitDetail} exact path="/unit/:unitId"/>
           <TitledRoute title={"Settings"} component={Settings} exact path="/settings"/>
           {/* Default Route */}
-          <TitledRoute title={"Home"} component={Home}/>
+          <TitledRoute title={"Home"} component={Home}>
+            <Redirect to="/summary"/>
+          </TitledRoute>
         </Switch>
       </div>
     </div>

@@ -1,8 +1,9 @@
 {
   "name": "epicsevenplanner-client",
-  "homepage": "https://e7planner.herokuapp.com/",
+  "homepage": "https://arkynized.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "@apollo/client": "^3.4.15",
     "@craco/craco": "^6.2.0",
@@ -40,6 +41,7 @@
     "react-router-dom": "^5.3.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "4.0.3",
+    "react-tooltip": "^4.2.21",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
     "typescript": "^4.4.2",
     "web-vitals": "^1.1.2"

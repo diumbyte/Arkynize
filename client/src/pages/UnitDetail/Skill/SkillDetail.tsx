@@ -43,8 +43,7 @@ export const SkillDetail = ({
             {/* Skill Info */}
             <div className="w-1/3">
                 <div className="row justify-start">
-                    <PlusIcon fill="#263645" className="mr-4 cursor-pointer" onClick={() => setModalOpen(true)}/>
-                    <span className="text-xl text-midnightBlue">{name}</span>
+                    <span className="text-xl">{name}</span>
                 </div>
                 <div>
                     <img 
@@ -79,8 +78,9 @@ export const SkillDetail = ({
                     {enhancements.map(e => <option key={e.id} value={e.id}>{e.level}</option>)}
                 </select>
             </div>
+            <PlusIcon fill="#263645" width={32} height={32} className="mx-4 cursor-pointer" onClick={() => setModalOpen(true)}/>
             <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "customModalOverlay"}}>
-                <div className="text-midnightBlue">
+                <div className="">
                     <h2 className="text-center text-2xl font-semibold pb-4">Materials Required</h2>
                     <SkillEnhancementCost
                         unitId={unitId}

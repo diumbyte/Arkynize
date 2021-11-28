@@ -200,7 +200,7 @@ export type GetUnitDetailsQueryVariables = Exact<{
 }>;
 
 
-export type GetUnitDetailsQuery = { __typename?: 'Query', unit: { __typename?: 'Unit', id: number, name: string, code: string }, getAwakeningsForUnit: Array<{ __typename?: 'Awakening', id: number, state: number, awakeningCatalystCost: { __typename?: 'AwakeningCatalystCost', id: number, count: number, catalyst: { __typename?: 'Catalyst', id: number, name: string, code: string, isEpic: boolean } }, runeCosts: Array<{ __typename?: 'RuneCost', count: number, rune: { __typename?: 'Rune', id: number, name: string, code: string, type: string } }> }>, getUnitSkills: Array<{ __typename?: 'Skill', id: number, name: string, type: number, code: string, enhancements: Array<{ __typename?: 'Enhancement', id: number, level: number, stigma: number, molagora: number, gold: number, enhancementCatalystCost: { __typename?: 'EnhancementCatalystCost', id: number, count: number, catalyst: { __typename?: 'Catalyst', id: number, name: string, code: string, isEpic: boolean } } }> }> };
+export type GetUnitDetailsQuery = { __typename?: 'Query', unit: { __typename?: 'Unit', id: number, name: string, code: string, rarity: { __typename?: 'Rarity', id: number, value: number }, zodiac?: { __typename?: 'Zodiac', id: number, name: string } | null | undefined, attribute: { __typename?: 'Attribute', id: number, name: string } }, getAwakeningsForUnit: Array<{ __typename?: 'Awakening', id: number, state: number, awakeningCatalystCost: { __typename?: 'AwakeningCatalystCost', id: number, count: number, catalyst: { __typename?: 'Catalyst', id: number, name: string, code: string, isEpic: boolean } }, runeCosts: Array<{ __typename?: 'RuneCost', count: number, rune: { __typename?: 'Rune', id: number, name: string, code: string, type: string } }> }>, getUnitSkills: Array<{ __typename?: 'Skill', id: number, name: string, type: number, code: string, enhancements: Array<{ __typename?: 'Enhancement', id: number, level: number, stigma: number, molagora: number, gold: number, enhancementCatalystCost: { __typename?: 'EnhancementCatalystCost', id: number, count: number, catalyst: { __typename?: 'Catalyst', id: number, name: string, code: string, isEpic: boolean } } }> }> };
 
 export type GetCatalystInfoQueryVariables = Exact<{
   catalystId: Scalars['Int'];
@@ -264,6 +264,18 @@ export const GetUnitDetailsDocument = gql`
     id
     name
     code
+    rarity {
+      id
+      value
+    }
+    zodiac {
+      id
+      name
+    }
+    attribute {
+      id
+      name
+    }
   }
   getAwakeningsForUnit(unitId: $unitId) {
     id

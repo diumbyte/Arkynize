@@ -26,6 +26,18 @@ gql`
             id
             name
             code
+            rarity {
+                id
+                value
+            }
+            zodiac {
+                id
+                name
+            }
+            attribute {
+                id
+                name
+            }
         }
         
         getAwakeningsForUnit(unitId: $unitId) {

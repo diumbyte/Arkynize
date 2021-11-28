@@ -1,6 +1,9 @@
+import ReactTooltip from "react-tooltip"
+
 import GoldIcon from "../../assets/gold.png"
 import StigmaIcon from "../../assets/stigma.png"
 import MolagoraIcon from "../../assets/molagora.png"
+import { ReactComponent as HelpIcon } from "../../assets/help.svg"
 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
 import { EditableResourceListItem } from "../components/EditableResourceListItem"
@@ -13,11 +16,19 @@ export const OverallResourceSummary = () => {
     
 
     return (
-        <div className="w-full md:w-11/12 md:min-w-450 max-w-4xl text-midnightBlue my-2 md:mx-2">
+        <div className="w-full mx-auto mb-2">
             <div className="text-2xl px-2 mb-4">
                 Total Costs
             </div>
-            <div className="p-2 flex flex-wrap justify-around bg-white rounded shadow p-4  text-sm ">
+            <div className="p-2 flex flex-wrap bg-white rounded shadow p-4 text-sm ">
+                <div className="w-full flex items-center">
+                    <span className="text-xl mr-2">Catalysts</span>
+                    <HelpIcon fill="#263645" className="cursor-pointer" data-tip data-for="catalyst-info"/>
+                    <ReactTooltip id="catalyst-info" place="bottom">
+                        <span>Click on catalysts for shop and drop information</span>
+                    </ReactTooltip>
+                    {/* TODO: The "i" help icon that shows a tooltip = Click on catalysts for locations */}
+                </div>
                 {
                     totalResources.catalysts.map((catalyst) => {
                         return (
@@ -46,6 +57,9 @@ export const OverallResourceSummary = () => {
                     })
 
                 }
+                <div className="w-full">
+                    <p className="text-xl">Runes</p>
+                </div>
                 {
                     totalResources.runes.map((rune) => {
                         return (
@@ -74,6 +88,9 @@ export const OverallResourceSummary = () => {
                     })
 
                 }
+                <div className="w-full">
+                    <p className="text-xl">Skill Costs</p>
+                </div>
                 <EditableResourceListItem
                     imageSourcePath={GoldIcon}
                     imageAlt={"Gold icon"}

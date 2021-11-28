@@ -38,7 +38,7 @@ export const AwakeningDetail = ({
     return (
         <>
             <div className="flex-auto">
-                <p className="text-2xl text-midnightBlue">Current</p>
+                <p className="text-2xl">Current</p>
                 <div className="row justify-start">
                     {currentAwakenings?.map(a => 
                         <img
@@ -54,7 +54,7 @@ export const AwakeningDetail = ({
                 </div>
             </div>
             <div className="flex-auto my-4 md:my-0">
-                <p className="text-2xl text-midnightBlue">Desired</p>
+                <p className="text-2xl">Desired</p>
                 <div className="row justify-start">
                     {desiredAwakenings?.map(a => 
                         <img 
@@ -80,7 +80,7 @@ export const AwakeningDetail = ({
                 }/>
             </div>
             <Modal open={modalOpen} onClose={() => setModalOpen(false)} center classNames={{modal: "customModal", overlay: "customModalOverlay"}}>
-                <div className="text-midnightBlue">
+                <div className="">
                     <h2 className="text-center text-2xl font-semibold pb-4">Materials Required</h2>
                     <AwakeningCost 
                         unitId={unitId}

@@ -81,14 +81,14 @@ export const CatalystDetail = ({
             {/* Tabbed navigation for mobile view */}
             <div className="flex md:hidden">
                 <div 
-                    className={`flex-1 pb-2 flex items-end justify-center ${isDropsSelected ? "border-b-2 border-white border-opacity-40" : ""}`}
+                    className={`flex-1 pb-2 flex items-end justify-center ${isDropsSelected ? "border-b-2 border-midnightBlue" : ""}`}
                     onClick={() => setIsDropsSelected(true)}
                 >
                         <img src={BattleIcon} alt="Battle icon" className="object-contain" width={36}/>
                         <h2 className="text-2xl">Drops</h2>
                 </div>
                 <div 
-                    className={`flex-1 pb-2 flex items-end justify-center ${isDropsSelected ? "" : "border-b-2 border-white border-opacity-40"}`}
+                    className={`flex-1 pb-2 flex items-end justify-center ${isDropsSelected ? "" : "border-b-2 border-midnightBlue"}`}
                     onClick={() => setIsDropsSelected(false)}
                 >
                         <img src={ShopIcon} alt="Shop icon" className="object-contain" width={36}/>
@@ -105,7 +105,7 @@ export const CatalystDetail = ({
                         groupedDropsByEpisode
                             ?.map(groupedDrops => 
                                 (
-                                    <EpisodeList name={`Episode ${groupedDrops.episode}`}>
+                                    <EpisodeList key={groupedDrops.episode} name={`Episode ${groupedDrops.episode}`}>
                                         {
                                             groupedDrops.drops?.map(drop => {
                                                 return <DropListing
@@ -131,7 +131,7 @@ export const CatalystDetail = ({
                         groupedShopsByEpisode
                             ?.map(groupedShopItems => 
                                 (
-                                    <EpisodeList name={`Episode ${groupedShopItems.episode}`}>
+                                    <EpisodeList key={groupedShopItems.episode} name={`Episode ${groupedShopItems.episode}`}>
                                         {
                                             groupedShopItems.shopItems?.map(shop => (
                                                 <ShopListing 

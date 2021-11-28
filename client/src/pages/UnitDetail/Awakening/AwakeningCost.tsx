@@ -172,9 +172,9 @@ const AwakeningCosts = (
                     })
                 }
             </form>
-            <div className="w-full row items-center space-x-4 md:space-x-10">
+            <div className="w-full row items-center justify-around">
                 <SuccessButton
-                    className="w-1/2 md:w-1/5"
+                    className="w-1/3"
                     onClick={(e) => {
                         e.preventDefault();
                         dispatch(
@@ -197,7 +197,7 @@ const AwakeningCosts = (
                     Track
                 </SuccessButton>
                 <ErrorButton
-                    className="w-1/2 md:w-1/5"
+                    className="w-1/3"
                     onClick={(e) => {
                         e.preventDefault()
                         dispatch(clearUnitTrackedAwakenings({unitId: unitId as number}))

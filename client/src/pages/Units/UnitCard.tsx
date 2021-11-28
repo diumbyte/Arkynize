@@ -26,7 +26,7 @@ export const UnitCard = ({
                     alt={`${name}'s icon`}
                 />
             </div>
-            <div className="text-base text-midnightBlue flex flex-col justify-center break-words flex-grow">
+            <div className="text-base flex flex-col justify-center break-words flex-grow">
                 {name}
             </div>
         </Link>

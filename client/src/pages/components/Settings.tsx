@@ -53,7 +53,7 @@ export const Settings = () => {
     return (
         <div className="mx-auto w-4/5 max-w-7xl flex flex-col items-center justify-center space-y-10">
             <NeutralButton
-                className="w-1/2 md:w-1/5"
+                className="w-4/5 md:w-1/5"
                 onClick={downloadJSON}
             >
                 Export Data
@@ -61,11 +61,11 @@ export const Settings = () => {
             <a
                 className="hidden"
                 href={fileDownloadURL}
-                download={"e7planner.json"}
+                download={"arkynized.json"}
                 ref={downloadRef}
             >Export data</a>
             <NeutralButton
-                className="w-1/2 md:w-1/5"
+                className="w-4/5 md:w-1/5"
                 onClick={() => {
                     uploadRef.current?.click()
                 }}
@@ -79,7 +79,7 @@ export const Settings = () => {
                 onChange={openFile}
             />
             <ErrorButton
-                className="w-1/2 md:w-1/5"
+                className="w-4/5 md:w-1/5"
                 onClick={() => {
                     dispatch(resetStore())
                     toast.success("Data successfully cleared")
