@@ -303,8 +303,8 @@ export const resolvers: Resolvers = {
         name: (parent, args, {prisma}) => {
             return parent.name
         },
-        zodiac: (parent, args, {prisma}) => {
-            return prisma.zodiac.findUnique({
+        zodiac: async (parent, args, {prisma}) => {
+            return await prisma.zodiac.findUnique({
                 where: {id: parent.zodiac?.id}
             })
         },
