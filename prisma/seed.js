@@ -26,7 +26,7 @@ async function main() {
         await prisma.attribute.create({
             data: { 
                 ...attribute 
-            }
+            },
         })
     }))
 
