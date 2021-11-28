@@ -2,12 +2,12 @@ import { useState, useEffect } from "react"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
 import { toast } from "react-hot-toast"
 
-import { clearUnitTrackedAwakenings, editAwakening, editTotalFromAwakenings, TrackedAwakeningPayload } from "../../../redux/actions/unitsReducer"
+import { clearUnitTrackedAwakenings, editAwakening, editTotalFromAwakenings, TrackedAwakeningPayload } from "../../../redux/unitsReducers"
 import { TrackedAwakening } from "../../../redux/types"
 import { Awakening } from "../../../generated/graphql"
-import { SuccessButton, ErrorButton } from "../../components/FormButton"
+import { SuccessButton, ErrorButton } from "../../../components/FormButton"
 
-import { TrackableResourceListItem } from "../../components/TrackableResourceListItem"
+import { TrackableResourceListItem } from "../../../components/TrackableResourceListItem"
 import { calculateTotalAwakeningsCosts,  } from "../../../util/calculateCosts"
 import { useTrackAwakeningCostChanges } from "../../../hooks/useAwakeningTracking"
 

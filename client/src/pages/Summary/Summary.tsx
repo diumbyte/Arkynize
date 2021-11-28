@@ -2,7 +2,7 @@ import { TrackedAwakening } from '../../redux/types';
 import { useAppSelector } from "../../redux/hooks"
 
 import { OverallResourceSummary } from './OverallResourceSummary';
-import { UnitSummary } from "./UnitSummary/UnitSummary"
+import { UnitSummary } from "./UnitSummary"
 
 export const Summary = () => {
     const { trackedUnits } = useAppSelector(state => state.units)

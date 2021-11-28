@@ -1,13 +1,13 @@
 import { useHistory } from "react-router"
 import { Tab } from "@headlessui/react"
 
-import GoldIcon from "../../../assets/gold.png"
-import StigmaIcon from "../../../assets/stigma.png"
-import MolagoraIcon from "../../../assets/molagora.png"
+import GoldIcon from "../../assets/gold.png"
+import StigmaIcon from "../../assets/stigma.png"
+import MolagoraIcon from "../../assets/molagora.png"
 
-import { useAppDispatch } from "../../../redux/hooks"
-import { editAwakening, editSkillEnhancement, toggleTotalCatalyst, toggleTotalRune, toggleTotalGold, toggleTotalStigma, toggleTotalMolagora } from "../../../redux/actions/unitsReducer"
-import { TrackedAwakening, TrackedSkill } from "../../../redux/types"
+import { useAppDispatch } from "../../redux/hooks"
+import { editAwakening, editSkillEnhancement, toggleTotalCatalyst, toggleTotalRune, toggleTotalGold, toggleTotalStigma, toggleTotalMolagora } from "../../redux/unitsReducers"
+import { TrackedAwakening, TrackedSkill } from "../../redux/types"
 import { TrackableResourceListItem } from "../../components/TrackableResourceListItem"
 
 type UnitSummaryProps = {

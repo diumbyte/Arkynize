@@ -1,9 +1,9 @@
 import React, {ChangeEvent} from 'react';
 import { useGetAllUnitsQuery } from "../../generated/graphql"
-import { SearchBar } from '../components/SearchBar';
+import { SearchBar } from '../../components/SearchBar';
 import { UnitCard } from './UnitCard';
 import { useSearch } from '../../hooks/useSearch';
-import { LoadingComponent } from '../components/LoadingComponent';
+import { LoadingComponent } from '../../components/LoadingComponent';
 
 
 export const AllUnits = () => {

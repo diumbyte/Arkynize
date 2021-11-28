@@ -1,5 +1,5 @@
 import { Switch } from "@headlessui/react"
-import { ReactComponent as CrossIcon } from "../../assets/cross.svg"
+import { ReactComponent as CrossIcon } from "../assets/cross.svg"
 
 type ResourceListItemProp = {
     imageSourcePath: string,

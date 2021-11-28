@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { Modal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css'
 
-import { ReactComponent as CrossIcon } from "../../assets/cross.svg"
+import { ReactComponent as CrossIcon } from "../assets/cross.svg"
 import { NumberInput } from "./NumberInput"
-import { CatalystDetail } from '../CatalystDetail/CatalystDetail'
+import { CatalystDetail } from '../pages/CatalystDetail/CatalystDetail'
 
 
 type ResourceListItemProp = {

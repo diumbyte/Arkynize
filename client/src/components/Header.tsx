@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { ReactComponent as BurgerIcon } from "../../assets/burger.svg"
+import { ReactComponent as BurgerIcon } from "../assets/burger.svg"
 
 type HeaderProps = {
     setIsExpanded: Function

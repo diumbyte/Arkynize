@@ -1,6 +1,6 @@
 import React from "react";
 import { toast } from "react-hot-toast"
-import useLongPress from "../../hooks/useLongPress"
+import useLongPress from "../hooks/useLongPress"
 
 type NumberInputProps = React.HTMLAttributes<HTMLDivElement> & {
     onCountChange: (value: number) => void,

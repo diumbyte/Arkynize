@@ -3,14 +3,14 @@ import { Enhancement } from "../../../generated/graphql"
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks"
 import { toast } from "react-hot-toast"
 
-import { clearUnitTrackedSkill, editSkillEnhancement, editTotalFromSkill, TrackedSkillPayload } from "../../../redux/actions/unitsReducer"
-import { SuccessButton, ErrorButton } from "../../components/FormButton"
+import { clearUnitTrackedSkill, editSkillEnhancement, editTotalFromSkill, TrackedSkillPayload } from "../../../redux/unitsReducers"
+import { SuccessButton, ErrorButton } from "../../../components/FormButton"
 import { TrackedSkill } from "../../../redux/types"
 import GoldIcon from "../../../assets/gold.png"
 import MolagoraIcon from "../../../assets/molagora.png"
 import StigmaIcon from "../../../assets/stigma.png"
 
-import { TrackableResourceListItem } from "../../components/TrackableResourceListItem"
+import { TrackableResourceListItem } from "../../../components/TrackableResourceListItem"
 import { calculateTotalSkillEnhancementsCosts } from "../../../util/calculateCosts"
 import { useTrackSkillCostChanges } from "../../../hooks/useSkillEnhancementTracking"
 

@@ -1,6 +1,6 @@
 import Ajv from "ajv"
 import schema from "./trackedUnitsJSONSchema.json"
-import { TrackedUnitsState } from "../redux/actions/unitsReducer";
+import { TrackedUnitsState } from "../redux/unitsReducers";
 
 const validateImportFile = (fileContents: string) => {
     const ajv = new Ajv();

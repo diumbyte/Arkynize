@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from "react"
-import { importStore, resetStore, TrackedUnitsState } from "../../redux/actions/unitsReducer"
-import { useAppDispatch } from "../../redux/hooks"
+import { importStore, resetStore, TrackedUnitsState } from "../redux/unitsReducers"
+import { useAppDispatch } from "../redux/hooks"
 import { toast } from "react-hot-toast"
-import validateImportFile from "../../util/validateImportFile"
+import validateImportFile from "../util/validateImportFile"
 import { ErrorButton, NeutralButton } from "./FormButton"
 
-import store from "../../redux/store"
+import store from "../redux/store"
 
 export const Settings = () => {
     const [fileDownloadURL, setFileDownloadURL] = useState("")

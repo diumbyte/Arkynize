@@ -1,4 +1,4 @@
-import LoadingAnimation from "../../assets/loading.gif"
+import LoadingAnimation from "../assets/loading.gif"
 
 export const LoadingComponent = () => {
     return (

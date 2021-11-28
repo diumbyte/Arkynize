@@ -2,14 +2,14 @@ import { useState } from "react"
 import { Switch, Route, Redirect } from "react-router-dom"
 import { Toaster, toast, ToastBar } from "react-hot-toast"
 
-import { TitledRoute } from "./pages/components/TitledRoute"
+import { TitledRoute } from "./components/TitledRoute"
 import { AllUnits } from "./pages/Units/AllUnits"
 import { UnitDetail } from "./pages/UnitDetail/UnitDetail"
 import { Summary } from "./pages/Summary/Summary"
-import { Settings } from './pages/components/Settings';
-import { Sidebar } from "./pages/components/Sidebar"
+import { Settings } from './components/Settings';
+import { Sidebar } from "./components/Sidebar"
 import { Home } from './pages/Home'
-import { Header } from './pages/components/Header'
+import { Header } from './components/Header'
 
 function App() {
   const [isExpanded, setIsExpanded] = useState(false)

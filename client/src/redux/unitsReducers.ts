@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 // import { RootState } from "../store";
-import { ITrackeableCount, TrackedAwakening, TrackedCatalyst, TrackedRune, TrackedSkill, TrackedUnit } from "../types";
+import { ITrackeableCount, TrackedAwakening, TrackedCatalyst, TrackedRune, TrackedSkill, TrackedUnit } from "./types";
 
 export interface TrackedSkillPayload {
     unitId: number,

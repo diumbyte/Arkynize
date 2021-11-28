@@ -6,9 +6,9 @@ import MolagoraIcon from "../../assets/molagora.png"
 import { ReactComponent as HelpIcon } from "../../assets/help.svg"
 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
-import { EditableResourceListItem } from "../components/EditableResourceListItem"
+import { EditableResourceListItem } from "../../components/EditableResourceListItem"
 import { ITrackeableCount, TrackedCatalyst, TrackedRune } from "../../redux/types"
-import { editTotalCatalyst, editTotalGold, editTotalMolagora, editTotalRune, editTotalStigma } from "../../redux/actions/unitsReducer"
+import { editTotalCatalyst, editTotalGold, editTotalMolagora, editTotalRune, editTotalStigma } from "../../redux/unitsReducers"
 
 export const OverallResourceSummary = () => {
     const dispatch = useAppDispatch();
