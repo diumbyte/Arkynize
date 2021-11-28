@@ -6,13 +6,13 @@ import reportWebVitals from './reportWebVitals';
 
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import { InMemoryCache, ApolloClient, ApolloProvider, HttpLink } from '@apollo/client';
+import { InMemoryCache, ApolloClient, ApolloProvider } from '@apollo/client';
 import { BrowserRouter as Router } from "react-router-dom"
 
 
 const cache = new InMemoryCache();
 const client = new ApolloClient({
-  link: new HttpLink({uri: "/api/test/woo"}),
+  uri: "/api",
   cache
 });
 
