@@ -22,148 +22,100 @@ const enhancementCatalystCostList = require('./seedData/enhancementCatalystCostL
 async function main() {
     
     // Seed Attribute List
-    await Promise.all(attributeList.map(async attribute => {
-        await prisma.attribute.create({
-            data: { 
-                ...attribute 
-            },
-        })
-    }))
+    await prisma.attribute.createMany({
+        data: attributeList,
+        skipDuplicates: true
+    })
 
     // Seed Rarity List
-    await Promise.all(rarityList.map(async rarity => {
-        await prisma.rarity.create({
-            data: { 
-                ...rarity 
-            }
-        })
-    }))
+    await prisma.rarity.createMany({
+        data: rarityList,
+        skipDuplicates: true
+    })
 
     // Seed Zodiac Symbols
-    await Promise.all(zodiacList.map(async zodiac => {
-        await prisma.zodiac.create({
-            data: { 
-                ...zodiac 
-            }
-        })
-    }))
+    await prisma.zodiac.createMany({
+        data: zodiacList,
+        skipDuplicates: true
+    })
 
     // Seed Runes
-    await Promise.all(runeList.map(async rune => {
-        await prisma.rune.create({
-            data: {
-                ...rune
-            }
-        })
-    }))
+    await prisma.rune.createMany({
+        data: runeList,
+        skipDuplicates: true
+    })
 
     // Seed Catalysts
-    await Promise.all(catalystList.map(async catalyst => {
-        await prisma.catalyst.create({
-            data: {
-                ...catalyst
-            }
-        })
-    }))
+    await prisma.catalyst.createMany({
+        data: catalystList,
+        skipDuplicates: true
+    })
 
     // Seed Regions
-    await Promise.all(regionList.map(async region => {
-        await prisma.region.create({
-            data: {
-                ...region
-            }
-        })
-    }))
+    await prisma.region.createMany({
+        data: regionList,
+        skipDuplicates: true
+    })
     
     // Seed Shop Items
-    await Promise.all(shopItemList.map(async item => {
-        await prisma.shopItem.create({
-            data: {
-                ...item
-            }
-        })
-    }))
+    await prisma.shopItem.createMany({
+        data: shopItemList,
+        skipDuplicates: true
+    })
 
     // Seed Stages in Regions
-    await Promise.all(stageList.map(async stage => {
-        await prisma.stage.create({
-            data: {
-                ...stage
-            }
-        })
-    }))
+    await prisma.stage.createMany({
+        data: stageList,
+        skipDuplicates: true
+    })
 
     // Seed Awakenings
-    await Promise.all(awakeningList.map(async awakening => {
-        await prisma.awakening.create({
-            data: {
-                ...awakening
-            }
-        })
-    }))
+    await prisma.awakening.createMany({
+        data: awakeningList,
+        skipDuplicates: true
+    })
 
     // Seed Rune Costs
-    await Promise.all(runeCostList.map(async runeCost => {
-        await prisma.runeCost.create({
-            data: {
-                ...runeCost
-            }
-        })
-    }))
+    await prisma.runeCost.createMany({
+        data: runeCostList,
+        skipDuplicates: true
+    })
 
     // Seed Drops
-    await Promise.all(dropList.map(async drop => {
-        await prisma.drop.create({
-            data: {
-                ...drop
-            }
-        })
-    }))
+    await prisma.drop.createMany({
+        data: dropList,
+        skipDuplicates: true
+    })
 
     // Seed Units
-    await Promise.all(unitList.map(async unit => {
-        await prisma.unit.create({
-            data: {
-                ...unit
-            }
-        })
-    }))
+    await prisma.unit.createMany({
+        data: unitList,
+        skipDuplicates: true
+    })
 
     // Seed Skills
-    await Promise.all(skillList.map(async skill => {
-        await prisma.skill.create({
-            data: {
-                ...skill
-            }
-        })
-    }))
+    await prisma.skill.createMany({
+        data: skillList,
+        skipDuplicates: true
+    })
 
     // Seed Enhancements
-    await Promise.all(enhancementList.map(async enhancement => {
-        await prisma.enhancement.create({
-            data: {
-                ...enhancement
-            }
-        })
-    }))
+    await prisma.enhancement.createMany({
+        data: enhancementList,
+        skipDuplicates: true
+    })
 
     // Seed Enhancements Catalyst Costs
-    await Promise.all(enhancementCatalystCostList.map(async enhancementCatalystCost => {
-        await prisma.enhancementCatalystCost.create({
-            data: {
-                ...enhancementCatalystCost
-            }
-        })
-    }))
+    await prisma.enhancementCatalystCost.createMany({
+        data: enhancementCatalystCostList,
+        skipDuplicates: true
+    })
     
     // Awakening Catalyst Cost List
-    await Promise.all(awakeningCatalystCostList.map(async awakeningCatalystCost => {
-        await prisma.awakeningCatalystCost.create({
-            data: {
-                ...awakeningCatalystCost
-            }
-        })
-    }))
+    await prisma.awakeningCatalystCost.createMany({
+        data: awakeningCatalystCostList,
+        skipDuplicates: true
+    })
     
 }
 
