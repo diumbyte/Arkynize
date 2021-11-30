@@ -188,7 +188,7 @@ const catalystList = [{
     "code": "Nightmare-Mask",
     "zodiacId": 1,
     "isEpic": true,
-    "isSkillMaterial": false
+    "isSkillMaterial": true
   },
   {
       "id": 25,

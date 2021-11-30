@@ -311,16 +311,16 @@ exports.resolvers = {
         name: (parent, args, { prisma }) => {
             return parent.name;
         },
-        zodiac: (parent, args, { prisma }) => {
+        zodiac: (parent, args, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
             var _a;
-            return prisma.zodiac.findUnique({
+            return yield prisma.zodiac.findUnique({
                 where: { id: (_a = parent.zodiac) === null || _a === void 0 ? void 0 : _a.id }
             });
-        },
+        }),
         rarity: (parent, args, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {
-            var _a;
+            var _b;
             return yield prisma.rarity.findUnique({
-                where: { id: Number((_a = parent.rarity) === null || _a === void 0 ? void 0 : _a.id) }
+                where: { id: Number((_b = parent.rarity) === null || _b === void 0 ? void 0 : _b.id) }
             });
         }),
         skills: (parent, args, { prisma }) => __awaiter(void 0, void 0, void 0, function* () {

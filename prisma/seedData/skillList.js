@@ -1,5 +1,4 @@
-const skillList = [
-  {
+const skillList = [{
     "id": 25,
     "unitId": 1,
     "name": "Eradicate",
@@ -13,7 +12,13 @@ const skillList = [
     "code": "sk_c1100_2",
     "type": 2
   },
-  { "id": 27, "unitId": 1, "name": "Genesis", "code": "sk_c1100_3", "type": 3 },
+  {
+    "id": 27,
+    "unitId": 1,
+    "name": "Genesis",
+    "code": "sk_c1100_3",
+    "type": 3
+  },
   {
     "id": 19,
     "unitId": 10,
@@ -91,7 +96,13 @@ const skillList = [
     "code": "pa_c1014_2",
     "type": 2
   },
-  { "id": 282, "unitId": 102, "name": "Hack", "code": "sk_c1014_3", "type": 3 },
+  {
+    "id": 282,
+    "unitId": 102,
+    "name": "Hack",
+    "code": "sk_c1014_3",
+    "type": 3
+  },
   {
     "id": 283,
     "unitId": 103,
@@ -99,7 +110,13 @@ const skillList = [
     "code": "sk_c1028_1",
     "type": 1
   },
-  { "id": 284, "unitId": 103, "name": "Rage", "code": "pa_c1028_2", "type": 2 },
+  {
+    "id": 284,
+    "unitId": 103,
+    "name": "Rage",
+    "code": "pa_c1028_2",
+    "type": 2
+  },
   {
     "id": 285,
     "unitId": 103,
@@ -191,7 +208,13 @@ const skillList = [
     "code": "sk_c2008_3",
     "type": 3
   },
-  { "id": 301, "unitId": 108, "name": "Rush", "code": "sk_c1036_1", "type": 1 },
+  {
+    "id": 301,
+    "unitId": 108,
+    "name": "Rush",
+    "code": "sk_c1036_1",
+    "type": 1
+  },
   {
     "id": 302,
     "unitId": 108,
@@ -234,7 +257,13 @@ const skillList = [
     "code": "sk_c2039_1",
     "type": 1
   },
-  { "id": 29, "unitId": 11, "name": "Grudge", "code": "sk_c2039_2", "type": 2 },
+  {
+    "id": 29,
+    "unitId": 11,
+    "name": "Grudge",
+    "code": "sk_c2039_2",
+    "type": 2
+  },
   {
     "id": 30,
     "unitId": 11,
@@ -242,7 +271,13 @@ const skillList = [
     "code": "sk_c2039_3",
     "type": 3
   },
-  { "id": 316, "unitId": 110, "name": "Hail", "code": "sk_c1037_1", "type": 1 },
+  {
+    "id": 316,
+    "unitId": 110,
+    "name": "Hail",
+    "code": "sk_c1037_1",
+    "type": 1
+  },
   {
     "id": 317,
     "unitId": 110,
@@ -1062,8 +1097,20 @@ const skillList = [
     "code": "sk_c3093_1",
     "type": 1
   },
-  { "id": 406, "unitId": 146, "name": "Gash", "code": "sk_c3093_2", "type": 2 },
-  { "id": 407, "unitId": 146, "name": "Ram", "code": "sk_c3093_3", "type": 3 },
+  {
+    "id": 406,
+    "unitId": 146,
+    "name": "Gash",
+    "code": "sk_c3093_2",
+    "type": 2
+  },
+  {
+    "id": 407,
+    "unitId": 146,
+    "name": "Ram",
+    "code": "sk_c3093_3",
+    "type": 3
+  },
   {
     "id": 399,
     "unitId": 147,
@@ -1085,7 +1132,13 @@ const skillList = [
     "code": "sk_c1018_3",
     "type": 3
   },
-  { "id": 421, "unitId": 148, "name": "Fell", "code": "sk_m0015_i", "type": 1 },
+  {
+    "id": 421,
+    "unitId": 148,
+    "name": "Fell",
+    "code": "sk_m0015_i",
+    "type": 1
+  },
   {
     "id": 422,
     "unitId": 148,
@@ -1261,7 +1314,13 @@ const skillList = [
     "code": "pa_m0026_f",
     "type": 2
   },
-  { "id": 453, "unitId": 155, "name": "Hack", "code": "sk_m0012_f", "type": 3 },
+  {
+    "id": 453,
+    "unitId": 155,
+    "name": "Hack",
+    "code": "sk_m0012_f",
+    "type": 3
+  },
   {
     "id": 442,
     "unitId": 156,
@@ -1297,7 +1356,13 @@ const skillList = [
     "code": "sk_m0010_f",
     "type": 2
   },
-  { "id": 480, "unitId": 157, "name": "Daze", "code": "sk_m0024_f", "type": 3 },
+  {
+    "id": 480,
+    "unitId": 157,
+    "name": "Daze",
+    "code": "sk_m0024_f",
+    "type": 3
+  },
   {
     "id": 469,
     "unitId": 158,
@@ -1613,7 +1678,13 @@ const skillList = [
     "code": "sk_m0026_w",
     "type": 3
   },
-  { "id": 484, "unitId": 171, "name": "Wail", "code": "sk_m0009_l", "type": 1 },
+  {
+    "id": 484,
+    "unitId": 171,
+    "name": "Wail",
+    "code": "sk_m0009_l",
+    "type": 1
+  },
   {
     "id": 485,
     "unitId": 171,
@@ -1789,9 +1860,27 @@ const skillList = [
     "code": "pa_m0019_w",
     "type": 2
   },
-  { "id": 525, "unitId": 179, "name": "Gale", "code": "sk_m0024_w", "type": 3 },
-  { "id": 49, "unitId": 18, "name": "Slash", "code": "sk_c1027_1", "type": 1 },
-  { "id": 50, "unitId": 18, "name": "Smash", "code": "sk_c1027_2", "type": 2 },
+  {
+    "id": 525,
+    "unitId": 179,
+    "name": "Gale",
+    "code": "sk_m0024_w",
+    "type": 3
+  },
+  {
+    "id": 49,
+    "unitId": 18,
+    "name": "Slash",
+    "code": "sk_c1027_1",
+    "type": 1
+  },
+  {
+    "id": 50,
+    "unitId": 18,
+    "name": "Smash",
+    "code": "sk_c1027_2",
+    "type": 2
+  },
   {
     "id": 51,
     "unitId": 18,
@@ -2023,7 +2112,13 @@ const skillList = [
     "code": "sk_c1009_2",
     "type": 2
   },
-  { "id": 15, "unitId": 19, "name": "Vortex", "code": "sk_c1009_3", "type": 3 },
+  {
+    "id": 15,
+    "unitId": 19,
+    "name": "Vortex",
+    "code": "sk_c1009_3",
+    "type": 3
+  },
   {
     "id": 541,
     "unitId": 190,
@@ -2059,7 +2154,13 @@ const skillList = [
     "code": "pa_m0019_l",
     "type": 2
   },
-  { "id": 564, "unitId": 191, "name": "Raid", "code": "sk_m0016_l", "type": 3 },
+  {
+    "id": 564,
+    "unitId": 191,
+    "name": "Raid",
+    "code": "sk_m0016_l",
+    "type": 3
+  },
   {
     "id": 544,
     "unitId": 192,
@@ -2109,7 +2210,13 @@ const skillList = [
     "code": "sk_m0005_w",
     "type": 1
   },
-  { "id": 590, "unitId": 194, "name": "Wild", "code": "pa_m0026_w", "type": 2 },
+  {
+    "id": 590,
+    "unitId": 194,
+    "name": "Wild",
+    "code": "pa_m0026_w",
+    "type": 2
+  },
   {
     "id": 591,
     "unitId": 194,
@@ -2208,7 +2315,13 @@ const skillList = [
     "code": "sk_m0011_d",
     "type": 1
   },
-  { "id": 551, "unitId": 199, "name": "Will", "code": "pa_m0026_d", "type": 2 },
+  {
+    "id": 551,
+    "unitId": 199,
+    "name": "Will",
+    "code": "pa_m0026_d",
+    "type": 2
+  },
   {
     "id": 552,
     "unitId": 199,
@@ -2230,7 +2343,13 @@ const skillList = [
     "code": "sk_c2042_2",
     "type": 2
   },
-  { "id": 702, "unitId": 2, "name": "Flash", "code": "sk_c2042_3", "type": 3 },
+  {
+    "id": 702,
+    "unitId": 2,
+    "name": "Flash",
+    "code": "sk_c2042_3",
+    "type": 3
+  },
   {
     "id": 43,
     "unitId": 20,
@@ -2462,7 +2581,13 @@ const skillList = [
     "code": "sk_m0006_i",
     "type": 3
   },
-  { "id": 82, "unitId": 21, "name": "Chop", "code": "sk_c1101_1", "type": 1 },
+  {
+    "id": 82,
+    "unitId": 21,
+    "name": "Chop",
+    "code": "sk_c1101_1",
+    "type": 1
+  },
   {
     "id": 83,
     "unitId": 21,
@@ -2624,7 +2749,13 @@ const skillList = [
     "code": "sk_c6002_3",
     "type": 3
   },
-  { "id": 634, "unitId": 217, "name": "Huma", "code": "sk_c6003_1", "type": 1 },
+  {
+    "id": 634,
+    "unitId": 217,
+    "name": "Huma",
+    "code": "sk_c6003_1",
+    "type": 1
+  },
   {
     "id": 635,
     "unitId": 217,
@@ -2660,7 +2791,13 @@ const skillList = [
     "code": "sk_c6004_3",
     "type": 3
   },
-  { "id": 640, "unitId": 219, "name": "Rush", "code": "sk_c6005_1", "type": 1 },
+  {
+    "id": 640,
+    "unitId": 219,
+    "name": "Rush",
+    "code": "sk_c6005_1",
+    "type": 1
+  },
   {
     "id": 641,
     "unitId": 219,
@@ -2822,9 +2959,27 @@ const skillList = [
     "code": "sk_c6011_3",
     "type": 3
   },
-  { "id": 661, "unitId": 226, "name": "Are you the Culprit?", "code": "sk_c6012_1", "type": 1 },
-  { "id": 662, "unitId": 226, "name": "Suppression Attempt", "code": "sk_c6012_2", "type": 2 },
-  { "id": 663, "unitId": 226, "name": "Sword of Flowers!", "code": "sk_c6012_3", "type": 3 },
+  {
+    "id": 661,
+    "unitId": 226,
+    "name": "Are you the Culprit?",
+    "code": "sk_c6012_1",
+    "type": 1
+  },
+  {
+    "id": 662,
+    "unitId": 226,
+    "name": "Suppression Attempt",
+    "code": "sk_c6012_2",
+    "type": 2
+  },
+  {
+    "id": 663,
+    "unitId": 226,
+    "name": "Sword of Flowers!",
+    "code": "sk_c6012_3",
+    "type": 3
+  },
   {
     "id": 91,
     "unitId": 23,
@@ -2874,7 +3029,13 @@ const skillList = [
     "code": "sk_c2022_1",
     "type": 1
   },
-  { "id": 65, "unitId": 25, "name": "Regen", "code": "sk_c2022_2", "type": 2 },
+  {
+    "id": 65,
+    "unitId": 25,
+    "name": "Regen",
+    "code": "sk_c2022_2",
+    "type": 2
+  },
   {
     "id": 66,
     "unitId": 25,
@@ -3050,7 +3211,13 @@ const skillList = [
     "code": "sk_c5050_3",
     "type": 3
   },
-  { "id": 73, "unitId": 33, "name": "Thorn", "code": "sk_c2046_1", "type": 1 },
+  {
+    "id": 73,
+    "unitId": 33,
+    "name": "Thorn",
+    "code": "sk_c2046_1",
+    "type": 1
+  },
   {
     "id": 74,
     "unitId": 33,
@@ -3170,7 +3337,13 @@ const skillList = [
     "code": "sk_c1024_3",
     "type": 3
   },
-  { "id": 106, "unitId": 39, "name": "Sever", "code": "sk_c1006_1", "type": 1 },
+  {
+    "id": 106,
+    "unitId": 39,
+    "name": "Sever",
+    "code": "sk_c1006_1",
+    "type": 1
+  },
   {
     "id": 107,
     "unitId": 39,
@@ -3185,8 +3358,20 @@ const skillList = [
     "code": "sk_c1006_3",
     "type": 3
   },
-  { "id": 4, "unitId": 4, "name": "Ignite", "code": "sk_c1048_1", "type": 1 },
-  { "id": 5, "unitId": 4, "name": "Catalyst", "code": "sk_c1048_2", "type": 2 },
+  {
+    "id": 4,
+    "unitId": 4,
+    "name": "Ignite",
+    "code": "sk_c1048_1",
+    "type": 1
+  },
+  {
+    "id": 5,
+    "unitId": 4,
+    "name": "Catalyst",
+    "code": "sk_c1048_2",
+    "type": 2
+  },
   {
     "id": 6,
     "unitId": 4,
@@ -3299,7 +3484,13 @@ const skillList = [
     "code": "sk_c1070_3",
     "type": 3
   },
-  { "id": 130, "unitId": 45, "name": "Fire", "code": "sk_c1109_1", "type": 1 },
+  {
+    "id": 130,
+    "unitId": 45,
+    "name": "Fire",
+    "code": "sk_c1109_1",
+    "type": 1
+  },
   {
     "id": 131,
     "unitId": 45,
@@ -3398,7 +3589,13 @@ const skillList = [
     "code": "sk_c1095_3",
     "type": 3
   },
-  { "id": 46, "unitId": 5, "name": "Sweep", "code": "sk_c2007_1", "type": 1 },
+  {
+    "id": 46,
+    "unitId": 5,
+    "name": "Sweep",
+    "code": "sk_c2007_1",
+    "type": 1
+  },
   {
     "id": 47,
     "unitId": 5,
@@ -3560,7 +3757,13 @@ const skillList = [
     "code": "sk_c2073_3",
     "type": 3
   },
-  { "id": 169, "unitId": 57, "name": "Might", "code": "sk_c1096_1", "type": 1 },
+  {
+    "id": 169,
+    "unitId": 57,
+    "name": "Might",
+    "code": "sk_c1096_1",
+    "type": 1
+  },
   {
     "id": 170,
     "unitId": 57,
@@ -3596,7 +3799,13 @@ const skillList = [
     "code": "sk_c1104_3",
     "type": 3
   },
-  { "id": 166, "unitId": 59, "name": "Lash", "code": "sk_c1044_1", "type": 1 },
+  {
+    "id": 166,
+    "unitId": 59,
+    "name": "Lash",
+    "code": "sk_c1044_1",
+    "type": 1
+  },
   {
     "id": 167,
     "unitId": 59,
@@ -3905,8 +4114,20 @@ const skillList = [
     "code": "sk_c1038_3",
     "type": 3
   },
-  { "id": 213, "unitId": 72, "name": "Sever", "code": "sk_c1072_1", "type": 1 },
-  { "id": 214, "unitId": 72, "name": "Smash", "code": "sk_c1072_2", "type": 2 },
+  {
+    "id": 213,
+    "unitId": 72,
+    "name": "Sever",
+    "code": "sk_c1072_1",
+    "type": 1
+  },
+  {
+    "id": 214,
+    "unitId": 72,
+    "name": "Smash",
+    "code": "sk_c1072_2",
+    "type": 2
+  },
   {
     "id": 215,
     "unitId": 72,
@@ -4124,7 +4345,13 @@ const skillList = [
     "code": "sk_c1042_3",
     "type": 3
   },
-  { "id": 228, "unitId": 82, "name": "Sweep", "code": "sk_c1007_1", "type": 1 },
+  {
+    "id": 228,
+    "unitId": 82,
+    "name": "Sweep",
+    "code": "sk_c1007_1",
+    "type": 1
+  },
   {
     "id": 229,
     "unitId": 82,
@@ -4328,7 +4555,13 @@ const skillList = [
     "code": "sk_c1008_3",
     "type": 3
   },
-  { "id": 247, "unitId": 91, "name": "Shred", "code": "sk_c2013_1", "type": 1 },
+  {
+    "id": 247,
+    "unitId": 91,
+    "name": "Shred",
+    "code": "sk_c2013_1",
+    "type": 1
+  },
   {
     "id": 248,
     "unitId": 91,
@@ -4343,7 +4576,13 @@ const skillList = [
     "code": "sk_c2013_3",
     "type": 3
   },
-  { "id": 298, "unitId": 92, "name": "Slice", "code": "sk_c2014_1", "type": 1 },
+  {
+    "id": 298,
+    "unitId": 92,
+    "name": "Slice",
+    "code": "sk_c2014_1",
+    "type": 1
+  },
   {
     "id": 299,
     "unitId": 92,
@@ -4463,7 +4702,13 @@ const skillList = [
     "code": "sk_c2011_3",
     "type": 3
   },
-  { "id": 268, "unitId": 98, "name": "Shred", "code": "sk_c1013_1", "type": 1 },
+  {
+    "id": 268,
+    "unitId": 98,
+    "name": "Shred",
+    "code": "sk_c1013_1",
+    "type": 1
+  },
   {
     "id": 269,
     "unitId": 98,
@@ -4492,7 +4737,221 @@ const skillList = [
     "code": "sk_c2005_2",
     "type": 2
   },
-  { "id": 258, "unitId": 99, "name": "Finale", "code": "sk_c2005_3", "type": 3 }
+  {
+    "id": 258,
+    "unitId": 99,
+    "name": "Finale",
+    "code": "sk_c2005_3",
+    "type": 3
+  },
+  {
+    "id": 718,
+    "unitId": 227,
+    "name": "Ritualistic Touch",
+    "code": "sk_c6062_1",
+    "type": 1
+  }, {
+    "id": 719,
+    "unitId": 227,
+    "name": "Guardian of Light",
+    "code": "pa_c6062_2",
+    "type": 2
+  }, {
+    "id": 720,
+    "unitId": 227,
+    "name": "Judgement of Angels",
+    "code": "sk_c6062_3",
+    "type": 3
+  },
+  {
+    "id": 721,
+    "unitId": 228,
+    "name": "Light of Destruction",
+    "code": "sk_c1117_1",
+    "type": 1
+  },
+  {
+    "id": 722,
+    "unitId": 228,
+    "name": "Shackles of Suppression",
+    "code": "sk_c1117_2",
+    "type": 2
+  },
+  {
+    "id": 723,
+    "unitId": 228,
+    "name": "Apocalypse",
+    "code": "sk_c1117_3",
+    "type": 3
+  },
+  {
+    "id": 724,
+    "unitId": 229,
+    "name": "Tempest",
+    "code": "sk_c1118_1",
+    "type": 1
+  },
+  {
+    "id": 725,
+    "unitId": 229,
+    "name": "Mental Focus",
+    "code": "sk_c1118_2",
+    "type": 2
+  },
+  {
+    "id": 726,
+    "unitId": 229,
+    "name": "Instant Blade",
+    "code": "sk_c1118_3",
+    "type": 3
+  },
+  {
+    "id": 727,
+    "unitId": 230,
+    "name": "Okay, Shall I Get Started?",
+    "code": "sk_c1121_1",
+    "type": 1
+  },
+  {
+    "id": 728,
+    "unitId": 230,
+    "name": "Analyze and Assess",
+    "code": "sk_c1121_2",
+    "type": 2
+  },
+  {
+    "id": 729,
+    "unitId": 230,
+    "name": "Devour It, Black Flame!",
+    "code": "sk_c1121_3",
+    "type": 3
+  },
+  {
+    "id": 730,
+    "unitId": 231,
+    "name": "Dragon Dive",
+    "code": "sk_c1122_1",
+    "type": 1
+  },
+  {
+    "id": 731,
+    "unitId": 231,
+    "name": "Dragon Eye (Milim Eye)",
+    "code": "sk_c1122_2",
+    "type": 2
+  },
+  {
+    "id": 732,
+    "unitId": 231,
+    "name": "Dragon Fear",
+    "code": "sk_c1122_3",
+    "type": 3
+  },
+  {
+    "id": 733,
+    "unitId": 232,
+    "name": "Magicule Explosion",
+    "code": "sk_c1123_1",
+    "type": 1
+  },
+  {
+    "id": 734,
+    "unitId": 232,
+    "name": "Blooming Lotus",
+    "code": "sk_c1123_2",
+    "type": 2
+  },
+  {
+    "id": 735,
+    "unitId": 232,
+    "name": "Sleeping Spell",
+    "code": "sk_c1123_3",
+    "type": 3
+  },
+  {
+    "id": 736,
+    "unitId": 233,
+    "name": "Mighty Strike",
+    "code": "sk_c2103_1",
+    "type": 1
+  },
+  {
+    "id": 737,
+    "unitId": 233,
+    "name": "Sxith Sense",
+    "code": "sk_c2103_2",
+    "type": 2
+  },
+  {
+    "id": 738,
+    "unitId": 233,
+    "name": "Spirit Gate: Burning Possession",
+    "code": "sk_c2103_3",
+    "type": 3
+  },
+  {
+    "id": 739,
+    "unitId": 234,
+    "name": "Vulnerability Exposed",
+    "code": "sk_c1119_1",
+    "type": 1
+  },
+  {
+    "id": 740,
+    "unitId": 234,
+    "name": "Elaborate Plan",
+    "code": "sk_c1119_2",
+    "type": 2
+  },
+  {
+    "id": 741,
+    "unitId": 234,
+    "name": "Execute",
+    "code": "sk_c1119_3",
+    "type": 3
+  },
+  {
+    "id": 742,
+    "unitId": 235,
+    "name": "Ankle Cut",
+    "code": "sk_c3143_1",
+    "type": 1
+  },
+  {
+    "id": 743,
+    "unitId": 235,
+    "name": "Blade Gust",
+    "code": "sk_c3143_2",
+    "type": 2
+  },
+  {
+    "id": 744,
+    "unitId": 235,
+    "name": "Lightning Bolt",
+    "code": "sk_c3143_3",
+    "type": 3
+  },
+  {
+    "id": 745,
+    "unitId": 236,
+    "name": "Weakening Blow",
+    "code": "sk_c4005_1",
+    "type": 1
+  },
+  {
+    "id": 746,
+    "unitId": 236,
+    "name": "Will",
+    "code": "sk_c4005_2",
+    "type": 2
+  },
+  {
+    "id": 747,
+    "unitId": 236,
+    "name": "Perceptive Slash",
+    "code": "sk_c4005_3",
+    "type": 3
+  }
 ]
 
 module.exports = skillList;

@@ -1805,7 +1805,88 @@ const unitList = [{
         "zodiacId": 10,
         "rarityId": 5,
         "attributeId": 1
+    },
+    {
+        "id": 227,
+        "code": "c6062",
+        "name": "Angel of Light Angelica",
+        "zodiacId": 2,
+        "rarityId": 4,
+        "attributeId": 5
+    },
+    {
+        "id": 228,
+        "code": "c1117",
+        "name": "Belian",
+        "zodiacId": 1,
+        "rarityId": 5,
+        "attributeId": 5
+    },
+    {
+        "id": 229,
+        "code": "c1118",
+        "name": "Ran",
+        "zodiacId": 1,
+        "rarityId": 5,
+        "attributeId": 2
+    },
+    {
+        "id": 230,
+        "code": "c1121",
+        "name": "Rimuru",
+        "zodiacId": 7,
+        "rarityId": 5,
+        "attributeId": 3
+    },
+    {
+        "id": 231,
+        "code": "c1122",
+        "name": "Milim",
+        "zodiacId": 4,
+        "rarityId": 5,
+        "attributeId": 1
+    },
+    {
+        "id": 232,
+        "code": "c1123",
+        "name": "Shuna",
+        "zodiacId": 3,
+        "rarityId": 5,
+        "attributeId": 1
+    },
+    {
+        "id": 233,
+        "code": "c2103",
+        "name": "Spirit Eye Celine",
+        "zodiacId": 9,
+        "rarityId": 5,
+        "attributeId": 5
+    },
+    {
+        "id": 234,
+        "code": "c1119",
+        "name": "Zahhak",
+        "zodiacId": 9,
+        "rarityId": 5,
+        "attributeId": 3
+    },
+    {
+        "id": 235,
+        "code": "c3143",
+        "name": "Adin",
+        "zodiacId": 5,
+        "rarityId": 3,
+        "attributeId": 3
+    },
+    {
+        "id": 236,
+        "code": "c4005",
+        "name": "Shadow Knight Pyllis",
+        "zodiacId": 4,
+        "rarityId": 3,
+        "attributeId": 4
     }
+
 ]
 
 module.exports = unitList;
