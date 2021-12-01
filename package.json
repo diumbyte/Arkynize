@@ -1,8 +1,8 @@
 {
-  "name": "EpicSevenPlanner",
+  "name": "Arkynized",
   "homepage": "https://arkynized.herokuapp.com/",
   "version": "1.0.0",
-  "description": "A planner tool for Epic Seven users to organize their resources.",
+  "description": "A planner tool for Epic Seven users to organize (arky-nize) their resources.",
   "engines": {
     "node": "14.17.0",
     "npm": "6.14.8"
