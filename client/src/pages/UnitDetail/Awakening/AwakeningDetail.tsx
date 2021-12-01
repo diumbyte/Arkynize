@@ -36,9 +36,9 @@ export const AwakeningDetail = ({
     const desiredAwakeningsIdx = findLastIndex(desiredAwakenings, da => da.status === true)
     
     return (
-        <>
+        <div className="flex flex-col items-center md:flex-row md:flex-nowrap mt-4 bg-white p-4 rounded shadow space-y-4 md:space-y-0">
             <div className="flex-auto">
-                <p className="text-2xl">Current</p>
+                <p className="text-2xl text-center md:text-left">Current</p>
                 <div className="row justify-start">
                     {currentAwakenings?.map(a => 
                         <img
@@ -53,8 +53,8 @@ export const AwakeningDetail = ({
                     )}
                 </div>
             </div>
-            <div className="flex-auto my-4 md:my-0">
-                <p className="text-2xl">Desired</p>
+            <div className="flex-auto">
+                <p className="text-2xl text-center md:text-left">Desired</p>
                 <div className="row justify-start">
                     {desiredAwakenings?.map(a => 
                         <img 
@@ -70,7 +70,7 @@ export const AwakeningDetail = ({
                 </div>
             </div>
             <div className="flex-auto md:w-auto w-full my-4">
-                <PlusIcon fill="#263645" width={32} height={32} className="cursor-pointer" onClick={() => {
+                <PlusIcon fill="#263645" width={32} height={32} className="cursor-pointer mx-auto md:mx-0" onClick={() => {
                         if( currentAwakeningsIdx < desiredAwakeningsIdx) {
                             setModalOpen(true)
                         } else {
@@ -93,6 +93,6 @@ export const AwakeningDetail = ({
                     />
                 </div>
             </Modal>
-        </>
+        </div>
     )
 }

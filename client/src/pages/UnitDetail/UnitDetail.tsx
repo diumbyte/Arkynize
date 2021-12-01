@@ -22,8 +22,8 @@ export const UnitDetail = () => {
                     <title>{data?.unit.name} - Arkynized</title>
                 }
             </Helmet>
-            <div className="flex items-start justify-between space-x-20">
-                <div className="flex flex-col justify-center w-min bg-white rounded shadow px-8 py-4">
+            <div className="flex items-start justify-between flex-wrap md:flex-nowrap md:space-x-20 space-y-4 md:space-y-0">
+                <div className="flex flex-col justify-center w-full md:w-min bg-white rounded shadow px-8 py-4">
                     <img 
                         className="mx-auto"
                         width={120}
@@ -31,7 +31,7 @@ export const UnitDetail = () => {
                         alt={`Unit's thumbnail`}
                     />
                     <span className="text-xl font-semibold text-center">{data?.unit.name}</span>
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-center md:justify-start">
                         <span className="text-gray-400">Attribute: </span>
                         <img 
                             width={24}
@@ -40,7 +40,7 @@ export const UnitDetail = () => {
                         />
                         <span className="capitalize">{data?.unit.attribute.name}</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-center md:justify-start">
                         <span className="text-gray-400">Zodiac: </span>
                         <img 
                             width={24}
@@ -49,7 +49,7 @@ export const UnitDetail = () => {
                         />
                         <span className="capitalize">{data?.unit.zodiac?.name}</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-center md:justify-start">
                         <span className="text-gray-400">Rarity: </span>
                         {
                             [...Array(data?.unit.rarity.value)].map((x, i) => {
@@ -60,7 +60,7 @@ export const UnitDetail = () => {
                         }
                     </div>
                 </div>
-                <div className="flex-1 flex flex-col w-max">
+                <div className="md:flex-1 flex flex-col w-full md:w-max">
                     <div className="flex flex-col">
                         <span className="text-2xl">Skills</span>
                         <div className="flex flex-col mt-4">
@@ -79,18 +79,14 @@ export const UnitDetail = () => {
                             }
                         </div>
                     </div>
-                    <div className="mt-4">
-                            <div className="">
-                                <span className="text-2xl">Awakenings</span>
-                            </div>
-                            <div className="flex flex-nowrap mt-4 bg-white p-4 rounded shadow">
-                                <AwakeningDetail 
-                                    awakenings={data?.getAwakeningsForUnit as Awakening[]} 
-                                    unitId={data?.unit.id}
-                                    unitCode={data?.unit.code}
-                                    unitName={data?.unit.name}
-                                />
-                            </div>
+                    <div className="flex flex-col">
+                            <span className="text-2xl">Awakenings</span>
+                            <AwakeningDetail 
+                                awakenings={data?.getAwakeningsForUnit as Awakening[]} 
+                                unitId={data?.unit.id}
+                                unitCode={data?.unit.code}
+                                unitName={data?.unit.name}
+                            />
                     </div>
                 </div>
             </div>

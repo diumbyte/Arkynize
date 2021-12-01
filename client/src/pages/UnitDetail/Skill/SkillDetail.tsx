@@ -39,21 +39,17 @@ export const SkillDetail = ({
     } = useSkillEnhancementTracking(id, unitId, enhancements)
     
     return (
-        <div className="row bg-white p-4 rounded shadow">
+        <div className="flex flex-col items-center space-y-2 md:space-y-0 md:flex-row bg-white p-4 rounded shadow">
             {/* Skill Info */}
-            <div className="w-1/3">
-                <div className="row justify-start">
-                    <span className="text-xl">{name}</span>
-                </div>
-                <div>
-                    <img 
-                        src={`${process.env.PUBLIC_URL}/assets/images/skill/${code}.png`} 
-                        alt={`${name} logo`} 
-                    />
-                </div>
+            <div className="w-full flex flex-col items-center md:block md:w-1/3">
+                <p className="text-xl">{name}</p>
+                <img 
+                    src={`${process.env.PUBLIC_URL}/assets/images/skill/${code}.png`} 
+                    alt={`${name} logo`} 
+                />
             </div>
             {/* Current */}
-            <div className="w-1/3 align-start">
+            <div className="w-full flex flex-col items-center md:block md:w-1/3 md:align-start">
                 <p className="text-gray-300">Current</p>
                 <select 
                     className="w-1/2 p-2 bg-aliceBlue text-black shadow-md rounded" 
@@ -66,7 +62,7 @@ export const SkillDetail = ({
                 </select>
             </div>
             {/* Goal */}
-            <div className="w-1/3">
+            <div className="w-full flex flex-col items-center md:block md:w-1/3 md:align-start">
                 <p className="text-gray-300">Desired</p>
                 <select 
                     className="w-1/2 p-2 bg-aliceBlue text-black shadow-md rounded" 
