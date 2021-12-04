@@ -1,3 +1,4 @@
+import sslRedirect from 'heroku-ssl-redirect';
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { PrismaClient } from '@prisma/client';
@@ -10,6 +11,8 @@ const app = express();
 
 const PORT = process.env.PORT || 3001;
 
+app.disable('x-powered-by')
+app.use(sslRedirect())
 
 // Apollo code
 // The GraphQL schema
