@@ -18,7 +18,7 @@ export const Summary = () => {
                     <p>No units tracked.</p>
                 }
             </div>
-            <div className="flex flex-wrap items-stretch justify-around lg:space-x-10 xl:space-x-16">
+            <div className="flex flex-wrap items-stretch justify-around">
                 {
                     trackedUnits.length !== 0 && 
                     trackedUnits.map(unit => {

@@ -19,7 +19,7 @@ export const TrackableResourceListItem = ({
     onItemToggled
 }:ResourceListItemProp) => {
     return (
-        <div className="flex items-center justify-center px-4">
+        <div className="flex items-center justify-center">
             <div className={`flex-1 flex justify-start items-center py-4 px-2 ${isTracked ? "opacity-100" : "opacity-30"}`} >
                 <img 
                     className="h-full object-contain mx-2 md:mx-0"

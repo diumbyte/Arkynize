@@ -45,6 +45,15 @@ module.exports = {
       },
       minWidth: {
         "90": "90px",
+      },
+      keyframes: {
+        selectedFade: {
+          "0%, 100%": {background: "#fff"},
+          "50%": {background: "#DADCDD"},
+        }
+      },
+      animation: {
+        fadeIt: "selectedFade 2s ease-in-out infinite"
       }
     },
   },

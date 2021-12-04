@@ -9,6 +9,7 @@ import { useAppDispatch } from "../../redux/hooks"
 import { editAwakening, editSkillEnhancement, toggleTotalCatalyst, toggleTotalRune, toggleTotalGold, toggleTotalStigma, toggleTotalMolagora } from "../../redux/unitsReducers"
 import { TrackedAwakening, TrackedSkill } from "../../redux/types"
 import { TrackableResourceListItem } from "../../components/TrackableResourceListItem"
+import { useEffect, useRef, useState } from "react"
 
 type UnitSummaryProps = {
     unitId: number,
@@ -54,11 +55,32 @@ export const UnitSummary = ({
 }: UnitSummaryProps) => {
     const dispatch = useAppDispatch();
     const history = useHistory();
+    const unitSummaryRef = useRef<HTMLDivElement>(null)
+    const [isSelectedUnit, setIsSelectedUnit] = useState(false);
+
+    const hash = history.location.hash.substr(1)
+    
+    useEffect(() => {
+        if(hash && (Number(hash) === unitId)) {
+            setTimeout(() => {
+                unitSummaryRef.current?.scrollIntoView({behavior: "smooth"})
+                setIsSelectedUnit(true)
+            }, 0)
+        }
+    }, [hash, unitId])
+
+    useEffect(() => {
+        if(isSelectedUnit) {
+            setTimeout(() => {
+                setIsSelectedUnit(false)
+            }, 2100)
+        }
+    }, [isSelectedUnit])
 
     return (
         <div 
             id={unitId.toString()}
-            className="bg-white rounded shadow p-2 w-full md:w-2/5 xl:w-1/5 text-sm my-2"
+            className={`bg-white rounded shadow p-2 w-full md:w-2/5 xl:w-1/3 text-sm my-2 md:mx-2 ${isSelectedUnit ? "animate-fadeIt" : ""}`}
         >
             <div className="row border-b border-black border-opacity-20 py-1">
                 <img 
